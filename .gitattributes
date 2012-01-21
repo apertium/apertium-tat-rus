@@ -1,0 +1,27 @@
+* text=auto !eol
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-tt-ru.ru-tt.lrx -text
+/apertium-tt-ru.ru-tt.rlx -text
+/apertium-tt-ru.ru-tt.t1x -text
+/apertium-tt-ru.ru-tt.t2x -text
+/apertium-tt-ru.ru-tt.t3x -text
+/apertium-tt-ru.ru.lexc -text
+/apertium-tt-ru.ru.twol -text
+/apertium-tt-ru.tt-ru.dix -text
+/apertium-tt-ru.tt-ru.lrx -text
+/apertium-tt-ru.tt-ru.rlx -text
+/apertium-tt-ru.tt-ru.t1x -text
+/apertium-tt-ru.tt-ru.t2x -text
+/apertium-tt-ru.tt-ru.t3x -text
+/apertium-tt-ru.tt.lexc -text
+/apertium-tt-ru.tt.twol -text
+/autogen.sh -text
+/configure.ac -text
+/modes.xml -text
+/ru-tt.prob -text svneol=unset#unset
+/tt-ru.prob -text svneol=unset#unset
