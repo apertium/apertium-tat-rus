@@ -26,13 +26,171 @@ Multichar_Symbols
 %<adv%> ! Наречие
 %<prn_pers%> ! Личные местоимения
 
+! Tense, aspect, mood
+%<imp%>            ! Imperative
+%<cond%>           ! Conditional  ! Шарт  ! Условное  ! -с{A}
+%<caus%>           ! Causative
+%<pass%>           ! Passive
+%<coop%>           ! Cooperative
+%<neg%>            ! Negative
+%<pres%>           ! -{A}
+%<past%>           ! -{G}{A}н 
+%<fut%>            ! -{I}р
+%<ifi%>            ! -{D}{I} 
+%<ger1%>           ! -м{A}{K}
+%<ger2%>           ! -{I}п
+%<ger3%>           ! -{G}{A}ч
+%<ger4%>           ! -{G}{A}нч{I}
+%<ger5%>           ! -{G}{A}н
+%<ger6%>           ! -{I}р / -{A}р
+%<ger7%>           ! -{A}ч{A}к
+%<ger8%>           ! -{E}с
+
+! Transitivity ! Переходность
+%<tv%>             ! Transitive
+%<iv%>             ! Intransitive
+
+! Зат ! Лицо
+%<p1%>             !
+%<p2%>             !
+%<p3%>             !
+
+%<vaux%>           ! Auxilary verb
+
+LEXICON V-PERS-S1 
+
+%<p1%>%<sg%>:%>м CLIT ;
+%<p2%>%<sg%>:%>с%{I%}ң CLIT ;
+%<p3%>%<sg%>:%> CLIT ;
+%<p1%>%<pl%>:%>б%{I%}з CLIT ;
+%<p2%>%<pl%>:%>г%{I%}з CLIT ;
+%<p3%>%<pl%>:%>%{L%}%{A%}р CLIT ;
+
+LEXICON V-PERS-S2
+!! кыска төрләнеш
+%<p1%>%<sg%>:%>м CLIT ;
+%<p2%>%<sg%>:%>ң CLIT ;
+%<p3%>%<sg%>:%> CLIT ;
+%<p1%>%<pl%>:%>к CLIT ;
+%<p2%>%<pl%>:%>г%{I%}з CLIT ;
+%<p3%>%<pl%>:%>%{L%}%{A%}р CLIT ;
+
+LEXICON V-PERS-S3-NO1SG
+
+%<p2%>%<sg%>:%>с%{I%}ң CLIT ;
+%<p3%>%<sg%>:%> CLIT ;
+%<p1%>%<pl%>:%>б%{I%}з CLIT ;
+%<p2%>%<pl%>:%>с%{I%}г%{I%}з CLIT ;
+%<p3%>%<pl%>:%>%{L%}%{A%}р CLIT ;
+
+LEXICON V-PERS-S3
+
+%<p1%>%<sg%>:%>м%{I%}н CLIT ;
+
+V-PERS-S3-NO1SG ; 
+
+LEXICON V-PERS-S4 ! Volition endings
+
+%<p1%>%<sg%>:%>м%{I%}н CLIT ;
+%<p2%>%<sg%>:%>с%{I%}ң CLIT ;
+%<p3%>%<sg%>:%> CLIT ;
+%<p1%>%<pl%>:%>б%{I%}з CLIT ;
+%<p2%>%<pl%>:%>с%{I%}г%{I%}з CLIT ;
+%<p3%>%<pl%>:%>%{L%}%{A%}р CLIT ;
+
+LEXICON V-FUT-IR
+
+%<fut%>:%>%{I%}р V-PERS-S3 ; 
+%<neg%>%<fut%>:%>м%{A%}с V-PERS-S3-NO1SG ; 
+%<neg%>%<fut%>%<p1%>%<sg%>:%>м%{A%}%>м CLIT ; 
+%<neg%>%<fut%>%<p1%>%<sg%>:%>м%{A%}с%>м%{I%}н CLIT ; ! Dir/LR 
+%<ger6%>:%>%{I%}р POSS ;
+%<neg%>%<ger6%>:%>м%{A%}%>%{I%}р POSS ;
+
+LEXICON V-FUT-AR
+
+%<fut%>:%>%{A%}р V-PERS-S3 ; 
+%<neg%>%<fut%>:%>м%{A%}с V-PERS-S3 ; 
+%<neg%>%<fut%>%<p1%>%<sg%>:%>м%{A%}%>м CLIT ; 
+%<neg%>%<fut%>%<p1%>%<sg%>:%>м%{A%}с%>м%{I%}н CLIT ; ! Dir/LR 
+%<ger6%>:%>%{A%}р POSS ;
+%<neg%>%<ger6%>:%>м%{A%}%>%{A%}р POSS ;
+
+LEXICON V-FINITE-FORMS
+
+%<pres%>:%>%{E%} V-PERS-S1 ; 
+%<ifi%>:%>%{D%}%{I%} V-PERS-S2 ; 
+%<past%>:%>%{G%}%{A%}н V-PERS-S3 ; 
+
+LEXICON V-COMMON-LEX
+
+V-FINITE-FORMS ; 
+
+%<ger1%>:%>м%{A%}%{K%} POSS ; 
+%<ger2%>:%>%{I%}п POSS ; 
+%<ger3%>:%>%{G%}%{A%}ч POSS ; 
+%<ger4%>:%>%{G%}%{A%}нч%{I%} POSS ; 
+%<ger5%>:%>%{G%}%{A%}н POSS ;
+%<ger7%>:%>%{A%}ч%{A%}к POSS ;
+%<ger8%>:%>%{E%}с V-PERS-S4 ;
+%<cond%>:%>с%{A%} V-PERS-S2 ;
+
+%<imp%>%<p2%>%<sg%>: CLIT ;
+%<imp%>%<p2%>%<pl%>:%{I%}г%{I%}з CLIT ;
+
+LEXICON V-NEG
+
+%<neg%>:%>м%{A%} V-COMMON-LEX ; 
+
+V-COMMON-LEX ; 
+
+LEXICON V-DER
+
+%<caus%>:%>%{I%}т V-NEG ;
+%<coop%>:%>%{I%}ш V-NEG ;
+
+V-NEG ;
+
+LEXICON V-IV-IR-LEX
+
+%<v%>%<iv%>: V-COMMON-LEX ; 
+%<v%>%<iv%>: V-FUT-IR; 
+%<v%>%<iv%>: V-DER; 
+
+LEXICON V-TV-IR-LEX
+
+%<v%>%<tv%>: V-COMMON-LEX ; 
+%<v%>%<tv%>: V-FUT-IR; 
+%<v%>%<tv%>: V-DER; 
+%<v%>%<tv%>%<pass%>:%>%{I%}%{l%} V-COMMON-LEX ; 
+%<v%>%<tv%>%<pass%>:%>%{I%}%{l%} V-FUT-IR ; 
+
+LEXICON V-IV-AR-LEX
+
+%<v%>%<iv%>: V-COMMON-LEX ; 
+%<v%>%<iv%>: V-FUT-AR ;
+%<v%>%<iv%>: V-DER; 
+
+LEXICON V-TV-AR-LEX
+
+%<v%>%<tv%>: V-COMMON-LEX ; 
+%<v%>%<tv%>: V-FUT-AR ;
+%<v%>%<tv%>: V-DER; 
+%<v%>%<tv%>%<pass%>:%>%{I%}%{l%} V-COMMON-LEX ; 
+%<v%>%<tv%>%<pass%>:%>%{I%}%{l%} V-FUT-AR ; 
+
+LEXICON VAUX
+
+%<vaux%>: V-PERS-S2 ;
+
 LEXICON Root
 
 Nouns ; 
 Adjectives ;
 Conjunctions ;
 Adverbs ;
-Pronouns_Pers
+Pronouns_Pers ;
+Verbs ;
 
 LEXICON PRN_PERS
 
@@ -105,6 +263,7 @@ LEXICON Nouns
 баш N1 ; ! ""
 су N1 ; ! ""
 кыз N1 ; ! ""
+тыш N1 ; ! ""
 
 LEXICON Adjectives
 
@@ -117,6 +276,7 @@ LEXICON Adjectives
 LEXICON Conjunctions
 һәм CONJOO ;
 тик CONJOO ;
+әмма CONJOO ;
 
 LEXICON Adverbs
 кичә ADV ;
@@ -158,3 +318,25 @@ LEXICON Pronouns_Pers
 алар%<prn_pers%>%<acc%>:аларне # ;
 алар%<prn_pers%>%<mest%>:алардә # ;
 
+LEXICON Verbs
+
+бар:бар V-TV-IR-LEX ; ! ""
+кил:кил V-TV-IR-LEX ; ! ""
+утыр:утыр V-TV-IR-LEX ; ! ""
+йокла:йокла V-IV-IR-LEX ; ! ""
+күзәт:күзәт V-TV-IR-LEX ; ! ""
+уйна:уйна V-TV-AR-LEX ; ! ""
+йөгер:йөгер V-IV-IR-LEX ; ! ""
+яшерен:яшерен V-IV-IR-LEX ; ! ""
+эшлә:эшлә V-TV-IR-LEX ; ! ""
+кара:кара V-TV-IR-LEX ; ! ""
+эзлә:эзлә V-TV-AR-LEX ; ! ""
+сора:сора V-TV-AR-LEX ; ! ""
+җавап% бир:җавап% бир V-TV-IR-LEX ; ! ""
+әйт:әйт V-TV-IR-LEX ; ! ""
+йөр:йөр V-IV-IR-LEX ; ! ""
+табарга
+тырыш:тырыш V-TV-IR-LEX ; ! ""
+ишет:ишет V-TV-IR-LEX ; ! ""
+ашарга
+алырга

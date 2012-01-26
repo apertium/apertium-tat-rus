@@ -185,6 +185,7 @@ LEXICON Nouns
 голова N1 ; ! ""
 вода N1 ; ! ""
 девочка N1 ; ! ""
+улица N1 ; ! ""
 
 LEXICON Adjectives
 
@@ -203,6 +204,7 @@ LEXICON Conjunctions
 
 и CONJOO ;
 но только CONJOO ;
+но CONJOO ;
 
 LEXICON Adverbs
 вчера ADV ;
