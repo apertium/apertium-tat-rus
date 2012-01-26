@@ -2,19 +2,159 @@
 Multichar_Symbols
 
 %<n%>   ! Имя существительное · Noun
+%<adj%> ! Имя прилагательное 
+%<prep%> ! Предлог
+%<conjoo%> ! Союз
+%<adv%> ! Наречие
+%<sg%> ! Единственное число
+%<pl%> ! Множественное число
+%<sclon1%> ! Склонение 1
+%<sclon2%> ! Склонение 2
+%<sclon3%> ! Склонение 3
+%{Ы%} ! 'а' в 'ы' или 'и' 
+%{Е%} ! 'о' в 'е'
+%{ЕЕ%} ! 'а' в 'е'
+%{У%} ! 'о' в 'у' или 'ю'
+%{УУ%} ! 'а' в 'у' или 'ю'
+%{О%} ! 'а' в 'о' или 'е'
+%{А%} ! 'о' в 'а'
+%<gend%> ! Род
+%<acc%> ! Винительный падеж
+%<nom%> ! Именительный падеж
+%<gen%> ! Родительный падеж
+%<dat%> ! Дательный падеж
+%<ins%> ! Творительный падеж
+%<prp%> ! Предложный падеж
+%{И%} ! 'а' в 'и'
+%{К%} ! 'а' в 0
+%<v%> ! Глагол
+%<prn_pers%> ! Личные местоимения
+%<prn_ques%> ! Вопросительные местоимения
 
 LEXICON Root
 
 Nouns ; 
 Adjectives ;
+Prepositions ;
+Conjunctions ;
+Adverbs ;
+Verbs ;
+Pronouns_Pers ;
+!Pronouns_Quest ;
+
+
+LEXICON Pronouns_Pers
+
+я%<prn_pers%>%<nom%>:я # ;
+я%<prn_pers%>%<gen%>:меня # ;
+я%<prn_pers%>%<dat%>:мне # ;
+я%<prn_pers%>%<acc%>:меня # ;
+я%<prn_pers%>%<ins%>:мной # ;
+я%<prn_pers%>%<prp%>:мне # ;
+
+он%<prn_pers%>%<nom%>:он # ;
+он%<prn_pers%>%<gen%>:его # ;
+он%<prn_pers%>%<dat%>:ему # ;
+он%<prn_pers%>%<acc%>:его # ;
+он%<prn_pers%>%<ins%>:им # ;
+он%<prn_pers%>%<prp%>:нем # ;
+
+она%<prn_pers%>%<nom%>:она # ;
+она%<prn_pers%>%<gen%>:ее # ;
+она%<prn_pers%>%<dat%>:ей # ;
+она%<prn_pers%>%<acc%>:ее # ;
+она%<prn_pers%>%<ins%>:ей # ;
+она%<prn_pers%>%<prp%>:ней # ;
+
+они%<prn_pers%>%<nom%>:они # ;
+они%<prn_pers%>%<gen%>:их # ;
+они%<prn_pers%>%<dat%>:им # ;
+они%<prn_pers%>%<acc%>:их # ;
+они%<prn_pers%>%<ins%>:ими # ;
+они%<prn_pers%>%<prp%>:них # ;
+
+ты%<prn_pers%>%<nom%>:ты # ;
+ты%<prn_pers%>%<gen%>:тебя # ;
+ты%<prn_pers%>%<dat%>:тебе # ;
+ты%<prn_pers%>%<acc%>:тебя # ;
+ты%<prn_pers%>%<ins%>:тобой # ;
+ты%<prn_pers%>%<prp%>:тебе # ;
+
+
+
+LEXICON CASE
+%<n%>%<nom%>%<sg%>%<sclon2%>%<m%>: # ;
+%<n%>%<gen%>%<sg%>%<sclon2%>%<m%>:%>a # ;
+%<n%>%<dat%>%<sg%>%<sclon2%>%<m%>:%>у # ;
+%<n%>%<acc%>%<sg%>%<sclon2%>%<m%>: # ;
+%<n%>%<ins%>%<sg%>%<sclon2%>%<m%>:%>ом # ;
+%<n%>%<prp%>%<sg%>%<sclon2%>%<m%>:%>у # ;
+
+%<n%>%<nom%>%<pl%>%<sclon2%>%<m%>:%>a ;
+%<n%>%<gen%>%<pl%>%<sclon2%>%<m%>: # ;
+%<n%>%<dat%>%<pl%>%<sclon2%>%<m%>:%>ам # ;
+%<n%>%<acc%>%<pl%>%<sclon2%>%<m%>:%>а ;
+%<n%>%<ins%>%<pl%>%<sclon2%>%<m%>:%>ами # ;
+%<n%>%<prp%>%<pl%>%<sclon2%>%<m%>:%>ах # ;
+
+%<n%>%<nom%>%<sg%>%<sclon2%>%<n%>: # ;
+%<n%>%<gen%>%<sg%>%<sclon2%>%<n%>:%>%{А%} # ;
+%<n%>%<dat%>%<sg%>%<sclon2%>%<n%>:%>%{У%} # ;
+%<n%>%<acc%>%<sg%>%<sclon2%>%<n%>: # ;
+%<n%>%<ins%>%<sg%>%<sclon2%>%<n%>:%>%м # ;
+%<n%>%<prp%>%<sg%>%<sclon2%>%<n%>:%>%{Е%} # ;
+
+%<n%>%<nom%>%<sg%>%<sclon1%>: # ;
+%<n%>%<gen%>%<sg%>%<sclon1%>:%>%{Ы%} # ;
+%<n%>%<dat%>%<sg%>%<sclon1%>:%>%{ЕЕ%} # ;
+%<n%>%<acc%>%<sg%>%<sclon1%>:%>%{УУ%} # ;
+%<n%>%<ins%>%<sg%>%<sclon1%>:%>%{О%}й # ;
+%<n%>%<prp%>%<sg%>%<sclon1%>:%>%{Е%} # ;
+
+%<n%>%<nom%>%<pl%>%<sclon1%>:%>%{И%} # ;
+%<n%>%<gen%>%<pl%>%<sclon1%>:%>%{К%} # ;
+%<n%>%<dat%>%<pl%>%<sclon1%>:%>%м # ;
+%<n%>%<acc%>%<pl%>%<sclon1%>:%>%{И%} # ;
+%<n%>%<ins%>%<pl%>%<sclon1%>:%>%ми # ;
+%<n%>%<prp%>%<pl%>%<sclon1%>:%>%х # ;
+
+
+LEXICON GEND
+
+%<f%>: # ;
+%<m%>: # ;
+%<n%>: # ;
+
+LEXICON NUM
+
+%<sg%>: #;
+%<pl%>: # ;
+
+LEXICON ADV 
+%<adv%>: # ;
+
+LEXICON CONJOO
+%<conjoo%>: # ;
+ 
+LEXICON PREP
+
+%<prep%>: # ;
 
 LEXICON N1
 
-%<n%>: # ;
+%<n%>: CASE ;
 
 LEXICON A1
 
-%<adj%>: # ;
+%<adj%>: CASE ;
+
+LEXICON PRN_PERS
+
+%<prn_pers%>: # ;
+
+LEXICON V
+
+%<v%>: # ;
 
 LEXICON Nouns
 
@@ -54,4 +194,26 @@ LEXICON Adjectives
 большой A1 ;
 старый A1 ;
 маленький A1 ;
+
+LEXICON Prepositions
+
+в PREP ;
+
+LEXICON Conjunctions
+
+и CONJOO ;
+но только CONJOO ;
+
+LEXICON Adverbs
+вчера ADV ;
+очень ADV ;
+холодно ADV ;
+сегодня ADV ;
+довольно ADV ;
+тепло ADV ;
+всегда ADV ;
+вместе ADV ;
+
+LEXICON Verbs
+быть V ;
 

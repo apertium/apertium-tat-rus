@@ -3,9 +3,15 @@ SOFT-DELIMITERS = "<,>" ;
 
 SETS
 
-LIST N = n ; 
+LIST n = n ; 
+LIST v = v ; 
+LIST pl = pl ; 
+LIST sg = sg ; 
+LIST p3 = p3 ; 
 
 SECTION
 
-SELECT N ;
+SELECT n ;
   ## 
+
+REMOVE pl IF (0 (n sg nom))(NOT *1 (v pl p3)); 

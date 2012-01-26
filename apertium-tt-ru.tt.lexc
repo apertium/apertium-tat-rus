@@ -21,13 +21,25 @@ Multichar_Symbols
 %{Г%} ! Согласный 'г' или 'к'
 %{Д%} ! Согласный 'д' или 'т'
 %{Н%} ! Согласный 'н' или 'т'
+%<adj%> ! Имя прилагательное
+%<conjoo%> ! Союз
+%<adv%> ! Наречие
+%<prn_pers%> ! Личные местоимения
 
 LEXICON Root
 
 Nouns ; 
 Adjectives ;
+Conjunctions ;
+Adverbs ;
+Pronouns_Pers
+
+LEXICON PRN_PERS
+
+%<prn_pers%>: # ;
 
 LEXICON CASE
+
 %<nom%>: # ;
 %<gen%>:%>н%{Е%}ң # ;
 %<dir%>:%>%{Г%}%{А%} # ;
@@ -45,8 +57,16 @@ CASE ;
 %<pxpl3%>:%>л%{А%}р%{Е%} CASE;
 
 LEXICON NUM
+
 %<sg%>: PX ;
 %<pl%>:%>л%{А%}р PX ;
+
+LEXICON ADV
+%<adv%>: # ;
+
+LEXICON CONJOO
+
+%<conjoo%>: # ;
 
 LEXICON N1
 
@@ -54,7 +74,7 @@ LEXICON N1
 
 LEXICON A1
 
-%<adj%>: # ;
+%<adj%>: NUM ;
 
 LEXICON Nouns
 
@@ -93,4 +113,48 @@ LEXICON Adjectives
 шат A1 ; ! ""
 зур A1 ; ! ""
 иске A1 ; ! ""
+
+LEXICON Conjunctions
+һәм CONJOO ;
+тик CONJOO ;
+
+LEXICON Adverbs
+кичә ADV ;
+бик ADV ;
+суык ADV ;
+бүген ADV ;
+җылы ADV ;
+гына ADV ;
+һәрвакыт ADV ;
+бергә ADV ;
+
+LEXICON Pronouns_Pers
+
+мин%<prn_pers%>%<nom%>:мин # ;
+мин%<prn_pers%>%<gen%>:минем # ;
+мин%<prn_pers%>%<dir%>:миңа # ;
+мин%<prn_pers%>%<acc%>:мине # ;
+мин%<prn_pers%>%<ish%>:миннән # ;
+мин%<prn_pers%>%<mest%>:миндә # ;
+
+ул%<prn_pers%>%<nom%>:ул # ;
+ул%<prn_pers%>%<gen%>:аның # ;
+ул%<prn_pers%>%<dir%>:аңа # ;
+ул%<prn_pers%>%<acc%>:аны # ;
+ул%<prn_pers%>%<ish%>:аннан # ;
+ул%<prn_pers%>%<mest%>:анда # ;
+
+син%<prn_pers%>%<nom%>:син # ;
+син%<prn_pers%>%<gen%>:синең # ;
+син%<prn_pers%>%<dir%>:сиңа # ;
+син%<prn_pers%>%<ish%>:синнән # ;
+син%<prn_pers%>%<acc%>:сине # ;
+син%<prn_pers%>%<mest%>:синдә # ;
+
+алар%<prn_pers%>%<nom%>:алар # ;
+алар%<prn_pers%>%<gen%>:аларнең # ;
+алар%<prn_pers%>%<dir%>:аларгә # ;
+алар%<prn_pers%>%<ish%>:алардән # ;
+алар%<prn_pers%>%<acc%>:аларне # ;
+алар%<prn_pers%>%<mest%>:алардә # ;
 

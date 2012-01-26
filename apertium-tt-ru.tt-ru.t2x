@@ -6,25 +6,25 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
-    <def-cat n="SENT">
-      <cat-item tags="SENT"/>
+    <def-cat n="SN_MEST">
+      <cat-item tags="SN.MEST"/>
+      <cat-item tags="SN.MEST.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
-      <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
-      <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
       <attr-item tags="gen"/>
-      <attr-item tags="ins"/>
-      <attr-item tags="loc"/>
-      <attr-item tags="abl"/>
+      <attr-item tags="dir"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="ish"/>
+      <attr-item tags="mest"/>
+      <attr-item tags="prp"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
@@ -39,13 +39,22 @@
       </let>
     </def-macro>
   </section-def-macros>
+  
   <section-rules>
-    <rule comment="REGLA: SN">
+    <rule comment="REGLA: SN_MEST">
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_MEST"/>
       </pattern>
       <action>
         <out>
+          <chunk>
+             <lit v="prep"/>
+             <lit-tag v="pr"/>
+             <lit v="{^в"/>
+             <lit-tag v="pr"/>
+             <lit v="$}"/>
+          </chunk>
+          <b/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>

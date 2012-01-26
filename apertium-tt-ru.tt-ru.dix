@@ -3,6 +3,8 @@
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
     <sdef n="adj"  c="Имя прилагательное"/>
+    <sdef n="conjoo"  c="Союз"/>
+    <sdef n="adv"  c="Наречие"/>
   </sdefs>
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
@@ -41,5 +43,19 @@
     <e><p><l>шат<s n="adj"/></l><r>счастливый<s n="adj"/></r></p></e>
     <e><p><l>зур<s n="adj"/></l><r>большой<s n="adj"/></r></p></e>
     <e><p><l>иске<s n="adj"/></l><r>старый<s n="adj"/></r></p></e>
+  
+    <!-- Раздел: Союз -->
+    <e><p><l>һәм<s n="conjoo"/></l><r>и<s n="conjoo"/></r></p></e>
+    <e><p><l>тик<s n="conjoo"/></l><r>но только<s n="conjoo"/></r></p></e>
+
+    <!-- Раздел: Наречие -->
+    <e><p><l>кичә<s n="adv"/></l><r>вчера<s n="adv"/></r></p></e>
+    <e><p><l>бик<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
+    <e><p><l>суык<s n="adv"/></l><r>холодно<s n="adv"/></r></p></e>
+    <e><p><l>бүген<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
+    <e><p><l>җылы<s n="adv"/></l><r>достаточно<s n="adv"/></r></p></e>
+    <e><p><l>гына<s n="adv"/></l><r>тепло<s n="adv"/></r></p></e>
+    <e><p><l>һәрвакыт<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
+    <e><p><l>бергә<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
   </section>
 </dictionary>

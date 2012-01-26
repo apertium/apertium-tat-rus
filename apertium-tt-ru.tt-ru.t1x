@@ -15,38 +15,66 @@
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
-      <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
       <attr-item tags="gen"/>
-      <attr-item tags="loc"/>
-      <attr-item tags="ins"/>
-      <attr-item tags="abl"/>
+      <attr-item tags="dir"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="ish"/>
+      <attr-item tags="mest"/>
+      <attr-item tags="prp"/>
+    </def-attr>
+    <def-attr n="a_nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="ND"/>
     </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="current_verb"/>
+    <def-var n="sn_type"/>
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
-    </def-macro>
+    <def-macro n="conv_case1" npar="1">
+          <let><var n="sn_type"/><lit-tag v="SN"/></let>
+          <choose>
+            <when>
+              <test>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="mest"/></equal>
+              </test>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
+             <let><var n="sn_type"/><lit-tag v="SN.MEST"/></let>
+            </when>
+</choose>
+   </def-macro>
+<def-macro n="conv_number1" npar="1">
+          <choose>
+            <when>
+              <test>
+                <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="ND"/></equal>
+              </test>
+              <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+</choose>
+   </def-macro>
   </section-def-macros>
   <section-rules>
 
-    <rule comment="REGLA: SENT">
+    <rule comment="REGLA: noun">
       <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="nom"/>
       </pattern>
       <action>
-        <out>
-          <chunk name="sent" case="caseFirstWord">
+        <call-macro n="conv_case1">
+          <with-param pos="1"/>
+</call-macro>
+        <call-macro n="conv_number1">
+          <with-param pos="1"/>
+</call-macro>
+<out>
+          <chunk name="n" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SENT"/></tag>
+              <tag><var n="sn_type"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
