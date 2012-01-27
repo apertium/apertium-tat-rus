@@ -30,6 +30,11 @@ Multichar_Symbols
 %<prn_ques%> ! Вопросительные местоимения
 %<poslelog%> ! Послелоги
 %<chisl%> ! Имя числительное
+%<prn_dir%> ! Указательные местоимения
+%<ant%>
+%<np%>
+%<m%>
+%<f%>
 
 
 ! Tense, aspect, mood
@@ -51,6 +56,7 @@ Multichar_Symbols
 %<ger6%>           ! -{I}р / -{A}р
 %<ger7%>           ! -{A}ч{A}к
 %<ger8%>           ! -{E}с
+%<prn_otnos%>      ! 
 
 ! Transitivity ! Переходность
 %<tv%>             ! Transitive
@@ -71,11 +77,12 @@ Conjunctions ;
 Adverbs ;
 Pronouns_Pers ;
 Verbs ;
-Vvodnoe_slovo ;
+Vvodnoe slovo ;
 Punct ;
 Pronouns_Quest ;
 Poslelogi ;
 Numbers ;
+Pronouns_Dir ;
 
 LEXICON V-PERS-S1 
 
@@ -210,7 +217,11 @@ LEXICON PRN_PERS
 
 LEXICON CHISL
 
-%<chiisl%>: PX ;
+%<chisl%>: PX ;
+
+LEXICON Pron-Otnositelnyj
+
+%<prn_otnos%>: PX ;
 
 LEXICON CASE
 
@@ -246,6 +257,10 @@ LEXICON N1
 
 %<n%>: NUM ;
 
+LEXICON PRON_D
+
+%<prn_dir%>: CASE ;
+
 LEXICON A1
 
 %<adj%>: NUM ;
@@ -253,6 +268,7 @@ LEXICON A1
 LEXICON POSL
 
 %<poslelog%>: 
+
 
 
 LEXICON VV
@@ -271,14 +287,20 @@ LEXICON Pronouns_Quest
 ни PRON_Q ;
 кая PRON_Q ;
 
+LEXICON NP-Ant-M-Muzh-kak-Zhen-Mjak
+
+%<np%>%<ant%>%<m%>: CASE ;
+
+LEXICON NP-Ant-F
+
+%<np%>%<ant%>%<f%>: CASE ;
+
 LEXICON Nouns
 
 эт N1 ; ! ""
 Һава N1 ; ! ""
 бакча N1 ; ! ""
 малай N1 ; ! ""
-Гөлнара N1 ; ! ""
-Әхмәт N1 ; ! ""
 әни N1 ; ! ""
 сеңел N1 ; ! ""
 бала N1 ; ! ""
@@ -299,12 +321,13 @@ LEXICON Nouns
 хайван N1 ; ! ""
 баш N1 ; ! ""
 су N1 ; ! ""
-кыз N1 ; ! ""
+кызыкай N1 ; ! ""
 тыш N1 ; ! ""
 игътибар N1 ; ! ""
-нәрсә N1 ; ! ""
+нәрсә N1 ; ! "вещь"
 урын N1 ; ! ""
 яшь N1 ; ! ""
+вакыт N1 ; ! ""
 
 
 LEXICON Adjectives
@@ -321,6 +344,8 @@ LEXICON Conjunctions
 әмма CONJOO ;
 вә CONJOO ; ! ""
 ә CONJOO ; ! ""
+да CONJOO ; ! ""
+
 
 LEXICON Adverbs
 кичә ADV ;
@@ -336,6 +361,12 @@ LEXICON Adverbs
 якынрак ADV ;
 анда ADV ;
 әлегә ADV ;
+карап ADV ;
+тиз ADV ;
+шуннан ADV ;
+тагын ADV ;
+хәзер ADV ;
+
 
 LEXICON Pronouns_Pers
 
@@ -367,6 +398,8 @@ LEXICON Pronouns_Pers
 алар%<prn_pers%>%<acc%>:аларне # ;
 алар%<prn_pers%>%<mest%>:алардә # ;
 
+нәрсә Pron-Otnositelnyj ; ! "вещь"
+
 LEXICON Verbs
 
 бар:бар V-TV-IR-LEX ; ! ""
@@ -396,14 +429,31 @@ LEXICON Verbs
 ярат:ярат V-TV-IR-LEX ; ! ""
 эч:эч V-TV-IR-LEX ; ! ""
 
-LEXICON Vvodnoe_slovo
+LEXICON Vvodnoe slovo
 юк VV ; ! ""
 әлбәттә VV ; ! ""
+ди VV ; ! ""
 
 LEXICON Poslelogi
 алдындагы POSL ; ! ""
+артыннан POSL ; ! ""
+белән POSL ; ! ""
+астында POSL ; ! ""
+сәбәпле POSL ; ! ""
 
 LEXICON Numbers
 алты CHISL ; ! ""
 бер CHISL ; ! ""
 биш CHISL ; ! ""
+ике CHISL ; ! ""
+берәр CHISL ; ! ""
+
+LEXICON Pronouns_dir
+шул PRON_D ; ! ""
+бу PRON_D ; ! ""
+
+LEXICON Imena
+
+Гөлнара NP-Ant-F ; ! ""
+Әхмәт NP-Ant-M-Muzh-kak-Zhen-Mjak ; ! ""
+
