@@ -30,6 +30,10 @@ Multichar_Symbols
 %<v%> ! Глагол
 %<prn_pers%> ! Личные местоимения
 %<prn_ques%> ! Вопросительные местоимения
+%<vvod%> ! Вводные слова
+%<comma%> ! Запятая
+%<prep%> ! Предлоги
+%<chisl%> ! Имя числительное
 
 LEXICON Root
 
@@ -40,7 +44,55 @@ Conjunctions ;
 Adverbs ;
 Verbs ;
 Pronouns_Pers ;
-!Pronouns_Quest ;
+Pronouns_Quest ;
+Vvodnoe slovo ;
+Punct ;
+Prepositions ;
+Numbers ;
+
+
+LEXICON Numbers
+
+шесть%<chisl%>%<nom%>:шесть # ;
+шесть%<chisl%>%<gen%>:шести # ;
+шесть%<chisl%>%<dat%>:шести # ;
+шесть%<chisl%>%<acc%>:шесть # ;
+шесть%<chisl%>%<ins%>:шестью # ;
+шесть%<chisl%>%<prp%>:шести # ;
+
+один%<chisl%>%<nom%>:один # ;
+один%<chisl%>%<gen%>:одного # ;
+один%<chisl%>%<dat%>:одному # ;
+один%<chisl%>%<acc%>:одного # ;
+один%<chisl%>%<ins%>:одним # ;
+один%<chisl%>%<prp%>:одном # ;
+
+пять%<chisl%>%<nom%>:пять # ;
+пять%<chisl%>%<gen%>:пяти # ;
+пять%<chisl%>%<dat%>:пяти # ;
+пять%<chisl%>%<acc%>:пять # ;
+пять%<chisl%>%<ins%>:пятью # ;
+пять%<chisl%>%<prp%>:пяти # ;
+
+
+LEXICON PREP
+%<prep%>:
+
+LEXICON VV
+
+%<vvod%>:%>%<comma%> ;
+
+LEXICON Punct
+,%<comma%>:, # ;
+
+LEXICON PRON_Q
+%<prn_ques%>: # ;
+
+LEXICON Pronouns_Quest
+где PRON_Q ;
+почему PRON_Q ;
+что PRON_Q ;
+куда PRON_Q ;
 
 
 LEXICON Pronouns_Pers
@@ -80,6 +132,8 @@ LEXICON Pronouns_Pers
 ты%<prn_pers%>%<ins%>:тобой # ;
 ты%<prn_pers%>%<prp%>:тебе # ;
 
+что%<prn_pers%>%<nom%>:что # ;
+что%<prn_pers%>%<gen%>:чего # ;
 
 
 LEXICON CASE
@@ -97,27 +151,30 @@ LEXICON CASE
 %<n%>%<ins%>%<pl%>%<sclon2%>%<m%>:%>ами # ;
 %<n%>%<prp%>%<pl%>%<sclon2%>%<m%>:%>ах # ;
 
-%<n%>%<nom%>%<sg%>%<sclon2%>%<n%>: # ;
-%<n%>%<gen%>%<sg%>%<sclon2%>%<n%>:%>%{А%} # ;
-%<n%>%<dat%>%<sg%>%<sclon2%>%<n%>:%>%{У%} # ;
-%<n%>%<acc%>%<sg%>%<sclon2%>%<n%>: # ;
-%<n%>%<ins%>%<sg%>%<sclon2%>%<n%>:%>%м # ;
-%<n%>%<prp%>%<sg%>%<sclon2%>%<n%>:%>%{Е%} # ;
+%<n%>%<nom%>%<sg%>%<sclon2%>%<n%>:%>о # ;
+%<n%>%<gen%>%<sg%>%<sclon2%>%<n%>:%>а # ;
+%<n%>%<dat%>%<sg%>%<sclon2%>%<n%>:%>у # ;
+%<n%>%<acc%>%<sg%>%<sclon2%>%<n%>:%>о # ;
+%<n%>%<ins%>%<sg%>%<sclon2%>%<n%>:%>ом # ;
+%<n%>%<prp%>%<sg%>%<sclon2%>%<n%>:%>е # ;
 
-%<n%>%<nom%>%<sg%>%<sclon1%>: # ;
+%<n%>%<nom%>%<sg%>%<sclon1%>:%>%{Я%} # ;
 %<n%>%<gen%>%<sg%>%<sclon1%>:%>%{Ы%} # ;
-%<n%>%<dat%>%<sg%>%<sclon1%>:%>%{ЕЕ%} # ;
-%<n%>%<acc%>%<sg%>%<sclon1%>:%>%{УУ%} # ;
+%<n%>%<dat%>%<sg%>%<sclon1%>:%>е # ;
+%<n%>%<acc%>%<sg%>%<sclon1%>:%>%{У%} # ;
 %<n%>%<ins%>%<sg%>%<sclon1%>:%>%{О%}й # ;
-%<n%>%<prp%>%<sg%>%<sclon1%>:%>%{Е%} # ;
+%<n%>%<prp%>%<sg%>%<sclon1%>:%>е # ;
 
 %<n%>%<nom%>%<pl%>%<sclon1%>:%>%{И%} # ;
-%<n%>%<gen%>%<pl%>%<sclon1%>:%>%{К%} # ;
-%<n%>%<dat%>%<pl%>%<sclon1%>:%>%м # ;
-%<n%>%<acc%>%<pl%>%<sclon1%>:%>%{И%} # ;
-%<n%>%<ins%>%<pl%>%<sclon1%>:%>%ми # ;
-%<n%>%<prp%>%<pl%>%<sclon1%>:%>%х # ;
+%<n%>%<gen%>%<pl%>%<sclon1%>: # ;
+%<n%>%<dat%>%<pl%>%<sclon1%>:%>%{Я%}м # ;
+%<n%>%<acc%>%<pl%>%<sclon1%>: # ;
+%<n%>%<ins%>%<pl%>%<sclon1%>:%>%{Я%}ми # ;
+%<n%>%<prp%>%<pl%>%<sclon1%>:%>%{Я%}х # ;
 
+LEXICON CHISL
+
+%<chisl%>: # ;
 
 LEXICON GEND
 
@@ -158,34 +215,37 @@ LEXICON V
 
 LEXICON Nouns
 
-собака N1 ; ! ""
-погода N1 ; ! ""
+собак N1 ; ! ""
+погод N1 ; ! ""
 сад N1 ; ! ""
 мальчик N1 ; ! ""
-Маша N1 ; ! ""
-Ваня N1 ; ! ""
-мама N1 ; ! ""
-сестра N1 ; ! ""
+Маш N1 ; ! ""
+Ван N1 ; ! ""
+мам N1 ; ! ""
+сестр N1 ; ! ""
 ребенок N1 ; ! ""
 дом N1 ; ! ""
-кошка N1 ; ! ""
-окно N1 ; ! ""
-дерево N1 ; ! ""
+кошк N1 ; ! ""
+окн N1 ; ! ""
+дерев N1 ; ! ""
 глаз N1 ; ! ""
-рука N1 ; ! ""
-игра N1 ; ! ""
+рук N1 ; ! ""
+игр N1 ; ! ""
 ответ N1 ; ! ""
 вопрос N1 ; ! ""
 человек N1 ; ! ""
 стол N1 ; ! ""
 стул N1 ; ! ""
 звук N1 ; ! ""
-птица N1 ; ! ""
-животное N1 ; ! ""
-голова N1 ; ! ""
-вода N1 ; ! ""
-девочка N1 ; ! ""
-улица N1 ; ! ""
+птиц N1 ; ! ""
+животн N1 ; ! ""
+голов N1 ; ! ""
+вод N1 ; ! ""
+девочк N1 ; ! ""
+улиц N1 ; ! ""
+внимани N1 ; ! ""
+возраст N1 ; ! ""
+
 
 LEXICON Adjectives
 
@@ -205,6 +265,8 @@ LEXICON Conjunctions
 и CONJOO ;
 но только CONJOO ;
 но CONJOO ;
+однако CONJOO ;
+и CONJOO ;
 
 LEXICON Adverbs
 вчера ADV ;
@@ -215,7 +277,19 @@ LEXICON Adverbs
 тепло ADV ;
 всегда ADV ;
 вместе ADV ;
+затем ADV ;
+хорошо ADV ;
+ближе ADV ;
+везде ADV ;
+там ADV ;
+пока что ADV ;
 
 LEXICON Verbs
 быть V ;
 
+LEXICON Vvodnoe slovo
+нет VV ; ! ""
+конечно VV ; ! ""
+
+LEXICON Prepositions
+напротив PREP ;

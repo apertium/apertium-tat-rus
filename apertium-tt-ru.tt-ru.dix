@@ -5,7 +5,12 @@
     <sdef n="adj"  c="Имя прилагательное"/>
     <sdef n="conjoo"  c="Союз"/>
     <sdef n="adv"  c="Наречие"/>
-    <sdef n="prn_pers"  c="Личное местоимене"/>
+    <sdef n="prn_pers"  c="Личные местоимения"/>
+    <sdef n="prn_ques"  c="Вопросительные местоимения"/>
+    <sdef n="vvod"  c="Вводные слова"/>
+    <sdef n="poslelog"  c="Послелоги"/>
+    <sdef n="prep"  c="Предлоги"/>
+    <sdef n="chisl"  c="Имя числительное"/>
   </sdefs>
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
@@ -37,6 +42,7 @@
     <e><p><l>су<s n="n"/></l><r>вода<s n="n"/></r></p></e>
     <e><p><l>кыз<s n="n"/></l><r>девочка<s n="n"/></r></p></e>
     <e><p><l>тыш<s n="n"/></l><r>улица<s n="n"/></r></p></e>    
+    <e><p><l>нәрсә<s n="n"/></l><r>что<s n="prn_pers"/></r></p></e>   
 
     <!-- Раздел: Имя Прилагательное -->
 
@@ -51,6 +57,8 @@
     <e><p><l>һәм<s n="conjoo"/></l><r>и<s n="conjoo"/></r></p></e>
     <e><p><l>тик<s n="conjoo"/></l><r>но только<s n="conjoo"/></r></p></e>
     <e><p><l>әмма<s n="conjoo"/></l><r>но<s n="conjoo"/></r></p></e>
+    <e><p><l>ә<s n="conjoo"/></l><r>однако<s n="conjoo"/></r></p></e>
+    <e><p><l>вә<s n="conjoo"/></l><r>и<s n="conjoo"/></r></p></e>
 
     <!-- Раздел: Наречие -->
 
@@ -62,6 +70,11 @@
     <e><p><l>гына<s n="adv"/></l><r>тепло<s n="adv"/></r></p></e>
     <e><p><l>һәрвакыт<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
     <e><p><l>бергә<s n="adv"/></l><r>вместе<s n="adv"/></r></p></e>
+    <e><p><l>соңрак<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
+    <e><p><l>яхшы<s n="adv"/></l><r>хорошо<s n="adv"/></r></p></e>
+    <e><p><l>якынрак<s n="adv"/></l><r>ближе<s n="adv"/></r></p></e>
+    <e><p><l>анда<s n="adv"/></l><r>там<s n="adv"/></r></p></e>
+    <e><p><l>әлегә<s n="adv"/></l><r>пока что<s n="adv"/></r></p></e>
 
     <!-- Раздел: Личные местоимения -->
 
@@ -69,5 +82,25 @@
     <e><p><l>син<s n="prn_pers"/></l><r>ты<s n="prn_pers"/></r></p></e>
     <e><p><l>алар<s n="prn_pers"/></l><r>они<s n="prn_pers"/></r></p></e>
 
+    <!-- Раздел: Вопросительные  местоимения -->
+
+    <e><p><l>кайда<s n="prn_ques"/></l><r>где<s n="prn_ques"/></r></p></e>
+    <e><p><l>ни өчен<s n="prn_ques"/></l><r>почему<s n="prn_ques"/></r></p></e>
+    <e><p><l>ни<s n="prn_ques"/></l><r>что<s n="prn_ques"/></r></p></e>
+    <e><p><l>кая<s n="prn_ques"/></l><r>куда<s n="prn_ques"/></r></p></e>
+
+    <!-- Раздел: Вводные слова -->
+    <e><p><l>юк<s n="vvod"/></l><r>нет<s n="vvod"/></r></p></e>   
+    <e><p><l>әлбәттә<s n="vvod"/></l><r>конечно<s n="vvod"/></r></p></e> 
+
+    <!-- Раздел: Послелоги -->
+    <e><p><l>алдындагы<s n="poslelog"/></l><r>напротив<s n="prep"/></r></p></e>
+
+    <!-- Раздел: Имя числительное -->
+    <e><p><l>алты<s n="chisl"/></l><r>шесть<s n="chisl"/></r></p></e>
+    <e><p><l>бер<s n="chisl"/></l><r>один<s n="chisl"/></r></p></e>
+    <e><p><l>биш<s n="chisl"/></l><r>пять<s n="chisl"/></r></p></e>
+
+  
   </section>
 </dictionary>

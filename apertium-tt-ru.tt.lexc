@@ -25,6 +25,12 @@ Multichar_Symbols
 %<conjoo%> ! Союз
 %<adv%> ! Наречие
 %<prn_pers%> ! Личные местоимения
+%<vvod%> ! Вводное слово
+%<comma%> ! Запятая
+%<prn_ques%> ! Вопросительные местоимения
+%<poslelog%> ! Послелоги
+%<chisl%> ! Имя числительное
+
 
 ! Tense, aspect, mood
 %<imp%>            ! Imperative
@@ -56,6 +62,20 @@ Multichar_Symbols
 %<p3%>             !
 
 %<vaux%>           ! Auxilary verb
+
+LEXICON Root
+
+Nouns ; 
+Adjectives ;
+Conjunctions ;
+Adverbs ;
+Pronouns_Pers ;
+Verbs ;
+Vvodnoe_slovo ;
+Punct ;
+Pronouns_Quest ;
+Poslelogi ;
+Numbers ;
 
 LEXICON V-PERS-S1 
 
@@ -183,25 +203,21 @@ LEXICON VAUX
 
 %<vaux%>: V-PERS-S2 ;
 
-LEXICON Root
-
-Nouns ; 
-Adjectives ;
-Conjunctions ;
-Adverbs ;
-Pronouns_Pers ;
-Verbs ;
 
 LEXICON PRN_PERS
 
 %<prn_pers%>: # ;
+
+LEXICON CHISL
+
+%<chiisl%>: PX ;
 
 LEXICON CASE
 
 %<nom%>: # ;
 %<gen%>:%>н%{Е%}ң # ;
 %<dir%>:%>%{Г%}%{А%} # ;
-%<acc%>:%>н%{%} # ;
+%<acc%>:%>н # ;
 %<ish%>:%>%{Н%}%{А%}н # ;
 %<mest%>:%>%{Д%}%{А%} # ;
 
@@ -234,6 +250,27 @@ LEXICON A1
 
 %<adj%>: NUM ;
 
+LEXICON POSL
+
+%<poslelog%>: 
+
+
+LEXICON VV
+
+%<vvod%>:%>%<comma%> ;
+
+LEXICON Punct
+,%<comma%>:, # ;
+
+LEXICON PRON_Q
+%<prn_ques%>: # ;
+
+LEXICON Pronouns_Quest
+кайда PRON_Q ;
+ни өчен PRON_Q ;
+ни PRON_Q ;
+кая PRON_Q ;
+
 LEXICON Nouns
 
 эт N1 ; ! ""
@@ -264,6 +301,11 @@ LEXICON Nouns
 су N1 ; ! ""
 кыз N1 ; ! ""
 тыш N1 ; ! ""
+игътибар N1 ; ! ""
+нәрсә N1 ; ! ""
+урын N1 ; ! ""
+яшь N1 ; ! ""
+
 
 LEXICON Adjectives
 
@@ -277,6 +319,8 @@ LEXICON Conjunctions
 һәм CONJOO ;
 тик CONJOO ;
 әмма CONJOO ;
+вә CONJOO ; ! ""
+ә CONJOO ; ! ""
 
 LEXICON Adverbs
 кичә ADV ;
@@ -287,6 +331,11 @@ LEXICON Adverbs
 гына ADV ;
 һәрвакыт ADV ;
 бергә ADV ;
+соңрак ADV ;
+яхшы ADV ;
+якынрак ADV ;
+анда ADV ;
+әлегә ADV ;
 
 LEXICON Pronouns_Pers
 
@@ -340,3 +389,21 @@ LEXICON Verbs
 ишет:ишет V-TV-IR-LEX ; ! ""
 ашарга
 алырга
+күрен:күрен V-IV-IR-LEX ; ! ""
+сөйләш:сөйләш V-IV-IR-LEX ; ! ""
+күр: V-TV-IR-LEX ; ! ""
+ал:ал V-TV-IR-LEX ; ! ""
+ярат:ярат V-TV-IR-LEX ; ! ""
+эч:эч V-TV-IR-LEX ; ! ""
+
+LEXICON Vvodnoe_slovo
+юк VV ; ! ""
+әлбәттә VV ; ! ""
+
+LEXICON Poslelogi
+алдындагы POSL ; ! ""
+
+LEXICON Numbers
+алты CHISL ; ! ""
+бер CHISL ; ! ""
+биш CHISL ; ! ""
