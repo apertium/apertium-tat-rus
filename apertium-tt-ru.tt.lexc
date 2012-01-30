@@ -29,7 +29,7 @@ Multichar_Symbols
 %<comma%> ! Запятая
 %<prn_ques%> ! Вопросительные местоимения
 %<poslelog%> ! Послелоги
-%<chisl%> ! Имя числительное
+%<num%> ! Имя числительное
 %<prn_dir%> ! Указательные местоимения
 %<ant%>
 %<np%>
@@ -77,12 +77,18 @@ Conjunctions ;
 Adverbs ;
 Pronouns_Pers ;
 Verbs ;
-Vvodnoe slovo ;
+Vvodnoe_slovo ;
 Punct ;
 Pronouns_Quest ;
 Poslelogi ;
 Numbers ;
 Pronouns_Dir ;
+
+LEXICON CLIT
+# ; ! For clitics, if they exist.
+
+LEXICON POSS
+# ; !! NB! This is not defined.
 
 LEXICON V-PERS-S1 
 
@@ -217,7 +223,7 @@ LEXICON PRN_PERS
 
 LEXICON CHISL
 
-%<chisl%>: PX ;
+%<num%>: PX ;
 
 LEXICON Pron-Otnositelnyj
 
@@ -273,7 +279,8 @@ LEXICON POSL
 
 LEXICON VV
 
-%<vvod%>:%>%<comma%> ;
+!%<vvod%>:%>%<comma%> ; ! Probably not intended.
+%<vvod%>: # ; ! Perhaps this was intended?
 
 LEXICON Punct
 ,%<comma%>:, # ;
@@ -429,7 +436,7 @@ LEXICON Verbs
 ярат:ярат V-TV-IR-LEX ; ! ""
 эч:эч V-TV-IR-LEX ; ! ""
 
-LEXICON Vvodnoe slovo
+LEXICON Vvodnoe_slovo
 юк VV ; ! ""
 әлбәттә VV ; ! ""
 ди VV ; ! ""
@@ -448,7 +455,7 @@ LEXICON Numbers
 ике CHISL ; ! ""
 берәр CHISL ; ! ""
 
-LEXICON Pronouns_dir
+LEXICON Pronouns_Dir
 шул PRON_D ; ! ""
 бу PRON_D ; ! ""
 
