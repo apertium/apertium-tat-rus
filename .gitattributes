@@ -6,20 +6,14 @@
 /NEWS -text
 /README -text
 /apertium-tt-ru.ru-tt.lrx -text
-/apertium-tt-ru.ru-tt.rlx -text
 /apertium-tt-ru.ru-tt.t1x -text
 /apertium-tt-ru.ru-tt.t2x -text
 /apertium-tt-ru.ru-tt.t3x -text
-/apertium-tt-ru.ru.lexc -text
-/apertium-tt-ru.ru.twol -text
 /apertium-tt-ru.tt-ru.dix -text
 /apertium-tt-ru.tt-ru.lrx -text
-/apertium-tt-ru.tt-ru.rlx -text
 /apertium-tt-ru.tt-ru.t1x -text
 /apertium-tt-ru.tt-ru.t2x -text
 /apertium-tt-ru.tt-ru.t3x -text
-/apertium-tt-ru.tt.lexc -text
-/apertium-tt-ru.tt.twol -text
 /autogen.sh -text
 /configure.ac -text
 corpa/README -text
@@ -27,6 +21,12 @@ corpa/corpus.rus.txt -text svneol=unset#application/octet-stream
 corpa/corpus.tat.txt -text svneol=unset#application/octet-stream
 corpa/tat-rus-nova.txt -text
 corpa/tat-rus-origina.txt -text
+dev/shupashkar/apertium-tt-ru.ru-tt.rlx -text
+dev/shupashkar/apertium-tt-ru.ru.lexc -text
+dev/shupashkar/apertium-tt-ru.ru.twol -text
+dev/shupashkar/apertium-tt-ru.tt-ru.rlx -text
+dev/shupashkar/apertium-tt-ru.tt.lexc -text
+dev/shupashkar/apertium-tt-ru.tt.twol -text
 /modes.xml -text
 /qa.sh -text
 /ru-tt.prob -text svneol=unset#unset
