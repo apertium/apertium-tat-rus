@@ -22,8 +22,13 @@
 /apertium-tt-ru.tt.twol -text
 /autogen.sh -text
 /configure.ac -text
-corpa/ru.txt -text svneol=unset#application/octet-stream
-corpa/tt.txt -text svneol=unset#application/octet-stream
+corpa/README -text
+corpa/corpus.rus.txt -text svneol=unset#application/octet-stream
+corpa/corpus.tat.txt -text svneol=unset#application/octet-stream
+corpa/tat-rus-nova.txt -text
+corpa/tat-rus-origina.txt -text
 /modes.xml -text
+/qa.sh -text
 /ru-tt.prob -text svneol=unset#unset
+tests/tat-rus-corp.test -text
 /tt-ru.prob -text svneol=unset#unset
