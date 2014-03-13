@@ -22,6 +22,8 @@
 /apertium-tt-ru.tt.twol -text
 /autogen.sh -text
 /configure.ac -text
+corpa/ru.txt -text svneol=unset#application/octet-stream
+corpa/tt.txt -text svneol=unset#application/octet-stream
 /modes.xml -text
 /ru-tt.prob -text svneol=unset#unset
 text/ru.txt -text svneol=unset#application/octet-stream
