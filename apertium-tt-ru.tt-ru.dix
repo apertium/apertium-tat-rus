@@ -11,6 +11,7 @@
     <sdef n="poslelog"  c="Послелоги"/>
     <sdef n="prep"  c="Предлоги"/>
     <sdef n="chisl"  c="Имя числительное"/>
+    <sdef n="num"  c="Имя числительное"/>
     <sdef n="prn_dir"  c="Указательные местоимения"/>
     <sdef n="comma"  c="Знаки препинания"/>
     <sdef n="prn_otnos" c="..." />
@@ -115,7 +116,7 @@
     <e><p><l>сәбәпле<s n="poslelog"/></l><r>причина<s n="n"/></r></p></e>
 
     <!-- Раздел: Имя числительное -->
-    <e><p><l>алты<s n="chisl"/></l><r>шесть<s n="chisl"/></r></p></e>
+    <e><p><l>алты<s n="num"/></l><r>шесть<s n="num"/></r></p></e>
     <e><p><l>бер<s n="chisl"/></l><r>один<s n="chisl"/></r></p></e>
     <e><p><l>биш<s n="chisl"/></l><r>пять<s n="chisl"/></r></p></e>
     <e><p><l>ике<s n="chisl"/></l><r>два<s n="chisl"/></r></p></e>
