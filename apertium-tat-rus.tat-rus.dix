@@ -3,17 +3,17 @@
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
     <sdef n="adj"  c="Имя прилагательное"/>
-    <sdef n="conjoo"  c="Союз"/>
+    <sdef n="cnjcoo"  c="Союз"/>
     <sdef n="adv"  c="Наречие"/>
-    <sdef n="prn_pers"  c="Личные местоимения"/>
-    <sdef n="prn_ques"  c="Вопросительные местоимения"/>
-    <sdef n="vvod"  c="Вводные слова"/>
-    <sdef n="poslelog"  c="Послелоги"/>
+    <sdef n="prn"  c="Местоимение"/>
+    <sdef n="pers"  c="Личный"/>
+    <sdef n="itg"  c="Вопросительные"/>
+    <sdef n="ij"  c="Вводные слова"/>
+    <sdef n="post"  c="Послелоги"/>
     <sdef n="prep"  c="Предлоги"/>
-    <sdef n="chisl"  c="Имя числительное"/>
     <sdef n="num"  c="Имя числительное"/>
     <sdef n="prn_dir"  c="Указательные местоимения"/>
-    <sdef n="comma"  c="Знаки препинания"/>
+    <sdef n="cm"  c="Знаки препинания"/>
     <sdef n="prn_otnos" c="..." />
   </sdefs>
   <section id="main" type="standard">
@@ -49,7 +49,6 @@
     <e><p><l>нәрсә<s n="n"/></l><r>вещь<s n="n"/></r></p></e>  
     <e><p><l>яшь<s n="n"/></l><r>возраст<s n="n"/></r></p></e> 
     <e><p><l>вакыт<s n="n"/></l><r>пора<s n="n"/></r></p></e>  
-    <e><p><l>нәрсә<s n="prn_otnos"/></l><r>что<s n="prn_pers"/></r></p></e>  
 
     <!-- Раздел: Имя Прилагательное -->
 
@@ -61,12 +60,12 @@
   
     <!-- Раздел: Союз -->
 
-    <e><p><l>һәм<s n="conjoo"/></l><r>и<s n="conjoo"/></r></p></e>
-    <e><p><l>тик<s n="conjoo"/></l><r>но только<s n="conjoo"/></r></p></e>
-    <e><p><l>әмма<s n="conjoo"/></l><r>но<s n="conjoo"/></r></p></e>
-    <e><p><l>ә<s n="conjoo"/></l><r>однако<s n="conjoo"/></r></p></e>
-    <e><p><l>вә<s n="conjoo"/></l><r>и<s n="conjoo"/></r></p></e>
-    <e><p><l>да<s n="conjoo"/></l><r>но<s n="conjoo"/></r></p></e>
+    <e><p><l>һәм<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+    <e><p><l>тик<s n="cnjcoo"/></l><r>но<b/>только<s n="cnjcoo"/></r></p></e>
+    <e><p><l>әмма<s n="cnjcoo"/></l><r>но<s n="cnjcoo"/></r></p></e>
+    <e><p><l>ә<s n="cnjcoo"/></l><r>однако<s n="cnjcoo"/></r></p></e>
+    <e><p><l>вә<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+    <e><p><l>да<s n="cnjcoo"/></l><r>но<s n="cnjcoo"/></r></p></e>
 
     <!-- Раздел: Наречие -->
 
@@ -88,46 +87,45 @@
     <e><p><l>тагын<s n="adv"/></l><r>снова<s n="adv"/></r></p></e>
     <e><p><l>хәзер<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
 
+    <!-- Раздел: местоимения -->
 
-    <!-- Раздел: Личные местоимения -->
+    <e><p><l>мин<s n="prn"/><s n="pers"/></l><r>я<s n="prn"/><s n="pers"/></r></p></e>
+    <e><p><l>син<s n="prn"/><s n="pers"/></l><r>ты<s n="prn"/><s n="pers"/></r></p></e>
+    <e><p><l>алар<s n="prn"/><s n="pers"/></l><r>они<s n="prn"/><s n="pers"/></r></p></e>
+    <e><p><l>ул<s n="prn"/><s n="pers"/></l><r>она<s n="prn"/><s n="pers"/></r></p></e>
 
-    <e><p><l>мин<s n="prn_pers"/></l><r>я<s n="prn_pers"/></r></p></e>
-    <e><p><l>син<s n="prn_pers"/></l><r>ты<s n="prn_pers"/></r></p></e>
-    <e><p><l>алар<s n="prn_pers"/></l><r>они<s n="prn_pers"/></r></p></e>
-    <e><p><l>ул<s n="prn_pers"/></l><r>она<s n="prn_pers"/></r></p></e>
+    <e><p><l>нәрсә<s n="prn_otnos"/></l><r>что<s n="prn"/><s n="pers"/></r></p></e>  
 
-    <!-- Раздел: Вопросительные местоимения -->
-
-    <e><p><l>кайда<s n="prn_ques"/></l><r>где<s n="prn_ques"/></r></p></e>
-    <e><p><l>ни өчен<s n="prn_ques"/></l><r>почему<s n="prn_ques"/></r></p></e>
-    <e><p><l>ни<s n="prn_ques"/></l><r>что<s n="prn_ques"/></r></p></e>
-    <e><p><l>кая<s n="prn_ques"/></l><r>куда<s n="prn_ques"/></r></p></e>
+    <e><p><l>кайда<s n="prn"/><s n="itg"/></l><r>где<s n="prn"/><s n="itg"/></r></p></e>
+    <e><p><l>ни өчен<s n="prn"/><s n="itg"/></l><r>почему<s n="prn"/><s n="itg"/></r></p></e>
+    <e><p><l>ни<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/></r></p></e>
+    <e><p><l>кая<s n="prn"/><s n="itg"/></l><r>куда<s n="prn"/><s n="itg"/></r></p></e>
 
     <!-- Раздел: Вводные слова -->
-    <e><p><l>юк<s n="vvod"/></l><r>нет<s n="vvod"/></r></p></e>   
-    <e><p><l>әлбәттә<s n="vvod"/></l><r>конечно<s n="vvod"/></r></p></e> 
-    <e><p><l>ди<s n="vvod"/></l><r>говорит<s n="vvod"/></r></p></e> 
+    <e><p><l>юк<s n="ij"/></l><r>нет<s n="ij"/></r></p></e>   
+    <e><p><l>әлбәттә<s n="ij"/></l><r>конечно<s n="ij"/></r></p></e> 
+    <e><p><l>ди<s n="ij"/></l><r>говорит<s n="ij"/></r></p></e> 
 
     <!-- Раздел: Послелоги -->
-    <e><p><l>алдындагы<s n="poslelog"/></l><r>напротив<s n="prep"/></r></p></e>
-    <e><p><l>артыннан<s n="poslelog"/></l><r>из-за<s n="prep"/></r></p></e>
-    <e><p><l>белән<s n="poslelog"/></l><r>и<s n="conjoo"/></r></p></e>
-    <e><p><l>астында<s n="poslelog"/></l><r>под<s n="prep"/></r></p></e>
-    <e><p><l>сәбәпле<s n="poslelog"/></l><r>причина<s n="n"/></r></p></e>
+    <e><p><l>алдындагы<s n="post"/></l><r>напротив<s n="prep"/></r></p></e>
+    <e><p><l>артыннан<s n="post"/></l><r>из-за<s n="prep"/></r></p></e>
+    <e><p><l>белән<s n="post"/></l><r>и<s n="cnjcoo"/></r></p></e>
+    <e><p><l>астында<s n="post"/></l><r>под<s n="prep"/></r></p></e>
+    <e><p><l>сәбәпле<s n="post"/></l><r>причина<s n="n"/></r></p></e>
 
     <!-- Раздел: Имя числительное -->
     <e><p><l>алты<s n="num"/></l><r>шесть<s n="num"/></r></p></e>
-    <e><p><l>бер<s n="chisl"/></l><r>один<s n="chisl"/></r></p></e>
-    <e><p><l>биш<s n="chisl"/></l><r>пять<s n="chisl"/></r></p></e>
-    <e><p><l>ике<s n="chisl"/></l><r>два<s n="chisl"/></r></p></e>
-    <e><p><l>берәр<s n="chisl"/></l><r>какой-нибудь<s n="prn_pers"/></r></p></e>
+    <e><p><l>бер<s n="num"/></l><r>один<s n="num"/></r></p></e>
+    <e><p><l>биш<s n="num"/></l><r>пять<s n="num"/></r></p></e>
+    <e><p><l>ике<s n="num"/></l><r>два<s n="num"/></r></p></e>
+    <e><p><l>берәр<s n="num"/></l><r>какой-нибудь<s n="prn"/></r></p></e>
 
     <!-- Раздел: Указательные местоимения -->
     <e><p><l>шул<s n="prn_dir"/></l><r>это<s n="prn_dir"/></r></p></e>
     <e><p><l>бу<s n="prn_dir"/></l><r>это<s n="prn_dir"/></r></p></e>
 
     <!-- Раздел: Знаки препинания -->
-    <e><p><l>,<s n="comma"/></l><r>,<s n="comma"/></r></p></e>
+    <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
 
   
   </section>

@@ -1,410 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modes>
-  <!-- tt → ru --> 
-
-  <mode name="tt-ru" install="yes">
+  <mode name="tat-rus" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
+      <program name="cg-proc  -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
+        <file name="tat-rus.autobil.bin"/>
       </program>
+      <program name="lrx-proc -m"> 
+        <file name="tat-rus.lrx.bin"/> 
+      </program> 
       <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.tt-ru.t1x"/>
-        <file name="tt-ru.t1x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t1x"/>
+        <file name="tat-rus.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.tt-ru.t2x"/>
-        <file name="tt-ru.t2x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t2x"/>
+        <file name="tat-rus.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-tt-ru.tt-ru.t3x"/>
-        <file name="tt-ru.t3x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t3x"/>
+        <file name="tat-rus.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
-        <file name="tt-ru.autogen.hfst"/>
+      <program name="lt-proc $1">
+        <file name="tat-rus.autogen.bin"/>
       </program>
+      <program name="lt-proc -p">
+        <file name="tat-rus.autopgen.bin"/>
+      </program>
+
     </pipeline>
   </mode>
 
-  <mode name="tt-ru-debug" install="no">
+  <mode name="tat-rus-debug">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
+      <program name="cg-proc  -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
+        <file name="tat-rus.autobil.bin"/>
       </program>
+      <program name="lrx-proc -m"> 
+        <file name="tat-rus.lrx.bin"/> 
+      </program> 
       <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.tt-ru.t1x"/>
-        <file name="tt-ru.t1x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t1x"/>
+        <file name="tat-rus.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.tt-ru.t2x"/>
-        <file name="tt-ru.t2x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t2x"/>
+        <file name="tat-rus.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-tt-ru.tt-ru.t3x"/>
-        <file name="tt-ru.t3x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t3x"/>
+        <file name="tat-rus.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
-        <file name="tt-ru.autogen.hfst"/>
-      </program>
-    </pipeline>
-  </mode>
- 
-  
-  <mode name="tt-ru-morph" install="no">
-    <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -d">
+        <file name="tat-rus.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
 
-  <mode name="tt-ru-tagger" install="no">
+
+  <mode name="tat-rus-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
+    </pipeline>
+  </mode>
+
+  <mode name="tat-rus-disam" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
+      <program name="cg-conv -a -l"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="tat-rus.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="tat-rus-tagger" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
+      </program>
+      <program name="cg-proc  -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
     </pipeline>
   </mode>
 
-  <mode name="tt-ru-biltrans" install="no">
+  <mode name="tat-rus-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="tt-ru-lex" install="no">
-    <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
-      </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
+      <program name="cg-proc  -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
+        <file name="tat-rus.autobil.bin"/>
       </program>
-      <program name="apertium-lrx-proc -t">
-        <file name="tt-ru.lrx.bin"/>
+    </pipeline>
+  </mode>
+
+  <mode name="tat-rus-lextor" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
+      </program>
+      <program name="cg-proc  -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="tat-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m -t">
+        <file name="tat-rus.lrx.bin"/>
       </program>
     </pipeline>
   </mode>
 
 
-  <mode name="tt-ru-transfer" install="no">
+  <mode name="tat-rus-chunker" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
+      <program name="cg-proc -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
+        <file name="tat-rus.autobil.bin"/>
       </program>
-      <program name="apertium-lrx-proc">
-        <file name="tt-ru.lrx.bin"/>
+      <program name="lrx-proc -m"> 
+        <file name="tat-rus.lrx.bin"/> 
+      </program> 
+      <program name="apertium-transfer -b -t">
+        <file name="apertium-tat-rus.tat-rus.t1x"/>
+        <file name="tat-rus.t1x.bin"/>
       </program>
+    </pipeline>
+  </mode>
+
+  <mode name="tat-rus-interchunk" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
+      </program>
+      <program name="cg-proc -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="tat-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m"> 
+        <file name="tat-rus.lrx.bin"/> 
+      </program> 
       <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.tt-ru.t1x"/>
-        <file name="tt-ru.t1x.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="tt-ru-interchunk" install="no">
-    <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
-      </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
-      </program>
-      <program name="apertium-lrx-proc">
-        <file name="tt-ru.lrx.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.tt-ru.t1x"/>
-        <file name="tt-ru.t1x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t1x"/>
+        <file name="tat-rus.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.tt-ru.t2x"/>
-        <file name="tt-ru.t2x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t2x"/>
+        <file name="tat-rus.t2x.bin"/>
       </program>
     </pipeline>
   </mode>
 
-  <mode name="tt-ru-postchunk" install="no">
+  <mode name="tat-rus-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="tt-ru.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
-        <file name="tt-ru.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="tt-ru.prob"/>
+      <program name="cg-proc -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
-        <file name="tt-ru.autobil.bin"/>
+        <file name="tat-rus.autobil.bin"/>
       </program>
-      <program name="apertium-lrx-proc">
-        <file name="tt-ru.lrx.bin"/>
-      </program>
+      <program name="lrx-proc -m"> 
+        <file name="tat-rus.lrx.bin"/> 
+      </program> 
       <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.tt-ru.t1x"/>
-        <file name="tt-ru.t1x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t1x"/>
+        <file name="tat-rus.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.tt-ru.t2x"/>
-        <file name="tt-ru.t2x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t2x"/>
+        <file name="tat-rus.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-tt-ru.tt-ru.t3x"/>
-        <file name="tt-ru.t3x.bin"/>
+        <file name="apertium-tat-rus.tat-rus.t3x"/>
+        <file name="tat-rus.t3x.bin"/>
       </program>
     </pipeline>
   </mode>
 
-  <!-- ru → tt -->
 
-  <mode name="ru-tt" install="yes">
+  <mode name="rus-tat-morph" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.ru-tt.t1x"/>
-        <file name="ru-tt.t1x.bin"/>
-      </program>
-      <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.ru-tt.t2x"/>
-        <file name="ru-tt.t2x.bin"/>
-      </program>
-      <program name="apertium-postchunk">
-        <file name="apertium-tt-ru.ru-tt.t3x"/>
-        <file name="ru-tt.t3x.bin"/>
-      </program>
-      <program name="hfst-proc $1">
-        <file name="ru-tt.autogen.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-tat.automorf.bin"/>
       </program>
     </pipeline>
   </mode>
-
-  <mode name="ru-tt-debug" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.ru-tt.t1x"/>
-        <file name="ru-tt.t1x.bin"/>
-      </program>
-      <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.ru-tt.t2x"/>
-        <file name="ru-tt.t2x.bin"/>
-      </program>
-      <program name="apertium-postchunk">
-        <file name="apertium-tt-ru.ru-tt.t3x"/>
-        <file name="ru-tt.t3x.bin"/>
-      </program>
-      <program name="hfst-proc -d">
-        <file name="ru-tt.autogen.hfst"/>
-      </program>
-    </pipeline>
-  </mode>
-  
-  <mode name="ru-tt-morph" install="no">
-    <pipeline>
-      <program name="hfst-proc -w">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="ru-tt-tagger" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-    </pipeline>
-  </mode>
-
-  <mode name="ru-tt-biltrans" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="ru-tt-lex" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-      <program name="apertium-lrx-proc">
-        <file name="ru-tt.lrx.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="ru-tt-transfer" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.ru-tt.t1x"/>
-        <file name="ru-tt.t1x.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="ru-tt-interchunk" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.ru-tt.t1x"/>
-        <file name="ru-tt.t1x.bin"/>
-      </program>
-      <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.ru-tt.t2x"/>
-        <file name="ru-tt.t2x.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-  <mode name="ru-tt-postchunk" install="no">
-    <pipeline>
-      <program name="hfst-proc">
-        <file name="ru-tt.automorf.hfst"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="ru-tt.prob"/>
-      </program>
-      <program name="apertium-pretransfer"/>
-      <program name="lt-proc -b">
-        <file name="ru-tt.autobil.bin"/>
-      </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-tt-ru.ru-tt.t1x"/>
-        <file name="ru-tt.t1x.bin"/>
-      </program>
-      <program name="apertium-interchunk">
-        <file name="apertium-tt-ru.ru-tt.t2x"/>
-        <file name="ru-tt.t2x.bin"/>
-      </program>
-      <program name="apertium-postchunk">
-        <file name="apertium-tt-ru.ru-tt.t3x"/>
-        <file name="ru-tt.t3x.bin"/>
-      </program>
-    </pipeline>
-  </mode>
-
-
-
 
 </modes>
 

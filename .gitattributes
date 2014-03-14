@@ -29,6 +29,4 @@ dev/shupashkar/apertium-tt-ru.tt.lexc -text
 dev/shupashkar/apertium-tt-ru.tt.twol -text
 /modes.xml -text
 /qa.sh -text
-/rus-tat.prob -text svneol=unset#unset
-/tat-rus.prob -text svneol=unset#unset
 tests/tat-rus-corp.test -text
