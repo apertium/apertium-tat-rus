@@ -5,10 +5,6 @@
 /Makefile.am -text
 /NEWS -text
 /README -text
-/apertium-tat-rus.rus-tat.lrx -text
-/apertium-tat-rus.rus-tat.t1x -text
-/apertium-tat-rus.rus-tat.t2x -text
-/apertium-tat-rus.rus-tat.t3x -text
 /apertium-tat-rus.tat-rus.dix -text
 /apertium-tat-rus.tat-rus.lrx -text
 /apertium-tat-rus.tat-rus.t1x -text
