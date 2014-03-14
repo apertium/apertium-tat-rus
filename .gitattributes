@@ -5,15 +5,15 @@
 /Makefile.am -text
 /NEWS -text
 /README -text
-/apertium-tt-ru.ru-tt.lrx -text
-/apertium-tt-ru.ru-tt.t1x -text
-/apertium-tt-ru.ru-tt.t2x -text
-/apertium-tt-ru.ru-tt.t3x -text
-/apertium-tt-ru.tt-ru.dix -text
-/apertium-tt-ru.tt-ru.lrx -text
-/apertium-tt-ru.tt-ru.t1x -text
-/apertium-tt-ru.tt-ru.t2x -text
-/apertium-tt-ru.tt-ru.t3x -text
+/apertium-tat-rus.rus-tat.lrx -text
+/apertium-tat-rus.rus-tat.t1x -text
+/apertium-tat-rus.rus-tat.t2x -text
+/apertium-tat-rus.rus-tat.t3x -text
+/apertium-tat-rus.tat-rus.dix -text
+/apertium-tat-rus.tat-rus.lrx -text
+/apertium-tat-rus.tat-rus.t1x -text
+/apertium-tat-rus.tat-rus.t2x -text
+/apertium-tat-rus.tat-rus.t3x -text
 /autogen.sh -text
 /configure.ac -text
 corpa/README -text
@@ -29,6 +29,6 @@ dev/shupashkar/apertium-tt-ru.tt.lexc -text
 dev/shupashkar/apertium-tt-ru.tt.twol -text
 /modes.xml -text
 /qa.sh -text
-/ru-tt.prob -text svneol=unset#unset
+/rus-tat.prob -text svneol=unset#unset
+/tat-rus.prob -text svneol=unset#unset
 tests/tat-rus-corp.test -text
-/tt-ru.prob -text svneol=unset#unset

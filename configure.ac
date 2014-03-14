@@ -1,13 +1,12 @@
 AC_PREREQ(2.52)
 
-AC_INIT([apertium-tt-ru], [0.1.0], [unknown@users.sourceforge.net])
-AM_INIT_AUTOMAKE([apertium-tt-ru], [0.1.0], no-define)
+AC_INIT([apertium-tat-rus], [0.2.0], [spectre360@users.sourceforge.net])
+AM_INIT_AUTOMAKE([apertium-tat-rus], [0.2.0], no-define)
 AC_PROG_LN_S
 AC_PROG_AWK
 
 m4_define([required_apertium_version], [3.2.0])
 PKG_CHECK_MODULES(APERTIUM,   apertium >= required_apertium_version, [], [PKG_CHECK_MODULES(APERTIUM,   apertium-3.2 >= required_apertium_version)])
-                          
 
 AC_PATH_PROG(HFSTLEXC, hfst-lexc, no)
 if test x$ac_cv_path_HFSTLEXC = x
@@ -69,6 +68,25 @@ then
   AC_MSG_ERROR([You don't have lrx-proc installed.])
 fi
 
+AC_PATH_PROG(GZCAT, gzcat, no)
+AC_PATH_PROG(ZCAT, zcat, no)
+
+if test x$ac_cv_path_GZCAT = xno
+then
+  if test x$ac_cv_path_ZCAT = xno
+  then
+    AC_MSG_ERROR([No working zcat installed.])
+  else
+    AC_SUBST(ZCAT,[zcat])
+  fi
+else
+  AC_SUBST(ZCAT,[gzcat])
+fi
+
+
+m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: http://wiki.apertium.org/wiki/Installation_troubleshooting])])
+
+AP_CHECK_LING([1], [apertium-tat])
+AP_CHECK_LING([2], [apertium-rus])
 
 AC_OUTPUT([Makefile])
-
