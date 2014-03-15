@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
+
 <transfer default="chunk">
+
   <section-def-cats>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
@@ -9,6 +11,7 @@
       <cat-item tags="sent"/>
     </def-cat>
   </section-def-cats>
+
   <section-def-attrs>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
@@ -27,37 +30,42 @@
       <attr-item tags="pl"/>
       <attr-item tags="ND"/>
     </def-attr>
-
   </section-def-attrs>
+
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="current_verb"/>
     <def-var n="sn_type"/>
   </section-def-vars>
+
   <section-def-macros>
+    
     <def-macro n="conv_case1" npar="1">
-          <let><var n="sn_type"/><lit-tag v="SN"/></let>
-          <choose>
-            <when>
-              <test>
-                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="mest"/></equal>
-              </test>
-              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
-             <let><var n="sn_type"/><lit-tag v="SN.MEST"/></let>
-            </when>
-</choose>
-   </def-macro>
-<def-macro n="conv_number1" npar="1">
-          <choose>
-            <when>
-              <test>
-                <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="ND"/></equal>
-              </test>
-              <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
-            </when>
-</choose>
-   </def-macro>
+      <let><var n="sn_type"/><lit-tag v="SN"/></let>
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="mest"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
+            <let><var n="sn_type"/><lit-tag v="SN.MEST"/></let>
+        </when>
+        </choose>
+    </def-macro>
+
+    <def-macro n="conv_number1" npar="1">
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="ND"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+          </when>
+        </choose>
+    </def-macro>
+
   </section-def-macros>
+
   <section-rules>
 
     <rule comment="REGLA: noun">
@@ -67,11 +75,11 @@
       <action>
         <call-macro n="conv_case1">
           <with-param pos="1"/>
-</call-macro>
+        </call-macro>
         <call-macro n="conv_number1">
           <with-param pos="1"/>
-</call-macro>
-<out>
+        </call-macro>
+        <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
               <tag><var n="sn_type"/></tag>
@@ -85,4 +93,5 @@
     </rule>
 
   </section-rules>
+
 </transfer>
