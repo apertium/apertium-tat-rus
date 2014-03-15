@@ -18,6 +18,7 @@ corpa/corpus.tat.txt -text svneol=unset#application/octet-stream
 corpa/tat-rus-nova.txt -text
 corpa/tat-rus-origina.txt -text
 dev/Pending_tests.html -text
+dev/Regression_tests.html -text
 dev/shupashkar/apertium-tt-ru.ru-tt.rlx -text
 dev/shupashkar/apertium-tt-ru.ru.lexc -text
 dev/shupashkar/apertium-tt-ru.ru.twol -text
