@@ -19,6 +19,7 @@
     <def-attr n="a_gender">
       <attr-item tags="m"/>
       <attr-item tags="f"/>
+      <attr-item tags="nt"/>
     </def-attr>
     <def-attr n="a_anim">
       <attr-item tags="aa"/>
