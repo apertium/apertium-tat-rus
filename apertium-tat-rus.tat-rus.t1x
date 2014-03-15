@@ -86,7 +86,7 @@ INPUT:  мәктәп
 OUTPUT: школа
         ^noun<NP>{^школа<n><m><nn><sg><nom$}$
 -->
-    <rule comment="REGLA: noun">
+    <rule comment="">
       <pattern>
         <pattern-item n="noun-nom"/>
       </pattern>
@@ -115,7 +115,7 @@ INPUT:  мәктәптә
 OUTPUT: в школе
         ^pr-noun<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
 -->
-    <rule comment="REGLA: noun">
+    <rule comment="">
       <pattern>
         <pattern-item n="noun-loc"/>
       </pattern>
