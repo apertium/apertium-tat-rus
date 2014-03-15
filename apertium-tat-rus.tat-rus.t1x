@@ -4,8 +4,11 @@
 <transfer default="chunk">
 
   <section-def-cats>
-    <def-cat n="noun">
-      <cat-item tags="n.*"/>
+    <def-cat n="noun-nom">
+      <cat-item tags="n.nom"/>
+    </def-cat>
+    <def-cat n="noun-loc">
+      <cat-item tags="n.loc"/>
     </def-cat>
   </section-def-cats>
 
@@ -78,14 +81,14 @@
   <section-rules>
 
 <!--
-INPUT:  бакча
-        ^бакча<n><nom>$
-OUTPUT: сад
-        ^noun<NP>{^сад<n><m><nn><sg><nom$}$
+INPUT:  мәктәп
+        ^мәктәп<n><nom>$
+OUTPUT: школа
+        ^noun<NP>{^школа<n><m><nn><sg><nom$}$
 -->
     <rule comment="REGLA: noun">
       <pattern>
-        <pattern-item n="noun"/>
+        <pattern-item n="noun-nom"/>
       </pattern>
       <action>
         <out>
@@ -100,6 +103,40 @@ OUTPUT: сад
               <clip pos="1" side="tl" part="a_anim"/>
               <lit-tag v="sg"/>
               <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  мәктәптә
+        ^мәктәп<n><loc>$
+OUTPUT: в школе
+        ^pr-noun<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
+-->
+    <rule comment="REGLA: noun">
+      <pattern>
+        <pattern-item n="noun-loc"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="pr-noun">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+            </tags>
+            <lu>
+              <lit v="в"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="prp"/>
             </lu>
           </chunk>
         </out>
