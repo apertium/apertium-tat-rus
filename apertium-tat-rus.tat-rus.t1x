@@ -81,7 +81,7 @@
 INPUT:  бакча
         ^бакча<n><nom>$
 OUTPUT: сад
-        ^сад<n><m><nn><sg><nom$
+        ^noun<NP>{^сад<n><m><nn><sg><nom$}$
 -->
     <rule comment="REGLA: noun">
       <pattern>
