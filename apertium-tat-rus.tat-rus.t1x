@@ -4,19 +4,25 @@
 <transfer default="chunk">
 
   <section-def-cats>
-    <def-cat n="nom">
+    <def-cat n="noun">
       <cat-item tags="n.*"/>
-    </def-cat>
-    <def-cat n="sent">
-      <cat-item tags="sent"/>
     </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_nom">
+    <def-attr n="a_noun">
       <attr-item tags="n"/>
     </def-attr>
-    <def-attr n="a_cas">
+    <def-attr n="a_gender">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+    </def-attr>
+    <def-attr n="a_anim">
+      <attr-item tags="aa"/>
+      <attr-item tags="nn"/>
+      <attr-item tags="an"/>
+    </def-attr>
+    <def-attr n="a_case">
       <attr-item tags="nom"/>
       <attr-item tags="gen"/>
       <attr-item tags="dir"/>
@@ -38,8 +44,9 @@
     <def-var n="sn_type"/>
   </section-def-vars>
 
+<!--
   <section-def-macros>
-    
+
     <def-macro n="conv_case1" npar="1">
       <let><var n="sn_type"/><lit-tag v="SN"/></let>
         <choose>
@@ -66,26 +73,33 @@
 
   </section-def-macros>
 
+-->
+
   <section-rules>
 
+<!--
+INPUT:  бакча
+        ^бакча<n><nom>$
+OUTPUT: сад
+        ^сад<n><m><nn><sg><nom$
+-->
     <rule comment="REGLA: noun">
       <pattern>
-        <pattern-item n="nom"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="conv_case1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="conv_number1">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk name="noun">
             <tags>
-              <tag><var n="sn_type"/></tag>
+              <tag><lit-tag v="NP"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <clip pos="1" side="tl" part="a_case"/>
             </lu>
           </chunk>
         </out>
