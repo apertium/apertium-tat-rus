@@ -26,5 +26,8 @@ dev/shupashkar/apertium-tt-ru.tt-ru.rlx -text
 dev/shupashkar/apertium-tt-ru.tt.lexc -text
 dev/shupashkar/apertium-tt-ru.tt.twol -text
 /modes.xml -text
+/pending-tests.sh -text
 /qa.sh -text
+/regression-tests.sh -text
 tests/tat-rus-corp.test -text
+/wiki-tests.sh -text
