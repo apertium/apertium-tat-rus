@@ -139,7 +139,7 @@
 <e>       <p><l>кайт<s n="v"/><s n="iv"/></l>     <r>возвращаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>капла<s n="v"/><s n="tv"/></l>    <r>закрывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кара<s n="v"/><s n="tv"/></l>     <r>смотреть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>кит<s n="v"/><s n="iv"/></l>      <r>уходить<s n="vblex"/><s n="perf"/><s n="iv"/></r></p></e>
+<e>       <p><l>кит<s n="v"/><s n="iv"/></l>      <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>көл<s n="v"/><s n="iv"/></l>      <r>смеяться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>күзәт<s n="v"/><s n="tv"/></l>    <r>наблюдать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>күр<s n="v"/><s n="tv"/></l>      <r>видеть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
@@ -148,6 +148,7 @@
 <e>       <p><l>тыңла<s n="v"/><s n="tv"/></l>    <r>слушать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>тырыш<s n="v"/><s n="iv"/></l>    <r>пытаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>шатлан<s n="v"/><s n="iv"/></l>   <r>радоваться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>эзлә<s n="v"/><s n="tv"/></l>     <r>искать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>     <r>работать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>яшерен<s n="v"/><s n="iv"/></l>   <r>прятаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 
