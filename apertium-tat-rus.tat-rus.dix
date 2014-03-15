@@ -23,25 +23,27 @@
     <sdef n="prep" 	c="Предлог"/> 
     <sdef n="cm" 	c="Запятая"/> 
     <sdef n="sent" 	c="Точка и другие знаки препинания"/> 
+
     <sdef n="pers" 	c="Личные"/> 
     <sdef n="dem" 	c="Указательные"/> 
     <sdef n="itg" 	c="Вопросительные"/> 
+
     <sdef n="m" 	c=""/> 
     <sdef n="f" 	c=""/> 
     <sdef n="nt" 	c=""/> 
+    <sdef n="mf" 	c=""/>
+    <sdef n="mfn" 	c=""/> 
+
     <sdef n="aa" 	c="Одушевленное"/> 
     <sdef n="an" 	c="Одушевленное / неодушевленное"/> 
     <sdef n="nn" 	c="Неодушевленное"/> 
+
+    <sdef n="p1" 	c=""/> 
+    <sdef n="p2" 	c=""/> 
+    <sdef n="p3" 	c=""/> 
+
   </sdefs>
   <section id="main" type="standard">
-    
-<!-- Раздел: Имена прилагательные -->
-
-<e>       <p><l>әйбәт<s n="adj"/></l>             <r>хороший<s n="adj"/></r></p></e>
-<e>       <p><l>бәләкәй<s n="adj"/></l>           <r>маленький<s n="adj"/></r></p></e>
-<e>       <p><l>шат<s n="adj"/></l>               <r>счастливый<s n="adj"/></r></p></e>
-<e>       <p><l>зур<s n="adj"/></l>               <r>большой<s n="adj"/></r></p></e>
-<e>       <p><l>иске<s n="adj"/></l>              <r>старый<s n="adj"/></r></p></e>
   
 <!-- Раздел: Союзы -->
 
@@ -51,6 +53,49 @@
 <e>       <p><l>ә<s n="cnjcoo"/></l>              <r>однако<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>вә<s n="cnjcoo"/></l>             <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>да<s n="cnjcoo"/></l>             <r>но<s n="cnjcoo"/></r></p></e>
+
+<!-- Раздел: Местоимения -->
+
+<e>       <p><l>мин<s n="prn"/><s n="pers"/><s n="p1"/></l><r>я<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
+<e>       <p><l>син<s n="prn"/><s n="pers"/><s n="p2"/></l><r>ты<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/></l><r>она<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/></l><r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/></r></p></e>
+<e>       <p><l>без<s n="prn"/><s n="pers"/><s n="p1"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
+<e>       <p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/></l><r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
+<e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/></r></p></e>
+
+<e>       <p><l>кайда<s n="prn"/><s n="itg"/></l> <r>где<s n="prn"/><s n="itg"/></r></p></e>
+<e>       <p><l>ни өчен<s n="prn"/><s n="itg"/></l><r>почему<s n="prn"/><s n="itg"/></r></p></e>
+<e>       <p><l>ни<s n="prn"/><s n="itg"/></l>    <r>что<s n="prn"/><s n="itg"/></r></p></e>
+<e>       <p><l>кая<s n="prn"/><s n="itg"/></l>   <r>куда<s n="prn"/><s n="itg"/></r></p></e>
+
+    <!-- Раздел: Указательные -->
+
+<e>       <p><l>шул<s n="prn"/><s n="dem"/></l>   <r>это<s n="prn"/><s n="dem"/></r></p></e>
+<e>       <p><l>бу<s n="prn"/><s n="dem"/></l>    <r>это<s n="prn"/><s n="dem"/></r></p></e>
+
+<!-- Раздел: Междометия и вводные слова -->
+
+<e>       <p><l>юк<s n="ij"/></l>                 <r>нет<s n="ij"/></r></p></e>
+<e>       <p><l>әлбәттә<s n="ij"/></l>            <r>конечно<s n="ij"/></r></p></e>
+<e>       <p><l>ди<s n="ij"/></l>                 <r>говорит<s n="ij"/></r></p></e>
+
+<!-- Раздел: Имена числительные -->
+
+<e>       <p><l>алты<s n="num"/></l>              <r>шесть<s n="num"/></r></p></e>
+<e>       <p><l>бер<s n="num"/></l>               <r>один<s n="num"/></r></p></e>
+<e>       <p><l>биш<s n="num"/></l>               <r>пять<s n="num"/></r></p></e>
+<e>       <p><l>ике<s n="num"/></l>               <r>два<s n="num"/></r></p></e>
+<e>       <p><l>берәр<s n="num"/></l>             <r>какой-нибудь<s n="prn"/></r></p></e>
+
+<!-- Раздел: Послелоги -->
+
+<e>       <p><l>алдындагы<s n="post"/></l>        <r>напротив<s n="prep"/></r></p></e>
+<e>       <p><l>артыннан<s n="post"/></l>         <r>из-за<s n="prep"/></r></p></e>
+<e>       <p><l>белән<s n="post"/></l>            <r>и<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>астында<s n="post"/></l>          <r>под<s n="prep"/></r></p></e>
+<e>       <p><l>сәбәпле<s n="post"/></l>          <r>причина<s n="n"/></r></p></e>
 
 <!-- Раздел: Наречия -->
 
@@ -72,44 +117,13 @@
 <e>       <p><l>тагын<s n="adv"/></l>             <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>хәзер<s n="adv"/></l>             <r>сейчас<s n="adv"/></r></p></e>
 
-<!-- Раздел: Местоимения -->
+<!-- Раздел: Имена прилагательные -->
 
-<e>       <p><l>мин<s n="prn"/><s n="pers"/></l>  <r>я<s n="prn"/><s n="pers"/></r></p></e>
-<e>       <p><l>син<s n="prn"/><s n="pers"/></l>  <r>ты<s n="prn"/><s n="pers"/></r></p></e>
-<e>       <p><l>алар<s n="prn"/><s n="pers"/></l> <r>они<s n="prn"/><s n="pers"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="pers"/></l>   <r>она<s n="prn"/><s n="pers"/></r></p></e>
-
-<e>       <p><l>кайда<s n="prn"/><s n="itg"/></l> <r>где<s n="prn"/><s n="itg"/></r></p></e>
-<e>       <p><l>ни өчен<s n="prn"/><s n="itg"/></l><r>почему<s n="prn"/><s n="itg"/></r></p></e>
-<e>       <p><l>ни<s n="prn"/><s n="itg"/></l>    <r>что<s n="prn"/><s n="itg"/></r></p></e>
-<e>       <p><l>кая<s n="prn"/><s n="itg"/></l>   <r>куда<s n="prn"/><s n="itg"/></r></p></e>
-
-    <!-- Раздел: Указательные -->
-
-<e>       <p><l>шул<s n="prn"/><s n="dem"/></l>   <r>это<s n="prn"/><s n="dem"/></r></p></e>
-<e>       <p><l>бу<s n="prn"/><s n="dem"/></l>    <r>это<s n="prn"/><s n="dem"/></r></p></e>
-
-<!-- Раздел: Междометия и вводные слова -->
-
-<e>       <p><l>юк<s n="ij"/></l>                 <r>нет<s n="ij"/></r></p></e>
-<e>       <p><l>әлбәттә<s n="ij"/></l>            <r>конечно<s n="ij"/></r></p></e>
-<e>       <p><l>ди<s n="ij"/></l>                 <r>говорит<s n="ij"/></r></p></e>
-
-<!-- Раздел: Послелоги -->
-
-<e>       <p><l>алдындагы<s n="post"/></l>        <r>напротив<s n="prep"/></r></p></e>
-<e>       <p><l>артыннан<s n="post"/></l>         <r>из-за<s n="prep"/></r></p></e>
-<e>       <p><l>белән<s n="post"/></l>            <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>астында<s n="post"/></l>          <r>под<s n="prep"/></r></p></e>
-<e>       <p><l>сәбәпле<s n="post"/></l>          <r>причина<s n="n"/></r></p></e>
-
-<!-- Раздел: Имена числительные -->
-
-<e>       <p><l>алты<s n="num"/></l>              <r>шесть<s n="num"/></r></p></e>
-<e>       <p><l>бер<s n="num"/></l>               <r>один<s n="num"/></r></p></e>
-<e>       <p><l>биш<s n="num"/></l>               <r>пять<s n="num"/></r></p></e>
-<e>       <p><l>ике<s n="num"/></l>               <r>два<s n="num"/></r></p></e>
-<e>       <p><l>берәр<s n="num"/></l>             <r>какой-нибудь<s n="prn"/></r></p></e>
+<e>       <p><l>әйбәт<s n="adj"/></l>             <r>хороший<s n="adj"/></r></p></e>
+<e>       <p><l>бәләкәй<s n="adj"/></l>           <r>маленький<s n="adj"/></r></p></e>
+<e>       <p><l>шат<s n="adj"/></l>               <r>счастливый<s n="adj"/></r></p></e>
+<e>       <p><l>зур<s n="adj"/></l>               <r>большой<s n="adj"/></r></p></e>
+<e>       <p><l>иске<s n="adj"/></l>              <r>старый<s n="adj"/></r></p></e>
 
 <!-- Раздел: Имена собственные -->
 
