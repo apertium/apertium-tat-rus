@@ -15,9 +15,9 @@ echo '[*@#] errors tat-rus after:'
 grep -c '[*@#]' corpa/tat-rus-nova.txt
 
 echo 'WER tat-rus before:'
-perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-origina.txt -ref corpa/corpus.rus.txt > /tmp/tat-rus-wer-origina.txt
+perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-origina.txt -ref corpa/tat-rus-posted.txt > /tmp/tat-rus-wer-origina.txt
 grep '(WER)' /tmp/tat-rus-wer-origina.txt
 echo 'WER tat-rus after:'
-perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-nova.txt -ref corpa/corpus.rus.txt > /tmp/tat-rus-wer-nova.txt
+perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-nova.txt -ref corpa/tat-rus-posted.txt > /tmp/tat-rus-wer-nova.txt
 grep '(WER)' /tmp/tat-rus-wer-nova.txt
 
