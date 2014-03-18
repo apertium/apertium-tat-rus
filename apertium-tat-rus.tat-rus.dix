@@ -35,7 +35,8 @@
     <sdef n="ant" 	c=""/> 
 
     <sdef n="sg" 	c=""/> 
-
+    <sdef n="pl" 	c=""/> 
+ 
     <sdef n="m" 	c=""/> 
     <sdef n="f" 	c=""/> 
     <sdef n="nt" 	c=""/> 
@@ -55,6 +56,26 @@
     <sdef n="p1" 	c=""/> 
     <sdef n="p2" 	c=""/> 
     <sdef n="p3" 	c=""/> 
+    <sdef n="ind"    c=""/>
+    <sdef n="nom"    c=""/>
+    <sdef n="pr"    c=""/>
+    <sdef n="loc"    c=""/>
+    <sdef n="mod_ind"    c=""/>
+    <sdef n="cop"    c=""/>
+    <sdef n="abl"    c=""/>
+    <sdef n="ref"    c=""/>
+    <sdef n="pos"    c=""/>
+    <sdef n="vaux"    c=""/>
+    <sdef n="imp"    c=""/>
+    <sdef n="cnjadv"    c=""/>
+    <sdef n="pres"    c=""/>
+    <sdef n="pred"    c=""/>
+    <sdef n="guio"    c=""/>
+    <sdef n="apos"    c=""/>
+    <sdef n="rpar"    c=""/>
+    <sdef n="lpar"    c=""/>
+    <sdef n="rquot"    c=""/>
+    <sdef n="lquot"    c=""/>
 
   </sdefs>
   <section id="main" type="standard">
@@ -123,8 +144,9 @@
 <e>       <p><l>бергә<s n="adv"/></l>             <r>вместе<s n="adv"/></r></p></e>
 <e>       <p><l>бик<s n="adv"/></l>               <r>очень<s n="adv"/></r></p></e>
 <e>       <p><l>бүген<s n="adv"/></l>             <r>сегодня<s n="adv"/></r></p></e>
-<e>       <p><l>гына<s n="adv"/></l>              <r>тепло<s n="adv"/></r></p></e>
-<e>       <p><l>җылы<s n="adv"/></l>              <r>довольно<s n="adv"/></r></p></e>
+<e>       <p><l>гына<s n="postadv"/></l>          <r>только<s n="adv"/></r></p></e>
+<e>       <p><l>җылы<s n="adv"/></l>              <r>тепло<s n="adv"/></r></p></e>
+<e>       <p><l>игътибар<b/>белән<s n="adv"/></l> <r>внимательно<s n="adv"/></r></p></e>
 <e>       <p><l>карап<s n="adv"/></l>             <r>смотря<s n="adv"/></r></p></e>
 <e>       <p><l>кичә<s n="adv"/></l>              <r>вчера<s n="adv"/></r></p></e>
 <e>       <p><l>соңрак<s n="adv"/></l>            <r>затем<s n="adv"/></r></p></e>
@@ -137,8 +159,6 @@
 <e>       <p><l>якынрак<s n="adv"/></l>           <r>ближе<s n="adv"/></r></p></e>
 <e>       <p><l>янәдән<s n="adv"/></l>            <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>яхшы<s n="adv"/></l>              <r>хорошо<s n="adv"/></r></p></e>
-
-<e>       <p><l>гына<s n="postadv"/></l>              <r>только<s n="adv"/></r></p></e>
 
 <!-- Раздел: Глаголы -->
 
@@ -238,48 +258,68 @@
 
 <!-- Раздел: Знаки препинания -->
 
-<e>       <p><l>,<s n="cm"/></l>                  <r>,<s n="cm"/></r></p></e>
-<e>       <re>[.\?;:!"]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+<e>       <p><l>,<s n="cm"/></l>                            <r>,<s n="cm"/></r></p></e>
+<e>       <p><l>(<s n="lpar"/></l>                          <r>(<s n="lpar"/></r></p></e>
+<e>       <p><l>)<s n="rpar"/></l>                          <r>)<s n="rpar"/></r></p></e>
+<e>       <p><l>[<s n="lpar"/></l>                          <r>[<s n="lpar"/></r></p></e>
+<e>       <p><l>]<s n="rpar"/></l>                          <r>]<s n="rpar"/></r></p></e>
+<e>       <p><l>«<s n="lquot"/></l>                         <r>«<s n="lquot"/></r></p></e>
+<e>       <p><l>»<s n="rquot"/></l>                         <r>»<s n="rquot"/></r></p></e>
+<e>       <p><l>“<s n="lquot"/></l>                         <r>“<s n="lquot"/></r></p></e>
+<e>       <p><l>”<s n="rquot"/></l>                         <r>”<s n="rquot"/></r></p></e>
+<e>       <p><l>-<s n="guio"/></l>                          <r>-<s n="guio"/></r></p></e>
+<e>       <p><l>—<s n="guio"/></l>                          <r>—<s n="guio"/></r></p></e>
+<e>       <p><l>'<s n="apos"/></l>                          <r>'<s n="apos"/></r></p></e>
+<e>       <re>[.\?;:!"]+</re><p><l><s n="sent"/></l>        <r><s n="sent"/></r></p></e>
+<e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e> 
+
+<!-- The surface forms of the following LU's were added here first, then I
+     looked them up in transducers to lemmatize them and to see which
+     analyses and tags they receive. Then I chose the right analysis
+     and deleted the reduntant tags. Might be a good approach to work
+     on bidix.  Keep in mind that the analyses transducers provide
+     might be wrong (miscategorized etc.) -->
+
+<e>       <p><l>ал<s n="v"/><s n="tv"/></l><r>брать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
+<e>       <p><l>арт<s n="n"/><s n="loc"/></l><r>позади<s n="adv"/></r></p></e>
+<e>       <p><l>арт<s n="n"/></l><r>зад<s n="n"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>аст<s n="n"/></l><r>низ<s n="n"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>аш<s n="n"/></l><r>еда<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/>$</r></p></e>
+<e>       <p><l>аша<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
+<e>       <p><l>аша<s n="post"/></l><r>через<s n="pr"/></r></p></e>
+<e>       <p><l>бар<s n="v"/><s n="iv"/></l><r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>бар<s n="adj"/></l><r>быть<s n="vbser"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
+<e>       <p><l>белән<s n="post"/></l><r>с<s n="pr"/></r></p></e>
+<e>       <p><l>белән<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>бер<s n="num"/></l><r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>берәр<s n="det"/><s n="ind"/></l><r>какой-то<s n="prn"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>бәлки<s n="cnjcoo"/></l><r>а<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>бул<s n="vaux"/><s n="imp"/><s n="p2"/><s n="sg"/></l><r>быть<s n="vbser"/></r></p></e>
+<e>       <p><l>да<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>да<s n="postadv"/></l><r>тоже<s n="adv"/></r></p></e>
+<e>       <p><l>дыр<s n="mod_ind"/></l><r>наверное<s n="adv"/></r></p></e>
+<e>       <p><l>елмай<s n="v"/><s n="iv"/></l><r>улыбаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>әле<s n="cnjcoo"/></l><r>пока<s n="cnjadv"/></r></p></e>
+<e>       <p><l>әле<s n="adv"/></l><r>пока<s n="adv"/></r></p></e>
+<e>       <p><l>и<s n="cop"/></l><r>быть<s n="vbser"/></r></p></e>
+<e>       <p><l>кайда<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
+<e>       <p><l>кая<s n="adv"/><s n="itg"/></l><r>куда<s n="adv"/><s n="itg"/></r></p></e>
+<e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/><s n="nt"/><s n="sg"/></r></p></e>
+<e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l><r>вещь<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ни<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/><s n="nt"/></r></p></e>
+<e>       <p><l>тиеш<s n="adj"/></l><r>должен<s n="pred"/></r></p></e>
+<e>       <p><l>тирә-як<s n="n"/></l><r>окрестность<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="n"/></l><r>сын<s n="n"/><s n="m"/><s n="aa"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="dem"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>ул<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/><s n="nt"/><s n="an"/><s n="sg"/></r></p></e>
+<e>       <p><l>үз<s n="det"/><s n="ref"/></l><r>свой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/>$</r></p></e>
+<e>       <p><l>үз<s n="prn"/><s n="ref"/><s n="p3"/><s n="sg"/></l><r>сам<s n="prn"/><s n="ref"/><s n="m"/><s n="nn"/><s n="sg"/></r></p></e>
+<e>       <p><l>шул<s n="det"/><s n="dem"/></l><r>тот<s n="det"/><s n="dem"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>шул<s n="prn"/><s n="dem"/></l><r>тот<s n="prn"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>оттуда<s n="adv"/></r></p></e>
+<e>       <p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>потом<s n="adv"/></r></p></e>
   
   </section>
 </dictionary>
-
-<!--
-Pending:
-ал
-алд
-арт
-аст
-аш
-бар
-Бар
-белән
-Бәлки
-бер
-Бер
-берәр
-бул
-да
-дыр
-әле
-елмаю
-и
-кайда
-КАЙДА
-кая
-ки
-мы
-нәрсә
-ни
-Ни
-тиеш
-тирә
-үз
-ул
-Ул
-чы
-Шул
-Шуңа
-Шуннан
-ян
--->
