@@ -308,6 +308,7 @@
 <e>       <p><l>и<s n="cop"/></l><r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>кайда<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>кая<s n="adv"/><s n="itg"/></l><r>куда<s n="adv"/><s n="itg"/></r></p></e>
+<e>       <p><l>ки<s n="v"/><s n="tv"/></l><r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/><s n="nt"/><s n="sg"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l><r>вещь<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>ни<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/><s n="nt"/></r></p></e>
@@ -325,6 +326,7 @@
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l><r>тот<s n="prn"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e c="шуннан"><p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>оттуда<s n="adv"/></r></p></e>
 <e c="шуннан"><p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>потом<s n="adv"/></r></p></e>
+<e>       <p><l>шуннан<b/>соң<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
   
   </section>
 </dictionary>
