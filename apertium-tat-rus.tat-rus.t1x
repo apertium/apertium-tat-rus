@@ -164,7 +164,7 @@ OUTPUT: в школе
 INPUT:  Гөлнараның эте юк
         ^Гөлнара<np><ant><f><gen>$ ^эт<n><px3sp><nom>$ ^юк<adj>$ ^и<cop><p3><sg>
 OUTPUT: У Гульнары нет собаки
-        ^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$
+        ^bar-yuq<S>{^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
 -->
     <rule comment="">
       <pattern>
