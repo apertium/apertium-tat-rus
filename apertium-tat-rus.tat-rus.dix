@@ -77,6 +77,7 @@
     <sdef n="rquot"    c=""/>
     <sdef n="lquot"    c=""/>
     <sdef n="px3sp"    c=""/>
+    <sdef n="neg"    c=""/>
   </sdefs>
   <section id="main" type="standard">
   
@@ -327,6 +328,7 @@
 <e c="шуннан"><p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>оттуда<s n="adv"/></r></p></e>
 <e c="шуннан"><p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>потом<s n="adv"/></r></p></e>
 <e>       <p><l>шуннан<b/>соң<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
+<e>       <p><l>юк<s n="adj"/></l><r>быть<s n="vbser"/><s n="neg"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
   
   </section>
 </dictionary>

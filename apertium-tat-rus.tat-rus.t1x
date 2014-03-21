@@ -7,14 +7,30 @@
     <def-cat n="noun-nom">
       <cat-item tags="n.nom"/>
     </def-cat>
+    <def-cat n="noun-gen">
+      <cat-item tags="n.gen"/>
+      <cat-item tags="np.ant.f.gen"/>
+    </def-cat>
     <def-cat n="noun-loc">
       <cat-item tags="n.loc"/>
+    </def-cat>
+    <def-cat n="noun-px3sp-nom">
+      <cat-item tags="n.px3sp.nom"/>
+    </def-cat>
+    <def-cat n="bar-yuq-adj">
+      <cat-item lemma="бар" tags="adj"/>
+      <cat-item lemma="юк" tags="adj"/>
+    </def-cat>
+    <def-cat n="cop-p3">
+      <cat-item tags="cop.p3.sg"/>
+     <cat-item tags="cop.p3.pl"/>
     </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
     <def-attr n="a_noun">
       <attr-item tags="n"/>
+      <attr-item tags="np.ant"/>
     </def-attr>
     <def-attr n="a_gender">
       <attr-item tags="m"/>
@@ -138,6 +154,56 @@ OUTPUT: в школе
               <clip pos="1" side="tl" part="a_anim"/>
               <lit-tag v="sg"/>
               <lit-tag v="prp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  Гөлнараның эте юк
+        ^Гөлнара<np><ant><f><gen>$ ^эт<n><px3sp><nom>$ ^юк<adj>$ ^и<cop><p3><sg>
+OUTPUT: У Гульнары нет собаки
+        ^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="noun-gen"/>
+        <pattern-item n="noun-px3sp-nom"/>
+        <pattern-item n="bar-yuq-adj"/>
+        <pattern-item n="cop-p3"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="bar-yuq">
+            <tags>
+              <tag><lit-tag v="S"/></tag>
+            </tags>
+            <lu>
+              <lit v="у"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <lit-tag v="gen"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_noun"/>
+              <clip pos="2" side="tl" part="a_gender"/>
+              <clip pos="2" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="gen"/>
             </lu>
           </chunk>
         </out>
