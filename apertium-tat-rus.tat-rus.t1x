@@ -17,8 +17,7 @@
     <def-cat n="noun-px3sp-nom">
       <cat-item tags="n.px3sp.nom"/>
     </def-cat>
-    <def-cat n="bar-yuq-adj">
-      <cat-item lemma="бар" tags="adj"/>
+    <def-cat n="yuq-adj">
       <cat-item lemma="юк" tags="adj"/>
     </def-cat>
     <def-cat n="cop-p3">
@@ -170,7 +169,7 @@ OUTPUT: У Гульнары нет собаки
       <pattern>
         <pattern-item n="noun-gen"/>
         <pattern-item n="noun-px3sp-nom"/>
-        <pattern-item n="bar-yuq-adj"/>
+        <pattern-item n="yuq-adj"/>
         <pattern-item n="cop-p3"/>
       </pattern>
       <action>
