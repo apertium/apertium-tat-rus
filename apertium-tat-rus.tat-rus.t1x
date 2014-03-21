@@ -24,12 +24,19 @@
       <cat-item tags="cop.p3.sg"/>
      <cat-item tags="cop.p3.pl"/>
     </def-cat>
+    <def-cat n="vbser">
+      <cat-item tags="vbser"/>
+    </def-cat>
+
   </section-def-cats>
 
   <section-def-attrs>
     <def-attr n="a_noun">
       <attr-item tags="n"/>
       <attr-item tags="np.ant"/>
+    </def-attr>
+    <def-attr n="a_vbser">
+      <attr-item tags="vbser"/>
     </def-attr>
     <def-attr n="a_gender">
       <attr-item tags="m"/>
@@ -44,55 +51,46 @@
     <def-attr n="a_case">
       <attr-item tags="nom"/>
       <attr-item tags="gen"/>
-      <attr-item tags="dir"/>
+      <attr-item tags="dat"/>
       <attr-item tags="acc"/>
-      <attr-item tags="ish"/>
-      <attr-item tags="mest"/>
+      <attr-item tags="abl"/>
+      <attr-item tags="loc"/>
       <attr-item tags="prp"/>
     </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
-      <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="a_tense">
+      <attr-item tags="pres"/>
     </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="current_verb"/>
-    <def-var n="sn_type"/>
+    <def-var n="tense"/>
   </section-def-vars>
 
-<!--
   <section-def-macros>
 
-    <def-macro n="conv_case1" npar="1">
-      <let><var n="sn_type"/><lit-tag v="SN"/></let>
-        <choose>
-          <when>
-            <test>
-              <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="mest"/></equal>
-            </test>
-            <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
-            <let><var n="sn_type"/><lit-tag v="SN.MEST"/></let>
-        </when>
-        </choose>
-    </def-macro>
-
-    <def-macro n="conv_number1" npar="1">
+    <def-macro n="assign-pres-tense" npar="1">
       <choose>
         <when>
           <test>
-            <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="ND"/></equal>
+            <equal>
+              <clip pos="1" side="sl" part="a_tense"/>
+              <lit v=""/>
+            </equal>
           </test>
-          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
-          </when>
-        </choose>
+          <let><var n="tense"/><lit-tag v="pres"/></let>
+        </when>
+      </choose>
     </def-macro>
 
   </section-def-macros>
-
--->
 
   <section-rules>
 
@@ -203,6 +201,35 @@ OUTPUT: У Гульнары нет собаки
               <clip pos="2" side="tl" part="a_anim"/>
               <lit-tag v="sg"/>
               <lit-tag v="gen"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^и<cop><p3><sg>/быть<vbser><p3><sg>$
+OUTPUT: ^vbser<V>{^быть<vbser><pres><p3><sg>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="cop-p3"/>
+      </pattern>
+      <action>
+        <call-macro n="assign-pres-tense">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="vbser">
+            <tags>
+              <tag><lit-tag v="V"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vbser"/>
+              <var n="tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
         </out>
