@@ -2,59 +2,37 @@
 <!-- -*- nxml -*- -->
 <interchunk>
   <section-def-cats>
-    <def-cat n="SN">
-      <cat-item tags="SN"/>
-      <cat-item tags="SN.*"/>
+    <def-cat n="PP">
+      <cat-item tags="PP"/>
     </def-cat>
-    <def-cat n="SN_MEST">
-      <cat-item tags="SN.MEST"/>
-      <cat-item tags="SN.MEST.*"/>
+    <def-cat n="VBSER">
+      <cat-item lemma="vbser" tags="V"/>
     </def-cat>
   </section-def-cats>
+
   <section-def-attrs>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
-      <attr-item tags="ND"/>
-    </def-attr>
-    <def-attr n="a_cas">
-      <attr-item tags="nom"/>
-      <attr-item tags="gen"/>
-      <attr-item tags="dir"/>
-      <attr-item tags="acc"/>
-      <attr-item tags="ish"/>
-      <attr-item tags="mest"/>
-      <attr-item tags="prp"/>
     </def-attr>
   </section-def-attrs>
+
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="POST"/>
   </section-def-vars>
-  <section-def-macros>
-    <def-macro n="test1" npar="1">
-      <let>
-        <var n="POST"/>
-        <lit v=""/>
-      </let>
-    </def-macro>
-  </section-def-macros>
-  
+
+<!--
+INPUT:  ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$ ^vbser<V>{^быть<vbser><pres><p3><sg>$}$
+OUTPUT: ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$
+-->
   <section-rules>
-    <rule comment="REGLA: SN_MEST">
+    <rule comment="">
       <pattern>
-        <pattern-item n="SN_MEST"/>
+        <pattern-item n="PP"/>
+        <pattern-item n="VBSER"/>
       </pattern>
       <action>
         <out>
-          <chunk>
-             <lit v="prep"/>
-             <lit-tag v="pr"/>
-             <lit v="{^в"/>
-             <lit-tag v="pr"/>
-             <lit v="$}"/>
-          </chunk>
-          <b/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>

@@ -127,7 +127,7 @@ OUTPUT: школа
 INPUT:  мәктәптә
         ^мәктәп<n><loc>$
 OUTPUT: в школе
-        ^pr-noun<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
+        ^noun_loc<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
 -->
     <rule comment="">
       <pattern>
@@ -135,7 +135,7 @@ OUTPUT: в школе
       </pattern>
       <action>
         <out>
-          <chunk name="pr-noun">
+          <chunk name="noun_loc">
             <tags>
               <tag><lit-tag v="PP"/></tag>
             </tags>
