@@ -6,6 +6,8 @@
   <section-def-cats>
     <def-cat n="noun-nom">
       <cat-item tags="n.nom"/>
+      <cat-item tags="prn.pers.*.*.*.nom"/>
+      <cat-item tags="prn.dem.nom"/>
     </def-cat>
     <def-cat n="noun-gen">
       <cat-item tags="n.gen"/>
@@ -34,6 +36,10 @@
     <def-attr n="a_noun">
       <attr-item tags="n"/>
       <attr-item tags="np.ant"/>
+      <attr-item tags="prn.pers.p1"/>
+      <attr-item tags="prn.pers.p2"/>
+      <attr-item tags="prn.pers.p3"/>
+      <attr-item tags="prn.dem"/>
     </def-attr>
     <def-attr n="a_vbser">
       <attr-item tags="vbser"/>
@@ -42,6 +48,7 @@
       <attr-item tags="m"/>
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
+      <attr-item tags="mf"/>
     </def-attr>
     <def-attr n="a_anim">
       <attr-item tags="aa"/>
@@ -90,6 +97,23 @@
       </choose>
     </def-macro>
 
+    <def-macro n="assign-tl-number-according-to-sl-nbr" npar="1">
+      <choose>
+        <when>
+          <test>
+            <equal>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <lit-tag v="pl"/>
+            </equal>
+          </test>
+          <let><var n="number"/><lit-tag v="pl"/></let>
+        </when>
+        <otherwise>
+          <let><var n="number"/><lit-tag v="sg"/></let>
+        </otherwise>   
+      </choose>
+    </def-macro>
+
   </section-def-macros>
 
   <section-rules>
@@ -98,15 +122,18 @@
 INPUT:  мәктәп
         ^мәктәп<n><nom>$
 OUTPUT: школа
-        ^noun<NP>{^школа<n><m><nn><sg><nom$}$
+        ^noun-nom<NP>{^школа<n><m><nn><sg><nom$}$
 -->
     <rule comment="">
       <pattern>
         <pattern-item n="noun-nom"/>
       </pattern>
       <action>
+        <call-macro n="assign-tl-number-according-to-sl-nbr">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
-          <chunk name="noun">
+          <chunk name="noun-nom">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
@@ -115,7 +142,7 @@ OUTPUT: школа
               <clip pos="1" side="tl" part="a_noun"/>
               <clip pos="1" side="tl" part="a_gender"/>
               <clip pos="1" side="tl" part="a_anim"/>
-              <lit-tag v="sg"/>
+              <var n="number"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
           </chunk>
