@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
+
 <interchunk>
+
   <section-def-cats>
     <def-cat n="PP">
       <cat-item tags="PP"/>
     </def-cat>
     <def-cat n="VBSER">
-      <cat-item lemma="vbser" tags="V"/>
+      <cat-item lemma="cop-pres" tags="VBSER"/>
     </def-cat>
   </section-def-cats>
 
@@ -21,11 +23,12 @@
     <def-var n="number"/>
   </section-def-vars>
 
+  <section-rules>
+
 <!--
-INPUT:  ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$ ^vbser<V>{^быть<vbser><pres><p3><sg>$}$
+INPUT:  ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
 OUTPUT: ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$
 -->
-  <section-rules>
     <rule comment="">
       <pattern>
         <pattern-item n="PP"/>
@@ -41,6 +44,7 @@ OUTPUT: ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$
         </out>
       </action>
     </rule>
+
   </section-rules>
 </interchunk>
 

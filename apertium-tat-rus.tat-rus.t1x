@@ -209,7 +209,7 @@ OUTPUT: У Гульнары нет собаки
 
 <!--
 INPUT:  ^и<cop><p3><sg>/быть<vbser><p3><sg>$
-OUTPUT: ^vbser<V>{^быть<vbser><pres><p3><sg>$}$
+OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
 -->
     <rule comment="">
       <pattern>
@@ -220,9 +220,9 @@ OUTPUT: ^vbser<V>{^быть<vbser><pres><p3><sg>$}$
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="vbser">
+          <chunk name="cop-pres">
             <tags>
-              <tag><lit-tag v="V"/></tag>
+              <tag><lit-tag v="VBSER"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
