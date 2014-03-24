@@ -29,8 +29,8 @@
   <section-rules>
 
 <!--
-INPUT:  ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
-OUTPUT: ^noun_loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$
+INPUT:  ^noun-loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
+OUTPUT: ^noun-loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$
 -->
     <rule comment="">
       <pattern>

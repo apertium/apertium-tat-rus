@@ -6,8 +6,10 @@
   <section-def-cats>
     <def-cat n="noun-nom">
       <cat-item tags="n.nom"/>
+      <cat-item tags="n.pl.nom"/>
       <cat-item tags="prn.pers.*.*.*.nom"/>
       <cat-item tags="prn.dem.nom"/>
+      <cat-item tags="prn.dem.pl.nom"/>
     </def-cat>
     <def-cat n="noun-gen">
       <cat-item tags="n.gen"/>
@@ -25,6 +27,9 @@
     <def-cat n="cop-p3">
       <cat-item tags="cop.p3.sg"/>
      <cat-item tags="cop.p3.pl"/>
+    </def-cat>
+    <def-cat n="cop-pres">
+      <cat-item tags="cop.*.*"/>
     </def-cat>
     <def-cat n="vbser">
       <cat-item tags="vbser"/>
@@ -49,6 +54,7 @@
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
       <attr-item tags="mf"/>
+      <attr-item tags="mfn"/>
     </def-attr>
     <def-attr n="a_anim">
       <attr-item tags="aa"/>
@@ -73,6 +79,7 @@
     </def-attr>
     <def-attr n="a_tense">
       <attr-item tags="pres"/>
+      <attr-item tags="ifi"/>
     </def-attr>
   </section-def-attrs>
 
@@ -83,17 +90,20 @@
 
   <section-def-macros>
 
-    <def-macro n="assign-pres-tense" npar="1">
+    <def-macro n="convert-tense-or-assign-pres" npar="1">
       <choose>
         <when>
           <test>
             <equal>
               <clip pos="1" side="sl" part="a_tense"/>
-              <lit v=""/>
+              <lit-tag v="ifi"/>
             </equal>
           </test>
-          <let><var n="tense"/><lit-tag v="pres"/></let>
+          <let><var n="tense"/><lit-tag v="past"/></let>
         </when>
+        <otherwise>
+          <let><var n="tense"/><lit-tag v="pres"/></let>
+        </otherwise>
       </choose>
     </def-macro>
 
@@ -154,7 +164,7 @@ OUTPUT: школа
 INPUT:  мәктәптә
         ^мәктәп<n><loc>$
 OUTPUT: в школе
-        ^noun_loc<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
+        ^noun-loc<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
 -->
     <rule comment="">
       <pattern>
@@ -162,7 +172,7 @@ OUTPUT: в школе
       </pattern>
       <action>
         <out>
-          <chunk name="noun_loc">
+          <chunk name="noun-loc">
             <tags>
               <tag><lit-tag v="PP"/></tag>
             </tags>
@@ -240,10 +250,10 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
 -->
     <rule comment="">
       <pattern>
-        <pattern-item n="cop-p3"/>
+        <pattern-item n="cop-pres"/>
       </pattern>
       <action>
-        <call-macro n="assign-pres-tense">
+        <call-macro n="convert-tense-or-assign-pres">
           <with-param pos="1"/>
         </call-macro>
         <out>
