@@ -87,11 +87,15 @@
       <attr-item tags="pres"/>
       <attr-item tags="ifi"/>
     </def-attr>
+    <def-attr n="a_neg">
+      <attr-item tags="neg"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="tense"/>
+    <def-var n="negation"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -127,6 +131,21 @@
         <otherwise>
           <let><var n="number"/><lit-tag v="sg"/></let>
         </otherwise>   
+      </choose>
+    </def-macro>
+
+    <def-macro n="convert-neg-to-ne.adv" npar="1">
+      <!-- arg.1 verb
+           Sets 'negation' variable to 'не<adv>' if the verb contains <neg> tag
+      -->
+      <let><var n="negation"/><lit v=""/></let>
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
+          </test>
+          <let><var n="negation"/><concat><lit v="не"/><lit-tag v="adv"/></concat></let>
+        </when>
       </choose>
     </def-macro>
 
@@ -291,11 +310,18 @@ OUTPUT: ^verb<VBLEX>{^играть<vblex><impf><pres><p1><sg>$}$
         <call-macro n="convert-tense-or-assign-pres">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="convert-neg-to-ne.adv">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="verb">
             <tags>
               <tag><lit-tag v="VBLEX"/></tag>
             </tags>
+            <lu>
+              <var n="negation"/>
+            </lu>
+            <b/>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_vblex"/>
