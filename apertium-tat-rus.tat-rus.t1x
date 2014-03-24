@@ -31,8 +31,8 @@
     <def-cat n="cop-pres">
       <cat-item tags="cop.*.*"/>
     </def-cat>
-    <def-cat n="vbser">
-      <cat-item tags="vbser"/>
+    <def-cat n="verb">
+      <cat-item tags="v.*"/>
     </def-cat>
 
   </section-def-cats>
@@ -48,6 +48,10 @@
     </def-attr>
     <def-attr n="a_vbser">
       <attr-item tags="vbser"/>
+    </def-attr>
+    <def-attr n="a_vblex">
+      <attr-item tags="vblex.impf"/>
+      <attr-item tags="vblex.perf"/>
     </def-attr>
     <def-attr n="a_gender">
       <attr-item tags="m"/>
@@ -75,6 +79,8 @@
       <attr-item tags="pl"/>
     </def-attr>
     <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
       <attr-item tags="p3"/>
     </def-attr>
     <def-attr n="a_tense">
@@ -264,6 +270,35 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_vbser"/>
+              <var n="tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
+OUTPUT: ^verb<VBLEX>{^играть<vblex><impf><pres><p1><sg>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-tense-or-assign-pres">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="verb">
+            <tags>
+              <tag><lit-tag v="VBLEX"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <var n="tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
