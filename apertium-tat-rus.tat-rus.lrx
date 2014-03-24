@@ -2,4 +2,7 @@
   <rule>
     <match lemma="эт" tags="n.*"><select lemma="собака" tags="n.*"/></match>
   </rule>
+  <rule>
+    <match lemma="ул" tags="prn.pers.*"><select lemma="он" tags="prn.pers.*"/></match>
+  </rule>
 </rules>
