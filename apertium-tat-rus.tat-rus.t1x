@@ -39,6 +39,10 @@
       <cat-item tags="v.*.ifi.*"/>
       <cat-item tags="v.*.*.ifi.*"/>
     </def-cat>
+    <def-cat n="inf">
+      <cat-item tags="v.*.inf"/>
+      <cat-item tags="v.*.*.inf.*"/>
+    </def-cat>
     <def-cat n="qst">
       <cat-item tags="qst"/>
     </def-cat>
@@ -353,6 +357,30 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
               <lit-tag v="past"/>
               <var n="gender"/>
               <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^уйна<v><tv><inf>/играть<vblex><impf><tv><inf>$
+OUTPUT: ^inf<VBLEX>{^играть<vblex><impf><tv><inf>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="inf">
+            <tags>
+              <tag><lit-tag v="VBLEX"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
+              <lit-tag v="inf"/>
             </lu>
           </chunk>
         </out>
