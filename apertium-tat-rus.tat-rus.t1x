@@ -39,7 +39,12 @@
       <cat-item tags="v.*.ifi.*"/>
       <cat-item tags="v.*.*.ifi.*"/>
     </def-cat>
-
+    <def-cat n="qst">
+      <cat-item tags="qst"/>
+    </def-cat>
+    <def-cat n="sent">
+      <cat-item tags="sent"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -348,6 +353,30 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
               <lit-tag v="past"/>
               <var n="gender"/>
               <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  (^бел<v><tv><pres><p2><pl>/знать<vblex><impf><tv><pres><p2><pl>$)
+        ^мы<qst>/@мы<qst>$^?<sent>/?<sent>$
+OUTPUT: ^qst<SENT>{^?<sent>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="qst"/>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="qst">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
