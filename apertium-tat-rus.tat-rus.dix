@@ -213,7 +213,8 @@
 <e>       <p><l>сөйлә<s n="v"/><s n="tv"/></l>              <r>рассказывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>су<s n="n"/></l>                            <r>вода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>суык<s n="adj"/></l>                        <r>холодный<s n="adj"/></r></p></e>
-<e>       <p><l>суык<s n="adv"/></l>                        <r>холодно<s n="adv"/></r></p></e>
+<e>       <p><l>суык<s n="adj"/></l>                        <r>холодно<s n="adv"/></r></p></e> <!-- FIXME CHECK (used for 'салкын (иде)>холодно (было)'
+                                                                                                    see also related adj+cop>adv lrx rule-->
 <e>       <p><l>таба<s n="post"/></l>                       <r>к<s n="pr"/></r></p></e>
 <e>       <p><l>тавыш<s n="n"/></l>                         <r>звук<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>тагын<s n="adv"/></l>                       <r>снова<s n="adv"/></r></p></e>
@@ -221,7 +222,7 @@
 <e>       <p><l>тәрәзә<s n="n"/></l>                        <r>окно<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>тиеш<s n="adj"/></l>                        <r>должен<s n="pred"/></r></p></e>
 <e>       <p><l>тиз<s n="adj"/></l>                         <r>быстрый<s n="adj"/></r></p></e>
-<e>       <p><l>тик<s n="cnjcoo"/></l>                      <r>но<b/>только<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>тик<s n="cnjcoo"/></l>                      <r>но<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>тирә-як<s n="n"/></l>                       <r>окрестность<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/></r></p></e>
 <e>       <p><l>тор<s n="v"/><s n="iv"/></l>                <r>стоять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>түк<s n="v"/><s n="tv"/></l>                <r>лить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>

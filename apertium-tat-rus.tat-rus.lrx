@@ -5,4 +5,15 @@
   <rule>
     <match lemma="ул" tags="prn.pers.*"><select lemma="он" tags="prn.pers.*"/></match>
   </rule>
+
+<!--
+INPUT:  ^Тик<cnjcoo>/Но<cnjcoo>$ ^кичә<adv>/вчера<adv>$ ^бик<adv>/очень<adv>$
+        ^суык<adj>/холодно<adv>/холодный<adj>$ ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
+OUTPUT: ^Тик<cnjcoo>/Но<cnjcoo>$ ^кичә<adv>/вчера<adv>$ ^бик<adv>/очень<adv>$
+        [0]^суык<adj>/холодно<adv>$ ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
+-->
+  <rule>
+    <match tags="adj"><select tags="adv"/></match>
+    <match tags="cop.*"/>
+  </rule>
 </rules>
