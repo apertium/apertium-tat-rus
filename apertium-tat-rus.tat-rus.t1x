@@ -21,6 +21,18 @@
     <def-cat n="noun-px3sp-nom">
       <cat-item tags="n.px3sp.nom"/>
     </def-cat>
+    <def-cat n="noun-px">
+      <cat-item tags="n.px1sg.*"/>
+      <cat-item tags="n.*.px1sg.*"/>
+      <cat-item tags="n.px2sg.*"/>
+      <cat-item tags="n.*.px2sg.*"/>
+      <cat-item tags="n.px3sp.*"/>
+      <cat-item tags="n.*.px3sp.*"/>
+      <cat-item tags="n.px1pl.*"/>
+      <cat-item tags="n.*.px1pl.*"/>
+      <cat-item tags="n.px2pl.*"/>
+      <cat-item tags="n.*.px2pl.*"/>
+    </def-cat>
     <def-cat n="yuq-adj">
       <cat-item lemma="юк" tags="adj"/>
     </def-cat>
@@ -48,6 +60,11 @@
       <cat-item tags="v.*.inf"/>
       <cat-item tags="v.*.*.inf.*"/>
     </def-cat>
+    <def-cat n="prn-gen">
+      <cat-item tags="prn.pers.*.*.gen"/>
+     <cat-item lemma="ул" tags="prn.dem.gen"/>
+      <cat-item lemma="ул" tags="prn.dem.pl.gen"/> 
+   </def-cat>
     <def-cat n="qst">
       <cat-item tags="qst"/>
     </def-cat>
@@ -64,6 +81,9 @@
       <attr-item tags="prn.pers.p2"/>
       <attr-item tags="prn.pers.p3"/>
       <attr-item tags="prn.dem"/>
+    </def-attr>
+    <def-attr n="a_det">
+      <attr-item tags="det.pos"/>
     </def-attr>
     <def-attr n="a_vbser">
       <attr-item tags="vbser"/>
@@ -461,6 +481,80 @@ OUTPUT: ^sent<SENT>{^.<sent>$}$
             </lu>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
+OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="prn-gen"/>
+        <pattern-item n="noun-px"/>
+      </pattern>
+      <action>
+        <call-macro n="assign-tl-number-according-to-sl-nbr">
+          <with-param pos="2"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
+        <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
+        <choose>
+          <when>
+            <test>
+              <or>
+                <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="его"/></equal>
+                <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="их"/></equal>
+              </or>
+            </test>
+            <out>
+              <chunk name="det_noun">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_det"/>
+                </lu>
+                <b/>
+                <lu>
+                  <clip pos="2" side="tl" part="lem"/>
+                  <clip pos="2" side="tl" part="a_noun"/>
+                  <clip pos="2" side="tl" part="a_gender"/>
+                  <clip pos="2" side="tl" part="a_anim"/>
+                  <var n="number"/>
+                  <clip pos="2" side="tl" part="a_case"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="det_noun">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_det"/>
+                  <clip pos="1" side="tl" part="a_gender"/>
+                  <clip pos="1" side="tl" part="a_anim"/>
+                  <var n="number"/>
+                  <clip pos="2" side="tl" part="a_case"/>
+                </lu>
+                <b/>
+                <lu>
+                  <clip pos="2" side="tl" part="lem"/>
+                  <clip pos="2" side="tl" part="a_noun"/>
+                  <clip pos="2" side="tl" part="a_gender"/>
+                  <clip pos="2" side="tl" part="a_anim"/>
+                  <var n="number"/>
+                  <clip pos="2" side="tl" part="a_case"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 

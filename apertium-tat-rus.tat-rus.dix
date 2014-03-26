@@ -73,6 +73,8 @@
     <sdef n="part" 	c=""/> 
     <sdef n="qnt" 	c=""/> 
     <sdef n="vbmod" 	c=""/> 
+    <sdef n="gen" 	c=""/> 
+    <sdef n="dat" 	c=""/> 
   </sdefs>
   <section id="main" type="standard">
 
@@ -82,6 +84,39 @@
      and deleted the reduntant tags. Might be a good approach to work
      on bidix.  Keep in mind that the analyses transducers provide
      might be wrong (miscategorized etc.) -->
+
+<!-- SECTION: Closed categories -->
+
+    <!-- Pronouns -->
+
+<e>       <p><l>мин<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>я<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <p><l>син<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></l><r>ты<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l> <r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l> <r>она<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l> <r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/><s n="sg"/></r></p></e>
+<e>       <p><l>без<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></l><r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l> <r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>ул<s n="prn"/><s n="dem"/></l>              <r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+<e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l>   <r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
+
+    <!-- Determiners -->
+
+<e c="минем"><p><l>мин<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/><s n="gen"/></l><r>мой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/></r></p></e>
+<e c="синең"><p><l>син<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/><s n="gen"/></l><r>твой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/></r></p></e>
+<e c="аның"><p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/><s n="gen"/></l> <r>его<s n="det"/><s n="pos"/></r></p></e>
+<e c="безнең"><p><l>без<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="gen"/></l><r>наш<s n="det"/><s n="pos"/><s n="m"/></r></p></e>
+<e c="сезнең"><p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/><s n="gen"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/></r></p></e>
+<e c="аларның"><p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/><s n="gen"/></l> <r>их<s n="det"/><s n="pos"/></r></p></e>
+
+<e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l> <r>его<s n="det"/><s n="pos"/></r></p></e>
+<e c="аларның"><p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/><s n="gen"/></l> <r>их<s n="det"/><s n="pos"/></r></p></e>
+
+<e>       <p><l>ул<s n="det"/><s n="dem"/></l>              <r>этот<s n="det"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
+
+
+<!-- SECTION:  -->
 
 <e>       <p><l>агач<s n="n"/></l>                          <r>дерево<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>ал<s n="v"/><s n="tv"/></l>                 <r>брать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
@@ -94,6 +129,7 @@
 <e>       <p><l>аңла<s n="v"/><s n="tv"/></l>               <r>понимать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>арт<s n="n"/></l>                           <r>зад<s n="n"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e c="артта"><p><l>арт<s n="n"/><s n="loc"/></l>            <r>позади<s n="adv"/></r></p></e>
+<e c="артына"><p><l>арт<s n="n"/><s n="px3sp"/><s n="dat"/></l>            <r>за<s n="pr"/></r></p></e>
 <e c="артыннан"><p><l>арт<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-за<s n="pr"/></r></p></e>
 <e c="артында"><p><l>арт<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>за<s n="pr"/></r></p></e>
 <e>       <p><l>аст<s n="n"/></l>                           <r>низ<s n="n"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -107,7 +143,6 @@
 <e>       <p><l>бар<s n="det"/><s n="qnt"/></l>             <r>весь<s n="det"/><s n="ind"/></r></p></e>
 <e>       <p><l>бар<s n="v"/><s n="iv"/></l>                <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>баш<s n="n"/></l>                           <r>голова<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
-<e>       <p><l>без<s n="prn"/><s n="pers"/><s n="p1"/></l> <r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
 <e>       <p><l>бел<s n="v"/><s n="tv"/></l>                <r>знать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>белән<s n="cnjcoo"/></l>                    <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>белән<s n="post"/></l>                      <r>и<s n="cnjcoo"/></r></p></e>
@@ -190,7 +225,6 @@
 <e>       <p><l>кызчык<s n="n"/></l>                        <r>девочка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 <e>       <p><l>малай<s n="n"/></l>                         <r>мальчик<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>мәктәп<s n="n"/></l>                        <r>школа<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
-<e>       <p><l>мин<s n="prn"/><s n="pers"/><s n="p1"/></l> <r>я<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
 <e>       <p><l>нәрсә<s n="n"/></l>                         <r>вещь<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l>           <r>вещь<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l>           <r>что<s n="prn"/><s n="itg"/><s n="nt"/><s n="sg"/></r></p></e>
@@ -203,18 +237,15 @@
 <e>       <p><l>өстәл<s n="n"/></l>                         <r>стол<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>песи<s n="n"/></l>                          <r>кошка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 <e>       <p><l>сана<s n="v"/><s n="tv"/></l>               <r>считать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/></l> <r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
 <e>       <p><l>сеңел<s n="n"/></l>                         <r>сестра<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 <e>       <p><l>сәбәпле<s n="post"/></l>                    <r>причина<s n="n"/></r></p></e>
-<e>       <p><l>син<s n="prn"/><s n="pers"/><s n="p2"/></l> <r>ты<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
 <e>       <p><l>соңрак<s n="adv"/></l>                      <r>затем<s n="adv"/></r></p></e>
 <e>       <p><l>сора<s n="v"/><s n="tv"/></l>               <r>спрашивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>сорау<s n="n"/></l>                         <r>вопрос<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>сөйлә<s n="v"/><s n="tv"/></l>              <r>рассказывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>су<s n="n"/></l>                            <r>вода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>суык<s n="adj"/></l>                        <r>холодный<s n="adj"/></r></p></e>
-<e>       <p><l>суык<s n="adj"/></l>                        <r>холодно<s n="adv"/></r></p></e> <!-- FIXME CHECK (used for 'салкын (иде)>холодно (было)'
-                                                                                                    see also related adj+cop>adv lrx rule-->
+<e>       <p><l>суык<s n="adj"/></l>                        <r>холодно<s n="adv"/></r></p></e> <!-- FIXME CHECK (used for 'салкын (иде)>холодно (see also related adj+cop>adv lrx rule-->
 <e>       <p><l>таба<s n="post"/></l>                       <r>к<s n="pr"/></r></p></e>
 <e>       <p><l>тавыш<s n="n"/></l>                         <r>звук<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>тагын<s n="adv"/></l>                       <r>снова<s n="adv"/></r></p></e>
@@ -232,14 +263,7 @@
 <e>       <p><l>уен<s n="n"/></l>                           <r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/></l>               <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>укытучы<s n="n"/></l>                       <r>учитель<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
-<e>       <p><l>ул<s n="det"/><s n="dem"/></l>              <r>этот<s n="det"/><s n="dem"/><s n="nt"/><s n="an"/><s n="sg"/></r></p></e>
 <e>       <p><l>ул<s n="n"/></l>                            <r>сын<s n="n"/><s n="m"/><s n="aa"/><s n="sg"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="dem"/></l>              <r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l>   <r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/></l>  <r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/></l>  <r>она<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/></l>  <r>оно<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/></r></p></e>
-<e>       <p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
 <e>       <p><l>урындык<s n="n"/></l>                       <r>стул<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>утыр<s n="v"/><s n="iv"/></l>               <r>сидеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>утыргыч<s n="n"/></l>                       <r>стул<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
