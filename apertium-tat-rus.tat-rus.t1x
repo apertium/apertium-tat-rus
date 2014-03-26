@@ -29,7 +29,12 @@
      <cat-item tags="cop.p3.pl"/>
     </def-cat>
     <def-cat n="cop-pres">
-      <cat-item tags="cop.*.*"/>
+      <cat-item tags="cop.p1.*"/>
+      <cat-item tags="cop.p2.*"/>
+      <cat-item tags="cop.p3.*"/>
+    </def-cat>
+    <def-cat n="cop-ifi">
+      <cat-item tags="cop.ifi.*.*"/>
     </def-cat>
     <def-cat n="verb-pres">
       <cat-item tags="v.*.pres.*"/>
@@ -285,6 +290,32 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
               <clip pos="1" side="tl" part="a_vbser"/>
               <lit-tag v="pres"/>
               <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>
+OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="cop-ifi"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="cop">
+            <tags>
+              <tag><lit-tag v="VBSER"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vbser"/>
+              <lit-tag v="past"/>
+              <lit-tag v="nt"/>
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
