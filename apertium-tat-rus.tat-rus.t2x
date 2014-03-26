@@ -13,6 +13,9 @@
     <def-cat n="VBSER-pres">
       <cat-item lemma="cop-pres" tags="VBSER"/>
     </def-cat>
+    <def-cat n="SENT">
+      <cat-item lemma="sent" tags="SENT"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -69,6 +72,27 @@ OUTPUT: ^noun-nom<NP>{^Я<prn><pers><p1><mf><sg><nom>$}$
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^sent<SENT>{^.<sent>$}$
+OUTPUT: ^sent<SENT>{^.<sent>$}$
+-->
+    <rule comment="Deletes copula in present tense which
+                   hasn't been captured already by other rules.">
+      <pattern>
+        <pattern-item n="VBSER-pres"/>
+        <pattern-item n="SENT"/>
+      </pattern>
+      <action>
+        <out>
           <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="tags"/>
