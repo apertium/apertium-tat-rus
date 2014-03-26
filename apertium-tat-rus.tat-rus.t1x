@@ -497,7 +497,15 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
         <call-macro n="assign-tl-number-according-to-sl-nbr">
           <with-param pos="2"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
+        <choose>
+          <when>
+            <test><equal><var n="number"/><lit-tag v="pl"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
+          </when>
+          <otherwise>
+            <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
+          </otherwise>
+        </choose>
         <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
         <choose>
           <when>
