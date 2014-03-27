@@ -4,8 +4,8 @@
 <postchunk>
 
   <section-def-cats>
-    <def-cat n="catstub">
-      <cat-item name="catstub"/>
+    <def-cat n="vbser-pres">
+      <cat-item name="cop-pres"/>
     </def-cat>
   </section-def-cats>
 
@@ -20,14 +20,20 @@
   </section-def-vars>
 
   <section-rules>
-    <rule comment="">
+
+<!--
+INPUT:  ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^sent<SENT>{^.<sent>$}$
+OUTPUT: ^sent<SENT>{^.<sent>$}$
+-->
+    <rule comment="Deletes copula in present tense which
+                   is normally ommitted in Russian.">
       <pattern>
-        <pattern-item n="catstub"/>
+        <pattern-item n="vbser-pres"/>
       </pattern>
       <action>
         <out>
           <lu>
-            <clip pos="1" part="whole"/>
+            <lit v=""/>
           </lu>
         </out>
       </action>

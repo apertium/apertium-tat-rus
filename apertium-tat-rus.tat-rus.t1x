@@ -627,7 +627,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
           <when>
             <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="быть"/></equal></test>
             <out>
-              <chunk name="cop-pres">
+              <chunk name="bar">
                 <tags>
                   <tag><lit-tag v="VBSER"/></tag>
                 </tags>

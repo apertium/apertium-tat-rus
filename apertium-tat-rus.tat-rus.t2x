@@ -82,27 +82,7 @@ OUTPUT: ^noun-nom<NP>{^Я<prn><pers><p1><mf><sg><nom>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^sent<SENT>{^.<sent>$}$
-OUTPUT: ^sent<SENT>{^.<sent>$}$
--->
-    <rule comment="Deletes copula in present tense which
-                   hasn't been captured already by other rules.">
-      <pattern>
-        <pattern-item n="VBSER-pres"/>
-        <pattern-item n="SENT-OR-CM"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
   </section-rules>
+
 </interchunk>
 
