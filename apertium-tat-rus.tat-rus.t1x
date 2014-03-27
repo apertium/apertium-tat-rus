@@ -166,7 +166,7 @@
 
   <section-def-macros>
 
-    <def-macro n="assign-tl-number-according-to-sl-nbr" npar="1">
+    <def-macro n="return-number-of-sl-noun" npar="1">
       <choose>
         <when>
           <test>
@@ -185,7 +185,7 @@
 
     <def-macro n="convert-neg-to-ne.adv" npar="1">
       <!-- arg.1 verb
-           Sets 'negation' variable to 'не<adv>' if the verb contains <neg> tag.
+           Sets 'negation' variable to '^не<adv>$' if the verb contains <neg> tag.
       -->
       <let><var n="negation"/><lit v=""/></let>
       <choose>
@@ -198,9 +198,9 @@
       </choose>
     </def-macro>
 
-    <def-macro n="post-govern2" npar="2">
-      <!-- arg.1 prepostion arg.2 noun
-           Returns 'case'.
+    <def-macro n="return-case-pr-governs" npar="1">
+      <!-- arg.1 prepostion
+           Returns 'case' which the preposition governs.
       -->
       <choose>
         <when>
@@ -225,7 +225,7 @@ OUTPUT: школа
         <pattern-item n="noun-nom"/>
       </pattern>
       <action>
-        <call-macro n="assign-tl-number-according-to-sl-nbr">
+        <call-macro n="return-number-of-sl-noun">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -290,9 +290,8 @@ OUTPUT: ^pr_noun<PP><ADVL>^Перед<pr>$ ^дом<n><m><nn><sg><ins>$
         <pattern-item n="nounpost"/>
       </pattern>
       <action>
-        <call-macro n="post-govern2">
+        <call-macro n="return-case-pr-governs">
           <with-param pos="2"/>
-          <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="pr_noun" case="caseFirstWord">
@@ -328,12 +327,11 @@ OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><
         <pattern-item n="noun-loc"/>
       </pattern>
       <action>
-        <call-macro n="assign-tl-number-according-to-sl-nbr">
+        <call-macro n="return-number-of-sl-noun">
           <with-param pos="3"/>
         </call-macro>
-        <call-macro n="post-govern2">
+        <call-macro n="return-case-pr-governs">
           <with-param pos="2"/>
-          <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="noun_pr_noun" case="caseFirstWord">
@@ -603,7 +601,7 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
         <pattern-item n="noun-px"/>
       </pattern>
       <action>
-        <call-macro n="assign-tl-number-according-to-sl-nbr">
+        <call-macro n="return-number-of-sl-noun">
           <with-param pos="2"/>
         </call-macro>
         <choose>
