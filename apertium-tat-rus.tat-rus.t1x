@@ -33,6 +33,16 @@
       <cat-item tags="n.px2pl.*"/>
       <cat-item tags="n.*.px2pl.*"/>
     </def-cat>
+    <def-cat n="noun-attr">
+      <cat-item tags="n.attr"/>
+    </def-cat>
+    <def-cat n="nounpost">
+      <cat-item lemma="алд" tags="n.px3sp.loc"/>
+    </def-cat>
+    <def-cat n="nounpost-attr">
+      <cat-item lemma="алд" tags="n.px3sp.loc.attr"/>
+    </def-cat>
+
     <def-cat n="adj">
       <cat-item tags="adj"/>
     </def-cat>
@@ -98,6 +108,9 @@
     <def-attr n="a_adv">
       <attr-item tags="adv"/>
     </def-attr>
+    <def-attr n="a_pr">
+      <attr-item tags="pr"/>
+    </def-attr>
     <def-attr n="a_vbser">
       <attr-item tags="vbser"/>
     </def-attr>
@@ -148,6 +161,7 @@
     <def-var n="number"/>
     <def-var n="negation"/>
     <def-var n="gender"/>
+    <def-var n="case"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -171,7 +185,7 @@
 
     <def-macro n="convert-neg-to-ne.adv" npar="1">
       <!-- arg.1 verb
-           Sets 'negation' variable to 'не<adv>' if the verb contains <neg> tag
+           Sets 'negation' variable to 'не<adv>' if the verb contains <neg> tag.
       -->
       <let><var n="negation"/><lit v=""/></let>
       <choose>
@@ -180,6 +194,18 @@
             <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
           </test>
           <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$"/></concat></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="post-govern2" npar="2">
+      <!-- arg.1 prepostion arg.2 noun
+           Returns 'case'.
+      -->
+      <choose>
+        <when>
+          <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="перед"/></equal></test>
+          <let><var n="case"/><lit-tag v="ins"/></let>
         </when>
       </choose>
     </def-macro>
@@ -248,6 +274,98 @@ OUTPUT: в школе
               <clip pos="1" side="tl" part="a_anim"/>
               <lit-tag v="sg"/>
               <lit-tag v="prp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
+OUTPUT: ^pr_noun<PP><ADVL>^Перед<pr>$ ^дом<n><m><nn><sg><ins>$
+-->
+    <rule comment="REGLA:">
+      <pattern>
+        <pattern-item n="noun-attr"/>
+        <pattern-item n="nounpost"/>
+      </pattern>
+      <action>
+        <call-macro n="post-govern2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="pr_noun" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <var n="case"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$
+        ^бакча<n><loc>/сад<n><m><nn><loc>$
+OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+-->
+    <rule comment="REGLA:">
+      <pattern>
+        <pattern-item n="noun-attr"/>
+        <pattern-item n="nounpost-attr"/>
+        <pattern-item n="noun-loc"/>
+      </pattern>
+      <action>
+        <call-macro n="assign-tl-number-according-to-sl-nbr">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="post-govern2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="noun_pr_noun" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <lu>
+              <lit v="в"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="a_noun"/>
+              <clip pos="3" side="tl" part="a_gender"/>
+              <clip pos="3" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="prp"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <var n="case"/>
             </lu>
           </chunk>
         </out>
