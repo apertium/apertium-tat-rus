@@ -4,23 +4,38 @@
 <transfer default="chunk">
 
   <section-def-cats>
-    <def-cat n="noun-nom">
+
+    <def-cat n="noun">
       <cat-item tags="n.nom"/>
       <cat-item tags="n.pl.nom"/>
-      <cat-item tags="prn.pers.*.*.*.nom"/>
-      <cat-item tags="prn.dem.nom"/>
-      <cat-item tags="prn.dem.pl.nom"/>
+      <cat-item tags="n.gen"/>
+      <cat-item tags="n.pl.gen"/>
+      <cat-item tags="n.dat"/>
+      <cat-item tags="n.pl.dat"/>
+      <cat-item tags="n.acc"/>
+      <cat-item tags="n.pl.acc"/>
+      <cat-item tags="prn.pers.*.*.*."/>
     </def-cat>
+
     <def-cat n="noun-gen">
       <cat-item tags="n.gen"/>
       <cat-item tags="np.ant.f.gen"/>
     </def-cat>
+
+    <def-cat n="noun-abl">
+      <cat-item tags="n.abl"/>
+      <cat-item tags="n.pl.abl"/>
+    </def-cat>
+
     <def-cat n="noun-loc">
       <cat-item tags="n.loc"/>
+      <cat-item tags="n.pl.loc"/>
     </def-cat>
+
     <def-cat n="noun-px3sp-nom">
       <cat-item tags="n.px3sp.nom"/>
     </def-cat>
+
     <def-cat n="noun-px">
       <cat-item tags="n.px1sg.*"/>
       <cat-item tags="n.*.px1sg.*"/>
@@ -218,18 +233,18 @@
 INPUT:  мәктәп
         ^мәктәп<n><nom>$
 OUTPUT: школа
-        ^noun-nom<NP>{^школа<n><m><nn><sg><nom$}$
+        ^noun<NP>{^школа<n><m><nn><sg><nom$}$
 -->
     <rule comment="">
       <pattern>
-        <pattern-item n="noun-nom"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="return-number-of-sl-noun">
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="noun-nom">
+          <chunk name="noun">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
@@ -257,6 +272,9 @@ OUTPUT: в школе
         <pattern-item n="noun-loc"/>
       </pattern>
       <action>
+        <call-macro n="return-number-of-sl-noun">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="noun-loc">
             <tags>
@@ -272,8 +290,45 @@ OUTPUT: в школе
               <clip pos="1" side="tl" part="a_noun"/>
               <clip pos="1" side="tl" part="a_gender"/>
               <clip pos="1" side="tl" part="a_anim"/>
-              <lit-tag v="sg"/>
+              <var n="number"/>
               <lit-tag v="prp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  мәктәптән
+        ^мәктәп<n><abl>$
+OUTPUT: в школе
+        ^noun-abl<PP>{^из<pr>$ ^школы<n><f><nn><sg><gen>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="noun-abl"/>
+      </pattern>
+      <action>
+        <call-macro n="return-number-of-sl-noun">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="noun-abl">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+            </tags>
+            <lu>
+              <lit v="из"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <var n="number"/>
+              <lit-tag v="gen"/>
             </lu>
           </chunk>
         </out>
