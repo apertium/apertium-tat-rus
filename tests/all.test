@@ -6,7 +6,7 @@ cd ../apertium-rus
 make &&
 cd ../../incubator/apertium-tat-rus
 make &&
-./wiki-tests.sh Regression tat rus update &&
+./wiki-tests.sh Regression tat rus &&
 ./qa.sh tat-rus-corp &&
 
 echo '[*@#] errors tat-rus before:'
