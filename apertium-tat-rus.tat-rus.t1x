@@ -225,6 +225,25 @@
       </choose>
     </def-macro>
 
+    <def-macro n="translate-noun" npar="1">
+      <call-macro n="return-number-of-sl-noun">
+        <with-param pos="1"/>
+      </call-macro>
+      <let>
+        <clip pos="1" side="tl" part="whole"/>
+        <concat>
+          <clip pos="1" side="tl" part="lemh"/>
+          <clip pos="1" side="tl" part="a_noun"/>
+          <clip pos="1" side="tl" part="a_gender"/>
+          <clip pos="1" side="tl" part="a_anim"/>
+          <var n="number"/>
+          <clip pos="1" side="tl" part="a_case"/>
+          <clip pos="1" side="tl" part="lemq"/>
+
+        </concat>
+      </let>
+    </def-macro>
+
   </section-def-macros>
 
   <section-rules>
@@ -240,7 +259,7 @@ OUTPUT: школа
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="return-number-of-sl-noun">
+        <call-macro n="translate-noun">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -249,12 +268,7 @@ OUTPUT: школа
               <tag><lit-tag v="NP"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_noun"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <var n="number"/>
-              <clip pos="1" side="tl" part="a_case"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
