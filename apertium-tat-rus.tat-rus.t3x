@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
+
 <postchunk>
+
   <section-def-cats>
-    <def-cat n="sent">
-      <cat-item name="punt"/>
+    <def-cat n="catstub">
+      <cat-item name="catstub"/>
     </def-cat>
   </section-def-cats>
+
   <section-def-attrs>
-    <def-attr n="nbr">
-      <attr-item tags="sg"/>
-      <attr-item tags="pl"/>
-      <attr-item tags="sp"/>
-      <attr-item tags="ND"/>
+    <def-attr n="attrstub">
+      <attr-item tags="attrstub"/>
     </def-attr>
   </section-def-attrs>
+
   <section-def-vars>
-    <def-var n="paraula"/>
+    <def-var n="varstub"/>
   </section-def-vars>
+
   <section-rules>
-    <rule comment="CHUNK:">
+    <rule comment="">
       <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="catstub"/>
       </pattern>
       <action>
         <out>
@@ -30,5 +32,7 @@
         </out>
       </action>
     </rule>
+
   </section-rules>
+
 </postchunk>
