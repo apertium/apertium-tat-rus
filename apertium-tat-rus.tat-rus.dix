@@ -75,6 +75,7 @@
     <sdef n="vbmod" 	c=""/> 
     <sdef n="gen" 	c=""/> 
     <sdef n="dat" 	c=""/> 
+    <sdef n="sint" 	c=""/> 
   </sdefs>
   <section id="main" type="standard">
 
@@ -190,7 +191,7 @@
 <e>       <p><l>җавап<s n="n"/></l>                         <r>ответ<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>җавап<b/>бир<s n="v"/><s n="tv"/></l>       <r>отвечать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>җир<s n="n"/></l>                           <r>земля<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
-<e>       <p><l>җылы<s n="adj"/></l>                        <r>теплый<s n="adj"/></r></p></e>
+<e>       <p><l>җылы<s n="adj"/></l>                        <r>тёплый<s n="adj"/><s n="sint"/></r></p></e>
 <e>       <p><l>җылы<s n="adv"/></l>                        <r>тепло<s n="adv"/></r></p></e>
 <e>       <p><l>зур<s n="adj"/></l>                         <r>большой<s n="adj"/></r></p></e>
 <e>       <p><l>и<s n="cop"/></l>                           <r>быть<s n="vbser"/></r></p></e>

@@ -33,6 +33,9 @@
       <cat-item tags="n.px2pl.*"/>
       <cat-item tags="n.*.px2pl.*"/>
     </def-cat>
+    <def-cat n="adj">
+      <cat-item tags="adj"/>
+    </def-cat>
     <def-cat n="yuq-adj">
       <cat-item lemma="юк" tags="adj"/>
     </def-cat>
@@ -71,6 +74,9 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="cm">
+      <cat-item tags="cm"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -84,6 +90,13 @@
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.pos"/>
+    </def-attr>
+    <def-attr n="a_adj">
+      <attr-item tags="adj"/>
+      <attr-item tags="adj.sint"/>
+    </def-attr>
+    <def-attr n="a_adv">
+      <attr-item tags="adv"/>
     </def-attr>
     <def-attr n="a_vbser">
       <attr-item tags="vbser"/>
@@ -485,6 +498,28 @@ OUTPUT: ^sent<SENT>{^.<sent>$}$
     </rule>
 
 <!--
+INPUT:  (^и<cop><p3><sg>/быть<vbser><p3><sg>$)^,<cm>/.<cm>$
+OUTPUT: ^cm<CM>{^,<cm>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="cm"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="cm">
+            <tags>
+              <tag><lit-tag v="CM"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
 INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
 OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
 -->
@@ -558,6 +593,63 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
                   <clip pos="2" side="tl" part="a_anim"/>
                   <var n="number"/>
                   <clip pos="2" side="tl" part="a_case"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^яхшы<adj>/хороший<adj>$
+OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_adv"/><lit-tag v="adv"/></equal></test>
+            <out>
+              <chunk name="adv">
+                <tags>
+                  <tag><lit-tag v="AdvP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <when>
+            <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="быть"/></equal></test>
+            <out>
+              <chunk name="cop-pres">
+                <tags>
+                  <tag><lit-tag v="VBSER"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="adj">
+                <tags>
+                  <tag><lit-tag v="AdjP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_adj"/>
+                  <lit-tag v="m"/>
+                  <lit-tag v="an"/>
+                  <lit-tag v="sg"/>
+                  <lit-tag v="nom"/>
                 </lu>
               </chunk>
             </out>

@@ -13,8 +13,9 @@
     <def-cat n="VBSER-pres">
       <cat-item lemma="cop-pres" tags="VBSER"/>
     </def-cat>
-    <def-cat n="SENT">
+    <def-cat n="SENT-OR-CM">
       <cat-item lemma="sent" tags="SENT"/>
+      <cat-item lemma="cm" tags="CM"/>
     </def-cat>
   </section-def-cats>
 
@@ -89,7 +90,7 @@ OUTPUT: ^sent<SENT>{^.<sent>$}$
                    hasn't been captured already by other rules.">
       <pattern>
         <pattern-item n="VBSER-pres"/>
-        <pattern-item n="SENT"/>
+        <pattern-item n="SENT-OR-CM"/>
       </pattern>
       <action>
         <out>
