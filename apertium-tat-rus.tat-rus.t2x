@@ -4,79 +4,35 @@
 <interchunk>
 
   <section-def-cats>
-    <def-cat n="NP-nom">
-      <cat-item lemma="noun-nom" tags="NP"/>
-    </def-cat>
-    <def-cat n="PP">
-      <cat-item tags="PP"/>
-    </def-cat>
-    <def-cat n="VBSER-pres">
-      <cat-item lemma="cop-pres" tags="VBSER"/>
-    </def-cat>
-    <def-cat n="SENT-OR-CM">
-      <cat-item lemma="sent" tags="SENT"/>
-      <cat-item lemma="cm" tags="CM"/>
+    <def-cat n="catstub">
+      <cat-item lemma="stub" tags="stub"/>
     </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_nbr">
-      <attr-item tags="sg"/>
-      <attr-item tags="pl"/>
+    <def-attr n="attrstub">
+      <attr-item tags="stub"/>
     </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
-    <def-var n="number"/>
+    <def-var n="varstub"/>
   </section-def-vars>
 
   <section-rules>
 
 <!--
-INPUT:  ^noun-loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
-OUTPUT: ^noun-loc<PP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$}$
+INPUT:
+OUTPUT:
 -->
     <rule comment="">
       <pattern>
-        <pattern-item n="PP"/>
-        <pattern-item n="VBSER-pres"/>
+        <pattern-item n="catstub"/>
       </pattern>
       <action>
         <out>
           <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
-INPUT:  ^noun-nom<NP>{^Я<prn><pers><p1><mf><sg><nom>$}$
-        ^noun-nom<NP>{^учитель<n><m><aa><sg><nom>$}$
-        ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
-OUTPUT: ^noun-nom<NP>{^Я<prn><pers><p1><mf><sg><nom>$}$
-        ^noun-nom<NP>{^учитель<n><m><aa><sg><nom>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="NP-nom"/>
-        <pattern-item n="NP-nom"/>
-        <pattern-item n="VBSER-pres"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
+            <clip pos="1" part="whole"/>
           </chunk>
         </out>
       </action>

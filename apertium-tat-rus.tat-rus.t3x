@@ -22,8 +22,8 @@
   <section-rules>
 
 <!--
-INPUT:  ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^sent<SENT>{^.<sent>$}$
-OUTPUT: ^sent<SENT>{^.<sent>$}$
+INPUT:  ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
+OUTPUT: ""
 -->
     <rule comment="Deletes copula in present tense which
                    is normally ommitted in Russian.">

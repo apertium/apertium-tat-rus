@@ -476,50 +476,6 @@ OUTPUT: ^qst<SENT>{^?<sent>$}$
     </rule>
 
 <!--
-INPUT:  (^и<cop><p3><sg>/быть<vbser><p3><sg>$)^.<sent>/.<sent>$
-OUTPUT: ^sent<SENT>{^.<sent>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="sent"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="sent">
-            <tags>
-              <tag><lit-tag v="SENT"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
-INPUT:  (^и<cop><p3><sg>/быть<vbser><p3><sg>$)^,<cm>/.<cm>$
-OUTPUT: ^cm<CM>{^,<cm>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="cm"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="cm">
-            <tags>
-              <tag><lit-tag v="CM"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
 INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
 OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
 -->
