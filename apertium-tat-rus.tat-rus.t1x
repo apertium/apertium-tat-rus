@@ -200,7 +200,7 @@
 
     <def-macro n="return-case-pr-governs" npar="1">
       <!-- arg.1 prepostion
-           Returns 'case' which the preposition governs.
+           Sets the 'case' variable to the case which the preposition governs.
       -->
       <choose>
         <when>
