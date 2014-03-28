@@ -14,6 +14,10 @@
       <cat-item tags="n.pl.dat"/>
       <cat-item tags="n.acc"/>
       <cat-item tags="n.pl.acc"/>
+      <cat-item tags="n.abl"/>
+      <cat-item tags="n.pl.abl"/>
+      <cat-item tags="n.loc"/>
+      <cat-item tags="n.pl.loc"/>
       <cat-item tags="prn.pers.*.*.*."/>
       <cat-item tags="prn.dem.*"/>
       <cat-item tags="prn.itg.*"/>
@@ -22,11 +26,6 @@
     <def-cat n="noun-gen">
       <cat-item tags="n.gen"/>
       <cat-item tags="np.ant.f.gen"/>
-    </def-cat>
-
-    <def-cat n="noun-abl">
-      <cat-item tags="n.abl"/>
-      <cat-item tags="n.pl.abl"/>
     </def-cat>
 
     <def-cat n="noun-loc">
@@ -181,6 +180,7 @@
     <def-var n="negation"/>
     <def-var n="gender"/>
     <def-var n="case"/>
+    <def-var n="preposition"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -226,13 +226,45 @@
           <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="перед"/></equal></test>
           <let><var n="case"/><lit-tag v="ins"/></let>
         </when>
+        <when>
+          <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="за"/></equal></test>
+          <let><var n="case"/><lit-tag v="ins"/></let>
+        </when>
       </choose>
     </def-macro>
 
     <def-macro n="translate-noun" npar="1">
+      <!-- arg.1 noun
+           Translates ablative and locative cases with a preposition (variable) and noun,
+           other cases remain as they are.
+      -->
       <call-macro n="return-number-of-sl-noun">
         <with-param pos="1"/>
       </call-macro>
+      <choose>
+        <when>
+          <test>
+            <or>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="dat"/></equal>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+            </or>
+          </test>
+          <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
+          <let><var n="preposition"/><lit v=""/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="abl"/></equal></test>
+          <let><var n="preposition"/><concat><lit v="^из"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
+          <let><var n="case"/><lit-tag v="gen"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></equal></test>
+          <let><var n="preposition"/><concat><lit v="^в"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
+          <let><var n="case"/><lit-tag v="prp"/></let>
+        </when>
+      </choose>
       <let>
         <clip pos="1" side="tl" part="whole"/>
         <concat>
@@ -241,9 +273,8 @@
           <clip pos="1" side="tl" part="a_gender"/>
           <clip pos="1" side="tl" part="a_anim"/>
           <var n="number"/>
-          <clip pos="1" side="tl" part="a_case"/>
+          <var n="case"/>
           <clip pos="1" side="tl" part="lemq"/>
-
         </concat>
       </let>
     </def-macro>
@@ -271,82 +302,9 @@ OUTPUT: школа
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
+            <var n="preposition"/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
-INPUT:  мәктәптә
-        ^мәктәп<n><loc>$
-OUTPUT: в школе
-        ^noun-loc<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="noun-loc"/>
-      </pattern>
-      <action>
-        <call-macro n="return-number-of-sl-noun">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="noun-loc">
-            <tags>
-              <tag><lit-tag v="PP"/></tag>
-            </tags>
-            <lu>
-              <lit v="в"/>
-              <lit-tag v="pr"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_noun"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <var n="number"/>
-              <lit-tag v="prp"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
-INPUT:  мәктәптән
-        ^мәктәп<n><abl>$
-OUTPUT: в школе
-        ^noun-abl<PP>{^из<pr>$ ^школы<n><f><nn><sg><gen>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="noun-abl"/>
-      </pattern>
-      <action>
-        <call-macro n="return-number-of-sl-noun">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="noun-abl">
-            <tags>
-              <tag><lit-tag v="PP"/></tag>
-            </tags>
-            <lu>
-              <lit v="из"/>
-              <lit-tag v="pr"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_noun"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <var n="number"/>
-              <lit-tag v="gen"/>
             </lu>
           </chunk>
         </out>
