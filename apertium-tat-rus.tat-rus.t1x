@@ -16,6 +16,7 @@
       <cat-item tags="n.pl.acc"/>
       <cat-item tags="prn.pers.*.*.*."/>
       <cat-item tags="prn.dem.*"/>
+      <cat-item tags="prn.itg.*"/>
     </def-cat>
 
     <def-cat n="noun-gen">
@@ -54,6 +55,7 @@
     </def-cat>
     <def-cat n="nounpost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
+      <cat-item lemma="арт" tags="n.px3sp.loc"/>
     </def-cat>
     <def-cat n="nounpost-attr">
       <cat-item lemma="алд" tags="n.px3sp.loc.attr"/>
@@ -113,6 +115,7 @@
       <attr-item tags="prn.pers.p2"/>
       <attr-item tags="prn.pers.p3"/>
       <attr-item tags="prn.dem"/>
+      <attr-item tags="prn.itg"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.pos"/>
