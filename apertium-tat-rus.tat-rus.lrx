@@ -16,4 +16,10 @@ OUTPUT: ^Тик<cnjcoo>/Но<cnjcoo>$ ^кичә<adv>/вчера<adv>$ ^бик<ad
     <match tags="adj"><select tags="adv"/></match>
     <match tags="cop.*"/>
   </rule>
+
+  <rule>
+    <match lemma="ул" tags="prn.dem.gen"><select lemma="он" tags="prn.pers.*"/></match>
+    <match tags="adv.itg"/>
+  </rule>
+
 </rules>

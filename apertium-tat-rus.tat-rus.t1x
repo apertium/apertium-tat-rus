@@ -15,6 +15,7 @@
       <cat-item tags="n.acc"/>
       <cat-item tags="n.pl.acc"/>
       <cat-item tags="prn.pers.*.*.*."/>
+      <cat-item tags="prn.dem.*"/>
     </def-cat>
 
     <def-cat n="noun-gen">
