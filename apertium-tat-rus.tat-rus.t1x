@@ -279,6 +279,51 @@
       </let>
     </def-macro>
 
+    <def-macro n="concord2" npar="2">
+      <!-- arg.1 determiner arg.2 noun
+           Concords gender, animacy, number, case of the determiner with the head of the NP.
+           Assumes that the head of the NP was already 'translated'.
+      -->
+      <!-- "First, copy everything except for animacy from the noun (for some reason some of the
+           possessive determiners do not receive animacy tag in rus.dix)."-->
+      <let>
+        <clip pos="1" side="tl" part="whole"/>
+        <concat>
+          <clip pos="1" side="tl" part="lem"/>
+          <clip pos="1" side="tl" part="a_det"/>
+          <clip pos="2" side="tl" part="a_gender"/>
+          <clip pos="1" side="tl" part="a_anim"/>
+          <clip pos="2" side="tl" part="a_nbr"/>
+          <clip pos="2" side="tl" part="a_case"/>
+        </concat>
+      </let>
+      <!-- Now adjust -->
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when c="If the gender is masculin or number is plural, in accusative we want to take the animacy tag of the noun,
+                 otherwise it should be set to 'an'.">
+          <test>
+            <and>
+              <or>
+                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
+                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></equal>
+              </or>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
+        </when>
+        <otherwise>
+          <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
+        </otherwise>
+      </choose>
+    </def-macro>
+
   </section-def-macros>
 
   <section-rules>
@@ -632,21 +677,15 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
         <pattern-item n="noun-px"/>
       </pattern>
       <action>
-        <call-macro n="return-number-of-sl-noun">
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="concord2">
+          <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
         <choose>
-          <when>
-            <test><equal><var n="number"/><lit-tag v="pl"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
-          </when>
-          <otherwise>
-            <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
-          </otherwise>
-        </choose>
-        <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
-        <choose>
-          <when>
+          <when c="'его' and 'их' do not take animacy or gender tags">
             <test>
               <or>
                 <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="его"/></equal>
@@ -658,44 +697,31 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
                 <tags>
                   <tag><lit-tag v="NP"/></tag>
                 </tags>
+                <var n="preposition"/>
                 <lu>
                   <clip pos="1" side="tl" part="lem"/>
                   <clip pos="1" side="tl" part="a_det"/>
                 </lu>
                 <b/>
                 <lu>
-                  <clip pos="2" side="tl" part="lem"/>
-                  <clip pos="2" side="tl" part="a_noun"/>
-                  <clip pos="2" side="tl" part="a_gender"/>
-                  <clip pos="2" side="tl" part="a_anim"/>
-                  <var n="number"/>
-                  <clip pos="2" side="tl" part="a_case"/>
+                  <clip pos="2" side="tl" part="whole"/>
                 </lu>
               </chunk>
             </out>
           </when>
-          <otherwise>
+          <otherwise c="all other possessive determiners">
             <out>
               <chunk name="det_noun">
                 <tags>
                   <tag><lit-tag v="NP"/></tag>
                 </tags>
+                <var n="preposition"/>
                 <lu>
-                  <clip pos="1" side="tl" part="lem"/>
-                  <clip pos="1" side="tl" part="a_det"/>
-                  <clip pos="1" side="tl" part="a_gender"/>
-                  <clip pos="1" side="tl" part="a_anim"/>
-                  <var n="number"/>
-                  <clip pos="2" side="tl" part="a_case"/>
+                  <clip pos="1" side="tl" part="whole"/>
                 </lu>
                 <b/>
                 <lu>
-                  <clip pos="2" side="tl" part="lem"/>
-                  <clip pos="2" side="tl" part="a_noun"/>
-                  <clip pos="2" side="tl" part="a_gender"/>
-                  <clip pos="2" side="tl" part="a_anim"/>
-                  <var n="number"/>
-                  <clip pos="2" side="tl" part="a_case"/>
+                  <clip pos="2" side="tl" part="whole"/>
                 </lu>
               </chunk>
             </out>
