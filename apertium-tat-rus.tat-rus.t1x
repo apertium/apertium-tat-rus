@@ -258,11 +258,13 @@
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="abl"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^из"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
           <let><var n="case"/><lit-tag v="gen"/></let>
+          <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
         </when>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^в"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
           <let><var n="case"/><lit-tag v="prp"/></let>
+          <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
         </when>
       </choose>
       <let>
@@ -343,7 +345,7 @@ OUTPUT: школа
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="noun">
+          <chunk name="noun" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
