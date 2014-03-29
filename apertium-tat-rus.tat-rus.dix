@@ -120,8 +120,14 @@
 <e>       <p><l>бу<s n="det"/><s n="dem"/></l>              <r>это<s n="det"/><s n="dem"/></r></p></e>
 <e>       <p><l>ул<s n="det"/><s n="dem"/></l>              <r>этот<s n="det"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
 
+    <!-- Adpositions -->
+
+<e>       <p><l>белән<s n="cnjcoo"/></l>                    <r>и<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>белән<s n="post"/></l>                      <r>с<s n="pr"/></r></p></e>
+
     <!-- Nouns -->
 
+<e>       <p><l>абый<s n="n"/></l>                           <r>брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>йорт<s n="n"/></l>                           <r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>китап<s n="n"/></l>                          <r>книга<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>теләк<s n="n"/></l>                          <r>желание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
@@ -154,9 +160,6 @@
 <e>       <p><l>бар<s n="v"/><s n="iv"/></l>                <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>баш<s n="n"/></l>                           <r>голова<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>бел<s n="v"/><s n="tv"/></l>                <r>знать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>белән<s n="cnjcoo"/></l>                    <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>белән<s n="post"/></l>                      <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>белән<s n="post"/></l>                      <r>с<s n="pr"/></r></p></e>
 <e>       <p><l>бер<s n="num"/></l>                         <r>один<s n="num"/></r></p></e>
 <e>       <p><l>бер<s n="det"/><s n="ind"/></l>             <r>один<s n="num"/></r></p></e>
 <e>       <p><l>бергә<s n="adv"/></l>                       <r>вместе<s n="adv"/></r></p></e>

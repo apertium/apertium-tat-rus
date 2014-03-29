@@ -733,6 +733,49 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
     </rule>
 
 <!--
+INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$  
+OUTPUT: ^noun<NP>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
+-->
+    <rule comment="TODO: det.pos insertion doesn't work yet">
+      <pattern>
+        <pattern-item n="noun-px"/>
+      </pattern>
+      <action>
+        <choose>
+          <when c="sometimes Tatar noun with px3sp is translated with a preposition">
+            <test><equal><clip pos="1" side="tl" part="a_pr"/><lit-tag v="pr"/></equal></test>
+          <out>
+            <chunk name="pr" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="PREP"/></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            </chunk>
+          </out>
+          </when>
+          <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk name="noun" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <var n="preposition"/>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+      </action>
+    </rule>
+
+<!--
 INPUT:  ^яхшы<adj>/хороший<adj>$
 OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
 -->
