@@ -21,6 +21,8 @@
       <cat-item tags="prn.pers.*.*.*."/>
       <cat-item tags="prn.dem.*"/>
       <cat-item tags="prn.itg.*"/>
+      <cat-item tags="prn.neg.*"/>
+      <cat-item tags="np.ant.*"/>
     </def-cat>
 
     <def-cat n="noun-gen">
@@ -55,6 +57,7 @@
     <def-cat n="nounpost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
       <cat-item lemma="арт" tags="n.px3sp.loc"/>
+      <cat-item lemma="ян" tags="n.px3sp.loc"/>
     </def-cat>
     <def-cat n="nounpost-attr">
       <cat-item lemma="алд" tags="n.px3sp.loc.attr"/>
@@ -87,11 +90,15 @@
       <cat-item tags="vaux.pres.*"/>
       <cat-item tags="vaux.neg.pres.*"/>
     </def-cat>
-    <def-cat n="verb-ifi">
+    <def-cat n="verb-ifiPast">
       <cat-item tags="v.*.ifi.*"/>
       <cat-item tags="v.*.*.ifi.*"/>
       <cat-item tags="vaux.ifi.*"/>
       <cat-item tags="vaux.neg.ifi.*"/>
+      <cat-item tags="v.*.past.*"/>
+      <cat-item tags="v.*.*.past.*"/>
+      <cat-item tags="vaux.past.*"/>
+      <cat-item tags="vaux.neg.past.*"/>
     </def-cat>
     <def-cat n="verb-nonfin">
       <cat-item tags="v.*.inf"/>
@@ -111,6 +118,22 @@
       <cat-item tags="v.*.prc_vol_"/>
       <cat-item tags="v.*.ger_past.*"/>
       <cat-item tags="v.*.*.ger_past.*"/>
+      <cat-item tags="cop.ger_past.*"/>
+      <cat-item tags="cop.*.ger_past.*"/>
+      <cat-item tags="v.*.gpr_past"/>
+      <cat-item tags="v.*.*.gpr_past"/>
+      <cat-item tags="v.*.gpr_fut.*"/>
+      <cat-item tags="v.*.*.gpr_fut.*"/>
+      <cat-item tags="v.*.gpr_fut"/>
+      <cat-item tags="v.*.*.gpr_fut"/>
+      <cat-item tags="v.*.gpr_fut3"/>
+      <cat-item tags="v.*.*.gpr_fut3"/>
+      <cat-item tags="v.*.gna_after"/>
+      <cat-item tags="v.*.*.gna_after"/>
+      <cat-item tags="vaux.gna_after"/>
+      <cat-item tags="vaux.*.gna_after"/>
+      <cat-item tags="v.*.gna_cond.*"/>
+      <cat-item tags="v.*.*.gna_cond.*"/>
     </def-cat>
     <def-cat n="prn-gen">
       <cat-item tags="prn.pers.*.*.gen"/>
@@ -129,6 +152,11 @@
   </section-def-cats>
 
   <section-def-attrs>
+    <def-attr n="a_pos">
+      <attr-item tags="n"/>
+      <attr-item tags="np"/>
+      <attr-item tags="pred"/>
+    </def-attr>
     <def-attr n="a_noun">
       <attr-item tags="n"/>
       <attr-item tags="np.ant"/>
@@ -137,6 +165,7 @@
       <attr-item tags="prn.pers.p3"/>
       <attr-item tags="prn.dem"/>
       <attr-item tags="prn.itg"/>
+      <attr-item tags="prn.neg"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.dem"/>
@@ -290,13 +319,23 @@
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="abl"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^из"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
           <let><var n="case"/><lit-tag v="gen"/></let>
-          <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
+          <choose>
+            <when>
+              <test><not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np"/></equal></not></test>
+              <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
+            </when>
+          </choose>
         </when>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^в"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
           <let><var n="case"/><lit-tag v="prp"/></let>
-          <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
+          <choose>
+            <when>
+              <test><not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np"/></equal></not></test>
+              <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
+            </when>
+          </choose>
         </when>
       </choose>
       <let>
@@ -654,7 +693,7 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
 -->
     <rule comment="">
       <pattern>
-        <pattern-item n="verb-ifi"/>
+        <pattern-item n="verb-ifiPast"/>
       </pattern>
       <action>
         <call-macro n="convert-neg-to-ne.adv">
@@ -732,7 +771,7 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
                 <b/>
                 <lu>
                   <clip pos="1" side="tl" part="lemh"/>
-                  <clip pos="1" side="tl" part="a_vblex"/>
+                  <clip pos="1" side="tl" part="a_vblex"/><!-- OR --><clip pos="1" side="tl" part="a_vbser"/>
                   <lit-tag v="inf"/>
                   <clip pos="1" side="tl" part="lemq"/>
                 </lu>
@@ -905,6 +944,22 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="pred"/></equal></test>
+            <out>
+              <chunk name="pred">
+                <tags>
+                  <tag><lit-tag v="PRED"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <lit-tag v="pred"/>
+                  <lit-tag v="m"/>
+                  <lit-tag v="sg"/>
                 </lu>
               </chunk>
             </out>

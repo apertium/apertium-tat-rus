@@ -78,7 +78,8 @@
     <sdef n="sint" 	c=""/> 
     <sdef n="digit" 	c=""/> 
     <sdef n="ger_past" 	c=""/> 
-
+    <sdef n="comp" 	c=""/> 
+    <sdef n="advl" 	c=""/> 
   </sdefs>
   <section id="main" type="standard">
 
@@ -123,7 +124,7 @@
 
 <e>       <p><l>бу<s n="det"/><s n="dem"/></l>              <r>этот<s n="det"/><s n="dem"/></r></p></e>
 <e>       <p><l>ул<s n="det"/><s n="dem"/></l>              <r>этот<s n="det"/><s n="dem"/></r></p></e>
-<e>       <p><l>берәр<s n="det"/><s n="ind"/></l>           <r>какой<s n="det"/><s n="itg"/></r></p></e> <!-- FIXME какой-то -->
+<e>       <p><l>берәр<s n="det"/><s n="ind"/></l>           <r>какой<s n="det"/><s n="itg"/></r></p></e> <!-- FIXME какой-то (add it first in rus.dix) -->
 
     <!-- Adpositions -->
 
@@ -131,12 +132,28 @@
 <e>       <p><l>белән<s n="post"/></l>                      <r>с<s n="pr"/></r></p></e>
 <e>       <p><l>бергә<s n="post"/></l>                      <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
 
+    <!-- Interjections -->
+
+<e>       <p><l>әлбәттә<s n="ij"/></l>                      <r>конечно<s n="adv"/></r></p></e>  <!-- FIXME CHECK pos russian -->
+
 <!-- SECTION: ~Open categories -->
 
     <!-- Verbs -->
 
+<e>       <p><l>ки<s n="v"/><s n="tv"/></l>                 <r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
+<e>       <p><l>кил<s n="v"/><s n="iv"/></l>                <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>кит<s n="v"/><s n="iv"/></l>                <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/></l>               <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/><s n="ger_past"/></l><r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+
+    <!-- Adjectives -->
+
+<e>       <p><l>зур<s n="adj"/></l>                         <r>большой<s n="adj"/><s n="sint"/></r></p></e>
+<e>       <p><l>карт<s n="adj"/></l>                        <r>старый<s n="adj"/><s n="sint"/></r></p></e>
+<e>       <p><l>тиеш<s n="adj"/></l>                        <r>должен<s n="pred"/></r></p></e>
+<e>       <p><l>тиз<s n="adj"/></l>                         <r>быстрый<s n="adj"/><s n="sint"/></r></p></e>
+<e>       <p><l>якын<s n="adj"/></l>                        <r>близкий<s n="adj"/><s n="sint"/></r></p></e>
+<e>       <p><l>якын<s n="adj"/><s n="comp"/><s n="advl"/></l><r>ближе<s n="adv"/></r></p></e>
 
     <!-- Nouns -->
 
@@ -200,7 +217,6 @@
 <e>       <p><l>әйт<s n="v"/><s n="tv"/></l>                <r>сказать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>әкрен<s n="adj"/></l>                       <r>медленный<s n="adj"/></r></p></e>
 <e>       <p><l>әкрен<b/>генә<s n="adv"/></l>               <r>потихоньку<s n="adv"/></r></p></e>
-<e>       <p><l>әлбәттә<s n="ij"/></l>                      <r>конечно<s n="ij"/></r></p></e>
 <e>       <p><l>әле<s n="adv"/></l>                         <r>пока<s n="adv"/></r></p></e>
 <e>       <p><l>әле<s n="cnjcoo"/></l>                      <r>пока<s n="cnjadv"/></r></p></e>
 <e>       <p><l>әлегә<s n="adv"/></l>                       <r>пока<s n="adv"/></r></p></e>
@@ -212,7 +228,6 @@
 <e>       <p><l>җир<s n="n"/></l>                           <r>земля<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>җылы<s n="adj"/></l>                        <r>тёплый<s n="adj"/><s n="sint"/></r></p></e>
 <e>       <p><l>җылы<s n="adv"/></l>                        <r>тепло<s n="adv"/></r></p></e>
-<e>       <p><l>зур<s n="adj"/></l>                         <r>большой<s n="adj"/></r></p></e>
 <e>       <p><l>и<s n="cop"/></l>                           <r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>игътибар<b/>белән<s n="adv"/></l>           <r>внимательно<s n="adv"/></r></p></e>
 <e>       <p><l>игътибар<s n="n"/></l>                      <r>внимание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
@@ -227,13 +242,10 @@
 <e>       <p><l>капла<s n="v"/><s n="tv"/></l>              <r>закрывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кара<s n="v"/><s n="tv"/></l>               <r>смотреть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>карап<s n="adv"/></l>                       <r>смотря<s n="adv"/></r></p></e>
-<e>       <p><l>карт<s n="adj"/></l>                        <r>старый<s n="adj"/></r></p></e>
 <e>       <p><l>кая<s n="adv"/><s n="itg"/></l>             <r>куда<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>кая<s n="prn"/><s n="itg"/></l>             <r>куда<s n="prn"/><s n="itg"/></r></p></e>
 <e>       <p><l>кечкенә<s n="adj"/></l>                     <r>маленький<s n="adj"/></r></p></e>
 <e>       <p><l>кеше<s n="n"/></l>                          <r>человек<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
-<e>       <p><l>ки<s n="v"/><s n="tv"/></l>                 <r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
-<e>       <p><l>кит<s n="v"/><s n="iv"/></l>                <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кич<s n="n"/></l>                           <r>вечер<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>кичә<s n="adv"/></l>                        <r>вчера<s n="adv"/></r></p></e>
 <e>       <p><l>кош<s n="n"/></l>                           <r>птица<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
@@ -270,8 +282,6 @@
 <e>       <p><l>тагын<s n="adv"/></l>                       <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>тап<s n="v"/><s n="tv"/></l>                <r>найти<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>тәрәзә<s n="n"/></l>                        <r>окно<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
-<e>       <p><l>тиеш<s n="adj"/></l>                        <r>должен<s n="pred"/></r></p></e>
-<e>       <p><l>тиз<s n="adj"/></l>                         <r>быстрый<s n="adj"/></r></p></e>
 <e>       <p><l>тик<s n="cnjcoo"/></l>                      <r>но<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>тирә-як<s n="n"/></l>                       <r>окрестность<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/></r></p></e>
 <e>       <p><l>тор<s n="v"/><s n="iv"/></l>                <r>стоять<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
@@ -313,8 +323,6 @@
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>               <r>работать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>юк<s n="adj"/></l>                          <r>быть<s n="vbser"/><s n="neg"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
 <e>       <p><l>юк<s n="ij"/></l>                           <r>нет<s n="ij"/></r></p></e>
-<e>       <p><l>якын<s n="adj"/></l>                        <r>близкий<s n="adj"/></r></p></e>
-<e>       <p><l>якынрак<s n="adv"/></l>                     <r>ближе<s n="adv"/></r></p></e>
 <e>       <p><l>янәдән<s n="adv"/></l>                      <r>снова<s n="adv"/></r></p></e>
 <e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p></e>
 <e>       <p><l>ярат<s n="v"/><s n="tv"/></l>               <r>любить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
