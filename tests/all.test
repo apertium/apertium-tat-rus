@@ -10,9 +10,9 @@ make &&
 ./qa.sh tat-rus-corp &&
 
 echo '[*@#] errors tat-rus before:'
-grep -c '[*@#]' corpa/tat-rus-origina.txt
+grep -o '[*@#]' corpa/tat-rus-origina.txt | wc -l
 echo '[*@#] errors tat-rus after:'
-grep -c '[*@#]' corpa/tat-rus-nova.txt
+grep -o '[*@#]' corpa/tat-rus-nova.txt | wc -l
 
 echo 'WER tat-rus before:'
 perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-origina.txt -ref corpa/tat-rus-posted.txt > /tmp/tat-rus-wer-origina.txt
