@@ -59,9 +59,11 @@
     <def-cat n="nounpost-attr">
       <cat-item lemma="алд" tags="n.px3sp.loc.attr"/>
     </def-cat>
-
     <def-cat n="adj">
       <cat-item tags="adj"/>
+    </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num"/>
     </def-cat>
     <def-cat n="yuq-adj">
       <cat-item lemma="юк" tags="adj"/>
@@ -122,6 +124,12 @@
     <def-attr n="a_adj">
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
+    </def-attr>
+    <def-attr n="a_num">
+      <attr-item tags="num"/>
+    </def-attr>
+    <def-attr n="a_digit">
+      <attr-item tags="digit"/>
     </def-attr>
     <def-attr n="a_adv">
       <attr-item tags="adv"/>
@@ -820,6 +828,53 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
                 <lu>
                   <clip pos="1" side="tl" part="lem"/>
                   <clip pos="1" side="tl" part="a_adj"/>
+                  <lit-tag v="m"/>
+                  <lit-tag v="an"/>
+                  <lit-tag v="sg"/>
+                  <lit-tag v="nom"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^бер<num>/один<num>$
+OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
+-->
+    <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
+                   whether the lemma is a digit or not, for digits we add an additional 'digit' tag
+                   in bidix, which we delete here (i.e. do not output it).">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_digit"/><lit-tag v="digit"/></equal></test>
+            <out>
+              <chunk name="num">
+                <tags>
+                  <tag><lit-tag v="DET"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_num"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="num">
+                <tags>
+                  <tag><lit-tag v="DET"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_num"/>
                   <lit-tag v="m"/>
                   <lit-tag v="an"/>
                   <lit-tag v="sg"/>
