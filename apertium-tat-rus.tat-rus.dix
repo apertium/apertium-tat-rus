@@ -77,6 +77,8 @@
     <sdef n="dat" 	c=""/> 
     <sdef n="sint" 	c=""/> 
     <sdef n="digit" 	c=""/> 
+    <sdef n="ger_past" 	c=""/> 
+
   </sdefs>
   <section id="main" type="standard">
 
@@ -87,7 +89,7 @@
      on bidix.  Keep in mind that the analyses transducers provide
      might be wrong (miscategorized etc.) -->
 
-<!-- SECTION: Closed categories -->
+<!-- SECTION: ~Closed categories -->
 
     <!-- Pronouns -->
 
@@ -127,17 +129,25 @@
 
 <e>       <p><l>белән<s n="cnjcoo"/></l>                    <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>белән<s n="post"/></l>                      <r>с<s n="pr"/></r></p></e>
+<e>       <p><l>бергә<s n="post"/></l>                      <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
+
+<!-- SECTION: ~Open categories -->
+
+    <!-- Verbs -->
+
+<e>       <p><l>уйна<s n="v"/><s n="tv"/></l>               <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
+<e>       <p><l>уйна<s n="v"/><s n="tv"/><s n="ger_past"/></l><r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 
     <!-- Nouns -->
 
 <e>       <p><l>абый<s n="n"/></l>                           <r>брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+<e>       <p><l>агач<s n="n"/></l>                           <r>дерево<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
+<e>       <p><l>бала<s n="n"/></l>                           <r>ребёнок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>йорт<s n="n"/></l>                           <r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>китап<s n="n"/></l>                          <r>книга<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>теләк<s n="n"/></l>                          <r>желание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 
-<!-- SECTION:  -->
 
-<e>       <p><l>агач<s n="n"/></l>                          <r>дерево<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>ал<s n="v"/><s n="tv"/></l>                 <r>брать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>ал<s n="vaux"/></l>                         <r>мочь<s n="vbmod"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/></r></p></e>
@@ -157,7 +167,6 @@
 <e>       <p><l>аша<s n="post"/></l>                        <r>через<s n="pr"/></r></p></e>
 <e>       <p><l>аша<s n="v"/><s n="tv"/></l>                <r>есть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>бакча<s n="n"/></l>                         <r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
-<e>       <p><l>бала<s n="n"/></l>                          <r>ребенок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>бар<s n="adj"/></l>                         <r>быть<s n="vbser"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
 <e>       <p><l>бар<s n="det"/><s n="qnt"/></l>             <r>весь<s n="det"/><s n="ind"/></r></p></e>
 <e>       <p><l>бар<s n="v"/><s n="iv"/></l>                <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
@@ -271,7 +280,6 @@
 <e>       <p><l>тырыш<s n="v"/><s n="iv"/></l>              <r>пытаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>тыш<s n="n"/></l>                           <r>улица<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>уен<s n="n"/></l>                           <r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
-<e>       <p><l>уйна<s n="v"/><s n="tv"/></l>               <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>укытучы<s n="n"/></l>                       <r>учитель<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>ул<s n="n"/></l>                            <r>сын<s n="n"/><s n="m"/><s n="aa"/><s n="sg"/></r></p></e>
 <e>       <p><l>урындык<s n="n"/></l>                       <r>стул<s n="n"/><s n="m"/><s n="nn"/></r></p></e>

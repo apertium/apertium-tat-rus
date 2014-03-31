@@ -84,14 +84,33 @@
     <def-cat n="verb-pres">
       <cat-item tags="v.*.pres.*"/>
       <cat-item tags="v.*.*.pres.*"/>
+      <cat-item tags="vaux.pres.*"/>
+      <cat-item tags="vaux.neg.pres.*"/>
     </def-cat>
     <def-cat n="verb-ifi">
       <cat-item tags="v.*.ifi.*"/>
       <cat-item tags="v.*.*.ifi.*"/>
+      <cat-item tags="vaux.ifi.*"/>
+      <cat-item tags="vaux.neg.ifi.*"/>
     </def-cat>
-    <def-cat n="inf">
+    <def-cat n="verb-nonfin">
       <cat-item tags="v.*.inf"/>
       <cat-item tags="v.*.*.inf.*"/>
+      <cat-item tags="v.*.prc_perf"/>
+      <cat-item tags="v.*.*.prc_perf"/>
+      <cat-item tags="v.*.prc_impf"/>
+      <cat-item tags="v.*.*.prc_impf"/>
+      <cat-item tags="v.*.gna_perf"/>
+      <cat-item tags="v.*.*.gna_perf"/>
+      <cat-item tags="v.*.gna_impf"/>
+      <cat-item tags="v.*.*.gna_impf"/>
+      <cat-item tags="v.*.prc_fut"/>
+      <cat-item tags="v.*.*.prc_fut"/>
+      <cat-item tags="v.*.prc_fut"/>
+      <cat-item tags="v.*.*.prc_fut"/>
+      <cat-item tags="v.*.prc_vol_"/>
+      <cat-item tags="v.*.ger_past.*"/>
+      <cat-item tags="v.*.*.ger_past.*"/>
     </def-cat>
     <def-cat n="prn-gen">
       <cat-item tags="prn.pers.*.*.gen"/>
@@ -144,6 +163,10 @@
     <def-attr n="a_vblex">
       <attr-item tags="vblex.impf"/>
       <attr-item tags="vblex.perf"/>
+      <attr-item tags="vbmod.impf.tv"/> <!-- Modal verbs already receive transitivity tags in rus.dix-->
+      <attr-item tags="vbmod.impf.iv"/>
+      <attr-item tags="vbmod.perf.tv"/>
+      <attr-item tags="vbmod.perf.iv"/>
     </def-attr>
     <def-attr n="a_gender">
       <attr-item tags="m"/>
@@ -666,26 +689,57 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
     </rule>
 
 <!--
-INPUT:  ^уйна<v><tv><inf>/играть<vblex><impf><tv><inf>$
-OUTPUT: ^inf<VBLEX>{^играть<vblex><impf><tv><inf>$}$
+INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc> 
+OUTPUT: ^noun<NP>{^игра<n><f><nn><acc>$}$
+INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
+OUTPUT: ^inf<VBLEX>{^быть<vbser><inf>$}$
+INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$ (алмый/не может)
+OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
 -->
-    <rule comment="">
+    <rule comment="To translate every non-finite form with infinitive is not good,
+                   but this is a temporal solution till things get sorted out.">
       <pattern>
-        <pattern-item n="inf"/>
+        <pattern-item n="verb-nonfin"/>
       </pattern>
       <action>
-        <out>
-          <chunk name="inf">
-            <tags>
-              <tag><lit-tag v="VBLEX"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_vblex"/>
-              <lit-tag v="inf"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_noun"/><lit-tag v="n"/></equal></test>
+            <call-macro n="translate-noun">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk name="noun">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <call-macro n="convert-neg-to-ne.adv">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk name="inf">
+                <tags>
+                  <tag><lit-tag v="VBLEX"/></tag>
+                </tags>
+                <var n="negation"/>
+                <b/>
+                <lu>
+                  <clip pos="1" side="tl" part="lemh"/>
+                  <clip pos="1" side="tl" part="a_vblex"/>
+                  <lit-tag v="inf"/>
+                  <clip pos="1" side="tl" part="lemq"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
