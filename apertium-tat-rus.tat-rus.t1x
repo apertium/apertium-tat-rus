@@ -67,8 +67,11 @@
     </def-cat>
     <def-cat n="det">
       <cat-item tags="det.*"/>
+    </def-cat>
+    <def-cat n="num">
       <cat-item tags="num"/>
     </def-cat>
+
     <def-cat n="yuq-adj">
       <cat-item lemma="юк" tags="adj"/>
     </def-cat>
@@ -173,6 +176,10 @@
       <attr-item tags="det.itg"/>
       <attr-item tags="num"/>
     </def-attr>
+    <def-attr n="a_num">
+      <attr-item tags="num"/>
+    </def-attr>
+
     <def-attr n="a_adj">
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
@@ -352,12 +359,30 @@
       </let>
     </def-macro>
 
-    <def-macro n="adopt-det" npar="1">
-      <!-- arg.1 determiner (det.pos, det.dem etc, numerals)
+    <def-macro n="adapt-det" npar="1">
+      <!-- arg.1 determiner (det.pos, det.dem etc)
            Set the determiner to the default <m.an.sg.nom> (to be agreed with the head of the NP in another macro).
 
            INPUT: ^бу<det><dem>/этот<det><dem>$ "OUTPUT": ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$
-           INPUT: ^бер<num>/один<num>$ "OUTPUT": ^бер<num>/^один<num><m><an><sg><nom$
+      -->
+      <let>
+        <clip pos="1" side="tl" part="whole"/>
+        <concat>
+          <clip pos="1" side="tl" part="lem"/>
+          <clip pos="1" side="tl" part="a_det"/>
+          <lit-tag v="m"/>
+          <lit-tag v="an"/>
+          <lit-tag v="sg"/>
+          <lit-tag v="nom"/>
+        </concat>
+      </let>
+    </def-macro>
+
+    <def-macro n="adapt-num" npar="1">
+      <!-- arg.1 numeral
+           Set the numeral to the default <nom>. Other tags are taken from the bidix.
+
+           INPUT: ^бер<num>/один<num><m><an><sg>$ "OUTPUT": ^бер<num>/^один<num><m><an><sg><nom$
            INPUT: ^1<num>/1<num><digit>$ "OUTPUT": ^1<num>/^1<num>$
       -->
       <choose>
@@ -367,7 +392,7 @@
             <clip pos="1" side="tl" part="whole"/>
             <concat>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_det"/>
+              <clip pos="1" side="tl" part="a_num"/>
             </concat>
           </let>
         </when>
@@ -376,10 +401,10 @@
             <clip pos="1" side="tl" part="whole"/>
             <concat>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_det"/>
-              <lit-tag v="m"/>
-              <lit-tag v="an"/>
-              <lit-tag v="sg"/>
+              <clip pos="1" side="tl" part="a_num"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
               <lit-tag v="nom"/>
             </concat>
           </let>
@@ -986,8 +1011,8 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
     </rule>
 
 <!--
-INPUT: ^бер<num>/один<num>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
-INPUT: ^бер<det><ind>/один<num>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT: ^бер<num>/один<num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
 -->
     <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
                    whether the lemma is a digit or not, for digits we add an additional 'digit' tag
@@ -996,11 +1021,38 @@ INPUT: ^бер<det><ind>/один<num>$ OUTPUT: ^det<DET>{^один<num><m><an><
         <pattern-item n="det"/>
       </pattern>
       <action>
-        <call-macro n="adopt-det">
+        <call-macro n="adapt-det">
           <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="det">
+            <tags>
+              <tag><lit-tag v="DET"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT: ^бер<num>/один<num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+-->
+    <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
+                   whether the lemma is a digit or not, for digits we add an additional 'digit' tag
+                   in bidix, which we delete here (i.e. do not output it).">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <call-macro n="adapt-num">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="num">
             <tags>
               <tag><lit-tag v="DET"/></tag>
             </tags>

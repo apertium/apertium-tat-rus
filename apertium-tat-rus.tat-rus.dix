@@ -126,6 +126,14 @@
 <e>       <p><l>ул<s n="det"/><s n="dem"/></l>              <r>этот<s n="det"/><s n="dem"/></r></p></e>
 <e>       <p><l>берәр<s n="det"/><s n="ind"/></l>           <r>какой<s n="det"/><s n="itg"/></r></p></e> <!-- FIXME какой-то (add it first in rus.dix) -->
 
+    <!-- Numerals -->
+
+<e>       <p><l>бер<s n="num"/></l>                         <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
+<e>       <p><l>бер<s n="det"/><s n="ind"/></l>             <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
+<e>       <p><l>ике<s n="num"/></l>                         <r>два<s n="num"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
+<e>       <p><l>биш<s n="num"/></l>                         <r>пять<s n="num"/><s n="mfn"/><s n="pl"/></r></p></e>
+<e>       <p><l>алты<s n="num"/></l>                        <r>шесть<s n="num"/><s n="mfn"/><s n="pl"/></r></p></e>
+
     <!-- Adpositions -->
 
 <e>       <p><l>белән<s n="cnjcoo"/></l>                    <r>и<s n="cnjcoo"/></r></p></e>
@@ -171,7 +179,6 @@
 <e>       <p><l>ал<s n="vaux"/></l>                         <r>мочь<s n="vbmod"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/></r></p></e>
 <e c="алдында"><p><l>алд<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>перед<s n="pr"/></r></p></e>
-<e>       <p><l>алты<s n="num"/></l>                        <r>шесть<s n="num"/></r></p></e>
 <e>       <p><l>алты<b/>яшьлек<s n="adj"/></l>              <r>шестилетний<s n="adj"/></r></p></e>
 <e>       <p><l>анда<s n="adv"/></l>                        <r>там<s n="adv"/></r></p></e>
 <e>       <p><l>аңла<s n="v"/><s n="tv"/></l>               <r>понимать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
@@ -191,15 +198,12 @@
 <e>       <p><l>бар<s n="v"/><s n="iv"/></l>                <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>баш<s n="n"/></l>                           <r>голова<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>бел<s n="v"/><s n="tv"/></l>                <r>знать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>бер<s n="num"/></l>                         <r>один<s n="num"/></r></p></e>
-<e>       <p><l>бер<s n="det"/><s n="ind"/></l>             <r>один<s n="num"/></r></p></e>
 <e>       <p><l>бергә<s n="adv"/></l>                       <r>вместе<s n="adv"/></r></p></e>
 <e>       <p><l>бетер<s n="v"/><s n="tv"/></l>              <r>заканчивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>бетер<s n="vaux"/></l>                      <r>заканчивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>бәләкәй<s n="adj"/></l>                     <r>маленький<s n="adj"/></r></p></e>
 <e>       <p><l>бәлки<s n="cnjcoo"/></l>                    <r>а<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>бик<s n="adv"/></l>                         <r>очень<s n="adv"/></r></p></e>
-<e>       <p><l>биш<s n="num"/></l>                         <r>пять<s n="num"/></r></p></e>
 <e>       <p><l>бу<s n="v"/><s n="tv"/></l>                 <r>душить<s n="v"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>бул<s n="vaux"/><s n="imp"/><s n="p2"/><s n="sg"/></l><r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>бул<s n="v"/><s n="iv"/></l>                <r>быть<s n="vbser"/></r></p></e>
@@ -233,7 +237,6 @@
 <e>       <p><l>и<s n="cop"/></l>                           <r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>игътибар<b/>белән<s n="adv"/></l>           <r>внимательно<s n="adv"/></r></p></e>
 <e>       <p><l>игътибар<s n="n"/></l>                      <r>внимание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
-<e>       <p><l>ике<s n="num"/></l>                         <r>два<s n="num"/></r></p></e>
 <e>       <p><l>иске<s n="adj"/></l>                        <r>старый<s n="adj"/></r></p></e>
 <e>       <p><l>ишет<s n="v"/><s n="tv"/></l>               <r>слышать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>йокла<s n="v"/><s n="iv"/></l>              <r>спать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
