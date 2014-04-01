@@ -100,6 +100,8 @@
       <cat-item tags="v.*.*.past.*"/>
       <cat-item tags="vaux.past.*"/>
       <cat-item tags="vaux.neg.past.*"/>
+      <cat-item tags="v.*.imp.*"/>
+      <cat-item tags="v.*.*.imp.*"/>
     </def-cat>
     <def-cat n="verb-nonfin">
       <cat-item tags="v.*.inf"/>
@@ -236,6 +238,7 @@
       <attr-item tags="pres"/>
       <attr-item tags="ifi"/>
       <attr-item tags="past"/>
+      <attr-item tags="imp"/>
     </def-attr>
     <def-attr n="a_neg">
       <attr-item tags="neg"/>
