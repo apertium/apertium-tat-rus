@@ -18,6 +18,8 @@
       <cat-item tags="n.pl.abl"/>
       <cat-item tags="n.loc"/>
       <cat-item tags="n.pl.loc"/>
+      <cat-item tags="n.px.nom"/>
+      <cat-item tags="n.pl.px.nom"/>
       <cat-item tags="prn.pers.*.*.*."/>
       <cat-item tags="prn.dem.*"/>
       <cat-item tags="prn.itg.*"/>
@@ -77,7 +79,7 @@
     </def-cat>
     <def-cat n="cop-p3">
       <cat-item tags="cop.p3.sg"/>
-     <cat-item tags="cop.p3.pl"/>
+      <cat-item tags="cop.p3.pl"/>
     </def-cat>
     <def-cat n="cop-pres">
       <cat-item tags="cop.p1.*"/>
@@ -225,6 +227,9 @@
       <attr-item tags="loc"/>
       <attr-item tags="prp"/>
     </def-attr>
+    <def-attr n="a_px">
+      <attr-item tags="px"/>
+    </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
@@ -305,8 +310,8 @@
 
     <def-macro n="translate-noun" npar="1">
       <!-- arg.1 noun
-           Translates ablative and locative cases with a preposition (variable) and noun,
-           other cases remain as they are.
+           Translates ablative and locative cases with a 'preposition' (variable) and noun,
+           <px><nom> with genitive, other cases remain as they are.
       -->
       <call-macro n="return-number-of-sl-noun">
         <with-param pos="1"/>
@@ -345,6 +350,12 @@
               <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
             </when>
           </choose>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="px"/></equal></test>
+          <let><var n="case"/><lit-tag v="gen"/></let>
         </when>
       </choose>
       <let>
