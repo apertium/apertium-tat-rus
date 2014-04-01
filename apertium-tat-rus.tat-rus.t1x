@@ -87,13 +87,11 @@
     <def-cat n="cop-ifi">
       <cat-item tags="cop.ifi.*.*"/>
     </def-cat>
-    <def-cat n="verb-pres">
+    <def-cat n="verb-fin">
       <cat-item tags="v.*.pres.*"/>
       <cat-item tags="v.*.*.pres.*"/>
       <cat-item tags="vaux.pres.*"/>
       <cat-item tags="vaux.neg.pres.*"/>
-    </def-cat>
-    <def-cat n="verb-ifiPast">
       <cat-item tags="v.*.ifi.*"/>
       <cat-item tags="v.*.*.ifi.*"/>
       <cat-item tags="vaux.ifi.*"/>
@@ -237,6 +235,7 @@
     <def-attr n="a_tense">
       <attr-item tags="pres"/>
       <attr-item tags="ifi"/>
+      <attr-item tags="past"/>
     </def-attr>
     <def-attr n="a_neg">
       <attr-item tags="neg"/>
@@ -362,7 +361,6 @@
     <def-macro n="adapt-det" npar="1">
       <!-- arg.1 determiner (det.pos, det.dem etc)
            Set the determiner to the default <m.an.sg.nom> (to be agreed with the head of the NP in another macro).
-
            INPUT: ^бу<det><dem>/этот<det><dem>$ "OUTPUT": ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$
       -->
       <let>
@@ -381,7 +379,6 @@
     <def-macro n="adapt-num" npar="1">
       <!-- arg.1 numeral
            Set the numeral to the default <nom>. Other tags are taken from the bidix.
-
            INPUT: ^бер<num>/один<num><m><an><sg>$ "OUTPUT": ^бер<num>/^один<num><m><an><sg><nom$
            INPUT: ^1<num>/1<num><digit>$ "OUTPUT": ^1<num>/^1<num>$
       -->
@@ -684,54 +681,45 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
 <!--
 INPUT:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
 OUTPUT: ^verb<VBLEX>{^играть<vblex><impf><pres><p1><sg>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="verb-pres"/>
-      </pattern>
-      <action>
-        <call-macro n="convert-neg-to-ne.adv">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="verb">
-            <tags>
-              <tag><lit-tag v="VBLEX"/></tag>
-            </tags>
-            <var n="negation"/>
-            <b/>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_vblex"/>
-              <clip pos="1" side="tl" part="a_tense"/>
-              <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
 INPUT:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
 OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><past><mfn><pl>$}$
 -->
-    <rule comment="">
+    <rule comment="finite verbs">
       <pattern>
-        <pattern-item n="verb-ifiPast"/>
+        <pattern-item n="verb-fin"/>
       </pattern>
       <action>
+        <let><var n="gender"/><lit v=""/></let>
         <call-macro n="convert-neg-to-ne.adv">
           <with-param pos="1"/>
         </call-macro>
         <choose>
           <when>
-            <test><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></test>
-            <let><var n="gender"/><lit-tag v="mfn"/></let>
+            <test><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="ifi"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></let>
           </when>
-          <otherwise>
+        </choose>
+        <choose>
+          <when>
+            <test>
+              <and>
+                <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
+                <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+              </and>
+            </test>
+            <let><var n="gender"/><lit-tag v="mfn"/></let>
+            <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
+          </when>
+          <when>
+            <test>
+              <and>
+                <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
+                <not><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></not>
+              </and>
+            </test>
             <let><var n="gender"/><lit-tag v="m"/></let>
-          </otherwise>
+            <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
+          </when>
         </choose>
         <out>
           <chunk name="verb">
@@ -743,8 +731,9 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_vblex"/>
-              <lit-tag v="past"/>
+              <clip pos="1" side="tl" part="a_tense"/>
               <var n="gender"/>
+              <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
@@ -761,7 +750,7 @@ INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$ (алм�
 OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
 -->
     <rule comment="To translate every non-finite form with infinitive is not good,
-                   but this is a temporal solution till things get sorted out.">
+                   but this is a temporal solution until things get sorted out.">
       <pattern>
         <pattern-item n="verb-nonfin"/>
       </pattern>
