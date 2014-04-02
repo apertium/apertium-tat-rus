@@ -41,6 +41,11 @@
       <cat-item tags="n.px3sp.nom"/>
     </def-cat>
 
+    <def-cat n="noun-px3sp">
+      <cat-item tags="n.px3sp.*"/>
+      <cat-item tags="n.pl.px3sp.*"/>
+    </def-cat>
+
     <def-cat n="noun-px">
       <cat-item tags="n.px1sg.*"/>
       <cat-item tags="n.*.px1sg.*"/>
@@ -144,7 +149,7 @@
     </def-cat>
     <def-cat n="prn-gen">
       <cat-item tags="prn.pers.*.*.gen"/>
-     <cat-item lemma="ул" tags="prn.dem.gen"/>
+      <cat-item lemma="ул" tags="prn.dem.gen"/>
       <cat-item lemma="ул" tags="prn.dem.pl.gen"/> 
    </def-cat>
     <def-cat n="qst">
@@ -1090,6 +1095,42 @@ INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$ OUTPUT: ^det<DET>{^од�
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><sg><nom><pl><px3sp><acc>$
+OUTPUT: ^noun_noun-gen<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="noun-attr"/>
+        <pattern-item n="noun-px3sp"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="noun_noun-gen">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_noun"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="gen"/>
             </lu>
           </chunk>
         </out>
