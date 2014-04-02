@@ -39,4 +39,8 @@ OUTPUT: [0]^ул<prn><dem><gen>/он<prn><pers><p3><m><sg><gen>$
     <match tags="n.px3sp.dat"/>
   </rule>
 
+  <rule c="No present tense for perfective verbs">
+    <match tags="pres"><select tags="impf"/></match>
+  </rule>
+
 </rules>
