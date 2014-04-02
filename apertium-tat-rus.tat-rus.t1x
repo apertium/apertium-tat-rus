@@ -90,6 +90,7 @@
       <cat-item tags="cop.p1.*"/>
       <cat-item tags="cop.p2.*"/>
       <cat-item tags="cop.p3.*"/>
+      <cat-item tags="cop.neg.p3.*"/>
     </def-cat>
     <def-cat n="cop-ifi">
       <cat-item tags="cop.ifi.*.*"/>
@@ -184,6 +185,7 @@
       <attr-item tags="det.dem"/>
       <attr-item tags="det.pos"/>
       <attr-item tags="det.itg"/>
+      <attr-item tags="det.ind"/>
       <attr-item tags="num"/>
     </def-attr>
     <def-attr n="a_num">
@@ -657,11 +659,21 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
         <pattern-item n="cop-pres"/>
       </pattern>
       <action>
+        <call-macro n="convert-neg-to-ne.adv">
+          <with-param pos="1"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test><not><equal><var n="negation"/><lit v=""/></equal></not></test>
+          </when>
+        </choose>
         <out>
           <chunk name="cop-pres">
             <tags>
               <tag><lit-tag v="VBSER"/></tag>
             </tags>
+            <var n="negation"/>
+            <b/>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_vbser"/>
