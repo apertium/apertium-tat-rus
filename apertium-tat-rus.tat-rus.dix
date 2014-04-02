@@ -169,6 +169,8 @@
 <e>       <p><l>тиз<s n="adj"/></l>                         <r>быстрый<s n="adj"/><s n="sint"/></r></p></e>
 <e>       <p><l>якын<s n="adj"/></l>                        <r>близкий<s n="adj"/><s n="sint"/></r></p></e>
 <e>       <p><l>якын<s n="adj"/><s n="comp"/><s n="advl"/></l><r>ближе<s n="adv"/></r></p></e>
+<e>       <p><l>яхшы<s n="adj"/></l>                        <r>хороший<s n="adj"/></r></p></e>
+<e>       <p><l>яхшы<s n="adj"/><s n="advl"/></l>           <r>хорошо<s n="adv"/></r></p></e>
 
     <!-- Nouns -->
 
@@ -337,8 +339,6 @@
 <e>       <p><l>янәдән<s n="adv"/></l>                      <r>снова<s n="adv"/></r></p></e>
 <e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p></e>
 <e>       <p><l>ярат<s n="v"/><s n="tv"/></l>               <r>любить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>яхшы<s n="adj"/></l>                        <r>хороший<s n="adj"/></r></p></e>
-<e>       <p><l>яхшы<s n="adv"/></l>                        <r>хорошо<s n="adv"/></r></p></e>
 <e>       <p><l>яшерен<s n="v"/><s n="iv"/></l>             <r>прятаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>яшь<s n="adj"/></l>                         <r>молодой<s n="adj"/></r></p></e>
 <e>       <p><l>яшьлек<s n="n"/></l>                        <r>молодость<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
