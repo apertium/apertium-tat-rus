@@ -161,6 +161,7 @@
       <attr-item tags="n"/>
       <attr-item tags="np"/>
       <attr-item tags="pred"/>
+      <attr-item tags="pr"/>
     </def-attr>
     <def-attr n="a_noun">
       <attr-item tags="n"/>
@@ -844,54 +845,80 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
         <pattern-item n="noun-px"/>
       </pattern>
       <action>
-        <call-macro n="translate-noun">
-          <with-param pos="2"/>
-        </call-macro>
-        <call-macro n="concord2">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
         <choose>
-          <when c="'его' and 'их' do not take animacy or gender tags">
-            <test>
-              <or>
-                <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="его"/></equal>
-                <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="их"/></equal>
-              </or>
-            </test>
+          <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
+            <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
             <out>
-              <chunk name="det_noun">
+              <chunk name="pr">
+                <tags>
+                  <tag><lit-tag v="PREP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="noun">
                 <tags>
                   <tag><lit-tag v="NP"/></tag>
                 </tags>
-                <var n="preposition"/>
                 <lu>
-                  <clip pos="1" side="tl" part="lem"/>
-                  <clip pos="1" side="tl" part="a_det"/>
-                </lu>
-                <b/>
-                <lu>
-                  <clip pos="2" side="tl" part="whole"/>
+                  <clip pos="1" side="tl" part="whole"/>
                 </lu>
               </chunk>
             </out>
           </when>
-          <otherwise c="all other possessive determiners">
-            <out>
-              <chunk name="det_noun">
-                <tags>
-                  <tag><lit-tag v="NP"/></tag>
-                </tags>
-                <var n="preposition"/>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-                <b/>
-                <lu>
-                  <clip pos="2" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
+          <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+            <call-macro n="concord2">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
+            <choose>
+              <when c="'его' and 'их' do not take animacy or gender tags">
+                <test>
+                  <or>
+                    <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="его"/></equal>
+                    <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="их"/></equal>
+                  </or>
+                </test>
+                <out>
+                  <chunk name="det_noun">
+                    <tags>
+                      <tag><lit-tag v="NP"/></tag>
+                    </tags>
+                    <var n="preposition"/>
+                    <lu>
+                      <clip pos="1" side="tl" part="lem"/>
+                      <clip pos="1" side="tl" part="a_det"/>
+                    </lu>
+                    <b/>
+                    <lu>
+                      <clip pos="2" side="tl" part="whole"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+              <otherwise c="all other possessive determiners">
+                <out>
+                  <chunk name="det_noun">
+                    <tags>
+                      <tag><lit-tag v="NP"/></tag>
+                    </tags>
+                    <var n="preposition"/>
+                    <lu>
+                      <clip pos="1" side="tl" part="whole"/>
+                    </lu>
+                    <b/>
+                    <lu>
+                      <clip pos="2" side="tl" part="whole"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </otherwise>
+            </choose>
           </otherwise>
         </choose>
       </action>

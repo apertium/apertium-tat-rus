@@ -22,4 +22,21 @@ OUTPUT: ^Тик<cnjcoo>/Но<cnjcoo>$ ^кичә<adv>/вчера<adv>$ ^бик<ad
     <match tags="adv.itg"/>
   </rule>
 
+<!--
+INPUT:  ^ул<prn><dem><gen>/его<det><pos>/он<prn><pers><p3><m><sg><gen>$
+        ^арт<n><px3sp><dat>/за<pr>$
+        ^Гөлнара<np><ant><f><abl>/Гульнара<np><ant><f><sg><abl>$
+        ^яшерен<v><iv><pres><p3><sg>/прятаться<vblex><impf><iv><pres><p3><sg>$
+        ^.<sent>/.<sent>$
+OUTPUT: [0]^ул<prn><dem><gen>/он<prn><pers><p3><m><sg><gen>$
+        ^арт<n><px3sp><dat>/за<pr>$
+        ^Гөлнара<np><ant><f><abl>/Гульнара<np><ant><f><sg><abl>$
+        ^яшерен<v><iv><pres><p3><sg>/прятаться<vblex><impf><iv><pres><p3><sg>$
+        ^.<sent>/.<sent>$
+-->
+  <rule c="we need to select prn reading so that we can manipulate its case in transfer">
+    <match lemma="ул" tags="prn.dem.gen"><select tags="prn.pers.*"/></match>
+    <match tags="n.px3sp.dat"/>
+  </rule>
+
 </rules>
