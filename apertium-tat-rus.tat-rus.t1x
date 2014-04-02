@@ -127,6 +127,8 @@
       <cat-item tags="cop.*.ger_past.*"/>
       <cat-item tags="v.*.gpr_past"/>
       <cat-item tags="v.*.*.gpr_past"/>
+      <cat-item tags="v.*.gpr_past.*"/>
+      <cat-item tags="v.*.*.gpr_past.*"/>
       <cat-item tags="v.*.gpr_fut.*"/>
       <cat-item tags="v.*.*.gpr_fut.*"/>
       <cat-item tags="v.*.gpr_fut"/>
