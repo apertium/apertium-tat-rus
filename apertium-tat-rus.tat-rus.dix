@@ -80,6 +80,7 @@
     <sdef n="ger_past" 	c=""/> 
     <sdef n="comp" 	c=""/> 
     <sdef n="advl" 	c=""/> 
+    <sdef n="mod_ass" 	c=""/> 
   </sdefs>
   <section id="main" type="standard">
 
@@ -143,6 +144,10 @@
     <!-- Interjections -->
 
 <e>       <p><l>әлбәттә<s n="ij"/></l>                      <r>конечно<s n="adv"/></r></p></e>  <!-- FIXME CHECK pos russian -->
+
+    <!-- Modal particles -->
+
+<e>       <p><l>шул<s n="mod_ass"/></l>                     <r>ведь<s n="part"/></r></p></e>
 
 <!-- SECTION: ~Open categories -->
 
