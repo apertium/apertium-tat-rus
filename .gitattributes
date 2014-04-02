@@ -10,6 +10,7 @@
 /apertium-tat-rus.tat-rus.t1x -text
 /apertium-tat-rus.tat-rus.t2x -text
 /apertium-tat-rus.tat-rus.t3x -text
+/apertium-view.sh -text
 /autogen.sh -text
 /configure.ac -text
 corpa/README -text
