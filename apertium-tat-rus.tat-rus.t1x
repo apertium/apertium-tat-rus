@@ -26,26 +26,21 @@
       <cat-item tags="prn.neg.*"/>
       <cat-item tags="np.ant.*"/>
     </def-cat>
-
     <def-cat n="noun-gen">
       <cat-item tags="n.gen"/>
       <cat-item tags="np.ant.f.gen"/>
     </def-cat>
-
     <def-cat n="noun-loc">
       <cat-item tags="n.loc"/>
       <cat-item tags="n.pl.loc"/>
     </def-cat>
-
     <def-cat n="noun-px3sp-nom">
       <cat-item tags="n.px3sp.nom"/>
     </def-cat>
-
     <def-cat n="noun-px3sp">
       <cat-item tags="n.px3sp.*"/>
       <cat-item tags="n.pl.px3sp.*"/>
     </def-cat>
-
     <def-cat n="noun-px">
       <cat-item tags="n.px1sg.*"/>
       <cat-item tags="n.*.px1sg.*"/>
@@ -69,20 +64,29 @@
     <def-cat n="nounpost-attr">
       <cat-item lemma="алд" tags="n.px3sp.loc.attr"/>
     </def-cat>
+
+    <def-cat n="prn-gen">
+      <cat-item tags="prn.pers.*.*.gen"/>
+      <cat-item lemma="ул" tags="prn.dem.gen"/>
+      <cat-item lemma="ул" tags="prn.dem.pl.gen"/> 
+   </def-cat>
+
     <def-cat n="adj">
       <cat-item tags="adj"/>
     </def-cat>
+    <def-cat n="yuq-adj">
+      <cat-item lemma="юк" tags="adj"/>
+    </def-cat>
+
     <def-cat n="det">
       <cat-item tags="det.*"/>
     </def-cat>
+
     <def-cat n="num">
       <cat-item tags="num"/>
       <cat-item tags="num.*"/>
     </def-cat>
 
-    <def-cat n="yuq-adj">
-      <cat-item lemma="юк" tags="adj"/>
-    </def-cat>
     <def-cat n="cop-p3">
       <cat-item tags="cop.p3.sg"/>
       <cat-item tags="cop.p3.pl"/>
@@ -96,6 +100,7 @@
     <def-cat n="cop-ifi">
       <cat-item tags="cop.ifi.*.*"/>
     </def-cat>
+
     <def-cat n="verb-fin">
       <cat-item tags="v.*.pres.*"/>
       <cat-item tags="v.*.*.pres.*"/>
@@ -149,11 +154,7 @@
       <cat-item tags="v.*.gna_cond.*"/>
       <cat-item tags="v.*.*.gna_cond.*"/>
     </def-cat>
-    <def-cat n="prn-gen">
-      <cat-item tags="prn.pers.*.*.gen"/>
-      <cat-item lemma="ул" tags="prn.dem.gen"/>
-      <cat-item lemma="ул" tags="prn.dem.pl.gen"/> 
-   </def-cat>
+
     <def-cat n="qst">
       <cat-item tags="qst"/>
     </def-cat>
@@ -163,6 +164,7 @@
     <def-cat n="cm">
       <cat-item tags="cm"/>
     </def-cat>
+
   </section-def-cats>
 
   <section-def-attrs>
@@ -272,6 +274,10 @@
   <section-def-macros>
 
     <def-macro n="return-number-of-sl-noun" npar="1">
+      <!-- arg.1 any nominal -> v_number
+           Sets the 'number' variable to '<pl>' if the word contains the '<pl>' tag,
+           to '<sg>' otherwise (in context of Tatar, singular is the absence of the
+           plural affix). -->
       <choose>
         <when>
           <test>
@@ -289,9 +295,8 @@
     </def-macro>
 
     <def-macro n="convert-neg-to-ne.adv" npar="1">
-      <!-- arg.1 verb
-           Sets 'negation' variable to '^не<adv>$' if the verb contains <neg> tag.
-      -->
+      <!-- arg.1 verb -> v_negation
+           Sets the 'negation' variable to '^не<adv>$' if the verb contains <neg> tag. -->
       <let><var n="negation"/><lit v=""/></let>
       <choose>
         <when>
@@ -304,9 +309,8 @@
     </def-macro>
 
     <def-macro n="return-case-pr-governs" npar="1">
-      <!-- arg.1 prepostion
-           Sets the 'case' variable to the case which the preposition governs.
-      -->
+      <!-- arg.1 prepostion -> v_case
+           Sets the 'case' variable to the case which the preposition governs. -->
       <choose>
         <when>
           <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="перед"/></equal></test>
@@ -320,10 +324,9 @@
     </def-macro>
 
     <def-macro n="translate-noun" npar="1">
-      <!-- arg.1 noun
-           Translates ablative and locative cases with a 'preposition' (variable) and noun,
-           <px><nom> with genitive, other cases remain as they are.
-      -->
+      <!-- arg.1 noun -> v_preposition noun
+           Translates ablative and locative cases with the variable 'preposition' and noun,
+           <px><nom> with genitive, other cases remain as they are. -->
       <call-macro n="return-number-of-sl-noun">
         <with-param pos="1"/>
       </call-macro>
@@ -384,10 +387,9 @@
     </def-macro>
 
     <def-macro n="adapt-det" npar="1">
-      <!-- arg.1 determiner (det.pos, det.dem etc)
+      <!-- arg.1 determiner (det.pos, det.dem etc) -> determiner
            Set the determiner to the default <m.an.sg.nom> (to be agreed with the head of the NP in another macro).
-           INPUT: ^бу<det><dem>/этот<det><dem>$ "OUTPUT": ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$
-      -->
+           INPUT: ^бу<det><dem>/этот<det><dem>$ "OUTPUT": ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$ -->
       <let>
         <clip pos="1" side="tl" part="whole"/>
         <concat>
@@ -402,11 +404,10 @@
     </def-macro>
 
     <def-macro n="adapt-num" npar="1">
-      <!-- arg.1 numeral
+      <!-- arg.1 numeral -> numeral
            Set the numeral to the default <nom>. Other tags are taken from the bidix.
            INPUT: ^бер<num>/один<num><m><an><sg>$ "OUTPUT": ^бер<num>/^один<num><m><an><sg><nom$
-           INPUT: ^1<num>/1<num><digit>$ "OUTPUT": ^1<num>/^1<num>$
-      -->
+           INPUT: ^1<num>/1<num><digit>$ "OUTPUT": ^1<num>/^1<num>$ -->
       <choose>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_digit"/><lit-tag v="digit"/></equal></test>
@@ -435,10 +436,10 @@
     </def-macro>
      
     <def-macro n="concord2" npar="2">
-      <!-- arg.1 determiner arg.2 noun
+      <!-- arg.1 determiner arg.2 noun -> determiner noun
            Concords gender, animacy, number, case of the determiner with the head of the NP.
-           Assumes that the head of the NP was already 'translated'.
-      -->
+           Assumes that the head of the NP was already 'translated'. -->
+
       <!-- "First, copy everything except for animacy from the noun (for some reason some of the
            possessive determiners do not receive animacy tag in rus.dix)."-->
       <let>
@@ -460,8 +461,8 @@
         </when>
       </choose>
       <choose>
-        <when c="If the gender is masculin or number is plural, in accusative we want to take the animacy tag of the noun,
-                 otherwise it should be set to 'an'.">
+        <when c="If the gender is masculin or number is plural, in accusative we want to take the
+                 animacy tag of the noun, otherwise it should be set to 'an'.">
           <test>
             <and>
               <or>
