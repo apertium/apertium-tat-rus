@@ -273,7 +273,7 @@
 
   <section-def-macros>
 
-    <def-macro n="return-number-of-sl-noun" npar="1">
+    <def-macro n="return-number-of-sl-word" npar="1">
       <!-- arg.1 any nominal -> v_number
            Sets the 'number' variable to '<pl>' if the word contains the '<pl>' tag,
            to '<sg>' otherwise (in context of Tatar, singular is the absence of the
@@ -327,7 +327,7 @@
       <!-- arg.1 noun -> v_preposition noun
            Translates ablative and locative cases with the variable 'preposition' and noun,
            <px><nom> with genitive, other cases remain as they are. -->
-      <call-macro n="return-number-of-sl-noun">
+      <call-macro n="return-number-of-sl-word">
         <with-param pos="1"/>
       </call-macro>
       <choose>
@@ -613,7 +613,7 @@ OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><
         <pattern-item n="noun-loc"/>
       </pattern>
       <action>
-        <call-macro n="return-number-of-sl-noun">
+        <call-macro n="return-number-of-sl-word">
           <with-param pos="3"/>
         </call-macro>
         <call-macro n="return-case-pr-governs">
@@ -1165,6 +1165,58 @@ OUTPUT: ^noun_noun-gen<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><g
               <clip pos="1" side="tl" part="a_anim"/>
               <clip pos="2" side="tl" part="a_nbr"/>
               <lit-tag v="gen"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!--
+INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><nom>$
+OUTPUT: ^num_noun<NP>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
+INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><dat>/год<n><m><nn><dat>$
+OUTPUT: ^num_noun<NP>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="adapt-num">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <!-- Adjust noun's number to numeral's number -->
+        <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+        <!-- Adjust numeral's case to noun's case -->
+        <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>
+        <choose>
+          <when c="If the noun's case is nominative, change it to genitive
+                   (except when the numeral is 'один')">
+            <test>
+              <and>
+                <not><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal></not>
+                <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
+              </and>
+            </test>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="num_noun">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
