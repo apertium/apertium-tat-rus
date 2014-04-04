@@ -434,7 +434,61 @@
         </otherwise>
       </choose>
     </def-macro>
-     
+
+    <def-macro n="translate-verb-fin" npar="1">
+      <!-- arg.1 finiteVerb -> v_negation finiteVerb
+           Converts negation, tenses and features related to it (such as gender
+           in the past tense). Strips transitivity tag (rus.dix doesn't support it yet).
+           GIVEN:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
+           EXPECT: ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><pres><p1><sg>$
+           GIVEN:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
+           EXPECT: ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><past><mfn><pl>$ negation='не<adv>' -->
+      <let><var n="gender"/><lit v=""/></let>
+      <call-macro n="convert-neg-to-ne.adv">
+        <with-param pos="1"/>
+      </call-macro>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="ifi"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
+              <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            </and>
+          </test>
+          <let><var n="gender"/><lit-tag v="mfn"/></let>
+          <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
+        </when>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
+              <not><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></not>
+            </and>
+          </test>
+          <let><var n="gender"/><lit-tag v="m"/></let>
+          <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
+        </when>
+      </choose>
+      <let>
+        <clip pos="1" side="tl" part="whole"/>
+        <concat>
+            <clip pos="1" side="tl" part="lemh"/>
+            <clip pos="1" side="tl" part="a_vblex"/>
+            <clip pos="1" side="tl" part="a_tense"/>
+            <var n="gender"/>
+            <clip pos="1" side="tl" part="a_pers"/>
+            <clip pos="1" side="tl" part="a_nbr"/>
+            <clip pos="1" side="tl" part="lemq"/>
+        </concat>
+      </let>
+    </def-macro>
+
     <def-macro n="concord2" npar="2">
       <!-- arg.1 determiner arg.2 noun -> determiner noun
            Concords gender, animacy, number, case of the determiner with the head of the NP.
@@ -720,43 +774,14 @@ OUTPUT: ^verb<VBLEX>{^играть<vblex><impf><pres><p1><sg>$}$
 INPUT:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
 OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><past><mfn><pl>$}$
 -->
-    <rule comment="finite verbs">
+    <rule comment="">
       <pattern>
         <pattern-item n="verb-fin"/>
       </pattern>
       <action>
-        <let><var n="gender"/><lit v=""/></let>
-        <call-macro n="convert-neg-to-ne.adv">
+        <call-macro n="translate-verb-fin">
           <with-param pos="1"/>
         </call-macro>
-        <choose>
-          <when>
-            <test><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="ifi"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></let>
-          </when>
-        </choose>
-        <choose>
-          <when>
-            <test>
-              <and>
-                <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
-                <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
-              </and>
-            </test>
-            <let><var n="gender"/><lit-tag v="mfn"/></let>
-            <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
-          </when>
-          <when>
-            <test>
-              <and>
-                <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
-                <not><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></not>
-              </and>
-            </test>
-            <let><var n="gender"/><lit-tag v="m"/></let>
-            <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
-          </when>
-        </choose>
         <out>
           <chunk name="verb">
             <tags>
@@ -765,12 +790,7 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
             <var n="negation"/>
             <b/>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_vblex"/>
-              <clip pos="1" side="tl" part="a_tense"/>
-              <var n="gender"/>
-              <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
