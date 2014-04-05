@@ -4,7 +4,7 @@ cd ../../languages/apertium-tat
 make &&
 cd ../apertium-rus
 make &&
-cd ../../incubator/apertium-tat-rus
+cd ../../nursery/apertium-tat-rus
 make &&
 ./wiki-tests.sh Regression tat rus &&
 ./qa.sh tat-rus-corp &&
