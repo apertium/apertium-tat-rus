@@ -388,8 +388,8 @@
 
     <def-macro n="adapt-det" npar="1">
       <!-- arg.1 determiner (det.pos, det.dem etc) -> determiner
-           Set the determiner to the default <m.an.sg.nom> (to be agreed with the head of the NP in another macro).
-           INPUT: ^бу<det><dem>/этот<det><dem>$ "OUTPUT": ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$ -->
+           Sets the determiner to the default <m.an.sg.nom> (to be agreed with the head of the NP in another macro).
+           GIVEN: ^бу<det><dem>/этот<det><dem>$ EXPECT: ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$ -->
       <let>
         <clip pos="1" side="tl" part="whole"/>
         <concat>
@@ -405,9 +405,9 @@
 
     <def-macro n="adapt-num" npar="1">
       <!-- arg.1 numeral -> numeral
-           Set the numeral to the default <nom>. Other tags are taken from the bidix.
-           INPUT: ^бер<num>/один<num><m><an><sg>$ "OUTPUT": ^бер<num>/^один<num><m><an><sg><nom$
-           INPUT: ^1<num>/1<num><digit>$ "OUTPUT": ^1<num>/^1<num>$ -->
+           Sets the numeral to the default <nom>. Other tags are taken from the bidix.
+           GIVEN: ^бер<num>/один<num><m><an><sg>$ EXPECT: ^бер<num>/^один<num><m><an><sg><nom$
+           GIVEN: ^1<num>/1<num><digit>$ EXPECT: ^1<num>/^1<num>$ -->
       <choose>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_digit"/><lit-tag v="digit"/></equal></test>
