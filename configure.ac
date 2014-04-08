@@ -89,4 +89,6 @@ m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertiu
 AP_CHECK_LING([1], [apertium-tat])
 AP_CHECK_LING([2], [apertium-rus])
 
+AP_MKINCLUDE
+
 AC_OUTPUT([Makefile])
