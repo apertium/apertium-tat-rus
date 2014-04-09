@@ -16,12 +16,12 @@
 ------
 
 Basic workflow is like the following (IS talking to himself):
-	1) run diff on tat-rus-origina.txt and tat-rus-posted.txt,
-	2) see what is to fix/to improve,
-	3) fix them and compile,
-	4) run ./qa.sh tat-rus-corp to see whether you really fixed them,
-	5) commit,
-	6) mv tat-rus-nova.txt tat-rus-origina.txt
+	1) mv corpa/tat-rus-nova.txt corpa/tat-rus-origina.txt
+	2) run diff on tat-rus-origina.txt and tat-rus-posted.txt,
+	3) see what is to fix/to improve,
+	4) fix them and compile,
+	5) run ./qa.sh tat-rus-corp to see whether you really fixed them, if so
+	6) commit,
 	
 	repeat the cycle
 
