@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Compiles the language modules and the pair and runs all of the currently
+# set up tests, i.e.:
+# 1) tat>rus regression tests (without fetching them from the wiki)
+# 2) tat>rus corpus test (=tat-rus-corp.test).
+# and outputs info about the [*@#] errors and the WER in the 'origina' and
+# 'nova' translations, so that you can see whether they increased or
+# decreased after the changes you've made.
+#
+# If you want to update regression tests from the wiki, run
+# './wiki-tests.sh Regression tat rus update' first. Their local copy is
+# stored in dev/.
+
 cd ../../languages/apertium-tat
 make &&
 cd ../apertium-rus
