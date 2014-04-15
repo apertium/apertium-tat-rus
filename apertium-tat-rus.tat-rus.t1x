@@ -296,14 +296,14 @@
 
     <def-macro n="convert-neg-to-ne.adv" npar="1">
       <!-- arg.1 verb -> v_negation
-           Sets the 'negation' variable to '^не<adv>$' if the verb contains <neg> tag. -->
+           Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
       <let><var n="negation"/><lit v=""/></let>
       <choose>
         <when>
           <test>
             <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
           </test>
-          <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$"/></concat></let>
+          <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$ "/></concat></let>
         </when>
       </choose>
     </def-macro>
@@ -718,18 +718,12 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
         <call-macro n="convert-neg-to-ne.adv">
           <with-param pos="1"/>
         </call-macro>
-        <choose>
-          <when>
-            <test><not><equal><var n="negation"/><lit v=""/></equal></not></test>
-          </when>
-        </choose>
         <out>
           <chunk name="cop-pres">
             <tags>
               <tag><lit-tag v="VBSER"/></tag>
             </tags>
             <var n="negation"/>
-            <b/>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_vbser"/>
