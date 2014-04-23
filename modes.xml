@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <modes>
+
   <mode name="tat-rus" install="yes">
     <pipeline>
       <program name="lt-proc -w">
@@ -33,7 +35,6 @@
       <program name="lt-proc -p">
         <file name="tat-rus.autopgen.bin"/>
       </program>
-
     </pipeline>
   </mode>
 
@@ -69,7 +70,6 @@
       </program>
     </pipeline>
   </mode>
-
 
   <mode name="tat-rus-morph" install="no">
     <pipeline>
@@ -135,7 +135,6 @@
       </program>
     </pipeline>
   </mode>
-
 
   <mode name="tat-rus-chunker" install="no">
     <pipeline>
@@ -215,7 +214,6 @@
     </pipeline>
   </mode>
 
-
   <mode name="rus-tat-morph" install="no">
     <pipeline>
       <program name="lt-proc -w">
@@ -225,5 +223,3 @@
   </mode>
 
 </modes>
-
-
