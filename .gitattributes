@@ -34,5 +34,7 @@ dev/shupashkar/apertium-tt-ru.tt.twol -text
 tests/all.test -text
 tests/t1x.test.py -text
 tests/tat-rus-corp.test -text
+testvoc/inconsistency-summary.sh -text
+testvoc/inconsistency.sh -text
 testvoc/testvoc.sh -text
 /wiki-tests.sh -text
