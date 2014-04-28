@@ -36,5 +36,12 @@ A1 : яхшы<adj>
 N1 : мәктәп<n>
 V-TV : кара<v><tv>
 
-Then we expand the transducer with something like 'hfst-fst2sting' and search
-for 'яхшы<adj>', 'мәктәп<n>' etc.
+The testoc script takes the pardef name(s) as arguments (A1, N1, V-TV in our
+example).
+
+Then it expands the transducer with something like 'hfst-fst2sting' and searches
+for 'яхшы<adj>', 'мәктәп<n>' etc (depending on what pardef names were provided,
+possibly 'all') and runs the matches through the translator, giving the output
+usual testvoc produces.
+
+
