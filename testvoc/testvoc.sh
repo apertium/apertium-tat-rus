@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# A wrapper sccript to run the testvoc.
+# A wrapper script to run the testvoc.
 # Usage: [TMPDIR=...] ./testvoc.sh
 
 if [ -z $TMPDIR ]; then
