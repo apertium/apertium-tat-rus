@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dictionary>
+  <alphabet></alphabet>
+  <sdefs>
+    <sdef n="adj" 	c="Имя прилагательное"/> 
+    <sdef n="advl" 	c="Adverbial"/> 
+    <sdef n="adv" 	c="Adverb"/> 
+  </sdefs>
+
+  <section id="main" type="standard">
+
+<e>       <p><l>яхшы<s n="adj"/></l>                        <r>хороший<s n="adj"/></r></p></e>
+<e>       <p><l>яхшы<s n="adj"/><s n="advl"/></l>           <r>хорошо<s n="adv"/></r></p></e>
+
+  </section>
+
+</dictionary>
