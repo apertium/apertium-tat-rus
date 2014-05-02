@@ -13,12 +13,12 @@
 /apertium-view.sh -text
 /autogen.sh -text
 /configure.ac -text
-corpa/README -text
-corpa/corpus.rus.txt -text svneol=unset#application/octet-stream
-corpa/corpus.tat.txt -text svneol=unset#application/octet-stream
-corpa/tat-rus-nova.txt -text
-corpa/tat-rus-origina.txt -text
-corpa/tat-rus-posted.txt -text
+corpus/README -text
+corpus/corpus.rus.txt -text svneol=unset#application/octet-stream
+corpus/corpus.tat.txt -text svneol=unset#application/octet-stream
+corpus/tat-rus-nova.txt -text
+corpus/tat-rus-origina.txt -text
+corpus/tat-rus-posted.txt -text
 dev/Pending_tests.html -text
 dev/Regression_tests.html -text
 dev/shupashkar/apertium-tt-ru.ru-tt.rlx -text

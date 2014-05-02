@@ -16,7 +16,7 @@
 ------
 
 Basic workflow is like the following (IS talking to himself):
-	1) mv corpa/tat-rus-nova.txt corpa/tat-rus-origina.txt
+	1) mv corpus/tat-rus-nova.txt corpus/tat-rus-origina.txt
 	2) run diff on tat-rus-origina.txt and tat-rus-posted.txt,
 	3) see what is to fix/to improve,
 	4) fix them and compile,

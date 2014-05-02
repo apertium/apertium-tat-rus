@@ -3,8 +3,8 @@
 # Compiles the language modules and the pair,
 # runs all of the currently set up tests, i.e.:
 # 1) tat>rus regression tests (without fetching them from the wiki)
-# 2) tat>rus corpus test (=tat-rus-corp.test)
-# and, if the 'origina' and 'nova' translations differ, outputs info
+# 2) tat>rus corpus test (=tat-rus-corp.test), and,
+# if the 'origina' and 'nova' translations differ, outputs info
 # about the [*@#] errors and the WER of both, so that you can see whether they increased or
 # decreased after the changes you've made.
 #
@@ -21,16 +21,16 @@ make &&
 ./wiki-tests.sh Regression tat rus &&
 ./qa.sh tat-rus-corp &&
 
-if ! diff corpa/tat-rus-origina.txt corpa/tat-rus-nova.txt > /dev/null; then
+if ! diff corpus/tat-rus-origina.txt corpus/tat-rus-nova.txt > /dev/null; then
 	echo '[*@#] errors tat-rus before:'
-	grep -o '[*@#]' corpa/tat-rus-origina.txt | wc -l
+	grep -o '[*@#]' corpus/tat-rus-origina.txt | wc -l
 	echo '[*@#] errors tat-rus after:'
-	grep -o '[*@#]' corpa/tat-rus-nova.txt | wc -l
+	grep -o '[*@#]' corpus/tat-rus-nova.txt | wc -l
 
 	echo 'WER tat-rus before:'
-	perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-origina.txt -ref corpa/tat-rus-posted.txt > /tmp/tat-rus-wer-origina.txt
+	perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpus/tat-rus-origina.txt -ref corpus/tat-rus-posted.txt > /tmp/tat-rus-wer-origina.txt
 	grep '(WER)' /tmp/tat-rus-wer-origina.txt
 	echo 'WER tat-rus after:'
-	perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpa/tat-rus-nova.txt -ref corpa/tat-rus-posted.txt > /tmp/tat-rus-wer-nova.txt
+	perl ../../trunk/apertium-eval-translator/apertium-eval-translator.pl -test corpus/tat-rus-nova.txt -ref corpus/tat-rus-posted.txt > /tmp/tat-rus-wer-nova.txt
 	grep '(WER)' /tmp/tat-rus-wer-nova.txt
 fi
