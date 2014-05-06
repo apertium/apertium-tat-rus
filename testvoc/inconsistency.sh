@@ -30,7 +30,9 @@ if [[ $DIR = "tat-rus" ]]; then
     apertium-interchunk $T2X $T2XBIN |
     apertium-postchunk $T3X $T3XBIN | tee $TMPDIR/tmp_testvoc2.txt |
     lt-proc -d $GENERATORBIN > $TMPDIR/tmp_testvoc3.txt
-    paste -d _ $TMPDIR/tmp_testvoc1.txt $TMPDIR/tmp_testvoc2.txt $TMPDIR/tmp_testvoc3.txt | sed 's/\^.<sent>\$//g' | sed 's/_/   --------->  /g'
+    paste -d _ $TMPDIR/tmp_testvoc1.txt $TMPDIR/tmp_testvoc2.txt \
+	$TMPDIR/tmp_testvoc3.txt | 
+    sed 's/\^.<sent>\$//g' | sed 's/_/   --------->  /g'
 
 else
 	echo "./inconsistency.sh <direction>";
