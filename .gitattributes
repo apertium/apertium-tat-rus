@@ -37,8 +37,6 @@ tests/tat-rus-corp.test -text
 testvoc/inconsistency-summary.sh -text
 testvoc/inconsistency.sh -text
 testvoc/lite/README -text
-testvoc/lite/categories.txt -text
-testvoc/lite/mock-bi.dix -text
 testvoc/testvoc-summary.tat-rus.txt -text
 testvoc/testvoc.sh -text
 /wiki-tests.sh -text
