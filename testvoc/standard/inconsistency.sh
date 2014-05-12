@@ -17,12 +17,12 @@ function expand_monodix {
 
 if [[ $DIR = "tat-rus" ]]; then
 
-    MONODIX=../.deps/tat-rus.automorf.trimmed
-    BIDIXBIN=../tat-rus.autobil.bin
-    T1X=../apertium-tat-rus.tat-rus.t1x; T1XBIN=../tat-rus.t1x.bin
-    T2X=../apertium-tat-rus.tat-rus.t2x; T2XBIN=../tat-rus.t2x.bin
-    T3X=../apertium-tat-rus.tat-rus.t3x; T3XBIN=../tat-rus.t3x.bin
-    GENERATORBIN=../tat-rus.autogen.bin
+    MONODIX=../../.deps/tat-rus.automorf.trimmed
+    BIDIXBIN=../../tat-rus.autobil.bin
+    T1X=../../apertium-tat-rus.tat-rus.t1x; T1XBIN=../../tat-rus.t1x.bin
+    T2X=../../apertium-tat-rus.tat-rus.t2x; T2XBIN=../../tat-rus.t2x.bin
+    T3X=../../apertium-tat-rus.tat-rus.t3x; T3XBIN=../../tat-rus.t3x.bin
+    GENERATORBIN=../../tat-rus.autogen.bin
 
     expand_monodix |
     apertium-pretransfer |

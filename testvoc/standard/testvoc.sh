@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# A wrapper script to run the testvoc.
+# A wrapper script to run the standard (=full) testvoc.
 # Usage: [TMPDIR=/path/to/tmpdir] ./testvoc.sh
 # Assumes the pair is compiled.
 # Produces 'testvoc-summary.tat-rus.txt' file.
@@ -18,10 +18,10 @@ export TMPDIR
 # In order to trim them, we have to comment out the following line in tat-rus.dix
 # <e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r> ...
 # and then compile:
-cd ..
+cd ../../
 sed -i 's_^<e>       <re>\[№.*$_<!--&-->_' apertium-tat-rus.tat-rus.dix
 make
-cd testvoc/
+cd testvoc/standard/
 
 echo "==Tatar->Russian==========================="
 bash inconsistency.sh tat-rus > $TMPDIR/tat-rus.testvoc
