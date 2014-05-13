@@ -9,39 +9,22 @@ of the full testvoc if we make following simplifying assumptions:
    * there aren't any transfer rules which work selectively on lemmas;
    * SL words of particular POS correspond to words of one particular POS in TL.
 
-The first assumption usually holds true, the second and the third are not
-always the case, and we will make corresponding tweaks to our 'simple testvoc'
-process later.
+The first assumption holds true, the second and the third are not always the
+case, and we will make corresponding tweaks to our 'simple testvoc' process
+later.
 
 If we assume three things above, then testvocing one word per each paradigm
-becomes a reasonable substition for the full testvoc.
+definition becomes a reasonable substition for the full testvoc.
 
 DESCRIPTION OF THE PROCESS
 ==========================
 
-First, we must select one word for each pardef and extract the full
-paradigm of this word from the transducer.
+Note that in context of a lexc file, paradigm definition is a lexicon which is
+a direct continuation of stems. For each such lexicon, there is text file in
+apertium-tat/tests/morphotactics, which contains the full paradigm of a word
+linked to that lexicon. The name of a file indicates which lexicon it
+represents, e.g. A1.txt. 
 
-(Note that there aren't any pardefs in a lexc dictionary, there are
-lexicons. But it's useful to distinguish between two types of lexicons --
-lexicons which are continuations for other lexicons, and lexicons which are
-continuations for stems. Here we refer as 'pardefs' to the lexicons of the
-second type.)
-
-Of course we cannot know to which pardef a word is linked to only looking at
-the (binary) transducer itself, so we provide a separate file the content of
-which is similar to the following:
-
-A1 : яхшы<adj>
-N1 : мәктәп<n>
-V-TV : кара<v><tv>
-
-The testoc script takes the pardef name(s) as arguments (A1, N1, V-TV in our
-example).
-
-Then it expands the transducer with something like 'hfst-fst2sting' and searches
-for 'яхшы<adj>', 'мәктәп<n>' etc (depending on what pardef names were provided,
-possibly 'all') and runs the matches through the translator, giving the output
-usual testvoc produces.
-
-
+The job of the testvoc-lite script is to extract lexical forms from that text
+files, and run them through the translator pipeline, as the usual testvoc
+script would.
