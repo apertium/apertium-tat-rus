@@ -35,6 +35,7 @@ tests/all.test -text
 tests/t1x.test.py -text
 tests/tat-rus-corp.test -text
 testvoc/lite/README -text
+testvoc/lite/testvoc.sh -text
 testvoc/standard/inconsistency-summary.sh -text
 testvoc/standard/inconsistency.sh -text
 testvoc/standard/testvoc-summary.tat-rus.txt -text
