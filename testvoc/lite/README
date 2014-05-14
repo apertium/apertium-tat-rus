@@ -25,6 +25,6 @@ apertium-tat/tests/morphotactics, which contains the full paradigm of a word
 linked to that lexicon. The name of a file indicates which lexicon it
 represents, e.g. A1.txt. 
 
-The job of the testvoc-lite script is to extract lexical forms from that text
-files, and run them through the translator pipeline, as the usual testvoc
-script would.
+The job of the testvoc.sh script in this directory is to extract lexical forms
+from that text files, and run them through the translator pipeline, as the usual
+testvoc script would.
