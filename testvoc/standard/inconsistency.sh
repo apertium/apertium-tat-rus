@@ -33,8 +33,8 @@ if [[ $DIR = "tat-rus" ]]; then
     apertium-interchunk $T2X $T2XBIN |
     apertium-postchunk $T3X $T3XBIN | tee $TRANSFOUT |
     lt-proc -d $GENERATORBIN > $GENOUT
-    paste -d _ $INPUT $TRANSFOUT $GENOUT | 
-    sed 's/\^.<sent>\$//g' | sed 's/_/   -->  /g'
+    paste -d % $INPUT $TRANSFOUT $GENOUT |
+    sed 's/\^.<sent>\$//g' | sed 's/%/   -->  /g'
 
 else
 	echo "./inconsistency.sh <direction>";
