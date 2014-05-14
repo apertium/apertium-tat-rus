@@ -37,5 +37,5 @@ if [[ $DIR = "tat-rus" ]]; then
     sed 's/\^.<sent>\$//g' | sed 's/%/   -->  /g'
 
 else
-	echo "./inconsistency.sh <direction>";
+	echo "Usage: ./inconsistency.sh <direction>";
 fi
