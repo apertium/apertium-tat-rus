@@ -11,6 +11,8 @@
 # If you want to update regression tests from the wiki, run
 # './wiki-tests.sh Regression tat rus update' first. Their local copy is
 # stored in dev/.
+#
+# TODO: make the output of this test boolean: either all tests pass or they do not.
 
 cd ../../languages/apertium-tat
 make &&
