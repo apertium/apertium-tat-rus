@@ -31,9 +31,9 @@ dev/shupashkar/apertium-tt-ru.tt.twol -text
 /pending-tests.sh -text
 /qa.sh -text
 /regression-tests.sh -text
-tests/all.test -text
 tests/t1x.test.py -text
 tests/tat-rus-corp.test -text
+tests/tat-rus.test -text
 testvoc/lite/README -text
 testvoc/lite/testvoc.sh -text
 testvoc/standard/inconsistency-summary.sh -text
