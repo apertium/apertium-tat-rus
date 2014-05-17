@@ -566,7 +566,7 @@ OUTPUT: ^noun<NP>{^школа<n><m><nn><sg><nom$}$
 
 <!--
 INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
-OUTPUT: ^pr_noun<PP><ADVL>^Перед<pr>$ ^дом<n><m><nn><sg><ins>$
+OUTPUT: ^pr_noun<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
 -->
     <rule comment="REGLA:">
       <pattern>
