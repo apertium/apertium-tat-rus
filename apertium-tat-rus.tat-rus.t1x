@@ -539,10 +539,8 @@
   <section-rules>
 
 <!--
-INPUT:  мәктәп
-        ^мәктәп<n><nom>$
-OUTPUT: школа
-        ^noun<NP>{^школа<n><m><nn><sg><nom$}$
+INPUT:  ^мәктәп<n><nom>$
+OUTPUT: ^noun<NP>{^школа<n><m><nn><sg><nom$}$
 -->
     <rule comment="">
       <pattern>
@@ -602,8 +600,7 @@ OUTPUT: ^pr_noun<PP><ADVL>^Перед<pr>$ ^дом<n><m><nn><sg><ins>$
     </rule>
 
 <!--
-INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$
-        ^бакча<n><loc>/сад<n><m><nn><loc>$
+INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
 OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
 -->
     <rule comment="REGLA:">
@@ -657,10 +654,10 @@ OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><
     </rule>
 
 <!--
-INPUT:  Гөлнараның эте юк
-        ^Гөлнара<np><ant><f><gen>$ ^эт<n><px3sp><nom>$ ^юк<adj>$ ^и<cop><p3><sg>
-OUTPUT: У Гульнары нет собаки
-        ^bar-yuq<S>{^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
+INPUT:  ^Гөлнара<np><ant><f><gen>$ ^эт<n><px3sp><nom>$ ^юк<adj>$ ^и<cop><p3><sg>$
+	Гөлнараның эте юк
+OUTPUT: ^bar-yuq<S>{^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
+	У Гульнары нет собаки
 -->
     <rule comment="">
       <pattern>
@@ -796,7 +793,7 @@ INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>
 OUTPUT: ^noun<NP>{^игра<n><f><nn><acc>$}$
 INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
 OUTPUT: ^inf<VBLEX>{^быть<vbser><inf>$}$
-INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$ (алмый/не может)
+INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
 OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
 -->
     <rule comment="To translate every non-finite form with infinitive is not good,
@@ -847,8 +844,8 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
     </rule>
 
 <!--
-INPUT:  (^бел<v><tv><pres><p2><pl>/знать<vblex><impf><tv><pres><p2><pl>$)
-        ^мы<qst>/@мы<qst>$^?<sent>/?<sent>$
+        (^бел<v><tv><pres><p2><pl>/знать<vblex><impf><tv><pres><p2><pl>$)
+INPUT:  ^мы<qst>/@мы<qst>$^?<sent>/?<sent>$
 OUTPUT: ^qst<SENT>{^?<sent>$}$
 -->
     <rule comment="">
@@ -960,7 +957,7 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
     </rule>
 
 <!--
-INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$  
+INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
 OUTPUT: ^noun<NP>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
 -->
     <rule comment="TODO: det.pos insertion doesn't work yet">
@@ -1076,8 +1073,10 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
     </rule>
 
 <!--
-INPUT: ^бер<num>/один<num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
-INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT: ^бер<num>/один<num><m><an><sg>$
+OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$
+OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
 -->
     <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
                    whether the lemma is a digit or not, for digits we add an additional 'digit' tag
@@ -1103,8 +1102,10 @@ INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$ OUTPUT: ^det<DET>{^од�
     </rule>
 
 <!--
-INPUT: ^бер<num>/один<num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
-INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT:  ^бер<num>/один<num><m><an><sg>$
+OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+INPUT:  ^бер<det><ind>/один<num><num><m><an><sg>$
+OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
 -->
     <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
                    whether the lemma is a digit or not, for digits we add an additional 'digit' tag
