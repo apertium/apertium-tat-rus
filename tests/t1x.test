@@ -39,17 +39,24 @@
 TRANSFER_FILE="apertium-tat-rus.tat-rus.t1x"
 TRANSFER_MODE="apertium-transfer -b apertium-tat-rus.tat-rus.t1x tat-rus.t1x.bin"
 
-# returns "line number of INPUT:INPUT:OUTPUT" from the TRANSFER_FILE 
+# returns "line number of INPUT:INPUT:OUTPUT" from the TRANSFER_FILE
 function extract_tests {
     cat -n $TRANSFER_FILE | sed -n "s_[ \t]\([0-9]*\)[ \t]*INPUT: *\(\^.*\$\).*_\1:\2_p" > /tmp/inputs.txt
     sed -n "s_ *OUTPUT: *\(\^.*\$\).*_\1_p" $TRANSFER_FILE > /tmp/outputs.txt
     paste -d ":" /tmp/inputs.txt /tmp/outputs.txt
 }
 
-# runs inputs trough the TRANSFER_MODE
-extract_tests | while IFS=':' read lineNbr input expectedOut ; do
+extract_tests > /tmp/testCases.txt
+
+TOTAL=0
+CORRECT=0
+
+# runs testCases trough the TRANSFER_MODE
+while IFS=':' read lineNbr input expectedOut ; do
+    TOTAL=`expr $TOTAL + 1`
     apertiumsOut=$(echo $input | $TRANSFER_MODE)
     if [ "$apertiumsOut" = "$expectedOut" ]; then
+	CORRECT=`expr $CORRECT + 1`
 	echo "$lineNbr PASS: $input -> $expectedOut"
 	echo ""
     else
@@ -58,4 +65,7 @@ extract_tests | while IFS=':' read lineNbr input expectedOut ; do
 	echo "+($apertiumsOut)"
 	echo ""
     fi
-done
+done < /tmp/testCases.txt
+
+echo "$CORRECT / $TOTAL"
+
