@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 
+<!-- INPUT is the output of 'apertium tat-rus-biltrans',
+     OUTPUT is the output of 'apertium tat-rus-chunker'.
+     Tests are run by './qa.sh t1x' command. -->
+
 <transfer default="chunk">
 
   <section-def-cats>
@@ -538,11 +542,11 @@
 
   <section-rules>
 
-<!--
-INPUT:  ^мәктәп<n><nom>$
-OUTPUT: ^noun<NP>{^школа<n><m><nn><sg><nom$}$
--->
-    <rule comment="">
+    <rule comment="REGLA: NOM">
+      <!--
+        INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
+        OUTPUT: ^noun<NP>{^школа<n><f><nn><sg><nom>$}$
+      -->
       <pattern>
         <pattern-item n="noun"/>
       </pattern>
@@ -599,18 +603,18 @@ OUTPUT: ^pr_noun<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
-OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
--->
-    <rule comment="REGLA:">
+    <rule comment="REGLA: NOM POST NOM">
+      <!--
+        INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
+        OUTPUT: ^noun_pr_noun<NP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+      -->
       <pattern>
         <pattern-item n="noun-attr"/>
         <pattern-item n="nounpost-attr"/>
-        <pattern-item n="noun-loc"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="return-number-of-sl-word">
+        <call-macro n="translate-noun">
           <with-param pos="3"/>
         </call-macro>
         <call-macro n="return-case-pr-governs">
@@ -621,18 +625,9 @@ OUTPUT: ^noun_pr_noun<NP>{сад<n><m><nn><sg><nom> ^перед<pr>$ ^дом<n><
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
+            <var n="preposition"/>
             <lu>
-              <lit v="в"/>
-              <lit-tag v="pr"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="3" side="tl" part="lem"/>
-              <clip pos="3" side="tl" part="a_noun"/>
-              <clip pos="3" side="tl" part="a_gender"/>
-              <clip pos="3" side="tl" part="a_anim"/>
-              <lit-tag v="sg"/>
-              <lit-tag v="prp"/>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
             <b/>
             <lu>
