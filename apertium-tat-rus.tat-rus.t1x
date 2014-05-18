@@ -568,11 +568,11 @@
       </action>
     </rule>
 
-<!--
-INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
-OUTPUT: ^pr_noun<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
--->
-    <rule comment="REGLA:">
+    <rule comment="REGLA: NOM POST">
+      <!--
+        INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
+        OUTPUT: ^pr_noun<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
+      -->
       <pattern>
         <pattern-item n="noun-attr"/>
         <pattern-item n="nounpost"/>
