@@ -542,6 +542,8 @@
 
   <section-rules>
 
+<!-- SECTION: Noun phrases -->
+
     <rule comment="REGLA: NOM">
       <!--
         INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
@@ -648,13 +650,13 @@
       </action>
     </rule>
 
-<!--
-INPUT:  ^Гөлнара<np><ant><f><gen>$ ^эт<n><px3sp><nom>$ ^юк<adj>$ ^и<cop><p3><sg>$
-	Гөлнараның эте юк
-OUTPUT: ^bar-yuq<S>{^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
-	У Гульнары нет собаки
--->
     <rule comment="">
+      <!--
+        INPUT:  ^Гөлнара<np><ant><f><gen>/Гульнара<np><ant><f><sg><gen>$ ^эт<n><px3sp><nom>/собака<n><f><aa><px3sp><nom>$ ^юк<adj>/быть<vbser><neg><pres><p3><sg>$ ^и<cop><p3><sg>/быть<vbser><p3><sg>$
+        Гөлнараның эте юк
+        OUTPUT: ^bar-yuq<S>{^у<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
+        У Гульнары нет собаки
+      -->
       <pattern>
         <pattern-item n="noun-gen"/>
         <pattern-item n="noun-px3sp-nom"/>
@@ -698,6 +700,8 @@ OUTPUT: ^bar-yuq<S>{^У<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<v
       </action>
     </rule>
 
+<!-- SECTION: Verb phrases -->
+
 <!--
 INPUT:  ^и<cop><p3><sg>/быть<vbser><p3><sg>$
 OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
@@ -729,7 +733,7 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
     </rule>
 
 <!--
-INPUT:  ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>
+INPUT:  ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
 OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
 -->
     <rule comment="">
@@ -758,7 +762,7 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
 INPUT:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
 OUTPUT: ^verb<VBLEX>{^играть<vblex><impf><pres><p1><sg>$}$
 INPUT:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
-OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><past><mfn><pl>$}$
+OUTPUT: ^verb<VBLEX>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
 -->
     <rule comment="">
       <pattern>
@@ -774,7 +778,6 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
               <tag><lit-tag v="VBLEX"/></tag>
             </tags>
             <var n="negation"/>
-            <b/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
@@ -784,8 +787,8 @@ OUTPUT: ^verb<VBLEX>{^не/не<adv>$ ^играли/играть<vblex><impf><pa
     </rule>
 
 <!--
-INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc> 
-OUTPUT: ^noun<NP>{^игра<n><f><nn><acc>$}$
+INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>$
+OUTPUT: ^noun<NP>{^игра<n><f><nn><sg><acc>$}$
 INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
 OUTPUT: ^inf<VBLEX>{^быть<vbser><inf>$}$
 INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
@@ -824,7 +827,6 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
                   <tag><lit-tag v="VBLEX"/></tag>
                 </tags>
                 <var n="negation"/>
-                <b/>
                 <lu>
                   <clip pos="1" side="tl" part="lemh"/>
                   <clip pos="1" side="tl" part="a_vblex"/><!-- OR --><clip pos="1" side="tl" part="a_vbser"/>
@@ -864,7 +866,7 @@ OUTPUT: ^qst<SENT>{^?<sent>$}$
 
 <!--
 INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+OUTPUT: ^det_noun<NP>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
 -->
     <rule comment="">
       <pattern>
@@ -953,7 +955,7 @@ OUTPUT: ^det_noun<NP>{мой<det><pos><m><nn><sg><nom>$ ^сад<n><m><nn><sg><no
 
 <!--
 INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
-OUTPUT: ^noun<NP>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
+OUTPUT: ^noun<NP>{^брат<n><m><aa><sg><dat>$}$
 -->
     <rule comment="TODO: det.pos insertion doesn't work yet">
       <pattern>
@@ -996,7 +998,7 @@ OUTPUT: ^noun<NP>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat
 
 <!--
 INPUT:  ^яхшы<adj>/хороший<adj>$
-OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
+OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
 -->
     <rule comment="">
       <pattern>
@@ -1069,7 +1071,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom$}$
 
 <!--
 INPUT: ^бер<num>/один<num><m><an><sg>$
-OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
 INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$
 OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
 -->
@@ -1098,7 +1100,7 @@ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
 
 <!--
 INPUT:  ^бер<num>/один<num><m><an><sg>$
-OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
 INPUT:  ^бер<det><ind>/один<num><num><m><an><sg>$
 OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
 -->
@@ -1125,11 +1127,11 @@ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><sg><nom><pl><px3sp><acc>$
-OUTPUT: ^noun_noun-gen<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
--->
-    <rule comment="">
+    <rule comment="REGLA: NOM NOM">
+      <!--
+        INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
+        OUTPUT: ^noun_noun<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
+      -->
       <pattern>
         <pattern-item n="noun-attr"/>
         <pattern-item n="noun-px3sp"/>
@@ -1139,7 +1141,7 @@ OUTPUT: ^noun_noun-gen<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><g
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="noun_noun-gen">
+          <chunk name="noun_noun">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
