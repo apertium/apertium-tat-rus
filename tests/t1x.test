@@ -57,7 +57,8 @@ while IFS=':' read lineNbr input expectedOut ; do
     apertiumsOut=$(echo $input | $TRANSFER_MODE)
     if [ "$apertiumsOut" = "$expectedOut" ]; then
 	CORRECT=`expr $CORRECT + 1`
-	echo "$lineNbr PASS: $input -> $expectedOut"
+	echo "$lineNbr PASS: $input ->"
+	echo "            $expectedOut"
 	echo ""
     else
 	echo "$lineNbr FAIL: $input ->"
@@ -68,4 +69,3 @@ while IFS=':' read lineNbr input expectedOut ; do
 done < /tmp/testCases.txt
 
 echo "$CORRECT / $TOTAL"
-
