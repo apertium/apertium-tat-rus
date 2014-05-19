@@ -35,6 +35,7 @@ tests/t1x.test -text
 tests/tat-rus-corp.test -text
 tests/tat-rus.test -text
 testvoc/corpus/trimmed-coverage.sh -text
+testvoc/lite/N1.txt -text
 testvoc/lite/README -text
 testvoc/lite/testvoc-summary.tat-rus.txt -text
 testvoc/lite/testvoc.sh -text

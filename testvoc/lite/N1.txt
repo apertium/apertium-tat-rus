@@ -1,0 +1,21 @@
+мәктәп:мәктәп<n><nom>:школа
+мәктәптәй:мәктәп<n><sim>:как школа
+мәктәптә:мәктәп<n><loc>:в школе
+мәктәптәге:мәктәп<n><loc><subst><nom>:тот, который в школе
+мәктәптәгедә:мәктәп<n><loc><subst><loc>:в том, который в школе
+мәктәптәгенең:мәктәп<n><loc><subst><gen>:того, который в школе
+мәктәптәгегә:мәктәп<n><loc><subst><dat>:тому, который в школе
+мәктәптәгене:мәктәп<n><loc><subst><acc>:того, который в школе
+мәктәптәгедән:мәктәп<n><loc><subst><abl>:из того, который в школе
+мәктәптәге:мәктәп<n><loc><attr>:в школе
+мәктәпнең:мәктәп<n><gen>:школы
+мәктәпкә:мәктәп<n><dat>:школе
+мәктәпне:мәктәп<n><acc>:школу
+мәктәптән:мәктәп<n><abl>:из школы
+мәктәп:мәктәп<n><attr>:школьный
+
+cat testvoc/lite/N1.txt  | cut -d":" -f2 | sed 's/^/^/' | sed 's/$/$/' | 
+apertium-transfer apertium-tat-rus.tat-rus.t1x tat-rus.t1x.bin tat-rus.autobil.bin | 
+apertium-interchunk apertium-tat-rus.tat-rus.t2x tat-rus.t2x.bin | 
+apertium-postchunk apertium-tat-rus.tat-rus.t3x tat-rus.t3x.bin | 
+lt-proc -g tat-rus.autogen.bin | lt-proc -p tat-rus.autopgen.bin 
