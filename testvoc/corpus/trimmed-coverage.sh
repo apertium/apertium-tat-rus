@@ -23,7 +23,7 @@ TODOstripwords="the The of oblast in In it if ki any will his this who we right 
 
 
 ### Do the translation:
-apertium -d ../../ tat-rus-postchunk | apertium-cleanstream -n | tee "$transfout" | lt-proc -g ../../tat-rus.autogen.bin | lt-proc -p ../../tat-rus.autopgen.bin > "$genout"
+apertium-deshtml | apertium -f none -d ../../ tat-rus-postchunk | apertium-cleanstream -n | tee "$transfout" | lt-proc -g ../../tat-rus.autogen.bin | lt-proc -p ../../tat-rus.autopgen.bin > "$genout"
 #apertium-deshtml | apertium -f none -d .. tat-kaz-transfer2 | apertium-cleanstream -n | tee "$transfout" | hfst-proc -d ../tat-kaz.autogen.hfst > "$genout"
 
 
