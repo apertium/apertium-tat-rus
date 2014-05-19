@@ -6,13 +6,14 @@
 # Extracts lexical units from compressed text files in languages/apertium-tat/
 # tests/morphotactics/ and passes them through the translator (=INCONSISTENCY
 # script).
-# TODO: Generate a one-line stats about each file using the
-# INCONSISTENCY-SUMMARY script and produce 'testvoc-summary.tat-rus.txt' file.
+# Produces 'testvoc-summary.tat-rus.txt' file using the INCONSISTENCY_SUMMARY script.
+#
+# TODO: Generate stats about each file (e.g. N1.txt), not just about the category (e.g. nouns).
 #
 # Usage: [TMPDIR=/path/to/tmpdir] ./testvoc.sh
 
 INCONSISTENCY=../standard/./inconsistency.sh
-INCONSISTENCY_SUMMARY=./inconsistency-summary.sh
+INCONSISTENCY_SUMMARY=../standard/./inconsistency-summary.sh
 
 if [ -z $TMPDIR ]; then
 	TMPDIR="/tmp"
@@ -25,18 +26,18 @@ function extract_lexical_units {
     sed 's/^/^/g' | sed 's/$/$ ^.<sent>$/g'
 }
 
-echo "==Tatar->Russian==========================="
+#-------------------------------------------------------------------------------
+# Tatar->Russian testvoc
+#-------------------------------------------------------------------------------
 
 PARDEF_FILES=../../../../languages/apertium-tat/tests/morphotactics/*.txt.gz
-OUT=testvoc-summary.tat-rus.txt
 
-echo "" > $OUT
-date >> $OUT
-echo "===============================================" >> "$OUT"
-echo "POS\tTotal\tClean\tWith @\tWith #\tClean %" >> "$OUT"
+echo "==Tatar->Russian==========================="
 
 for file in $PARDEF_FILES; do
     zcat $file | extract_lexical_units |
-    $INCONSISTENCY tat-rus
+    $INCONSISTENCY tat-rus >> $TMPDIR/tat-rus.testvoc
 done
+
+$INCONSISTENCY_SUMMARY $TMPDIR/tat-rus.testvoc tat-rus
 
