@@ -3,5 +3,12 @@
 
 #!/bin/bash
 
-bash "tests/$1.test"
+if [ $# -eq 0 ]
+  then
+    testToRun=tat-rus.test
+  else
+    testToRun=$1.test
+fi
+
+bash "tests/$testToRun"
 
