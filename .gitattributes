@@ -34,6 +34,7 @@ dev/shupashkar/apertium-tt-ru.tt.twol -text
 tests/t1x.test -text
 tests/tat-rus-corp.test -text
 tests/tat-rus.test -text
+tests/testvoc.test -text
 testvoc/corpus/trimmed-coverage.sh -text
 testvoc/lite/N1.txt -text
 testvoc/lite/README -text

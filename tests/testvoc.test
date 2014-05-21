@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# This script is tight to test cases in apertium-tat-rus/testvoc/lite (see e.g.
+# N1.txt). Lines from that files look like this:
+#
+# мәктәптә  :^мәктәп<n><loc>$  :^в<pr>$ ^школа<n><f><nn><sg><prp>$  :в школе
+#
+# The purpose of this script is to make sure that if we pass field 2 of that
+# lines (i.e. Tatar lexical units) through the bilingual and transfer modules
+# of the system, it will produce a result which is equal to field 4 (i.e. Russian
+# surface forms).
+
+# Supposed to be invoked by "./qa.sh testvoc"
+
+TESTS="testvoc/lite/N1.txt"
+
+TRANSFER_1="apertium-transfer apertium-tat-rus.tat-rus.t1x tat-rus.t1x.bin tat-rus.autobil.bin" 
+TRANSFER_2="apertium-interchunk apertium-tat-rus.tat-rus.t2x tat-rus.t2x.bin"
+TRANSFER_3="apertium-postchunk apertium-tat-rus.tat-rus.t3x tat-rus.t3x.bin"
+GENERATOR="lt-proc -g tat-rus.autogen.bin"
+POSTGENERATOR="lt-proc -p tat-rus.autopgen.bin"
+
+TOTAL=0
+CORRECT=0
+
+# returns "line number of INPUT:INPUT:OUTPUT" from TESTS
+CURRENT_LINE=0
+function extract_tests {
+    while IFS=':' read SourceSurf SourceLex TargetLex TargetSurf; do
+	CURRENT_LINE=`expr $CURRENT_LINE + 1`
+	echo "$CURRENT_LINE:$SourceLex:$TargetSurf"
+    done < $TESTS
+}
+
+extract_tests > /tmp/testCases.txt
+
+# runs testCases trough the translator
+while IFS=':' read lineNbr input expectedOut ; do
+    TOTAL=`expr $TOTAL + 1`
+    apertiumsOut=$(echo $input | $TRANSFER_1 | $TRANSFER_2 | $TRANSFER_3 |
+	          $GENERATOR | $POSTGENERATOR)
+    if [ "$apertiumsOut" = "$expectedOut" ]; then
+        CORRECT=`expr $CORRECT + 1`
+        echo "$lineNbr PASS: $input ->"
+        echo "        $expectedOut"
+        echo ""
+    else
+        echo "$lineNbr FAIL: $input ->"
+        echo "-($expectedOut)"
+        echo "+($apertiumsOut)"
+        echo ""
+    fi
+done < /tmp/testCases.txt
+
+echo "$CORRECT / $TOTAL"
