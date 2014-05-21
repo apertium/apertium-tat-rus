@@ -82,6 +82,7 @@
     <sdef n="advl" 	c=""/> 
     <sdef n="mod_ass" 	c=""/> 
     <sdef n="subst" 	c=""/> 
+    <sdef n="attr" 	c=""/> 
   </sdefs>
   <section id="main" type="standard">
 
@@ -185,6 +186,8 @@
 <e>       <p><l>кеше<s n="n"/></l>                     <r>человек<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>кеше<s n="n"/><s n="pl"/></l>          <r>люди<s n="n"/><s n="m"/><s n="aa"/><s n="pl"/></r></p></e>
 <e>       <p><l>китап<s n="n"/></l>                    <r>книга<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+<e>       <p><l>мәктәп<s n="n"/></l>                   <r>школа<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+<e>       <p><l>мәктәп<s n="n"/><s n="attr"/></l>      <r>школьный<s n="adj"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>теләк<s n="n"/></l>                    <r>желание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>яшь<s n="n"/></l>                      <r>возраст<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>яшь<s n="n"/></l>                      <r>год<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
@@ -273,7 +276,6 @@
 <e>       <p><l>күр<s n="v"/><s n="tv"/></l>           <r>видеть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кызчык<s n="n"/></l>                   <r>девочка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 <e>       <p><l>малай<s n="n"/></l>                    <r>мальчик<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
-<e>       <p><l>мәктәп<s n="n"/></l>                   <r>школа<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>нәрсә<s n="n"/></l>                    <r>вещь<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l>      <r>вещь<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l>      <r>что<s n="prn"/><s n="itg"/><s n="nt"/><s n="sg"/></r></p></e>

@@ -9,19 +9,9 @@
 
   <section-def-cats>
 
-    <def-cat n="noun">
-      <cat-item tags="n.nom"/>
-      <cat-item tags="n.pl.nom"/>
-      <cat-item tags="n.gen"/>
-      <cat-item tags="n.pl.gen"/>
-      <cat-item tags="n.dat"/>
-      <cat-item tags="n.pl.dat"/>
-      <cat-item tags="n.acc"/>
-      <cat-item tags="n.pl.acc"/>
-      <cat-item tags="n.abl"/>
-      <cat-item tags="n.pl.abl"/>
-      <cat-item tags="n.loc"/>
-      <cat-item tags="n.pl.loc"/>
+    <def-cat n="nom">
+      <cat-item tags="n.*"/>
+      <cat-item tags="n.*.*"/>
       <cat-item tags="n.px.nom"/>
       <cat-item tags="n.pl.px.nom"/>
       <cat-item tags="prn.pers.*.*.*."/>
@@ -57,8 +47,9 @@
       <cat-item tags="n.px2pl.*"/>
       <cat-item tags="n.*.px2pl.*"/>
     </def-cat>
-    <def-cat n="noun-attr">
+    <def-cat n="noun-attr-or-gen">
       <cat-item tags="n.attr"/>
+      <cat-item tags="n.gen"/>
     </def-cat>
     <def-cat n="nounpost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
@@ -317,11 +308,21 @@
            Sets the 'case' variable to the case which the preposition governs. -->
       <choose>
         <when>
-          <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="перед"/></equal></test>
-          <let><var n="case"/><lit-tag v="ins"/></let>
+          <test>
+            <or>
+              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="из-за"/></equal>
+              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="внутри"/></equal>
+            </or>
+          </test>
+          <let><var n="case"/><lit-tag v="gen"/></let>
         </when>
         <when>
-          <test><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="за"/></equal></test>
+          <test>
+            <or>
+              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="перед"/></equal>
+              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="за"/></equal>
+            </or>
+          </test>
           <let><var n="case"/><lit-tag v="ins"/></let>
         </when>
       </choose>
@@ -546,18 +547,18 @@
 
     <rule comment="REGLA: NOM">
       <!--
-        INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
-        OUTPUT: ^noun<NP>{^школа<n><f><nn><sg><nom>$}$
+          INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
+          OUTPUT: ^nom<NP>{^школа<n><f><nn><sg><nom>$}$
       -->
       <pattern>
-        <pattern-item n="noun"/>
+        <pattern-item n="nom"/>
       </pattern>
       <action>
         <call-macro n="translate-noun">
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="noun" case="caseFirstWord">
+          <chunk name="nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
@@ -570,50 +571,127 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: NOM POST">
+    <rule comment="REGLA: NOM
+                   TODO: det.pos insertion doesn't work yet">
       <!--
-        INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
-        OUTPUT: ^pr_noun<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
+          INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
+          OUTPUT: ^nom<NP>{^брат<n><m><aa><sg><dat>$}$
       -->
       <pattern>
-        <pattern-item n="noun-attr"/>
-        <pattern-item n="nounpost"/>
+        <pattern-item n="noun-px"/>
       </pattern>
       <action>
-        <call-macro n="return-case-pr-governs">
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="pr_noun" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="PP"/></tag>
-            </tags>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_noun"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <lit-tag v="sg"/>
-              <var n="case"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when c="sometimes Tatar noun with px3sp is translated with a preposition">
+            <test><equal><clip pos="1" side="tl" part="a_pr"/><lit-tag v="pr"/></equal></test>
+          <out>
+            <chunk name="pr" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="PREP"/></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            </chunk>
+          </out>
+          </when>
+          <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk name="nom" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <var n="preposition"/>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NOM NOM">
+      <!--
+        INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
+        OUTPUT: ^nom_nom<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
+        INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
+        OUTPUT: ^pr_nom<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
+      -->
+      <pattern>
+        <pattern-item n="noun-attr-or-gen"/>
+        <pattern-item n="noun-px3sp"/>
+      </pattern>
+      <action>
+        <choose>
+          <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
+            <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
+            <call-macro n="return-case-pr-governs">
+              <with-param pos="2"/>
+            </call-macro>
+            <out>
+              <chunk name="pr_nom" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="PP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="2" side="tl" part="lem"/>
+                  <clip pos="2" side="tl" part="a_pr"/>
+                </lu>
+                <b/>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_noun"/>
+                  <clip pos="1" side="tl" part="a_gender"/>
+                  <clip pos="1" side="tl" part="a_anim"/>
+                  <lit-tag v="sg"/>
+                  <var n="case"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+            <out>
+              <chunk name="nom_nom">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <var n="preposition"/>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+                <b/>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_noun"/>
+                  <clip pos="1" side="tl" part="a_gender"/>
+                  <clip pos="1" side="tl" part="a_anim"/>
+                  <clip pos="2" side="tl" part="a_nbr"/>
+                  <lit-tag v="gen"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
     <rule comment="REGLA: NOM POST NOM">
       <!--
         INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
-        OUTPUT: ^noun_pr_noun<NP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+        OUTPUT: ^nom_pr_nom<NP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
-        <pattern-item n="noun-attr"/>
+        <pattern-item n="noun-attr-or-gen"/>
         <pattern-item n="nounpost-attr"/>
-        <pattern-item n="noun"/>
+        <pattern-item n="nom"/>
       </pattern>
       <action>
         <call-macro n="translate-noun">
@@ -623,7 +701,7 @@
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="noun_pr_noun" case="caseFirstWord">
+          <chunk name="nom_pr_nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
@@ -650,53 +728,144 @@
       </action>
     </rule>
 
-    <rule comment="">
+    <rule comment="REGLA: NUM NOM">
       <!--
-        INPUT:  ^Гөлнара<np><ant><f><gen>/Гульнара<np><ant><f><sg><gen>$ ^эт<n><px3sp><nom>/собака<n><f><aa><px3sp><nom>$ ^юк<adj>/быть<vbser><neg><pres><p3><sg>$ ^и<cop><p3><sg>/быть<vbser><p3><sg>$
-        Гөлнараның эте юк
-        OUTPUT: ^bar-yuq<S>{^у<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
-        У Гульнары нет собаки
+          INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><nom>$
+          OUTPUT: ^num_nom<NP>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
+          INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><dat>/год<n><m><nn><dat>$
+          OUTPUT: ^num_nom<NP>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
       -->
       <pattern>
-        <pattern-item n="noun-gen"/>
-        <pattern-item n="noun-px3sp-nom"/>
-        <pattern-item n="yuq-adj"/>
-        <pattern-item n="cop-p3"/>
+        <pattern-item n="num"/>
+        <pattern-item n="nom"/>
       </pattern>
       <action>
+        <call-macro n="adapt-num">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <!-- Adjust noun's number to numeral's number -->
+        <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+        <!-- Adjust numeral's case to noun's case -->
+        <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>
+        <choose>
+          <when c="If the noun's case is nominative, change it to genitive
+                   (except when the numeral is 'один')">
+            <test>
+              <and>
+                <not><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal></not>
+                <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
+              </and>
+            </test>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+          </when>
+        </choose>
         <out>
-          <chunk name="bar-yuq">
+          <chunk name="num_nom">
             <tags>
-              <tag><lit-tag v="S"/></tag>
+              <tag><lit-tag v="NP"/></tag>
             </tags>
+            <var n="preposition"/>
             <lu>
-              <lit v="у"/>
-              <lit-tag v="pr"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
             <b/>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_noun"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
-              <lit-tag v="gen"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="3" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_noun"/>
-              <clip pos="2" side="tl" part="a_gender"/>
-              <clip pos="2" side="tl" part="a_anim"/>
-              <lit-tag v="sg"/>
-              <lit-tag v="gen"/>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+    <rule comment="PRN NOM">
+      <!--
+          INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
+          OUTPUT: ^det_nom<NP>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+      -->
+      <pattern>
+        <pattern-item n="prn-gen"/>
+        <pattern-item n="noun-px"/>
+      </pattern>
+      <action>
+        <choose>
+          <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
+            <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
+            <out>
+              <chunk name="pr">
+                <tags>
+                  <tag><lit-tag v="PREP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="nom">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+            <call-macro n="concord2">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
+            <choose>
+              <when c="'его' and 'их' do not take animacy or gender tags">
+                <test>
+                  <or>
+                    <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="его"/></equal>
+                    <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="их"/></equal>
+                  </or>
+                </test>
+                <out>
+                  <chunk name="det_nom">
+                    <tags>
+                      <tag><lit-tag v="NP"/></tag>
+                    </tags>
+                    <var n="preposition"/>
+                    <lu>
+                      <clip pos="1" side="tl" part="lem"/>
+                      <clip pos="1" side="tl" part="a_det"/>
+                    </lu>
+                    <b/>
+                    <lu>
+                      <clip pos="2" side="tl" part="whole"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+              <otherwise c="all other possessive determiners">
+                <out>
+                  <chunk name="det_nom">
+                    <tags>
+                      <tag><lit-tag v="NP"/></tag>
+                    </tags>
+                    <var n="preposition"/>
+                    <lu>
+                      <clip pos="1" side="tl" part="whole"/>
+                    </lu>
+                    <b/>
+                    <lu>
+                      <clip pos="2" side="tl" part="whole"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </otherwise>
+            </choose>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
@@ -788,7 +957,7 @@ OUTPUT: ^verb<VBLEX>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
 
 <!--
 INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>$
-OUTPUT: ^noun<NP>{^игра<n><f><nn><sg><acc>$}$
+OUTPUT: ^nom<NP>{^игра<n><f><nn><sg><acc>$}$
 INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
 OUTPUT: ^inf<VBLEX>{^быть<vbser><inf>$}$
 INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
@@ -807,7 +976,7 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
               <with-param pos="1"/>
             </call-macro>
             <out>
-              <chunk name="noun">
+              <chunk name="nom">
                 <tags>
                   <tag><lit-tag v="NP"/></tag>
                 </tags>
@@ -864,137 +1033,7 @@ OUTPUT: ^qst<SENT>{^?<sent>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-OUTPUT: ^det_noun<NP>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="prn-gen"/>
-        <pattern-item n="noun-px"/>
-      </pattern>
-      <action>
-        <choose>
-          <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
-            <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
-            <out>
-              <chunk name="pr">
-                <tags>
-                  <tag><lit-tag v="PREP"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="2" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-              <b/>
-              <chunk name="noun">
-                <tags>
-                  <tag><lit-tag v="NP"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
-          </when>
-          <otherwise>
-            <call-macro n="translate-noun">
-              <with-param pos="2"/>
-            </call-macro>
-            <call-macro n="concord2">
-              <with-param pos="1"/>
-              <with-param pos="2"/>
-            </call-macro>
-            <choose>
-              <when c="'его' and 'их' do not take animacy or gender tags">
-                <test>
-                  <or>
-                    <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="его"/></equal>
-                    <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="их"/></equal>
-                  </or>
-                </test>
-                <out>
-                  <chunk name="det_noun">
-                    <tags>
-                      <tag><lit-tag v="NP"/></tag>
-                    </tags>
-                    <var n="preposition"/>
-                    <lu>
-                      <clip pos="1" side="tl" part="lem"/>
-                      <clip pos="1" side="tl" part="a_det"/>
-                    </lu>
-                    <b/>
-                    <lu>
-                      <clip pos="2" side="tl" part="whole"/>
-                    </lu>
-                  </chunk>
-                </out>
-              </when>
-              <otherwise c="all other possessive determiners">
-                <out>
-                  <chunk name="det_noun">
-                    <tags>
-                      <tag><lit-tag v="NP"/></tag>
-                    </tags>
-                    <var n="preposition"/>
-                    <lu>
-                      <clip pos="1" side="tl" part="whole"/>
-                    </lu>
-                    <b/>
-                    <lu>
-                      <clip pos="2" side="tl" part="whole"/>
-                    </lu>
-                  </chunk>
-                </out>
-              </otherwise>
-            </choose>
-          </otherwise>
-        </choose>
-      </action>
-    </rule>
-
-<!--
-INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
-OUTPUT: ^noun<NP>{^брат<n><m><aa><sg><dat>$}$
--->
-    <rule comment="TODO: det.pos insertion doesn't work yet">
-      <pattern>
-        <pattern-item n="noun-px"/>
-      </pattern>
-      <action>
-        <choose>
-          <when c="sometimes Tatar noun with px3sp is translated with a preposition">
-            <test><equal><clip pos="1" side="tl" part="a_pr"/><lit-tag v="pr"/></equal></test>
-          <out>
-            <chunk name="pr" case="caseFirstWord">
-              <tags>
-                <tag><lit-tag v="PREP"/></tag>
-              </tags>
-              <lu>
-                <clip pos="1" side="tl" part="whole"/>
-              </lu>
-            </chunk>
-          </out>
-          </when>
-          <otherwise>
-            <call-macro n="translate-noun">
-              <with-param pos="1"/>
-            </call-macro>
-            <out>
-              <chunk name="noun" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="NP"/></tag>
-                </tags>
-                <var n="preposition"/>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
-          </otherwise>
-        </choose>
-      </action>
-    </rule>
+<!-- SECTION: Modifiers -->
 
 <!--
 INPUT:  ^яхшы<adj>/хороший<adj>$
@@ -1127,27 +1166,28 @@ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
       </action>
     </rule>
 
-    <rule comment="REGLA: NOM NOM">
+    <rule comment="">
       <!--
-        INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
-        OUTPUT: ^noun_noun<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
+        INPUT:  ^Гөлнара<np><ant><f><gen>/Гульнара<np><ant><f><sg><gen>$ ^эт<n><px3sp><nom>/собака<n><f><aa><px3sp><nom>$ ^юк<adj>/быть<vbser><neg><pres><p3><sg>$ ^и<cop><p3><sg>/быть<vbser><p3><sg>$
+        Гөлнараның эте юк
+        OUTPUT: ^bar-yuq<S>{^у<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
+        У Гульнары нет собаки
       -->
       <pattern>
-        <pattern-item n="noun-attr"/>
-        <pattern-item n="noun-px3sp"/>
+        <pattern-item n="noun-gen"/>
+        <pattern-item n="noun-px3sp-nom"/>
+        <pattern-item n="yuq-adj"/>
+        <pattern-item n="cop-p3"/>
       </pattern>
       <action>
-        <call-macro n="translate-noun">
-          <with-param pos="2"/>
-        </call-macro>
         <out>
-          <chunk name="noun_noun">
+          <chunk name="bar-yuq">
             <tags>
-              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="S"/></tag>
             </tags>
-            <var n="preposition"/>
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+              <lit v="у"/>
+              <lit-tag v="pr"/>
             </lu>
             <b/>
             <lu>
@@ -1155,60 +1195,21 @@ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
               <clip pos="1" side="tl" part="a_noun"/>
               <clip pos="1" side="tl" part="a_gender"/>
               <clip pos="1" side="tl" part="a_anim"/>
-              <clip pos="2" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
               <lit-tag v="gen"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
-INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><nom>$
-OUTPUT: ^num_noun<NP>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
-INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><dat>/год<n><m><nn><dat>$
-OUTPUT: ^num_noun<NP>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="num"/>
-        <pattern-item n="noun"/>
-      </pattern>
-      <action>
-        <call-macro n="adapt-num">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="translate-noun">
-          <with-param pos="2"/>
-        </call-macro>
-        <!-- Adjust noun's number to numeral's number -->
-        <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
-        <!-- Adjust numeral's case to noun's case -->
-        <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>
-        <choose>
-          <when c="If the noun's case is nominative, change it to genitive
-                   (except when the numeral is 'один')">
-            <test>
-              <and>
-                <not><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal></not>
-                <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
-              </and>
-            </test>
-            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
-          </when>
-        </choose>
-        <out>
-          <chunk name="num_noun">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-            </tags>
-            <var n="preposition"/>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
             </lu>
             <b/>
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_noun"/>
+              <clip pos="2" side="tl" part="a_gender"/>
+              <clip pos="2" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="gen"/>
             </lu>
           </chunk>
         </out>
