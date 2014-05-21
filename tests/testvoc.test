@@ -7,8 +7,10 @@
 #
 # The purpose of this script is to make sure that if we pass field 2 of that
 # lines (i.e. Tatar lexical units) through the bilingual and transfer modules
-# of the system, it will produce a result which is equal to field 4 (i.e. Russian
-# surface forms).
+# of the system, they will produce a result which is equal to field 3 (i.e.
+# Russian lexical forms) and if we further pass their output through the
+# GENERATOR and POSTGENERATOR, the latter two will yield an output which is
+# equal to field 4 (i.e. Russian surface forms).
 
 # Supposed to be invoked by "./qa.sh testvoc"
 
@@ -23,31 +25,51 @@ POSTGENERATOR="lt-proc -p tat-rus.autopgen.bin"
 TOTAL=0
 CORRECT=0
 
-# returns "line number of INPUT:INPUT:OUTPUT" from TESTS
-CURRENT_LINE=0
+# return "line number of INPUT:field2:field3:field4" from TESTS
+currentLine=0
 function extract_tests {
     while IFS=':' read SourceSurf SourceLex TargetLex TargetSurf; do
-	CURRENT_LINE=`expr $CURRENT_LINE + 1`
-	echo "$CURRENT_LINE:$SourceLex:$TargetSurf"
+	currentLine=`expr $currentLine + 1`
+	echo "$currentLine:$SourceLex:$TargetLex:$TargetSurf"
     done < $TESTS
 }
 
 extract_tests > /tmp/testCases.txt
 
-# runs testCases trough the translator
-while IFS=':' read lineNbr input expectedOut ; do
+# run testCases trough the translator
+while IFS=':' read lineNbr input expectedOutOfTransfer expectedOutOfGenerator
+do
     TOTAL=`expr $TOTAL + 1`
-    apertiumsOut=$(echo $input | $TRANSFER_1 | $TRANSFER_2 | $TRANSFER_3 |
-	          $GENERATOR | $POSTGENERATOR)
-    if [ "$apertiumsOut" = "$expectedOut" ]; then
+    transfersOut=$(echo $input | $TRANSFER_1 | $TRANSFER_2 | $TRANSFER_3)
+    generatorsOut=$(echo $transfersOut | $GENERATOR | $POSTGENERATOR)
+    if [ "$transfersOut" = "$expectedOutOfTransfer" ] &&
+       [ "$generatorsOut" = "$expectedOutOfGenerator" ]
+    then
         CORRECT=`expr $CORRECT + 1`
         echo "$lineNbr PASS: $input ->"
-        echo "        $expectedOut"
+        echo "        $transfersOut"
+        echo "        $generatorsOut"
+        echo ""
+    elif [ "$transfersOut" = "$expectedOutOfTransfer" ]
+    then
+        echo "$lineNbr FAIL: $input ->"
+        echo "        $transfersOut"
+        echo "-($expectedOutOfGenerator)"
+        echo "+($generatorsOut)"
+        echo ""
+    elif [ "$generatorsOut" = "$expectedOutOfGenerator" ]
+    then
+        echo "$lineNbr FAIL: $input ->"
+        echo "-($expectedOutOfTransfer)"
+        echo "+($transfersOut)"
+        echo "        $generatorsOut"
         echo ""
     else
         echo "$lineNbr FAIL: $input ->"
-        echo "-($expectedOut)"
-        echo "+($apertiumsOut)"
+        echo "-($expectedOutOfTransfer)"
+        echo "+($transfersOut)"
+        echo "-($expectedOutOfGenerator)"
+        echo "+($generatorsOut)"
         echo ""
     fi
 done < /tmp/testCases.txt
