@@ -72,6 +72,7 @@
     <def-cat n="adj">
       <cat-item tags="adj"/>
     </def-cat>
+
     <def-cat n="yuq-adj">
       <cat-item lemma="юк" tags="adj"/>
     </def-cat>
@@ -556,6 +557,8 @@
       <!--
           INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
           OUTPUT: ^nom<NP>{^школа<n><f><nn><sg><nom>$}$
+          INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
+          OUTPUT: ^pr_nom<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
       -->
       <pattern>
         <pattern-item n="nom"/>
@@ -564,17 +567,34 @@
         <call-macro n="translate-noun">
           <with-param pos="1"/>
         </call-macro>
-        <out>
-          <chunk name="nom" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-            </tags>
-            <var n="preposition"/>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test><not><equal><var n="preposition"/><lit v=""/></equal></not></test>
+            <out>
+              <chunk name="pr_nom" case="caseFirstWord">
+		<tags>
+                  <tag><lit-tag v="PP"/></tag>
+		</tags>
+		<var n="preposition"/>
+		<lu>
+                  <clip pos="1" side="tl" part="whole"/>
+		</lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="nom" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="NP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
@@ -1016,30 +1036,6 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
       </action>
     </rule>
 
-<!--
-        (^бел<v><tv><pres><p2><pl>/знать<vblex><impf><tv><pres><p2><pl>$)
-INPUT:  ^мы<qst>/@мы<qst>$^?<sent>/?<sent>$
-OUTPUT: ^qst<SENT>{^?<sent>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="qst"/>
-        <pattern-item n="sent"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="qst">
-            <tags>
-              <tag><lit-tag v="SENT"/></tag>
-            </tags>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
 <!-- SECTION: Modifiers -->
 
 <!--
@@ -1167,6 +1163,32 @@ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+<!-- TODO: Consider handling issues below in the following transfer modules -->
+
+<!--
+        (^бел<v><tv><pres><p2><pl>/знать<vblex><impf><tv><pres><p2><pl>$)
+INPUT:  ^мы<qst>/@мы<qst>$^?<sent>/?<sent>$
+OUTPUT: ^qst<SENT>{^?<sent>$}$
+-->
+    <rule comment="">
+      <pattern>
+        <pattern-item n="qst"/>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="qst">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
