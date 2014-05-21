@@ -168,6 +168,7 @@
 
   <section-def-attrs>
     <def-attr n="a_pos">
+      <attr-item tags="adj"/>
       <attr-item tags="n"/>
       <attr-item tags="np"/>
       <attr-item tags="pred"/>
@@ -555,6 +556,8 @@
 
     <rule comment="REGLA: NOM">
       <!--
+          INPUT:  ^мәктәп<n><attr>/школьный<adj><m><an><sg><nom>$
+          OUTPUT: ^adj<AdjP>{^школьный<adj><m><an><sg><nom>$}$
           INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
           OUTPUT: ^nom<NP>{^школа<n><f><nn><sg><nom>$}$
           INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
@@ -564,37 +567,54 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="translate-noun">
-          <with-param pos="1"/>
-        </call-macro>
         <choose>
           <when>
-            <test><not><equal><var n="preposition"/><lit v=""/></equal></not></test>
+            <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal></test>
             <out>
-              <chunk name="pr_nom" case="caseFirstWord">
+              <chunk name="adj" case="caseFirstWord">
 		<tags>
-                  <tag><lit-tag v="PP"/></tag>
+                  <tag><lit-tag v="AdjP"/></tag>
 		</tags>
-		<var n="preposition"/>
 		<lu>
                   <clip pos="1" side="tl" part="whole"/>
 		</lu>
               </chunk>
             </out>
           </when>
-          <otherwise>
-            <out>
-              <chunk name="nom" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="NP"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
-          </otherwise>
-        </choose>
+	  <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="1"/>
+            </call-macro>
+	    <choose>
+              <when>
+		<test><not><equal><var n="preposition"/><lit v=""/></equal></not></test>
+		<out>
+		  <chunk name="pr_nom" case="caseFirstWord">
+		    <tags>
+                      <tag><lit-tag v="PP"/></tag>
+		    </tags>
+		    <var n="preposition"/>
+		    <lu>
+                      <clip pos="1" side="tl" part="whole"/>
+		    </lu>
+		  </chunk>
+		</out>
+              </when>
+              <otherwise>
+		<out>
+		  <chunk name="nom" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="NP"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="1" side="tl" part="whole"/>
+                    </lu>
+		  </chunk>
+		</out>
+              </otherwise>
+            </choose>
+	  </otherwise>
+	</choose>
       </action>
     </rule>
 
