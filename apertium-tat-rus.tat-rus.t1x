@@ -3,7 +3,10 @@
 
 <!-- INPUT is the output of 'apertium tat-rus-biltrans',
      OUTPUT is the output of 'apertium tat-rus-chunker'.
-     Tests are run by './qa.sh t1x' command. -->
+     Tests are run by './qa.sh t1x' command.
+
+     Also make sure to run './qa.sh' (with no arguments)
+     before committing to svn. -->
 
 <transfer default="chunk">
 
@@ -233,6 +236,7 @@
       <attr-item tags="acc"/>
       <attr-item tags="abl"/>
       <attr-item tags="loc"/>
+      <attr-item tags="sim"/>
       <attr-item tags="prp"/>
     </def-attr>
     <def-attr n="a_px">
@@ -330,8 +334,8 @@
 
     <def-macro n="translate-noun" npar="1">
       <!-- arg.1 noun -> v_preposition noun
-           Translates ablative and locative cases with the variable 'preposition' and noun,
-           <px><nom> with genitive, other cases remain as they are. -->
+           Translates ablative, locative, similiative cases with the variable 'preposition'
+           and noun, <px><nom> with genitive, other cases remain as they are. -->
       <call-macro n="return-number-of-sl-word">
         <with-param pos="1"/>
       </call-macro>
@@ -370,8 +374,11 @@
             </when>
           </choose>
         </when>
-      </choose>
-      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="sim"/></equal></test>
+          <let><var n="case"/><lit-tag v="nom"/></let>
+          <let><var n="preposition"/><concat><lit v="^как"/><lit-tag v="adv"/><lit-tag v="rel"/><lit v="$ "/></concat></let>
+        </when>
         <when>
           <test><equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="px"/></equal></test>
           <let><var n="case"/><lit-tag v="gen"/></let>
