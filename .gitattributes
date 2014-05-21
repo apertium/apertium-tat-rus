@@ -27,6 +27,7 @@ dev/shupashkar/apertium-tt-ru.ru.twol -text
 dev/shupashkar/apertium-tt-ru.tt-ru.rlx -text
 dev/shupashkar/apertium-tt-ru.tt.lexc -text
 dev/shupashkar/apertium-tt-ru.tt.twol -text
+dev/testGenerator.sh -text
 /modes.xml -text
 /pending-tests.sh -text
 /qa.sh -text
