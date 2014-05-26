@@ -318,6 +318,7 @@
             <or>
               <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="из-за"/></equal>
               <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="внутри"/></equal>
+              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="без"/></equal>
             </or>
           </test>
           <let><var n="case"/><lit-tag v="gen"/></let>
@@ -559,7 +560,7 @@
           INPUT:  ^мәктәп<n><attr>/школьный<adj><m><an><sg><nom>$
           OUTPUT: ^adj<AdjP>{^школьный<adj><m><an><sg><nom>$}$
           INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
-          OUTPUT: ^nom<NP>{^школа<n><f><nn><sg><nom>$}$
+          OUTPUT: ^nom<SN>{^школа<n><f><nn><sg><nom>$}$
           INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
           OUTPUT: ^pr_nom<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
       -->
@@ -604,7 +605,7 @@
 		<out>
 		  <chunk name="nom" case="caseFirstWord">
                     <tags>
-                      <tag><lit-tag v="NP"/></tag>
+                      <tag><lit-tag v="SN"/></tag>
                     </tags>
                     <lu>
                       <clip pos="1" side="tl" part="whole"/>
@@ -622,7 +623,7 @@
                    TODO: det.pos insertion doesn't work yet">
       <!--
           INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
-          OUTPUT: ^nom<NP>{^брат<n><m><aa><sg><dat>$}$
+          OUTPUT: ^nom<SN>{^брат<n><m><aa><sg><dat>$}$
       -->
       <pattern>
         <pattern-item n="noun-px"/>
@@ -649,7 +650,7 @@
             <out>
               <chunk name="nom" case="caseFirstWord">
                 <tags>
-                  <tag><lit-tag v="NP"/></tag>
+                  <tag><lit-tag v="SN"/></tag>
                 </tags>
                 <var n="preposition"/>
                 <lu>
@@ -665,7 +666,7 @@
     <rule comment="REGLA: NOM NOM">
       <!--
         INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
-        OUTPUT: ^nom_nom<NP>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
+        OUTPUT: ^nom_nom<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
         INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
         OUTPUT: ^pr_nom<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
       -->
@@ -708,7 +709,7 @@
             <out>
               <chunk name="nom_nom">
                 <tags>
-                  <tag><lit-tag v="NP"/></tag>
+                  <tag><lit-tag v="SN"/></tag>
                 </tags>
                 <var n="preposition"/>
                 <lu>
@@ -733,7 +734,7 @@
     <rule comment="REGLA: NOM POST NOM">
       <!--
         INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
-        OUTPUT: ^nom_pr_nom<NP>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+        OUTPUT: ^nom_pr_nom<SN>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
         <pattern-item n="noun-attr-or-gen"/>
@@ -750,7 +751,7 @@
         <out>
           <chunk name="nom_pr_nom" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="SN"/></tag>
             </tags>
             <var n="preposition"/>
             <lu>
@@ -778,9 +779,9 @@
     <rule comment="REGLA: NUM NOM">
       <!--
           INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><nom>$
-          OUTPUT: ^num_nom<NP>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
+          OUTPUT: ^num_nom<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
           INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><dat>/год<n><m><nn><dat>$
-          OUTPUT: ^num_nom<NP>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
+          OUTPUT: ^num_nom<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
       -->
       <pattern>
         <pattern-item n="num"/>
@@ -812,7 +813,7 @@
         <out>
           <chunk name="num_nom">
             <tags>
-              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="SN"/></tag>
             </tags>
             <var n="preposition"/>
             <lu>
@@ -830,7 +831,7 @@
     <rule comment="PRN NOM">
       <!--
           INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-          OUTPUT: ^det_nom<NP>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+          OUTPUT: ^det_nom<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="prn-gen"/>
@@ -852,7 +853,7 @@
               <b/>
               <chunk name="nom">
                 <tags>
-                  <tag><lit-tag v="NP"/></tag>
+                  <tag><lit-tag v="SN"/></tag>
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
@@ -879,7 +880,7 @@
                 <out>
                   <chunk name="det_nom">
                     <tags>
-                      <tag><lit-tag v="NP"/></tag>
+                      <tag><lit-tag v="SN"/></tag>
                     </tags>
                     <var n="preposition"/>
                     <lu>
@@ -897,7 +898,7 @@
                 <out>
                   <chunk name="det_nom">
                     <tags>
-                      <tag><lit-tag v="NP"/></tag>
+                      <tag><lit-tag v="SN"/></tag>
                     </tags>
                     <var n="preposition"/>
                     <lu>
@@ -1004,7 +1005,7 @@ OUTPUT: ^verb<VBLEX>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
 
 <!--
 INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>$
-OUTPUT: ^nom<NP>{^игра<n><f><nn><sg><acc>$}$
+OUTPUT: ^nom<SN>{^игра<n><f><nn><sg><acc>$}$
 INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
 OUTPUT: ^inf<VBLEX>{^быть<vbser><inf>$}$
 INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
@@ -1025,7 +1026,7 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
             <out>
               <chunk name="nom">
                 <tags>
-                  <tag><lit-tag v="NP"/></tag>
+                  <tag><lit-tag v="SN"/></tag>
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
