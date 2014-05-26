@@ -34,10 +34,11 @@ PARDEF_FILES=../../../../languages/apertium-tat/tests/morphotactics/*.txt.gz
 
 echo "==Tatar->Russian==========================="
 
+echo "" > $TMPDIR/tat-rus.testvoc
+
 for file in $PARDEF_FILES; do
     zcat $file | extract_lexical_units |
     $INCONSISTENCY tat-rus >> $TMPDIR/tat-rus.testvoc
 done
 
 $INCONSISTENCY_SUMMARY $TMPDIR/tat-rus.testvoc tat-rus
-
