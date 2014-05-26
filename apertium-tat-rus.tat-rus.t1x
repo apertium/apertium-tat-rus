@@ -13,6 +13,7 @@
   <section-def-cats>
 
     <def-cat n="nom">
+      <cat-item tags="n"/>
       <cat-item tags="n.*"/>
       <cat-item tags="n.*.*"/>
       <cat-item tags="n.px.nom"/>
@@ -162,6 +163,10 @@
     </def-cat>
     <def-cat n="cm">
       <cat-item tags="cm"/>
+    </def-cat>
+
+    <def-cat n="post">
+      <cat-item tags="post"/>
     </def-cat>
 
   </section-def-cats>
@@ -728,6 +733,42 @@
             </out>
           </otherwise>
         </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NOM POST">
+      <!--
+        INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr>$
+        OUTPUT: ^pr_nom<PP>{^без<pr>$ ^школа<n><f><nn><sg><gen>$}$
+      -->
+      <pattern>
+        <pattern-item n="nom"/>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+          <call-macro n="return-case-pr-governs">
+            <with-param pos="2"/>
+          </call-macro>
+          <out>
+            <chunk name="pr_nom" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="PP"/></tag>
+              </tags>
+              <lu>
+                <clip pos="2" side="tl" part="lem"/>
+                <clip pos="2" side="tl" part="a_pr"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="1" side="tl" part="lem"/>
+                <clip pos="1" side="tl" part="a_noun"/>
+                <clip pos="1" side="tl" part="a_gender"/>
+                <clip pos="1" side="tl" part="a_anim"/>
+                <lit-tag v="sg"/>
+                <var n="case"/>
+              </lu>
+            </chunk>
+          </out>
       </action>
     </rule>
 
