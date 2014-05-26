@@ -83,6 +83,7 @@
     <sdef n="mod_ass" 	c=""/> 
     <sdef n="subst" 	c=""/> 
     <sdef n="attr" 	c=""/> 
+    <sdef n="CD" 	c="Case to be determined"/> 
   </sdefs>
   <section id="main" type="standard">
 
@@ -131,12 +132,12 @@
 
     <!-- Numerals -->
 
-<e>       <p><l>бер<s n="num"/></l>                    <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
-<e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
-<e>       <p><l>ике<s n="num"/></l>                    <r>два<s n="num"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
+<e>       <p><l>бер<s n="num"/></l>                    <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="CD"/></r></p></e>
+<e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="CD"/></r></p></e>
+<e>       <p><l>ике<s n="num"/></l>                    <r>два<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="CD"/></r></p></e>
 <e>       <p><l>ике<s n="num"/><s n="subst"/></l>      <r>оба<s n="num"/><s n="m"/><s n="an"/><s n="pl"/></r></p></e>
-<e>       <p><l>биш<s n="num"/></l>                    <r>пять<s n="num"/><s n="mfn"/><s n="pl"/></r></p></e>
-<e>       <p><l>алты<s n="num"/></l>                   <r>шесть<s n="num"/><s n="mfn"/><s n="pl"/></r></p></e>
+<e>       <p><l>биш<s n="num"/></l>                    <r>пять<s n="num"/><s n="mfn"/><s n="pl"/><s n="CD"/></r></p></e>
+<e>       <p><l>алты<s n="num"/></l>                   <r>шесть<s n="num"/><s n="mfn"/><s n="pl"/><s n="CD"/></r></p></e>
 
     <!-- Adpositions -->
 
@@ -365,7 +366,7 @@
 <e>       <p><l>—<s n="guio"/></l>                     <r>—<s n="guio"/></r></p></e>
 <e>       <p><l>'<s n="apos"/></l>                     <r>'<s n="apos"/></r></p></e>
 <e>       <re>[.\?;:!"]+</re><p><l><s n="sent"/></l>   <r><s n="sent"/></r></p></e>
-<e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/></r></p></e> 
+<e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e> 
   
   </section>
 </dictionary>

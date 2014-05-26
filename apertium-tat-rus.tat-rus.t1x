@@ -245,6 +245,7 @@
       <attr-item tags="loc"/>
       <attr-item tags="sim"/>
       <attr-item tags="prp"/>
+      <attr-item tags="CD"/>
     </def-attr>
     <def-attr n="a_px">
       <attr-item tags="px"/>
@@ -421,38 +422,6 @@
           <lit-tag v="nom"/>
         </concat>
       </let>
-    </def-macro>
-
-    <def-macro n="adapt-num" npar="1">
-      <!-- arg.1 numeral -> numeral
-           Sets the numeral to the default <nom>. Other tags are taken from the bidix.
-           GIVEN: ^бер<num>/один<num><m><an><sg>$ EXPECT: ^бер<num>/^один<num><m><an><sg><nom$
-           GIVEN: ^1<num>/1<num><digit>$ EXPECT: ^1<num>/^1<num>$ -->
-      <choose>
-        <when>
-          <test><equal><clip pos="1" side="tl" part="a_digit"/><lit-tag v="digit"/></equal></test>
-          <let>
-            <clip pos="1" side="tl" part="whole"/>
-            <concat>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_num"/>
-            </concat>
-          </let>
-        </when>
-        <otherwise>
-          <let>
-            <clip pos="1" side="tl" part="whole"/>
-            <concat>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_num"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
-              <lit-tag v="nom"/>
-            </concat>
-          </let>
-        </otherwise>
-      </choose>
     </def-macro>
 
     <def-macro n="translate-verb-fin" npar="1">
@@ -819,9 +788,9 @@
 
     <rule comment="REGLA: NUM NOM">
       <!--
-          INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><nom>$
+          INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><nom>/год<n><m><nn><nom>$
           OUTPUT: ^num_nom<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
-          INPUT:  ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><dat>/год<n><m><nn><dat>$
+          INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><dat>/год<n><m><nn><dat>$
           OUTPUT: ^num_nom<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
       -->
       <pattern>
@@ -829,9 +798,6 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="adapt-num">
-          <with-param pos="1"/>
-        </call-macro>
         <call-macro n="translate-noun">
           <with-param pos="2"/>
         </call-macro>
@@ -1173,15 +1139,13 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
       </action>
     </rule>
 
-<!--
-INPUT: ^бер<num>/один<num><m><an><sg>$
-OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
-INPUT: ^бер<det><ind>/один<num><num><m><an><sg>$
-OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
--->
-    <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
-                   whether the lemma is a digit or not, for digits we add an additional 'digit' tag
-                   in bidix, which we delete here (i.e. do not output it).">
+    <rule comment="REGLA: DET">
+      <!--
+        INPUT: ^бер<det><ind>/один<num><num><m><an><sg><CD>$
+        OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+        INPUT: ^бер<num>/один<num><m><an><sg><CD>$
+        OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
+      -->
       <pattern>
         <pattern-item n="det"/>
       </pattern>
@@ -1202,29 +1166,30 @@ OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^бер<num>/один<num><m><an><sg>$
-OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
-INPUT:  ^бер<det><ind>/один<num><num><m><an><sg>$
-OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
--->
-    <rule comment="Digits receive only the 'num' tag in rus.dix. In order to be able to distinguish
-                   whether the lemma is a digit or not, for digits we add an additional 'digit' tag
-                   in bidix, which we delete here (i.e. do not output it).">
+    <rule comment="REGLA: NUM">
+      <!--
+        INPUT:  ^бер<num>/один<num><m><an><sg><CD>$
+        OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
+        INPUT:  ^бер<det><ind>/один<num><num><m><an><sg><CD>$
+        OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
+      -->
       <pattern>
         <pattern-item n="num"/>
       </pattern>
       <action>
-        <call-macro n="adapt-num">
-          <with-param pos="1"/>
-        </call-macro>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         <out>
           <chunk name="num">
             <tags>
               <tag><lit-tag v="DET"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_num"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
             </lu>
           </chunk>
         </out>
