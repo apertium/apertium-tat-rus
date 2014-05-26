@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 
-<!-- INPUT is the output of 'apertium tat-rus-biltrans',
-     OUTPUT is the output of 'apertium tat-rus-chunker'.
-     Tests are run by './qa.sh t1x' command.
+<!-- Tests are run by './qa.sh t1x' command.
+     INPUT is the output of lexical selection,
+     OUTPUT is the expected output of this transfer module.
 
      Also make sure to run './qa.sh' (with no arguments)
      before committing to svn. -->
