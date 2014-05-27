@@ -1,0 +1,12 @@
+абыем:^абый<n><px1sg><nom>$:^мой<det><pos><m><an><sg><nom>$ ^брат<n><m><aa><sg><nom>$:мой брат
+абыемның:^абый<n><px1sg><gen>$:^мой<det><pos><m><an><sg><gen>$ ^брат<n><m><aa><sg><gen>$:моего брата
+абыема:^абый<n><px1sg><dat>$:^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$:моему брату
+абыемны:^абый<n><px1sg><acc>$:^мой<det><pos><m><aa><sg><acc>$ ^брат<n><m><aa><sg><acc>$:моего брата
+абыемнан:^абый<n><px1sg><abl>$:^от<pr>$ ^мой<det><pos><m><an><sg><gen>$ ^брат<n><m><aa><sg><gen>$:от моего брата
+абыемда:^абый<n><px1sg><loc>$:^у<pr>$ ^мой<det><pos><m><an><sg><gen>$ ^брат<n><m><aa><sg><gen>$:у моего брата
+абыйларым:^абый<n><pl><px1sg><nom>$:^мой<det><pos><mfn><an><pl><nom>$ ^брат<n><m><aa><pl><nom>$:мои братья
+абыйларымның:^абый<n><pl><px1sg><gen>$:^мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:моих братьев
+абыйларыма:^абый<n><pl><px1sg><dat>$:^мой<det><pos><mfn><an><pl><dat>$ ^брат<n><m><aa><pl><dat>$:моим братьям
+абыйларымны:^абый<n><pl><px1sg><acc>$:^мой<det><pos><mfn><aa><pl><acc>$ ^брат<n><m><aa><pl><acc>$:моих братьев
+абыйларымнан:^абый<n><pl><px1sg><abl>$:^от<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:от моих братьев
+абыйларымда:^абый<n><pl><px1sg><loc>:^у<pr>$ ^моих/мой<det><мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:у моих братьев

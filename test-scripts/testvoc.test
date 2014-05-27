@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# This script is tight to test cases in apertium-tat-rus/testvoc/lite (see e.g.
-# N1.txt). Lines from that files look like this:
+# This script is tight to test cases in apertium-tat-rus/testvoc/lite
+# (regression.txt and pending.txt). Lines from that files look like this:
 #
 # мәктәптә  :^мәктәп<n><loc>$  :^в<pr>$ ^школа<n><f><nn><sg><prp>$  :в школе
 #
@@ -12,9 +12,13 @@
 # GENERATOR and POSTGENERATOR, the latter two will yield an output which is
 # equal to field 4 (i.e. Russian surface forms).
 
-# Supposed to be invoked by "./qa.sh testvoc"
+# Supposed to be invoked by "./qa.sh testvoc reg" or "./qa.sh testvoc pen"
 
-TESTS="testvoc/lite/N1.txt"
+if [ "$1" = "reg" ]; then
+    TESTS="testvoc/lite/regression.txt"
+elif [ "$1" = "pen" ]; then
+    TESTS="testvoc/lite/pending.txt"
+fi
 
 PRETRANSFER="apertium-pretransfer"
 TRANSFER_1="apertium-transfer apertium-tat-rus.tat-rus.t1x tat-rus.t1x.bin tat-rus.autobil.bin"

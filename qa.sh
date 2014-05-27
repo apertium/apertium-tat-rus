@@ -1,7 +1,10 @@
-# Takes the basename of the test scrpt in /tests as an argument
-# and runs the test.
-
 #!/bin/bash
+
+# Takes the basename of the test scrpt in /test-scripts as an argument,
+# an additional argument if the test script requires it, and runs the test.
+#
+# Usage: ./qa.sh t1x
+#        ./qa.sh testvoc reg
 
 if [ $# -eq 0 ]
 then
@@ -10,4 +13,4 @@ else
     testToRun=$1.test
 fi
 
-bash "tests/$testToRun"
+bash "test-scripts/$testToRun" "$2"

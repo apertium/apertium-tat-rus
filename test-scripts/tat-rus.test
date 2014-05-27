@@ -24,7 +24,7 @@ cd ../../nursery/apertium-tat-rus
 make &&
 
 ./wiki-tests.sh Regression tat rus &&
-./qa.sh testvoc &&
+./qa.sh testvoc reg &&
 ./qa.sh tat-rus-corp &&
 
 if ! diff corpus/tat-rus-origina.txt corpus/tat-rus-nova.txt > /dev/null; then

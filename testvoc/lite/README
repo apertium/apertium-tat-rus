@@ -28,3 +28,10 @@ represents, e.g. A1.txt.
 The job of the testvoc.sh script in this directory is to extract lexical forms
 from that text files, and run them through the translator pipeline, as the usual
 testvoc script would.
+
+There are also regression.txt and pending.txt files, which are like regular
+regression and pending tests on the wiki, but are intended to be used for single
+words, whereas the latter are reserved for phrases and clauses (which can be
+disambiguated). Test cases in regressioin.txt are run by the 'apertium-tat-rus/
+tests/testvoc.test' script (which is executed with './qa.sh testvoc' or simply
+'./qa.sh' command.
