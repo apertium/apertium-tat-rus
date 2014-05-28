@@ -286,7 +286,6 @@
     <def-var n="preposition"/>
     <def-var n="possessive"/>
     <def-var n="animacy"/>
-    <def-var n="lemma"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -333,43 +332,35 @@
            GIVEN:  ^абый<n><px1sg><nom>/брат<n><m><aa><px1sg><nom>$
            EXPECT: possessive = ^мой<det><pos><m><an><sg><nom>$
            GIVEN:  ^абый<n><px1sg><acc>/брат<n><m><aa><px1sg><acc>$
-           EXPECT: possessive = ^мой<det><pos><mfn><aa><pl><acc>$ -->
-      <let><var n="lemma"/><lit v=""/></let>
+           EXPECT: possessive = ^мой<det><pos><m><aa><sg><acc>$ -->
       <let><var n="possessive"/><lit v=""/></let>
       <choose>
-        <when>
-          <test><equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal></test>
-          <let><var n="lemma"/><lit v="мой"/></let>
+        <when c="If gender is masculin or number is plural, in accusative we want to take the
+                 animacy tag of the noun, otherwise it should be set to 'an'.">
+          <test>
+            <and>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+              <or>
+                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
+                <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+              </or>
+            </and>
+          </test>
+          <let><var n="animacy"/><clip pos="1" side="tl" part="a_anim"/></let>
         </when>
-        <when>
-          <test><equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal></test>
-          <let><var n="lemma"/><lit v="твой"/></let>
-        </when>
+        <otherwise>
+          <let><var n="animacy"/><lit-tag v="an"/></let>
+        </otherwise>
       </choose>
       <choose>
         <when>
-          <test><not><equal><var n="lemma"/><lit v=""/></equal></not></test>
-          <choose>
-            <when c="If gender is masculin or number is plural, in accusative we want to take the
-                     animacy tag of the noun, otherwise it should be set to 'an'.">
-              <test>
-                <and>
-                  <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
-                  <or>
-                    <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
-                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
-                  </or>
-                </and>
-              </test>
-              <let><var n="animacy"/><clip pos="1" side="tl" part="a_anim"/></let>
-            </when>
-            <otherwise>
-              <let><var n="animacy"/><lit-tag v="an"/></let>
-            </otherwise>
-          </choose>
+          <test><and>
+	    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+	  </and></test>
           <let><var n="possessive"/>
-            <concat>
-              <lit v="^"/><var n="lemma"/>
+          <concat>
+              <lit v="^мой"/>
               <lit-tag v="det"/><lit-tag v="pos"/>
               <clip pos="1" side="tl" part="a_gender"/>
               <var n="animacy"/>
@@ -377,8 +368,25 @@
               <clip pos="1" side="tl" part="a_case"/>
               <lit v="$ "/>
             </concat>
-          </let>
-        </when>
+          </let>  
+	</when>
+        <when>
+          <test><and>
+	    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+	  </and></test>
+          <let><var n="possessive"/>
+            <concat>
+              <lit v="^мой"/>
+              <lit-tag v="det"/><lit-tag v="pos"/>
+              <lit-tag v="mfn"/>
+              <var n="animacy"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+              <lit v="$ "/>
+            </concat>
+          </let>  
+	</when>
       </choose>
     </def-macro>
 
