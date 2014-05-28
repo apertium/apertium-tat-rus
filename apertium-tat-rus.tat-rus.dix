@@ -7,7 +7,7 @@
 
 -->
 <dictionary>
-  <alphabet></alphabet>
+  <alphabet/>
   <sdefs>
     <sdef n="n" 	c="Имя существительное"/> 
     <sdef n="np" 	c="Имя собственное"/> 
@@ -84,8 +84,29 @@
     <sdef n="subst" 	c=""/> 
     <sdef n="attr" 	c=""/> 
     <sdef n="ins" 	c=""/> 
+    <sdef n="acc" 	c=""/> 
     <sdef n="CD" 	c="Case to be determined"/> 
   </sdefs>
+
+  <pardefs>
+    <pardef n="__LR_gen">
+      <e r="LR"><p><l></l><r><s n="gen"/></r></p></e>
+      <e r="RL"><p><l></l><r></r></p></e>
+    </pardef>
+    <pardef n="__LR_dat">
+      <e r="LR"><p><l></l><r><s n="dat"/></r></p></e>
+      <e r="RL"><p><l></l><r></r></p></e>
+    </pardef>
+    <pardef n="__LR_acc">
+      <e r="LR"><p><l></l><r><s n="acc"/></r></p></e>
+      <e r="RL"><p><l></l><r></r></p></e>
+    </pardef>
+    <pardef n="__LR_ins">
+      <e r="LR"><p><l></l><r><s n="ins"/></r></p></e>
+      <e r="RL"><p><l></l><r></r></p></e>
+    </pardef>
+  </pardefs>
+
   <section id="main" type="standard">
 
 <!-- The surface forms of the following LU's were added here first, then I
@@ -96,6 +117,8 @@
      might be wrong (miscategorized etc.) -->
 
 <!-- SECTION: ~Closed categories -->
+
+<e>       <p><l>белән<s n="cnjcoo"/></l>               <r>и<s n="cnjcoo"/></r></p></e>
 
     <!-- Pronouns -->
 
@@ -142,10 +165,18 @@
 
     <!-- Adpositions -->
 
-<e>       <p><l>белән<s n="cnjcoo"/></l>               <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>белән<s n="post"/></l>                 <r>с<s n="pr"/><s n="ins"/></r></p></e>
+<e c="алдында"><p><l>алд<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>перед<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e c="артыннан"><p><l>арт<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-за<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="артына"><p><l>арт<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>за<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e c="артында"><p><l>арт<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>за<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e>       <p><l>астында<s n="post"/></l>               <r>под<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e>       <p><l>аша<s n="post"/></l>                   <r>через<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e>       <p><l>белән<s n="post"/></l>                 <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e>       <p><l>бергә<s n="post"/></l>                 <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
-<e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/><s n="gen"/></r></p></e>
+<e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/></r></p><par n="__LR_dat"/></e>
+<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p><par n="__LR_gen"/></e>
 
     <!-- Interjections -->
 
