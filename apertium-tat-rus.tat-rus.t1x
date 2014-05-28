@@ -281,6 +281,20 @@
 
   <section-def-macros>
 
+    <def-macro n="convert-neg-to-ne.adv" npar="1">
+      <!-- arg.1 verb -> v_negation
+           Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
+      <let><var n="negation"/><lit v=""/></let>
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
+          </test>
+          <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$ "/></concat></let>
+        </when>
+      </choose>
+    </def-macro>
+
     <def-macro n="return-number-of-sl-word" npar="1">
       <!-- arg.1 any nominal -> v_number
            Sets the 'number' variable to '<pl>' if the word contains the '<pl>' tag,
@@ -302,24 +316,14 @@
       </choose>
     </def-macro>
 
-    <def-macro n="convert-neg-to-ne.adv" npar="1">
-      <!-- arg.1 verb -> v_negation
-           Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
-      <let><var n="negation"/><lit v=""/></let>
-      <choose>
-        <when>
-          <test>
-            <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
-          </test>
-          <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$ "/></concat></let>
-        </when>
-      </choose>
-    </def-macro>
-
     <def-macro n="translate-noun" npar="1">
-      <!-- arg.1 noun -> v_preposition noun
+      <!-- arg.1 noun -> v_preposition v_possessive noun
            Translates ablative, locative, similiative cases with the variable 'preposition'
-           and noun, <px><nom> with genitive, other cases remain as they are. -->
+           and noun, <px><nom> with genitive, other cases remain as they are. If the noun
+           has a possessive affix, stores a corresponding possessive determiner in 'possessive'
+           variable.
+           Modifies variables and TL noun so that they are generatable (or, in case of variables,
+           empy). -->
       <call-macro n="return-number-of-sl-word">
         <with-param pos="1"/>
       </call-macro>
@@ -340,28 +344,16 @@
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="abl"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^из"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
           <let><var n="case"/><lit-tag v="gen"/></let>
-          <choose>
-            <when>
-              <test><not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np"/></equal></not></test>
-              <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
-            </when>
-          </choose>
         </when>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^в"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
           <let><var n="case"/><lit-tag v="prp"/></let>
-          <choose>
-            <when>
-              <test><not><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np"/></equal></not></test>
-              <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
-            </when>
-          </choose>
         </when>
         <when>
           <test><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="sim"/></equal></test>
-          <let><var n="case"/><lit-tag v="nom"/></let>
           <let><var n="preposition"/><concat><lit v="^как"/><lit-tag v="adv"/><lit-tag v="rel"/><lit v="$ "/></concat></let>
+          <let><var n="case"/><lit-tag v="nom"/></let>
         </when>
         <when>
           <test><equal><clip pos="1" side="sl" part="a_px"/><lit-tag v="px"/></equal></test>
@@ -522,49 +514,49 @@
             <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal></test>
             <out>
               <chunk name="adj" case="caseFirstWord">
-		<tags>
+                <tags>
                   <tag><lit-tag v="AdjP"/></tag>
-		</tags>
-		<lu>
+                </tags>
+                <lu>
                   <clip pos="1" side="tl" part="whole"/>
-		</lu>
+                </lu>
               </chunk>
             </out>
           </when>
-	  <otherwise>
+          <otherwise>
             <call-macro n="translate-noun">
               <with-param pos="1"/>
             </call-macro>
-	    <choose>
+            <choose>
               <when>
-		<test><not><equal><var n="preposition"/><lit v=""/></equal></not></test>
-		<out>
-		  <chunk name="pr_nom" case="caseFirstWord">
-		    <tags>
-                      <tag><lit-tag v="PP"/></tag>
-		    </tags>
-		    <var n="preposition"/>
-		    <lu>
-                      <clip pos="1" side="tl" part="whole"/>
-		    </lu>
-		  </chunk>
-		</out>
-              </when>
-              <otherwise>
-		<out>
-		  <chunk name="nom" case="caseFirstWord">
+                <test><equal><var n="preposition"/><lit v=""/></equal></test>
+                <out>
+                  <chunk name="nom" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
                     </tags>
                     <lu>
                       <clip pos="1" side="tl" part="whole"/>
                     </lu>
-		  </chunk>
-		</out>
+                  </chunk>
+                </out>
+              </when>
+              <otherwise>
+                <out>
+                  <chunk name="pr_nom" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="PP"/></tag>
+                    </tags>
+                    <var n="preposition"/>
+                    <lu>
+                      <clip pos="1" side="tl" part="whole"/>
+                    </lu>
+                  </chunk>
+                </out>
               </otherwise>
             </choose>
-	  </otherwise>
-	</choose>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
