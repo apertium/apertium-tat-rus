@@ -83,6 +83,7 @@
     <sdef n="mod_ass" 	c=""/> 
     <sdef n="subst" 	c=""/> 
     <sdef n="attr" 	c=""/> 
+    <sdef n="ins" 	c=""/> 
     <sdef n="CD" 	c="Case to be determined"/> 
   </sdefs>
   <section id="main" type="standard">
@@ -142,9 +143,9 @@
     <!-- Adpositions -->
 
 <e>       <p><l>белән<s n="cnjcoo"/></l>               <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>белән<s n="post"/></l>                 <r>с<s n="pr"/></r></p></e>
+<e>       <p><l>белән<s n="post"/></l>                 <r>с<s n="pr"/><s n="ins"/></r></p></e>
 <e>       <p><l>бергә<s n="post"/></l>                 <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
-<e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/></r></p></e>
+<e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/><s n="gen"/></r></p></e>
 
     <!-- Interjections -->
 
@@ -199,19 +200,19 @@
 <e>       <p><l>ал<s n="v"/><s n="tv"/></l>            <r>брать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>ал<s n="vaux"/></l>                    <r>мочь<s n="vbmod"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/></r></p></e>
-<e c="алдында"><p><l>алд<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>перед<s n="pr"/></r></p></e>
+<e c="алдында"><p><l>алд<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>перед<s n="pr"/><s n="ins"/></r></p></e>
 <e>       <p><l>алты<b/>яшьлек<s n="adj"/></l>         <r>шестилетний<s n="adj"/></r></p></e>
 <e>       <p><l>анда<s n="adv"/></l>                   <r>там<s n="adv"/></r></p></e>
 <e>       <p><l>аңла<s n="v"/><s n="tv"/></l>          <r>понимать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>арт<s n="n"/></l>                      <r>зад<s n="n"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e c="артта"><p><l>арт<s n="n"/><s n="loc"/></l>       <r>позади<s n="adv"/></r></p></e>
-<e c="артына"><p><l>арт<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>за<s n="pr"/></r></p></e>
-<e c="артыннан"><p><l>арт<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-за<s n="pr"/></r></p></e>
-<e c="артында"><p><l>арт<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>за<s n="pr"/></r></p></e>
+<e c="артына"><p><l>арт<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>за<s n="pr"/><s n="ins"/></r></p></e>
+<e c="артыннан"><p><l>арт<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-за<s n="pr"/><s n="gen"/></r></p></e>
+<e c="артында"><p><l>арт<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>за<s n="pr"/><s n="ins"/></r></p></e>
 <e>       <p><l>аст<s n="n"/></l>                      <r>низ<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
-<e>       <p><l>астында<s n="post"/></l>               <r>под<s n="pr"/></r></p></e>
+<e>       <p><l>астында<s n="post"/></l>               <r>под<s n="pr"/><s n="ins"/></r></p></e>
 <e>       <p><l>аш<s n="n"/></l>                       <r>еда<s n="n"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/>$</r></p></e>
-<e>       <p><l>аша<s n="post"/></l>                   <r>через<s n="pr"/></r></p></e>
+<e>       <p><l>аша<s n="post"/></l>                   <r>через<s n="pr"/><s n="gen"/></r></p></e>
 <e>       <p><l>аша<s n="v"/><s n="tv"/></l>           <r>есть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>бакча<s n="n"/></l>                    <r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>бар<s n="adj"/></l>                    <r>быть<s n="vbser"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
@@ -299,7 +300,7 @@
 <e>       <p><l>су<s n="n"/></l>                       <r>вода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>суык<s n="adj"/></l>                   <r>холодный<s n="adj"/></r></p></e>
 <e>       <p><l>суык<s n="adj"/></l>                   <r>холодно<s n="adv"/></r></p></e> <!-- FIXME CHECK (used for 'салкын (иде)>холодно (see also related adj+cop>adv lrx rule-->
-<e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/></r></p></e>
+<e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/><s n="dat"/></r></p></e>
 <e>       <p><l>тавыш<s n="n"/></l>                    <r>звук<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>тагын<s n="adv"/></l>                  <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>тап<s n="v"/><s n="tv"/></l>           <r>найти<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
@@ -339,14 +340,14 @@
 <e>       <p><l>шуңа<b/>күрә<s n="cnjadv"/></l>        <r>поэтому<s n="adv"/></r></p></e>
 <e>       <p><l>эзлә<s n="v"/><s n="tv"/></l>          <r>искать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>эт<s n="n"/></l>                       <r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
-<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/></r></p></e>
+<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/><s n="gen"/></r></p></e>
 <e>       <p><l>эч<s n="v"/><s n="tv"/></l>            <r>пить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>          <r>делать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>          <r>работать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>юк<s n="adj"/></l>                     <r>быть<s n="vbser"/><s n="neg"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
 <e>       <p><l>юк<s n="ij"/></l>                      <r>нет<s n="ij"/></r></p></e>
 <e>       <p><l>янәдән<s n="adv"/></l>                 <r>снова<s n="adv"/></r></p></e>
-<e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p></e>
+<e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/><s n="gen"/></r></p></e>
 <e>       <p><l>ярат<s n="v"/><s n="tv"/></l>          <r>любить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>яшерен<s n="v"/><s n="iv"/></l>        <r>прятаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>яшь<s n="adj"/></l>                    <r>молодой<s n="adj"/></r></p></e>

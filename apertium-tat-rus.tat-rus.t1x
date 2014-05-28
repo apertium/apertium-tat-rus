@@ -244,6 +244,7 @@
       <attr-item tags="abl"/>
       <attr-item tags="loc"/>
       <attr-item tags="sim"/>
+      <attr-item tags="ins"/>
       <attr-item tags="prp"/>
       <attr-item tags="CD"/>
     </def-attr>
@@ -311,32 +312,6 @@
             <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
           </test>
           <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$ "/></concat></let>
-        </when>
-      </choose>
-    </def-macro>
-
-    <def-macro n="return-case-pr-governs" npar="1">
-      <!-- arg.1 prepostion -> v_case
-           Sets the 'case' variable to the case which the preposition governs. -->
-      <choose>
-        <when>
-          <test>
-            <or>
-              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="из-за"/></equal>
-              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="внутри"/></equal>
-              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="без"/></equal>
-            </or>
-          </test>
-          <let><var n="case"/><lit-tag v="gen"/></let>
-        </when>
-        <when>
-          <test>
-            <or>
-              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="перед"/></equal>
-              <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="за"/></equal>
-            </or>
-          </test>
-          <let><var n="case"/><lit-tag v="ins"/></let>
         </when>
       </choose>
     </def-macro>
@@ -612,7 +587,8 @@
                 <tag><lit-tag v="PREP"/></tag>
               </tags>
               <lu>
-                <clip pos="1" side="tl" part="whole"/>
+                <clip pos="1" side="tl" part="lem"/>
+                <clip pos="1" side="tl" part="a_pr"/>
               </lu>
             </chunk>
           </out>
@@ -641,7 +617,7 @@
       <!--
         INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
         OUTPUT: ^nom_nom<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
-        INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr>$
+        INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
         OUTPUT: ^pr_nom<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
@@ -652,9 +628,6 @@
         <choose>
           <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
             <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
-            <call-macro n="return-case-pr-governs">
-              <with-param pos="2"/>
-            </call-macro>
             <out>
               <chunk name="pr_nom" case="caseFirstWord">
                 <tags>
@@ -671,7 +644,7 @@
                   <clip pos="1" side="tl" part="a_gender"/>
                   <clip pos="1" side="tl" part="a_anim"/>
                   <lit-tag v="sg"/>
-                  <var n="case"/>
+                  <clip pos="2" side="tl" part="a_case"/>
                 </lu>
               </chunk>
             </out>
@@ -707,7 +680,7 @@
 
     <rule comment="REGLA: NOM POST">
       <!--
-        INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr>$
+        INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
         OUTPUT: ^pr_nom<PP>{^без<pr>$ ^школа<n><f><nn><sg><gen>$}$
       -->
       <pattern>
@@ -715,9 +688,9 @@
         <pattern-item n="post"/>
       </pattern>
       <action>
-          <call-macro n="return-case-pr-governs">
-            <with-param pos="2"/>
-          </call-macro>
+        <call-macro n="return-number-of-sl-word">
+          <with-param pos="1"/>
+        </call-macro>
           <out>
             <chunk name="pr_nom" case="caseFirstWord">
               <tags>
@@ -733,8 +706,8 @@
                 <clip pos="1" side="tl" part="a_noun"/>
                 <clip pos="1" side="tl" part="a_gender"/>
                 <clip pos="1" side="tl" part="a_anim"/>
-                <lit-tag v="sg"/>
-                <var n="case"/>
+                <var n="number"/>
+                <clip pos="2" side="tl" part="a_case"/>
               </lu>
             </chunk>
           </out>
@@ -743,7 +716,7 @@
 
     <rule comment="REGLA: NOM POST NOM">
       <!--
-        INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
+        INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><ins><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
         OUTPUT: ^nom_pr_nom<SN>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
@@ -754,9 +727,6 @@
       <action>
         <call-macro n="translate-noun">
           <with-param pos="3"/>
-        </call-macro>
-        <call-macro n="return-case-pr-governs">
-          <with-param pos="2"/>
         </call-macro>
         <out>
           <chunk name="nom_pr_nom" case="caseFirstWord">
@@ -779,7 +749,7 @@
               <clip pos="1" side="tl" part="a_gender"/>
               <clip pos="1" side="tl" part="a_anim"/>
               <lit-tag v="sg"/>
-              <var n="case"/>
+              <clip pos="2" side="tl" part="a_case"/>
             </lu>
           </chunk>
         </out>
@@ -854,7 +824,8 @@
                   <tag><lit-tag v="PREP"/></tag>
                 </tags>
                 <lu>
-                  <clip pos="2" side="tl" part="whole"/>
+                  <clip pos="2" side="tl" part="lem"/>
+                  <clip pos="2" side="tl" part="a_pr"/>
                 </lu>
               </chunk>
               <b/>
@@ -1193,6 +1164,48 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
             </lu>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: POST">
+      <!--
+        INPUT:  ^белән<post>/с<pr><ins>$
+        OUTPUT: ^pr<PREP>{^с<pr>$}$
+	INPUT:  ^бергә<post>/вместе<adv>$
+        OUTPUT: ^pr<PREP>{^вместе<adv>$}$
+      -->
+      <pattern>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+	<choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
+            <out>
+              <chunk name="pr">
+		<tags>
+		  <tag><lit-tag v="PREP"/></tag>
+		</tags>
+		<lu>
+		  <clip pos="1" side="tl" part="lem"/>
+		  <clip pos="1" side="tl" part="a_pr"/>
+		</lu>
+              </chunk>
+            </out>
+	  </when>
+	  <otherwise>
+            <out>
+              <chunk name="pr">
+		<tags>
+		  <tag><lit-tag v="PREP"/></tag>
+		</tags>
+		<lu>
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
+              </chunk>
+            </out>
+	  </otherwise>
+	</choose>
       </action>
     </rule>
 
