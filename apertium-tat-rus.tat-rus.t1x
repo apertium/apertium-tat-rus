@@ -236,6 +236,13 @@
       <attr-item tags="nn"/>
       <attr-item tags="an"/>
     </def-attr>
+    <def-attr n="a_poss">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sp"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+    </def-attr>
     <def-attr n="a_case">
       <attr-item tags="nom"/>
       <attr-item tags="gen"/>
@@ -277,6 +284,9 @@
     <def-var n="gender"/>
     <def-var n="case"/>
     <def-var n="preposition"/>
+    <def-var n="possessive"/>
+    <def-var n="animacy"/>
+    <def-var n="lemma"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -316,6 +326,62 @@
       </choose>
     </def-macro>
 
+    <def-macro n="build-poss-determiner-from-poss-affix" npar="1">
+      <!-- arg.1 any nominal -> v_possessive
+           Sets the value of the 'possessive' variable to a possessive determiner if the nominal
+           contains a possessive affix.
+           GIVEN:  ^абый<n><px1sg><nom>/брат<n><m><aa><px1sg><nom>$
+           EXPECT: possessive = ^мой<det><pos><m><an><sg><nom>$
+           GIVEN:  ^абый<n><px1sg><acc>/брат<n><m><aa><px1sg><acc>$
+           EXPECT: possessive = ^мой<det><pos><mfn><aa><pl><acc>$ -->
+      <let><var n="lemma"/><lit v=""/></let>
+      <let><var n="possessive"/><lit v=""/></let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal></test>
+          <let><var n="lemma"/><lit v="мой"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal></test>
+          <let><var n="lemma"/><lit v="твой"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test><not><equal><var n="lemma"/><lit v=""/></equal></not></test>
+          <choose>
+            <when c="If gender is masculin or number is plural, in accusative we want to take the
+                     animacy tag of the noun, otherwise it should be set to 'an'.">
+              <test>
+                <and>
+                  <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+                  <or>
+                    <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+                  </or>
+                </and>
+              </test>
+              <let><var n="animacy"/><clip pos="1" side="tl" part="a_anim"/></let>
+            </when>
+            <otherwise>
+              <let><var n="animacy"/><lit-tag v="an"/></let>
+            </otherwise>
+          </choose>
+          <let><var n="possessive"/>
+            <concat>
+              <lit v="^"/><var n="lemma"/>
+              <lit-tag v="det"/><lit-tag v="pos"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <var n="animacy"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+              <lit v="$ "/>
+            </concat>
+          </let>
+        </when>
+      </choose>
+    </def-macro>
+
     <def-macro n="translate-noun" npar="1">
       <!-- arg.1 noun -> v_preposition v_possessive noun
            Translates ablative, locative, similiative cases with the variable 'preposition'
@@ -323,7 +389,7 @@
            has a possessive affix, stores a corresponding possessive determiner in 'possessive'
            variable.
            Modifies variables and TL noun so that they are generatable (or, in case of variables,
-           empy). -->
+           empty). -->
       <call-macro n="return-number-of-sl-word">
         <with-param pos="1"/>
       </call-macro>
@@ -372,6 +438,9 @@
           <clip pos="1" side="tl" part="lemq"/>
         </concat>
       </let>
+      <call-macro n="build-poss-determiner-from-poss-affix">
+        <with-param pos="1"/>
+      </call-macro>
     </def-macro>
 
     <def-macro n="adapt-det" npar="1">
@@ -502,6 +571,8 @@
           OUTPUT: ^adj<AdjP>{^школьный<adj><m><an><sg><nom>$}$
           INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
           OUTPUT: ^nom<SN>{^школа<n><f><nn><sg><nom>$}$
+          INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
+          OUTPUT: ^nom<SN>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
           INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
           OUTPUT: ^pr_nom<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
       -->
@@ -535,6 +606,7 @@
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
                     </tags>
+                    <var n="possessive"/>
                     <lu>
                       <clip pos="1" side="tl" part="whole"/>
                     </lu>
@@ -548,6 +620,7 @@
                       <tag><lit-tag v="PP"/></tag>
                     </tags>
                     <var n="preposition"/>
+                    <var n="possessive"/>
                     <lu>
                       <clip pos="1" side="tl" part="whole"/>
                     </lu>
@@ -555,51 +628,6 @@
                 </out>
               </otherwise>
             </choose>
-          </otherwise>
-        </choose>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: NOM
-                   TODO: det.pos insertion doesn't work yet">
-      <!--
-          INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
-          OUTPUT: ^nom<SN>{^брат<n><m><aa><sg><dat>$}$
-      -->
-      <pattern>
-        <pattern-item n="noun-px"/>
-      </pattern>
-      <action>
-        <choose>
-          <when c="sometimes Tatar noun with px3sp is translated with a preposition">
-            <test><equal><clip pos="1" side="tl" part="a_pr"/><lit-tag v="pr"/></equal></test>
-          <out>
-            <chunk name="pr" case="caseFirstWord">
-              <tags>
-                <tag><lit-tag v="PREP"/></tag>
-              </tags>
-              <lu>
-                <clip pos="1" side="tl" part="lem"/>
-                <clip pos="1" side="tl" part="a_pr"/>
-              </lu>
-            </chunk>
-          </out>
-          </when>
-          <otherwise>
-            <call-macro n="translate-noun">
-              <with-param pos="1"/>
-            </call-macro>
-            <out>
-              <chunk name="nom" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="SN"/></tag>
-                </tags>
-                <var n="preposition"/>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
           </otherwise>
         </choose>
       </action>
