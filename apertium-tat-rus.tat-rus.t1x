@@ -387,6 +387,40 @@
             </concat>
           </let>  
 	</when>
+        <when>
+          <test><and>
+	    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
+	  </and></test>
+          <let><var n="possessive"/>
+          <concat>
+              <lit v="^твой"/>
+              <lit-tag v="det"/><lit-tag v="pos"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <var n="animacy"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+              <lit v="$ "/>
+            </concat>
+          </let>  
+	</when>
+        <when>
+          <test><and>
+	    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
+	  </and></test>
+          <let><var n="possessive"/>
+            <concat>
+              <lit v="^твой"/>
+              <lit-tag v="det"/><lit-tag v="pos"/>
+              <lit-tag v="mfn"/>
+              <var n="animacy"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+              <lit v="$ "/>
+            </concat>
+          </let>  
+	</when>
       </choose>
     </def-macro>
 
