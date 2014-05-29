@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# The purpose of this script is to make sure that transfer rules
+# do the job they advertise in their headers with INPUT/OUTPUT comments.
+
+# Supposed to be invoked by "./qa.sh t2x"
+
+# In particular, the program does the following:
+#   * extracts all INPUT-OUTPUT statements from the TRANSFER_FILE,
+#   * for each INPUT statement:
+#      * runs it through the TRANSFER_MODE,
+#      * checks whether the output of the TRANSFER_MODE is equal to expected
+#        OUTPUT
+#      * if it is, prints "<line # of INPUT> PASS: INPUT -> OUTPUT
+#      * if not, prints "<line # of INPUT> FAIL: INPUT -> -(expected OUTPUT) +(actual OUTPUT)
+
+# Here is a snippet from the actual transfer rule file which shows how the
+# INPUT/OUTPUT statements look like:
+#
+# <!--
+# INPUT: ^и<cop><p3><sg>/быть<vbser><p3><sg>$
+# OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
+# -->
+#    <rule comment="">
+#      <pattern>
+#        <pattern-item n="cop-pres"/>
+#      </pattern>
+#      <action>
+#         ...
+#
+# NOTE: test cases might be in the rule body (either in the <rule comment=""> or
+# after the <rule> tag) -- haven't decided on it and it's up to the developer.
+# This script should work no matter where they are placed in the file.
+
+# Assumes that both INPUT and OUTPUT comments are single lines and there is
+# nothing before the first ^ tag except " *INPUT: *" or " *OUTPUT: *".
+# You can write comments or surface forms after the last $ tag.
+
+TRANSFER_FILE="apertium-tat-rus.tat-rus.t2x"
+TRANSFER_MODE="apertium-interchunk apertium-tat-rus.tat-rus.t2x tat-rus.t2x.bin"
+
+# returns "line number of INPUT:INPUT:OUTPUT" from the TRANSFER_FILE
+function extract_tests {
+    cat -n $TRANSFER_FILE | sed -n "s_[ \t]\([0-9]*\)[ \t]*INPUT: *\(\^.*\$\).*_\1:\2_p" > /tmp/inputs.txt
+    sed -n "s_ *OUTPUT: *\(\^.*\$\).*_\1_p" $TRANSFER_FILE > /tmp/outputs.txt
+    paste -d ":" /tmp/inputs.txt /tmp/outputs.txt
+}
+
+extract_tests > /tmp/testCases.txt
+
+TOTAL=0
+CORRECT=0
+
+# runs testCases trough the TRANSFER_MODE
+while IFS=':' read lineNbr input expectedOut ; do
+    TOTAL=`expr $TOTAL + 1`
+    apertiumsOut=$(echo $input | $TRANSFER_MODE)
+    if [ "$apertiumsOut" = "$expectedOut" ]; then
+	CORRECT=`expr $CORRECT + 1`
+	echo "$lineNbr PASS: $input ->"
+	echo "            $expectedOut"
+	echo ""
+    else
+	echo "$lineNbr FAIL: $input ->"
+	echo "-($expectedOut)"
+	echo "+($apertiumsOut)"
+	echo ""
+    fi
+done < /tmp/testCases.txt
+
+echo "$CORRECT / $TOTAL"
