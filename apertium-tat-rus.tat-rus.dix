@@ -88,6 +88,7 @@
     <sdef n="CD" 	c="Case to be determined"/> 
     <sdef n="top" 	c=""/> 
     <sdef n="ger" 	c=""/> 
+    <sdef n="pass" 	c=""/> 
   </sdefs>
 
   <pardefs>
@@ -199,6 +200,7 @@
 <e>       <p><l>йөр<s n="v"/><s n="iv"/></l>           <r>ходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>йөгер<s n="v"/><s n="iv"/></l>         <r>бегать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кайт<s n="v"/><s n="iv"/><s n="ger"/></l><r>возвращение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
+<e>       <p><l>кайтар<s n="v"/><s n="tv"/><s n="pass"/><s n="ger"/></l><r>возвращение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>ки<s n="v"/><s n="tv"/></l>            <r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кил<s n="v"/><s n="iv"/></l>           <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кит<s n="v"/><s n="iv"/></l>           <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
@@ -228,6 +230,7 @@
 <e>       <p><l>бакча<s n="n"/></l>                    <r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>бала<s n="n"/></l>                     <r>ребёнок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>баш<s n="n"/></l>                      <r>голова<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+<e>       <p><l>бурыч<s n="n"/></l>                    <r>долг<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>вакыт<s n="n"/></l>                    <r>пора<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>елмаю<s n="n"/></l>                    <r>улыбка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>әни<s n="n"/></l>                      <r>мама<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
