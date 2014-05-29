@@ -54,6 +54,7 @@
     <def-cat n="noun-attr-or-gen">
       <cat-item tags="n.attr"/>
       <cat-item tags="n.gen"/>
+      <cat-item tags="np.top.gen"/>
     </def-cat>
     <def-cat n="nounpost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
@@ -182,6 +183,7 @@
     <def-attr n="a_noun">
       <attr-item tags="n"/>
       <attr-item tags="np.ant"/>
+      <attr-item tags="np.top"/>
       <attr-item tags="prn.pers.p1"/>
       <attr-item tags="prn.pers.p2"/>
       <attr-item tags="prn.pers.p3"/>
@@ -678,7 +680,7 @@
     <rule comment="REGLA: NOM NOM">
       <!--
         INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
-        OUTPUT: ^nom_nom<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
+        OUTPUT: ^nom_nom<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><sg><gen>$}$
         INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
         OUTPUT: ^pr_nom<PP>{^Перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
@@ -719,6 +721,9 @@
             <call-macro n="translate-noun">
               <with-param pos="2"/>
             </call-macro>
+            <call-macro n="return-number-of-sl-word">
+              <with-param pos="1"/>
+            </call-macro>
             <out>
               <chunk name="nom_nom">
                 <tags>
@@ -734,7 +739,7 @@
                   <clip pos="1" side="tl" part="a_noun"/>
                   <clip pos="1" side="tl" part="a_gender"/>
                   <clip pos="1" side="tl" part="a_anim"/>
-                  <clip pos="2" side="tl" part="a_nbr"/>
+                  <var n="number"/>
                   <lit-tag v="gen"/>
                 </lu>
               </chunk>

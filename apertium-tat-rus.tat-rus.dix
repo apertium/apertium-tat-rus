@@ -86,6 +86,7 @@
     <sdef n="ins" 	c=""/> 
     <sdef n="acc" 	c=""/> 
     <sdef n="CD" 	c="Case to be determined"/> 
+    <sdef n="top" 	c=""/> 
   </sdefs>
 
   <pardefs>
@@ -240,6 +241,7 @@
 <e>       <p><l>күз<b/>яше<s n="n"/></l>               <r>слеза<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>күз<s n="n"/></l>                      <r>глаз<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>кул<s n="n"/></l>                      <r>рука<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+<e>       <p><l>күмер<s n="n"/></l>                    <r>уголь<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>кызчык<s n="n"/></l>                   <r>девочка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 <e>       <p><l>малай<s n="n"/></l>                    <r>мальчик<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>мәктәп<s n="n"/></l>                   <r>школа<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
@@ -271,6 +273,10 @@
 <e>       <p><l>яшьлек<s n="n"/></l>                   <r>молодость<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 
     <!-- Proper nouns -->
+
+        <!-- Toponyms -->
+
+    <e><p><l>Донбасс<s n="np"/><s n="top"/></l><r>Донбасс<s n="np"/><s n="top"/><s n="m"/></r></p></e>
 
     <!-- TO BE CHECKED -->
 
