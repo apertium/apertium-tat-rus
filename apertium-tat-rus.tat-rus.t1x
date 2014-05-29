@@ -54,6 +54,7 @@
     <def-cat n="n-attr-or-gen">
       <cat-item tags="n.attr"/>
       <cat-item tags="n.gen"/>
+      <cat-item tags="n.pl.gen"/>
       <cat-item tags="np.top.gen"/>
     </def-cat>
     <def-cat n="npost">
@@ -1280,7 +1281,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
       </action>
     </rule>
 
-    <rule comment="REGLA: POST">
+    <rule comment="REGLA: SENT">
       <!--
         INPUT:  ^.<sent>/.<sent>$
         OUTPUT: ^dot<SENT>{^.<sent>$}$
