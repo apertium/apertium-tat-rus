@@ -30,8 +30,8 @@
 
     <rule comment="REGLA: SN VBSER SENT">
       <!--
-        INPUT:  ^nom_nom<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
-        OUTPUT: ^nom_nom<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
+        INPUT:  ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
+        OUTPUT: ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
       -->
       <pattern>
         <pattern-item n="SN"/>
