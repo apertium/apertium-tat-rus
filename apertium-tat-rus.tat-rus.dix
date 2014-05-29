@@ -233,6 +233,7 @@
 <e>       <p><l>җир<s n="n"/></l>                      <r>земля<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>игътибар<s n="n"/></l>                 <r>внимание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>йорт<s n="n"/></l>                     <r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+<e>       <p><l>канат<s n="n"/></l>                    <r>крыло<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>кеше<s n="n"/></l>                     <r>человек<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>кеше<s n="n"/><s n="pl"/></l>          <r>люди<s n="n"/><s n="m"/><s n="aa"/><s n="pl"/></r></p></e>
 <e>       <p><l>китап<s n="n"/></l>                    <r>книга<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
@@ -256,6 +257,7 @@
 <e>       <p><l>сорау<s n="n"/></l>                    <r>вопрос<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>су<s n="n"/></l>                       <r>вода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>тавыш<s n="n"/></l>                    <r>звук<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+<e>       <p><l>тегермән<s n="n"/></l>                 <r>мельница<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>теләк<s n="n"/></l>                    <r>желание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>тәрәзә<s n="n"/></l>                   <r>окно<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>тирә-як<s n="n"/></l>                  <r>окрестность<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
@@ -279,6 +281,12 @@
         <!-- Toponyms -->
 
     <e><p><l>Донбасс<s n="np"/><s n="top"/></l><r>Донбасс<s n="np"/><s n="top"/><s n="m"/></r></p></e>
+
+        <!-- Antroponyms -->
+
+<e>       <p><l>Әхмәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Ахмет<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Зиннәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Зиннат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Гөлнара<s n="np"/><s n="ant"/><s n="f"/></l><r>Гульнара<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
 
     <!-- TO BE CHECKED -->
 
@@ -306,7 +314,6 @@
 <e>       <p><l>бул<s n="v"/><s n="iv"/></l>           <r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодня<s n="adv"/></r></p></e>
 <e>       <p><l>вә<s n="cnjcoo"/></l>                  <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>Гөлнара<s n="np"/><s n="ant"/><s n="f"/></l><r>Гульнара<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></r></p></e>
 <e>       <p><l>гына<s n="postadv"/></l>               <r>только<s n="adv"/></r></p></e>
 <e>       <p><l>да<s n="cnjcoo"/></l>                  <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>да<s n="postadv"/></l>                 <r>тоже<s n="adv"/></r></p></e>
@@ -321,7 +328,6 @@
 <e>       <p><l>әле<s n="cnjcoo"/></l>                 <r>пока<s n="cnjadv"/></r></p></e>
 <e>       <p><l>әлегә<s n="adv"/></l>                  <r>пока<s n="adv"/></r></p></e>
 <e>       <p><l>әмма<s n="cnjcoo"/></l>                <r>но<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>Әхмәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Ахмет<s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></r></p></e>
 <e>       <p><l>җавап<b/>бир<s n="v"/><s n="tv"/></l>  <r>отвечать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>җылы<s n="adj"/></l>                   <r>тёплый<s n="adj"/><s n="sint"/></r></p></e>
 <e>       <p><l>җылы<s n="adv"/></l>                   <r>тепло<s n="adv"/></r></p></e>

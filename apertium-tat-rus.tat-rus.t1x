@@ -1343,6 +1343,9 @@ OUTPUT: ^qst<SENT>{^?<sent>$}$
         <pattern-item n="cop-p3"/>
       </pattern>
       <action>
+        <call-macro n="return-number-of-sl-word">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="bar-yuq">
             <tags>
@@ -1358,7 +1361,7 @@ OUTPUT: ^qst<SENT>{^?<sent>$}$
               <clip pos="1" side="tl" part="a_nom"/>
               <clip pos="1" side="tl" part="a_gender"/>
               <clip pos="1" side="tl" part="a_anim"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
+              <var n="number"/>
               <lit-tag v="gen"/>
             </lu>
             <b/>
