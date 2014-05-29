@@ -1237,41 +1237,63 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
       <!--
         INPUT:  ^белән<post>/с<pr><ins>$
         OUTPUT: ^pr<PREP>{^с<pr>$}$
-	INPUT:  ^бергә<post>/вместе<adv>$
+        INPUT:  ^бергә<post>/вместе<adv>$
         OUTPUT: ^pr<PREP>{^вместе<adv>$}$
       -->
       <pattern>
         <pattern-item n="post"/>
       </pattern>
       <action>
-	<choose>
+        <choose>
           <when>
             <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
             <out>
               <chunk name="pr">
-		<tags>
-		  <tag><lit-tag v="PREP"/></tag>
-		</tags>
-		<lu>
-		  <clip pos="1" side="tl" part="lem"/>
-		  <clip pos="1" side="tl" part="a_pr"/>
-		</lu>
+                <tags>
+                  <tag><lit-tag v="PREP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_pr"/>
+                </lu>
               </chunk>
             </out>
-	  </when>
-	  <otherwise>
+          </when>
+          <otherwise>
             <out>
               <chunk name="pr">
-		<tags>
-		  <tag><lit-tag v="PREP"/></tag>
-		</tags>
-		<lu>
-		  <clip pos="1" side="tl" part="whole"/>
-		</lu>
+                <tags>
+                  <tag><lit-tag v="PREP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
               </chunk>
             </out>
-	  </otherwise>
-	</choose>
+          </otherwise>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: POST">
+      <!--
+        INPUT:  ^.<sent>/.<sent>$
+        OUTPUT: ^dot<SENT>{^.<sent>$}$
+      -->
+      <pattern>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="dot">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 

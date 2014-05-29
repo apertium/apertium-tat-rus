@@ -4,8 +4,14 @@
 <interchunk>
 
   <section-def-cats>
-    <def-cat n="catstub">
-      <cat-item lemma="stub" tags="stub"/>
+    <def-cat n="SN">
+      <cat-item tags="SN"/>
+    </def-cat>
+    <def-cat n="VBSER">
+      <cat-item lemma="cop-pres" tags="VBSER"/>
+    </def-cat>
+    <def-cat n="SENT">
+      <cat-item tags="SENT"/>
     </def-cat>
   </section-def-cats>
 
@@ -21,24 +27,29 @@
 
   <section-rules>
 
-<!--
-INPUT:
-OUTPUT:
--->
-    <rule comment="">
+
+    <rule comment="REGLA: SN VBSER SENT">
+      <!--
+        INPUT:  ^nom_nom<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
+        OUTPUT: ^nom_nom<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
+      -->
       <pattern>
-        <pattern-item n="catstub"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="VBSER"/>
+        <pattern-item n="SENT"/>
       </pattern>
       <action>
         <out>
           <chunk>
             <clip pos="1" part="whole"/>
           </chunk>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
         </out>
       </action>
     </rule>
-
+    
   </section-rules>
-
+  
 </interchunk>
-
