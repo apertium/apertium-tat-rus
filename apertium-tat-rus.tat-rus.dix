@@ -87,6 +87,7 @@
     <sdef n="acc" 	c=""/> 
     <sdef n="CD" 	c="Case to be determined"/> 
     <sdef n="top" 	c=""/> 
+    <sdef n="ger" 	c=""/> 
   </sdefs>
 
   <pardefs>
@@ -197,6 +198,7 @@
 <e>       <p><l>әйт<s n="v"/><s n="tv"/></l>           <r>сказать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>йөр<s n="v"/><s n="iv"/></l>           <r>ходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>йөгер<s n="v"/><s n="iv"/></l>         <r>бегать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>кайт<s n="v"/><s n="iv"/><s n="ger"/></l><r>возвращение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>ки<s n="v"/><s n="tv"/></l>            <r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кил<s n="v"/><s n="iv"/></l>           <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кит<s n="v"/><s n="iv"/></l>           <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>

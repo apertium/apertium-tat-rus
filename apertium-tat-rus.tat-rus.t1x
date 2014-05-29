@@ -23,10 +23,11 @@
       <cat-item tags="prn.itg.*"/>
       <cat-item tags="prn.neg.*"/>
       <cat-item tags="np.ant.*"/>
+      <cat-item tags="v.iv.ger.*"/>
     </def-cat>
     <def-cat n="n-gen">
       <cat-item tags="n.gen"/>
-      <cat-item tags="np.ant.f.gen"/>
+      <cat-item tags="np.ant.*.gen"/>
     </def-cat>
     <def-cat n="n-loc">
       <cat-item tags="n.loc"/>
@@ -38,6 +39,8 @@
     <def-cat n="n-px3sp">
       <cat-item tags="n.px3sp.*"/>
       <cat-item tags="n.pl.px3sp.*"/>
+      <cat-item tags="v.tv.ger.px3sp.*"/>
+      <cat-item tags="v.iv.ger.px3sp.*"/>
     </def-cat>
     <def-cat n="n-px">
       <cat-item tags="n.px1sg.*"/>
@@ -56,6 +59,7 @@
       <cat-item tags="n.gen"/>
       <cat-item tags="n.pl.gen"/>
       <cat-item tags="np.top.gen"/>
+      <cat-item tags="np.ant.*.gen"/>
     </def-cat>
     <def-cat n="npost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
