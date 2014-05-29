@@ -680,7 +680,7 @@
         INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
         OUTPUT: ^nom_nom<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><pl><gen>$}$
         INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
-        OUTPUT: ^pr_nom<PP>{^перед<pr>$ ^Дом<n><m><nn><sg><ins>$}$
+        OUTPUT: ^pr_nom<PP>{^Перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
         <pattern-item n="noun-attr-or-gen"/>
@@ -696,12 +696,16 @@
                   <tag><lit-tag v="PP"/></tag>
                 </tags>
                 <lu>
-                  <clip pos="2" side="tl" part="lem"/>
+                  <get-case-from pos="1">
+                    <clip pos="2" side="tl" part="lem"/>
+                  </get-case-from>
                   <clip pos="2" side="tl" part="a_pr"/>
                 </lu>
                 <b/>
                 <lu>
-                  <clip pos="1" side="tl" part="lem"/>
+                  <get-case-from pos="2">
+                    <clip pos="1" side="tl" part="lem"/>
+                  </get-case-from>
                   <clip pos="1" side="tl" part="a_noun"/>
                   <clip pos="1" side="tl" part="a_gender"/>
                   <clip pos="1" side="tl" part="a_anim"/>
