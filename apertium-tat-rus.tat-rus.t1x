@@ -18,6 +18,7 @@
       <cat-item tags="prn.*"/>
       <cat-item tags="np.*"/>
       <cat-item tags="adj.subst.*"/>
+      <cat-item tags="adj.comp.subst.*"/>
       <cat-item tags="v.*.ger.*"/>
     </def-cat>
     <def-cat n="n-gen">
@@ -72,6 +73,7 @@
 
     <def-cat n="adj">
       <cat-item tags="adj"/>
+      <cat-item tags="adj.comp"/>
     </def-cat>
 
     <def-cat n="yuq-adj">
