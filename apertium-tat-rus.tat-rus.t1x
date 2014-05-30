@@ -635,8 +635,8 @@
           OUTPUT: ^n<SN>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
           INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
           OUTPUT: ^pr_n<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
-	  INPUT:  ^яхшы<adj><subst><dat>/^хороший<adj><m><an><dat>$
-	  OUTPUT: ^n<SN>{^хороший<adj><m><an><sg><dat>$}$
+	  INPUT:  ^яхшы<adj><subst><dat>/хороший<adj><m><an><dat>$
+          OUTPUT: ^n<SN>{^хороший<adj><m><an><sg><dat>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
