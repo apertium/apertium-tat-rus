@@ -486,6 +486,21 @@
 	  <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
 	</when>
       </choose>
+      <choose>
+        <when>
+          <test>
+	    <and>
+              <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+	      <or>
+		<equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
+		<equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></equal>
+	      </or>
+	    </and>
+	  </test>
+	  <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="aa"/></let>
+	</when>
+      </choose>
       <let>
         <clip pos="1" side="tl" part="whole"/>
         <concat>
