@@ -1,5 +1,5 @@
-This is a comment.
-This one also : is a comment.
+Noun
+====
 мәктәп:^мәктәп<n><attr>$:^школьный<adj><m><an><sg><nom>$:школьный
 мәктәп:^мәктәп<n><nom>$:^школа<n><f><nn><sg><nom>$:школа
 мәктәпнең:^мәктәп<n><gen>$:^школа<n><f><nn><sg><gen>$:школы
@@ -40,3 +40,13 @@ This one also : is a comment.
 мәктәпләреңне:^мәктәп<n><pl><px2sg><acc>$:^твой<det><pos><mfn><nn><pl><acc>$ ^школа<n><f><nn><pl><acc>$:твои школы
 мәктәпләреңнән:^мәктәп<n><pl><px2sg><abl>$:^из<pr>$ ^твой<det><pos><mfn><an><pl><gen>$ ^школа<n><f><nn><pl><gen>$:из твоих школ
 мәктәпләреңдә:^мәктәп<n><pl><px2sg><loc>$:^в<pr>$ ^твой<det><pos><mfn><an><pl><prp>$ ^школа<n><f><nn><pl><prp>$:в твоих школах
+
+Adjective
+=========
+
+Adjective
+=========
+
+яхшы:^яхшы<adj>$:^хороший<adj><m><an><sg><nom>$:хороший
+яхшы:^яхшы<adj><advl>$:^хорошо<adv>$:хорошо
+яхшы:^яхшы<adj><comp><advl>$:^лучше<adv>$:лучше

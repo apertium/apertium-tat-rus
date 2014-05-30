@@ -56,8 +56,8 @@ do
     then
         CORRECT=`expr $CORRECT + 1`
         echo "$lineNbr PASS: $input ->"
-        echo "        $transfersOut"
-        echo "        $generatorsOut"
+        echo "         $transfersOut"
+        echo "         $generatorsOut"
         echo ""
     elif [ "$transfersOut" = "$expectedOutOfTransfer" ]
     then

@@ -1,3 +1,10 @@
+Noun
+====
+
+мәктәптәге:^мәктәп<n><loc><subst><nom>$:^тот<prn><dem><m><an><sg><nom>$^,<cm>$ ^который<det><itg><m><an><sg><nom>$ ^в<pr>$ ^школа<n><f><nn><sg><prp>$:тот, который в школе
+
+Animate noun (different case prep's in particular)
+--------------------------------------------------
 абыем:^абый<n><px1sg><nom>$:^мой<det><pos><m><an><sg><nom>$ ^брат<n><m><aa><sg><nom>$:мой брат
 абыемның:^абый<n><px1sg><gen>$:^мой<det><pos><m><an><sg><gen>$ ^брат<n><m><aa><sg><gen>$:моего брата
 абыема:^абый<n><px1sg><dat>$:^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$:моему брату
@@ -10,4 +17,3 @@
 абыйларымны:^абый<n><pl><px1sg><acc>$:^мой<det><pos><mfn><aa><pl><acc>$ ^брат<n><m><aa><pl><acc>$:моих братьев
 абыйларымнан:^абый<n><pl><px1sg><abl>$:^от<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:от моих братьев
 абыйларымда:^абый<n><pl><px1sg><loc>$:^у<pr>$ ^моих/мой<det><мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:у моих братьев
-мәктәптәге:^мәктәп<n><loc><subst><nom>$:^тот<prn><dem><m><an><sg><nom>$^,<cm>$ ^который<det><itg><m><an><sg><nom>$ ^в<pr>$ ^школа<n><f><nn><sg><prp>$:тот, который в школе
