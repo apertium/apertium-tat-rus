@@ -17,7 +17,9 @@
       <cat-item tags="n.*"/>
       <cat-item tags="prn.*"/>
       <cat-item tags="np.*"/>
+      <cat-item tags="adj.subst"/>
       <cat-item tags="adj.subst.*"/>
+      <cat-item tags="adj.comp.subst"/>
       <cat-item tags="adj.comp.subst.*"/>
       <cat-item tags="v.*.ger.*"/>
     </def-cat>
@@ -793,6 +795,8 @@
       <!--
         INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
         OUTPUT: ^pr_n<PP>{^без<pr>$ ^школа<n><f><nn><sg><gen>$}$
+        INPUT:  ^яхшы<adj><subst><pl>/хороший<adj><m><an><pl>$ ^сыз<post>/без<pr><gen>$
+        OUTPUT: ^pr_n<PP>{^без<pr>$ ^хороший<adj><mfn><an><pl><gen>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
@@ -802,14 +806,25 @@
         <call-macro n="return-number-of-sl-word">
           <with-param pos="1"/>
         </call-macro>
-          <out>
-            <chunk name="pr_n" case="caseFirstWord">
-              <tags>
-                <tag><lit-tag v="PP"/></tag>
-              </tags>
-              <lu>
-                <clip pos="2" side="tl" part="lem"/>
-                <clip pos="2" side="tl" part="a_pr"/>
+	<choose>
+          <when>
+            <test>
+	      <and>
+		<equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+		<equal><var n="number"/><lit-tag v="pl"/></equal>
+	      </and>
+	    </test>
+	    <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
+	  </when>
+	</choose>
+        <out>
+          <chunk name="pr_n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_pr"/>
               </lu>
               <b/>
               <lu>
