@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script is tight to test cases in apertium-tat-rus/testvoc/lite
+# This script is tied to test cases in apertium-tat-rus/testvoc/lite
 # (regression.txt and pending.txt). Lines from that files look like this:
 #
-# мәктәптә  :^мәктәп<n><loc>$  :^в<pr>$ ^школа<n><f><nn><sg><prp>$  :в школе
+# мәктәптә:^мәктәп<n><loc>$:^в<pr>$ ^школа<n><f><nn><sg><prp>$:в школе
 #
 # The purpose of this script is to make sure that if we pass field 2 of that
 # lines (i.e. Tatar lexical units) through the bilingual and transfer modules
@@ -33,9 +33,13 @@ CORRECT=0
 # return "line number of INPUT:field2:field3:field4" from TESTS
 currentLine=0
 function extract_tests {
-    while IFS=':' read SourceSurf SourceLex TargetLex TargetSurf; do
+    while IFS=':' read SourceSurf SourceLex TargetLex TargetSurf
+    do
 	currentLine=`expr $currentLine + 1`
-	echo "$currentLine:$SourceLex:$TargetLex:$TargetSurf"
+	if expr "$SourceLex:$TargetLex:$TargetSurf" : '^.*$:^.*$:[[:alpha:]]\+' >/dev/null
+	then
+	    echo "$currentLine:$SourceLex:$TargetLex:$TargetSurf"
+	fi
     done < $TESTS
 }
 
