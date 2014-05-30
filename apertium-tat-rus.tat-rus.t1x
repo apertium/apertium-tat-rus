@@ -17,6 +17,7 @@
       <cat-item tags="n.*"/>
       <cat-item tags="prn.*"/>
       <cat-item tags="np.*"/>
+      <cat-item tags="adj.subst.*"/>
       <cat-item tags="v.*.ger.*"/>
     </def-cat>
     <def-cat n="n-gen">
@@ -178,6 +179,11 @@
       <attr-item tags="pred"/>
       <attr-item tags="pr"/>
     </def-attr>
+    <def-attr n="a_syn">
+      <attr-item tags="advl"/>
+      <attr-item tags="attr"/>
+      <attr-item tags="subst"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
       <attr-item tags="np.ant"/>
@@ -188,6 +194,7 @@
       <attr-item tags="prn.dem"/>
       <attr-item tags="prn.itg"/>
       <attr-item tags="prn.neg"/>
+      <attr-item tags="adj"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.dem"/>
@@ -617,6 +624,8 @@
           OUTPUT: ^n<SN>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
           INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
           OUTPUT: ^pr_n<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
+	  INPUT:  ^яхшы<adj><subst><dat>/^хороший<adj><m><an><dat>$
+	  OUTPUT: ^n<SN>{^хороший<adj><m><an><sg><dat>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
@@ -624,7 +633,12 @@
       <action>
         <choose>
           <when>
-            <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal></test>
+            <test>
+	      <and>
+	        <equal><clip pos="1" side="sl" part="a_syn"/><lit-tag v="attr"/></equal>
+	        <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+	      </and>
+	    </test>
             <out>
               <chunk name="adj" case="caseFirstWord">
                 <tags>

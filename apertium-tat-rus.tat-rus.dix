@@ -220,8 +220,6 @@
 <e>       <p><l>шуннан<b/>соң<s n="adv"/></l>          <r>затем<s n="adv"/></r></p></e>
 <e>       <p><l>шуңа<b/>күрә<s n="cnjadv"/></l>        <r>поэтому<s n="adv"/></r></p></e>
 <e>       <p><l>янәдән<s n="adv"/></l>                 <r>снова<s n="adv"/></r></p></e>
-<e>       <p><l>яхшы<s n="adj"/><s n="advl"/></l>      <r>хорошо<s n="adv"/></r></p></e>
-<e>       <p><l>яхшы<s n="adj"/><s n="comp"/><s n="advl"/></l><r>лучше<s n="adv"/></r></p></e>
 
     <!-- Verbs -->
 
@@ -247,7 +245,8 @@
 <e>       <p><l>якын<s n="adj"/><s n="comp"/><s n="advl"/></l><r>ближе<s n="adv"/></r></p></e>
 <e>       <p><l>яхшы<s n="adj"/></l>                   <r>хороший<s n="adj"/></r></p></e>
 <e>       <p><l>яхшы<s n="adj"/><s n="advl"/></l>      <r>хорошо<s n="adv"/></r></p></e>
-
+<e>       <p><l>яхшы<s n="adj"/><s n="comp"/><s n="advl"/></l><r>лучше<s n="adv"/></r></p></e>
+<e>       <p><l>яхшы<s n="adj"/><s n="subst"/></l>     <r>хороший<s n="adj"/><s n="m"/><s n="an"/></r></p></e>
     <!-- Nouns -->
 
 <e>       <p><l>абый<s n="n"/></l>                     <r>брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>

@@ -44,9 +44,9 @@ Noun
 Adjective
 =========
 
-Adjective
-=========
-
 яхшы:^яхшы<adj>$:^хороший<adj><m><an><sg><nom>$:хороший
 яхшы:^яхшы<adj><advl>$:^хорошо<adv>$:хорошо
 яхшы:^яхшы<adj><comp><advl>$:^лучше<adv>$:лучше
+яхшы:^яхшы<adj><subst><nom>$:^хороший<adj><m><an><sg><nom>$:хороший
+яхшы:^яхшы<adj><subst><dat>$:^хороший<adj><m><an><sg><dat>$:хорошему
+яхшы:^яхшы<adj><subst><abl>$:^из<pr>$ ^хороший<adj><m><an><sg><gen>$:из хорошего
