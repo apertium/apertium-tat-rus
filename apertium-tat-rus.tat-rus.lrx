@@ -53,4 +53,20 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="яшь" tags="n.*"><select lemma="год"/></match>
   </rule>  
 
+  <rule>
+    <!--
+    INPUT:  ^тавыш<n><nom>/шум<n><m><nn><nom>/крик<n><m><nn><nom>/звук<n><m><nn><nom>/голос<n><m><nn><nom>$
+    OUTPUT: ^тавыш<n><nom>/звук<n><m><nn><nom>$"
+    -->
+    <match lemma="тавыш" tags="n.*"><select lemma="звук"/></match>
+  </rule>	 
+
+  <rule>
+    <!--
+    INPUT:  ^юл<n><nom>/путь<n><m><nn><nom>/дорога<n><f><nn><nom>/строка<n><f><nn><nom>$
+    OUTPUT: ^юл<n><nom>/дорога<n><f><nn><nom>$
+    -->
+    <match lemma="юл" tags="n.*"><select lemma="дорога"/></match>
+  </rule>	 
+
 </rules>
