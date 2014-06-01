@@ -91,8 +91,11 @@
     <sdef n="ger" 	c=""/> 
     <sdef n="pass" 	c=""/> 
     <sdef n="al" 	c=""/> 
+    <sdef n="cog" 	c=""/> 
   </sdefs>
+
   <pardefs>
+
 <pardef n="__LR_gen">
   <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
   <e r="RL"><p><l></l>          <r></r></p></e>
@@ -249,6 +252,23 @@
 <e>       <p><l>яхшы<s n="adj"/><s n="advl"/></l>      <r>хорошо<s n="adv"/></r></p></e>
 <e>       <p><l>яхшы<s n="adj"/><s n="comp"/><s n="advl"/></l><r>лучше<s n="adv"/></r></p></e>
 <e>       <p><l>яхшы<s n="adj"/><s n="subst"/></l>     <r>хороший<s n="adj"/><s n="m"/><s n="an"/></r></p></e>
+
+    <!-- Proper nouns -->
+
+        <!-- Toponyms -->
+
+<e>       <p><l>Донбасс<s n="np"/><s n="top"/></l>     <r>Донбасс<s n="np"/><s n="top"/><s n="m"/></r></p></e>
+
+        <!-- Anthroponyms -->
+
+<e>       <p><l>Әхмәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Ахмет<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Зиннәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Зиннат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Гөлнара<s n="np"/><s n="ant"/><s n="f"/></l><r>Гульнара<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+<e>       <p><l>Тукай<s n="np"/><s n="ant"/><s n="m"/></l><r>Тукай<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+
+        <!-- Cognomens -->
+
+<e>       <p><l>Рәхимов<s n="np"/><s n="cog"/></l><r>Рахимов<s n="np"/><s n="cog"/></r></p></e>
 
     <!-- Nouns -->
 
@@ -2204,18 +2224,6 @@
 <e>       <p><l>яшь<s n="n"/></l>                      <r>год<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>яшьлек<s n="n"/></l>                   <r>молодость<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>ящек<s n="n"/></l>                     <r>ящик<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
-
-    <!-- Proper nouns -->
-
-        <!-- Toponyms -->
-
-<e>       <p><l>Донбасс<s n="np"/><s n="top"/></l>     <r>Донбасс<s n="np"/><s n="top"/><s n="m"/></r></p></e>
-
-        <!-- Antroponyms -->
-
-<e>       <p><l>Әхмәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Ахмет<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
-<e>       <p><l>Зиннәт<s n="np"/><s n="ant"/><s n="m"/></l><r>Зиннат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
-<e>       <p><l>Гөлнара<s n="np"/><s n="ant"/><s n="f"/></l><r>Гульнара<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
 
     <!-- TO BE CHECKED -->
 

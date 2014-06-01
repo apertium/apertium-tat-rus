@@ -69,4 +69,13 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="юл" tags="n.*"><select lemma="дорога"/></match>
   </rule>	 
 
+  <rule>
+    <!--
+    INPUT:  ^шигырь<n><nom>/стих<n><m><nn><nom>/стихотворение<n><nt><nn><nom>$
+    OUTPUT: ^шигырь<n><nom>/стихотворение<n><nt><nn><nom>$
+    -->
+    <match lemma="шигырь" tags="n.*"><select lemma="стихотворение"/></match>
+  </rule>	 
+
+
 </rules>

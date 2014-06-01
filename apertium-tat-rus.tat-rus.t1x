@@ -38,6 +38,7 @@
       <cat-item tags="n.px3sp.*"/>
       <cat-item tags="n.pl.px3sp.*"/>
       <cat-item tags="v.*.ger.px3sp.*"/>
+      <cat-item tags="v.*.ger.pl.px3sp.*"/>
     </def-cat>
     <def-cat n="n-px">
       <cat-item tags="n.px1sg.*"/>
@@ -56,7 +57,10 @@
       <cat-item tags="n.gen"/>
       <cat-item tags="n.pl.gen"/>
       <cat-item tags="np.*.gen"/>
-      <cat-item tags="np.ant.*.gen"/>
+      <cat-item tags="np.ant.*.nom"/> <!-- no attr reading provided by lexc -->
+      <cat-item tags="np.ant.*.gen"/> 
+      <cat-item tags="np.cog.*.nom"/> <!-- no attr reading provided by lexc -->
+      <cat-item tags="np.cog.*.gen"/> 
     </def-cat>
     <def-cat n="npost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
@@ -180,6 +184,7 @@
       <attr-item tags="adj"/>
       <attr-item tags="n"/>
       <attr-item tags="np"/>
+      <attr-item tags="np.cog"/>
       <attr-item tags="pred"/>
       <attr-item tags="pr"/>
     </def-attr>
@@ -192,6 +197,7 @@
       <attr-item tags="n"/>
       <attr-item tags="np.ant"/>
       <attr-item tags="np.top"/>
+      <attr-item tags="np.cog"/>
       <attr-item tags="prn.pers.p1"/>
       <attr-item tags="prn.pers.p2"/>
       <attr-item tags="prn.pers.p3"/>
@@ -505,6 +511,17 @@
 	  <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="aa"/></let>
 	</when>
       </choose>
+      <choose>
+        <when>
+          <test>
+	    <and>
+              <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np.cog"/></equal>
+	      <equal><var n="number"/><lit-tag v="pl"/></equal>
+	    </and>
+	  </test>
+	  <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mf"/></let>
+	</when>
+      </choose>
       <let>
         <clip pos="1" side="tl" part="whole"/>
         <concat>
@@ -766,6 +783,17 @@
             <call-macro n="return-number-of-sl-word">
               <with-param pos="1"/>
             </call-macro>
+	    <choose>
+              <when>
+		<test>
+		  <and>
+		    <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="np.cog"/></equal>
+		    <equal><var n="number"/><lit-tag v="pl"/></equal>
+		  </and>
+		</test>
+		<let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mf"/></let>
+	      </when>
+	    </choose>
             <out>
               <chunk name="n_n">
                 <tags>
