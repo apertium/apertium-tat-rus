@@ -23,6 +23,15 @@
       <cat-item tags="adj.comp.subst.*"/>
       <cat-item tags="v.*.ger.*"/>
     </def-cat>
+    <def-cat n="n-attr-or-gen">
+      <cat-item tags="n.attr"/>
+      <cat-item tags="n.gen"/>
+      <cat-item tags="n.pl.gen"/>
+      <cat-item tags="np.*.nom"/> <!-- no attr reading provided by lexc -->
+      <cat-item tags="np.*.gen"/>
+      <cat-item tags="np.*.*.nom"/>
+      <cat-item tags="np.*.*.gen"/>
+    </def-cat>
     <def-cat n="n-gen">
       <cat-item tags="n.gen"/>
       <cat-item tags="np.*.*.gen"/>
@@ -52,16 +61,7 @@
       <cat-item tags="n.px2pl.*"/>
       <cat-item tags="n.*.px2pl.*"/>
     </def-cat>
-    <def-cat n="n-attr-or-gen">
-      <cat-item tags="n.attr"/>
-      <cat-item tags="n.gen"/>
-      <cat-item tags="n.pl.gen"/>
-      <cat-item tags="np.*.gen"/>
-      <cat-item tags="np.ant.*.nom"/> <!-- no attr reading provided by lexc -->
-      <cat-item tags="np.ant.*.gen"/> 
-      <cat-item tags="np.cog.*.nom"/> <!-- no attr reading provided by lexc -->
-      <cat-item tags="np.cog.*.gen"/> 
-    </def-cat>
+
     <def-cat n="npost">
       <cat-item lemma="алд" tags="n.px3sp.loc"/>
       <cat-item lemma="арт" tags="n.px3sp.loc"/>
@@ -163,6 +163,10 @@
       <cat-item tags="v.*.*.gna_cond.*"/>
     </def-cat>
 
+    <def-cat n="post">
+      <cat-item tags="post"/>
+    </def-cat>
+
     <def-cat n="qst">
       <cat-item tags="qst"/>
     </def-cat>
@@ -171,10 +175,6 @@
     </def-cat>
     <def-cat n="cm">
       <cat-item tags="cm"/>
-    </def-cat>
-
-    <def-cat n="post">
-      <cat-item tags="post"/>
     </def-cat>
 
   </section-def-cats>
@@ -307,20 +307,6 @@
 
   <section-def-macros>
 
-    <def-macro n="convert-neg-to-ne.adv" npar="1">
-      <!-- arg.1 verb -> v_negation
-           Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
-      <let><var n="negation"/><lit v=""/></let>
-      <choose>
-        <when>
-          <test>
-            <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
-          </test>
-          <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$ "/></concat></let>
-        </when>
-      </choose>
-    </def-macro>
-
     <def-macro n="return-number-of-sl-word" npar="1">
       <!-- arg.1 any nominal -> v_number
            Sets the 'number' variable to '<pl>' if the word contains the '<pl>' tag,
@@ -330,8 +316,7 @@
         <when>
           <test>
             <equal>
-              <clip pos="1" side="sl" part="a_nbr"/>
-              <lit-tag v="pl"/>
+              <clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/>
             </equal>
           </test>
           <let><var n="number"/><lit-tag v="pl"/></let>
@@ -342,18 +327,13 @@
       </choose>
     </def-macro>
 
-    <def-macro n="build-poss-determiner-from-poss-affix" npar="1">
-      <!-- arg.1 any nominal -> v_possessive
-           Sets the value of the 'possessive' variable to a possessive determiner if the nominal
-           contains a possessive affix.
-           GIVEN:  ^абый<n><px1sg><nom>/брат<n><m><aa><px1sg><nom>$
-           EXPECT: possessive = ^мой<det><pos><m><an><sg><nom>$
-           GIVEN:  ^абый<n><px1sg><acc>/брат<n><m><aa><px1sg><acc>$
-           EXPECT: possessive = ^мой<det><pos><m><aa><sg><acc>$ -->
-      <let><var n="possessive"/><lit v=""/></let>
+    <def-macro n="set-animacy" npar="1">
+      <!-- arg.1 noun -> v_animacy
+	   Selects a value for the 'animacy' variable to be used later to build a determiner.
+           (if gender is masculin or number is plural, in accusative we want to take the
+           animacy tag of the noun, otherwise the variabe 'animacy' is set to 'an').-->
       <choose>
-        <when c="If gender is masculin or number is plural, in accusative we want to take the
-                 animacy tag of the noun, otherwise it should be set to 'an'.">
+        <when>
           <test>
             <and>
               <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
@@ -369,12 +349,28 @@
           <let><var n="animacy"/><lit-tag v="an"/></let>
         </otherwise>
       </choose>
+    </def-macro>
+
+    <def-macro n="convert-poss-affix-to-poss-determiner" npar="1">
+      <!-- arg.1 any nominal -> v_possessive
+           Sets the value of the 'possessive' variable to a possessive determiner if the nominal
+           contains a possessive affix.
+           GIVEN:  ^абый<n><px1sg><nom>/брат<n><m><aa><px1sg><nom>$
+           EXPECT: possessive = ^мой<det><pos><m><an><sg><nom>$
+           GIVEN:  ^абый<n><px1sg><acc>/брат<n><m><aa><px1sg><acc>$
+           EXPECT: possessive = ^мой<det><pos><m><aa><sg><acc>$ -->
+      <let><var n="possessive"/><lit v=""/></let>
+      <call-macro n="set-animacy">
+	<with-param pos="1"/>
+      </call-macro>
       <choose>
         <when>
-          <test><and>
-            <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
-          </and></test>
+          <test>
+	    <and>
+              <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+            </and>
+	  </test>
           <let><var n="possessive"/>
           <concat>
             <lit v="^мой"/>
@@ -534,7 +530,7 @@
           <clip pos="1" side="tl" part="lemq"/>
         </concat>
       </let>
-      <call-macro n="build-poss-determiner-from-poss-affix">
+      <call-macro n="convert-poss-affix-to-poss-determiner">
         <with-param pos="1"/>
       </call-macro>
     </def-macro>
@@ -554,6 +550,20 @@
           <lit-tag v="nom"/>
         </concat>
       </let>
+    </def-macro>
+
+    <def-macro n="convert-neg-to-ne.adv" npar="1">
+      <!-- arg.1 verb -> v_negation
+           Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
+      <let><var n="negation"/><lit v=""/></let>
+      <choose>
+	<when>
+	  <test>
+            <equal><clip pos="1" side="sl" part="a_neg"/><lit-tag v="neg"/></equal>
+	  </test>
+          <let><var n="negation"/><concat><lit v="^не"/><lit-tag v="adv"/><lit v="$ "/></concat></let>
+        </when>
+      </choose>
     </def-macro>
 
     <def-macro n="translate-verb-fin" npar="1">
