@@ -552,6 +552,39 @@
       </let>
     </def-macro>
 
+    <def-macro n="concord2" npar="2">
+      <!-- arg.1 determiner arg.2 noun -> determiner noun
+           Concords gender, animacy, number, case of the determiner with the head of the NP.
+           Assumes that the head of the NP was already 'translated'. -->
+      <!-- "First, copy everything from the noun -->
+      <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
+      <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
+      <let><clip pos="1" side="tl" part="a_nbr"/><clip pos="2" side="tl" part="a_nbr"/></let>
+      <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>
+      <!-- Now adjust -->
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when c="If the gender is masculin or number is plural, in accusative we want to take the
+                 animacy tag of the noun, otherwise it should be set to 'an'.">
+          <test><not>
+            <and>
+              <or>
+                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
+                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></equal>
+              </or>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+            </and>
+          </not></test>
+          <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
+        </when>
+      </choose>
+    </def-macro>
+
     <def-macro n="convert-neg-to-ne.adv" npar="1">
       <!-- arg.1 verb -> v_negation
            Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
@@ -618,51 +651,6 @@
             <clip pos="1" side="tl" part="lemq"/>
         </concat>
       </let>
-    </def-macro>
-
-    <def-macro n="concord2" npar="2">
-      <!-- arg.1 determiner arg.2 noun -> determiner noun
-           Concords gender, animacy, number, case of the determiner with the head of the NP.
-           Assumes that the head of the NP was already 'translated'. -->
-
-      <!-- "First, copy everything except for animacy from the noun (for some reason some of the
-           possessive determiners do not receive animacy tag in rus.dix)."-->
-      <let>
-        <clip pos="1" side="tl" part="whole"/>
-        <concat>
-          <clip pos="1" side="tl" part="lem"/>
-          <clip pos="1" side="tl" part="a_det"/>
-          <clip pos="2" side="tl" part="a_gender"/>
-          <clip pos="1" side="tl" part="a_anim"/>
-          <clip pos="2" side="tl" part="a_nbr"/>
-          <clip pos="2" side="tl" part="a_case"/>
-        </concat>
-      </let>
-      <!-- Now adjust -->
-      <choose>
-        <when>
-          <test><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></test>
-          <let><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></let>
-        </when>
-      </choose>
-      <choose>
-        <when c="If the gender is masculin or number is plural, in accusative we want to take the
-                 animacy tag of the noun, otherwise it should be set to 'an'.">
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
-                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></equal>
-              </or>
-              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
-            </and>
-          </test>
-          <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
-        </when>
-        <otherwise>
-          <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
-        </otherwise>
-      </choose>
     </def-macro>
 
   </section-def-macros>
@@ -971,7 +959,7 @@
 
     <rule comment="PRN N">
       <!--
-          INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
+          INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
           OUTPUT: ^det_n<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
       -->
       <pattern>
