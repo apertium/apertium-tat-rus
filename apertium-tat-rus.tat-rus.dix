@@ -2,8 +2,8 @@
 <!--
 	Dictionary:
 	Sections: 1
-	Entries: 2139
-	Sdefs: 81
+	Entries: 2141
+	Sdefs: 82
 	Paradigms: 4
 
 -->
@@ -93,7 +93,6 @@
     <sdef n="al" 	c=""/> 
     <sdef n="cog" 	c=""/> 
   </sdefs>
-
   <pardefs>
 
 <pardef n="__LR_gen">
@@ -268,7 +267,7 @@
 
         <!-- Cognomens -->
 
-<e>       <p><l>Рәхимов<s n="np"/><s n="cog"/></l><r>Рахимов<s n="np"/><s n="cog"/></r></p></e>
+<e>       <p><l>Рәхимов<s n="np"/><s n="cog"/></l>     <r>Рахимов<s n="np"/><s n="cog"/></r></p></e>
 
     <!-- Nouns -->
 
