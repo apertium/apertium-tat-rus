@@ -740,6 +740,8 @@
         OUTPUT: ^n_n<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><sg><gen>$}$
         INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
         OUTPUT: ^pr_n<PP>{^Перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+        INPUT:  ^диңгез<n><attr>/морской<adj><m><an><sg><nom>$ ^флот<n><px3sp><nom>/флот<n><m><nn><px3sp><nom>$
+        OUTPUT: ^adj_n<SN>{^морской<adj><m><an><sg><nom>$ ^флот<n><m><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="n-attr-or-gen"/>
@@ -750,7 +752,7 @@
           <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
             <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
             <out>
-              <chunk name="pr_n" case="caseFirstWord">
+              <chunk name="pr_n">
                 <tags>
                   <tag><lit-tag v="PP"/></tag>
                 </tags>
@@ -774,7 +776,34 @@
               </chunk>
             </out>
           </when>
-          <otherwise>
+	  <when c="n.attr is translated with an adjective">
+	    <test>
+	      <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+	    </test>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+	    <call-macro n="concord2">
+	      <with-param pos="1"/>
+	      <with-param pos="2"/>
+	    </call-macro>
+	    <out>
+	      <chunk name="adj_n">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+                </tags>
+                <var n="preposition"/>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+                <b/>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+	      </chunk>
+	    </out>
+          </when>
+	  <otherwise>
             <call-macro n="translate-noun">
               <with-param pos="2"/>
             </call-macro>
