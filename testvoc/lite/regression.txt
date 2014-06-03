@@ -1,5 +1,6 @@
 Noun
 ====
+
 мәктәп:^мәктәп<n><attr>$:^школьный<adj><m><an><sg><nom>$:школьный
 мәктәп:^мәктәп<n><nom>$:^школа<n><f><nn><sg><nom>$:школа
 мәктәпнең:^мәктәп<n><gen>$:^школа<n><f><nn><sg><gen>$:школы
@@ -53,3 +54,26 @@ Adjective
 яхшыга:^яхшы<adj><subst><dat>$:^хороший<adj><m><an><sg><dat>$:хорошему
 яхшыдан:^яхшы<adj><subst><abl>$:^из<pr>$ ^хороший<adj><m><an><sg><gen>$:из хорошего
 яхшыларсыз:^яхшы<adj><subst><pl>$ ^сыз<post>$:^без<pr>$ ^хороший<adj><mfn><an><pl><gen>$:без хороших
+
+Verb
+====
+
+чакырам:^чакыр<v><tv><pres><p1><sg>$:^звать<vblex><impf><pres><p1><sg>$:зову
+чакырамын:^чакыр<v><tv><pres><p1><sg>$:^звать<vblex><impf><pres><p1><sg>$:зову
+чакырасың:^чакыр<v><tv><pres><p2><sg>$:^звать<vblex><impf><pres><p2><sg>$:зовёшь
+чакыра:^чакыр<v><tv><pres><p3><sg>$:^звать<vblex><impf><pres><p3><sg>$:зовёт
+чакырабыз:^чакыр<v><tv><pres><p1><pl>$:^звать<vblex><impf><pres><p1><pl>$:зовём
+чакырасыз:^чакыр<v><tv><pres><p2><pl>$:^звать<vblex><impf><pres><p2><pl>$:зовёте
+чакыралар:^чакыр<v><tv><pres><p3><pl>$:^звать<vblex><impf><pres><p3><pl>$:зовут
+чакырасыз:^чакыр<v><tv><pres><p2><frm><sg>$:^звать<vblex><impf><pres><p2><pl>$:зовёте
+чакырасыз:^чакыр<v><tv><pres><p2><frm><pl>$:^звать<vblex><impf><pres><p2><pl>$:зовёте
+
+чакырмыйм:^чакыр<v><tv><neg><pres><p1><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p1><sg>$:не зову
+чакырмыймын:^чакыр<v><tv><neg><pres><p1><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p1><sg>$:не зову
+чакырмыйсың:^чакыр<v><tv><neg><pres><p2><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p2><sg>$:не зовёшь
+чакырмый:^чакыр<v><tv><neg><pres><p3><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p3><sg>$:не зовёт
+чакырмыйбыз:^чакыр<v><tv><neg><pres><p1><pl>$:^не<adv>$ ^звать<vblex><impf><pres><p1><pl>$:не зовём
+чакырмыйсыз:^чакыр<v><tv><neg><pres><p2><pl>$:^не<adv>$ ^звать<vblex><impf><pres><p2><pl>$:не зовёте
+чакырмыйлар:^чакыр<v><tv><neg><pres><p3><pl>$:^не<adv>$ ^звать<vblex><impf><pres><p3><pl>$:не зовут
+чакырмыйсыз:^чакыр<v><tv><neg><pres><p2><frm><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p2><pl>$:не зовёте
+чакырмыйсыз:^чакыр<v><tv><neg><pres><p2><frm><pl>$:^не<adv>$ ^звать<vblex><impf><pres><p2><pl>$:не зовёте

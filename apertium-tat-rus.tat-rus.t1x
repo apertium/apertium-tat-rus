@@ -221,9 +221,6 @@
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
     </def-attr>
-    <def-attr n="a_digit">
-      <attr-item tags="digit"/>
-    </def-attr>
     <def-attr n="a_adv">
       <attr-item tags="adv"/>
     </def-attr>
@@ -292,6 +289,9 @@
     </def-attr>
     <def-attr n="a_neg">
       <attr-item tags="neg"/>
+    </def-attr>
+    <def-attr n="a_formality">
+      <attr-item tags="frm"/>
     </def-attr>
   </section-def-attrs>
 
@@ -606,7 +606,7 @@
            GIVEN:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
            EXPECT: ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><pres><p1><sg>$
            GIVEN:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
-           EXPECT: ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><past><mfn><pl>$ negation='не<adv>' -->
+           EXPECT: ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><past><mfn><pl>$ negation = '^не<adv>$ ' -->
       <let><var n="gender"/><lit v=""/></let>
       <call-macro n="convert-neg-to-ne.adv">
         <with-param pos="1"/>
@@ -620,24 +620,29 @@
       <choose>
         <when>
           <test>
-            <and>
-              <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
-              <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
-            </and>
+            <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
           </test>
-          <let><var n="gender"/><lit-tag v="mfn"/></let>
-          <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
-        </when>
-        <when>
-          <test>
-            <and>
-              <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
-              <not><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></not>
-            </and>
-          </test>
-          <let><var n="gender"/><lit-tag v="m"/></let>
-          <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
-        </when>
+	  <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
+	  <choose>
+	    <when>
+	      <test>
+	        <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+	      </test>
+              <let><var n="gender"/><lit-tag v="mfn"/></let>
+            </when>
+            <otherwise>
+              <let><var n="gender"/><lit-tag v="m"/></let>
+ 	    </otherwise>
+	  </choose>
+	</when>
+      </choose>
+      <choose>
+	<when>
+	  <test>
+	    <not><equal><clip pos="1" side="sl" part="a_formality"/><lit v=""/></equal></not>
+	  </test>
+	  <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+	</when>
       </choose>
       <let>
         <clip pos="1" side="tl" part="whole"/>
