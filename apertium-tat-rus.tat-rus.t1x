@@ -27,10 +27,11 @@
       <cat-item tags="n.attr"/>
       <cat-item tags="n.gen"/>
       <cat-item tags="n.pl.gen"/>
-      <cat-item tags="np.*.nom"/> <!-- no attr reading provided by lexc -->
+      <cat-item tags="np.*.nom"/>
       <cat-item tags="np.*.gen"/>
       <cat-item tags="np.*.*.nom"/>
       <cat-item tags="np.*.*.gen"/>
+      <cat-item tags="v.*.ger.nom"/>
     </def-cat>
     <def-cat n="n-gen">
       <cat-item tags="n.gen"/>

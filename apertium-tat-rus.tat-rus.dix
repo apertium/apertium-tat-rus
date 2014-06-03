@@ -235,6 +235,8 @@
 <e>       <p><l>ки<s n="v"/><s n="tv"/></l>            <r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кил<s n="v"/><s n="iv"/></l>           <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кит<s n="v"/><s n="iv"/></l>           <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>тукта<s n="v"/><s n="iv"/></l>         <r>остановиться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p></e>
+<e>       <p><l>тукта<s n="v"/><s n="iv"/><s n="ger"/></l><r>остановка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/></l>          <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/><s n="ger_past"/></l><r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>звать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
