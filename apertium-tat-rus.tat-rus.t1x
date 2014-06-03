@@ -27,6 +27,7 @@
       <cat-item tags="n.attr"/>
       <cat-item tags="n.gen"/>
       <cat-item tags="n.pl.gen"/>
+      <cat-item tags="np.*.attr"/>
       <cat-item tags="np.*.nom"/>
       <cat-item tags="np.*.gen"/>
       <cat-item tags="np.*.*.nom"/>
@@ -305,6 +306,14 @@
     <def-var n="possessive"/>
     <def-var n="animacy"/>
   </section-def-vars>
+
+  <section-def-lists>
+
+    <def-list n="np-top-hypernym">
+      <list-item v="шәһәр"/>
+    </def-list>
+
+  </section-def-lists>
 
   <section-def-macros>
 
@@ -746,8 +755,10 @@
         OUTPUT: ^n_n<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><sg><gen>$}$
         INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
         OUTPUT: ^pr_n<PP>{^Перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
-        INPUT:  ^диңгез<n><attr>/морской<adj><m><an><sg><nom>$ ^флот<n><px3sp><nom>/флот<n><m><nn><px3sp><nom>$
-        OUTPUT: ^adj_n<SN>{^морской<adj><m><an><sg><nom>$ ^флот<n><m><nn><sg><nom>$}$
+        INPUT:  ^диңгез<n><attr>/морской<adj><m><an><sg><nom>$ ^флот<n><px3sp><acc>/флот<n><m><nn><px3sp><acc>$
+        OUTPUT: ^adj_n<SN>{^морской<adj><m><nn><sg><acc>$ ^флот<n><m><nn><sg><acc>$}$
+        INPUT:  ^Казан<np><top><attr>/Казань<np><top><f><attr>$ ^шәһәр<n><px3sp><acc>/город<n><m><nn><px3sp><acc>$
+        OUTPUT: ^n_n<SN>{^город<n><m><nn><sg><acc>$ ^Казань<np><top><f><sg><acc>$}$
       -->
       <pattern>
         <pattern-item n="n-attr-or-gen"/>
@@ -805,6 +816,36 @@
                 <b/>
                 <lu>
                   <clip pos="2" side="tl" part="whole"/>
+                </lu>
+	      </chunk>
+	    </out>
+          </when>
+	  <when c="first word is a toponym and the second word is its hypernym">
+	    <test>
+	      <and>
+		<equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np.top"/></equal>	      
+		<in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="np-top-hypernym"/></in>
+	      </and>
+	    </test>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+	    <out>
+	      <chunk name="n_n">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+                </tags>
+                <var n="preposition"/>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+                <b/>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_nom"/>
+                  <clip pos="1" side="tl" part="a_gender"/>
+		  <lit-tag v="sg"/>
+		  <clip pos="2" side="tl" part="a_case"/>
                 </lu>
 	      </chunk>
 	    </out>
