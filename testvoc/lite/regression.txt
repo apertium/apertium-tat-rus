@@ -67,7 +67,6 @@ Verb
 чакыралар:^чакыр<v><tv><pres><p3><pl>$:^звать<vblex><impf><pres><p3><pl>$:зовут
 чакырасыз:^чакыр<v><tv><pres><p2><frm><sg>$:^звать<vblex><impf><pres><p2><pl>$:зовёте
 чакырасыз:^чакыр<v><tv><pres><p2><frm><pl>$:^звать<vblex><impf><pres><p2><pl>$:зовёте
-
 чакырмыйм:^чакыр<v><tv><neg><pres><p1><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p1><sg>$:не зову
 чакырмыймын:^чакыр<v><tv><neg><pres><p1><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p1><sg>$:не зову
 чакырмыйсың:^чакыр<v><tv><neg><pres><p2><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p2><sg>$:не зовёшь
@@ -77,3 +76,20 @@ Verb
 чакырмыйлар:^чакыр<v><tv><neg><pres><p3><pl>$:^не<adv>$ ^звать<vblex><impf><pres><p3><pl>$:не зовут
 чакырмыйсыз:^чакыр<v><tv><neg><pres><p2><frm><sg>$:^не<adv>$ ^звать<vblex><impf><pres><p2><pl>$:не зовёте
 чакырмыйсыз:^чакыр<v><tv><neg><pres><p2><frm><pl>$:^не<adv>$ ^звать<vblex><impf><pres><p2><pl>$:не зовёте
+
+чакырдым:^чакыр<v><tv><ifi><p1><sg>$:^звать<vblex><impf><past><m><sg>$:звал
+чакырдың:^чакыр<v><tv><ifi><p2><sg>$:^звать<vblex><impf><past><m><sg>$:звал
+чакырды:^чакыр<v><tv><ifi><p3><sg>$:^звать<vblex><impf><past><m><sg>$:звал
+чакырдык:^чакыр<v><tv><ifi><p1><pl>$:^звать<vblex><impf><past><mfn><pl>$:звали
+чакырдыгыз:^чакыр<v><tv><ifi><p2><pl>$:^звать<vblex><impf><past><mfn><pl>$:звали
+чакырдылар:^чакыр<v><tv><ifi><p3><pl>$:^звать<vblex><impf><past><mfn><pl>$:звали
+чакырдыгыз:^чакыр<v><tv><ifi><p2><frm><sg>$:^звать<vblex><impf><past><mfn><pl>$:звали
+чакырдыгыз:^чакыр<v><tv><ifi><p2><frm><pl>$:^звать<vblex><impf><past><mfn><pl>$:звали
+чакырмадым:^чакыр<v><tv><neg><ifi><p1><sg>$:^не<adv>$ ^звать<vblex><impf><past><m><sg>$:не звал
+чакырмадың:^чакыр<v><tv><neg><ifi><p2><sg>$:^не<adv>$ ^звать<vblex><impf><past><m><sg>$:не звал
+чакырмады:^чакыр<v><tv><neg><ifi><p3><sg>$:^не<adv>$ ^звать<vblex><impf><past><m><sg>$:не звал
+чакырмадык:^чакыр<v><tv><neg><ifi><p1><pl>$:^не<adv>$ ^звать<vblex><impf><past><mfn><pl>$:не звали
+чакырмадыгыз:^чакыр<v><tv><neg><ifi><p2><pl>$:^не<adv>$ ^звать<vblex><impf><past><mfn><pl>$:не звали
+чакырмадылар:^чакыр<v><tv><neg><ifi><p3><pl>$:^не<adv>$ ^звать<vblex><impf><past><mfn><pl>$:не звали
+чакырмадыгыз:^чакыр<v><tv><neg><ifi><p2><frm><sg>$:^не<adv>$ ^звать<vblex><impf><past><mfn><pl>$:не звали
+чакырмадыгыз:^чакыр<v><tv><neg><ifi><p2><frm><pl>$:^не<adv>$ ^звать<vblex><impf><past><mfn><pl>$:не звали

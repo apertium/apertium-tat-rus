@@ -618,11 +618,19 @@
         </when>
       </choose>
       <choose>
+	<when>
+	  <test>
+	    <not><equal><clip pos="1" side="sl" part="a_formality"/><lit v=""/></equal></not>
+	  </test>
+	  <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+	</when>
+      </choose>
+      <choose>
         <when>
           <test>
             <equal><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></equal>
           </test>
-	  <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let> <!-- no person in past tense in Russian -->
+	  <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
 	  <choose>
 	    <when>
 	      <test>
@@ -634,14 +642,6 @@
               <let><var n="gender"/><lit-tag v="m"/></let>
  	    </otherwise>
 	  </choose>
-	</when>
-      </choose>
-      <choose>
-	<when>
-	  <test>
-	    <not><equal><clip pos="1" side="sl" part="a_formality"/><lit v=""/></equal></not>
-	  </test>
-	  <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
 	</when>
       </choose>
       <let>
