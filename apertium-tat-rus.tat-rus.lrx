@@ -77,5 +77,22 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="шигырь" tags="n.*"><select lemma="стихотворение"/></match>
   </rule>	 
 
+  <rule>
+    <!--
+    INPUT:  ^Казан<np><top><attr>/Казань<np><top><f>/казанский<adj><m><an><sg><nom>$ ^шәһәр<n><px3sp><nom>/город<n><m><nn><px3sp><nom>$
+    OUTPUT: ^Казан<np><top><attr>/Казань<np><top><f>$ ^шәһәр<n><px3sp><nom>/город<n><m><nn><px3sp><nom>$
+    -->
+    <match tags="np.top.attr"><select lemma="Казань"/></match>
+    <match lemma="шәһәр" tags="n.*"/>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^Казан<np><top><attr>/Казань<np><top><f>/казанский<adj><m><sg><nom>$ ^ярминкә<n><px3sp><nom>/ярмарка<n><f><nn><px3sp><nom>$
+    OUTPUT: ^Казан<np><top><attr>/казанский<adj><m><sg><nom>$ ^ярминкә<n><px3sp><nom>/ярмарка<n><f><nn><px3sp><nom>$
+    -->
+    <match tags="np.top.attr"><select lemma="казанский"/></match>
+    <match lemma="ярминкә" tags="n.*"/>
+  </rule>
 
 </rules>

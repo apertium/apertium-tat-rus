@@ -261,6 +261,9 @@
 
 <e>       <p><l>Донбасс<s n="np"/><s n="top"/></l>     <r>Донбасс<s n="np"/><s n="top"/><s n="m"/></r></p></e>
 <e>       <p><l>Казан<s n="np"/><s n="top"/></l>       <r>Казань<s n="np"/><s n="top"/><s n="f"/></r></p></e>
+<e>       <p><l>Казан<s n="np"/><s n="top"/><s n="attr"/></l><r>казанский<s n="adj"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>Казан<s n="np"/><s n="top"/><s n="attr"/></l><r>Казань<s n="np"/><s n="top"/><s n="f"/></r></p></e>
+
 <e>       <p><l>Татарстан<s n="np"/><s n="top"/></l>   <r>Татарстан<s n="np"/><s n="top"/><s n="m"/></r></p></e>
 
         <!-- Anthroponyms -->
