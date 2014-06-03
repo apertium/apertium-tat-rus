@@ -825,6 +825,7 @@
 	      <and>
 		<equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np.top"/></equal>	      
 		<in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="np-top-hypernym"/></in>
+		<not><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal></not>
 	      </and>
 	    </test>
             <call-macro n="translate-noun">
