@@ -21,7 +21,9 @@ elif [ "$1" = "pen" ]; then
 fi
 
 PRETRANSFER="apertium-pretransfer"
-TRANSFER_1="apertium-transfer apertium-tat-rus.tat-rus.t1x tat-rus.t1x.bin tat-rus.autobil.bin"
+LEXTRANSFER="lt-proc -b tat-rus.autobil.bin"
+LEXSELECTION="lrx-proc -m tat-rus.lrx.bin"
+TRANSFER_1="apertium-transfer -b apertium-tat-rus.tat-rus.t1x tat-rus.t1x.bin"
 TRANSFER_2="apertium-interchunk apertium-tat-rus.tat-rus.t2x tat-rus.t2x.bin"
 TRANSFER_3="apertium-postchunk apertium-tat-rus.tat-rus.t3x tat-rus.t3x.bin"
 GENERATOR="lt-proc -g tat-rus.autogen.bin"
@@ -49,7 +51,7 @@ extract_tests > /tmp/testCases.txt
 while IFS=':' read lineNbr input expectedOutOfTransfer expectedOutOfGenerator
 do
     TOTAL=`expr $TOTAL + 1`
-    transfersOut=$(echo $input | $PRETRANSFER | $TRANSFER_1 | $TRANSFER_2 | $TRANSFER_3)
+    transfersOut=$(echo $input | $PRETRANSFER | $LEXTRANSFER | $LEXSELECTION | $TRANSFER_1 | $TRANSFER_2 | $TRANSFER_3)
     generatorsOut=$(echo $transfersOut | $GENERATOR | $POSTGENERATOR)
     if [ "$transfersOut" = "$expectedOutOfTransfer" ] &&
        [ "$generatorsOut" = "$expectedOutOfGenerator" ]
