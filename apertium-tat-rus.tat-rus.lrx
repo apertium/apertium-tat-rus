@@ -95,6 +95,24 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ярминкә" tags="n.*"/>
   </rule>
 
+<!-- TODO: the follwing rules should be lemma independent -->
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><pres><p3><sg>/звать<vblex><impf><tv><pres><p3><sg>/позвать<vblex><perf><tv><pres><p3><sg>$
+    OUTPUT: ^чакыр<v><tv><pres><p3><sg>/звать<vblex><impf><tv><pres><p3><sg>$
+    -->
+    <match tags="v.tv.pres.*"><select lemma="звать" tags="*.impf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><neg><pres><p3><sg>/звать<vblex><impf><tv><neg><pres><p3><sg>/позвать<vblex><perf><tv><neg><pres><p3><sg>$
+    OUTPUT: ^чакыр<v><tv><neg><pres><p3><sg>/звать<vblex><perf><tv><neg><pres><p3><sg>$
+    -->
+    <match tags="v.tv.neg.pres.*"><select lemma="звать" tags="*.impf.*"/></match>
+  </rule>
+
   <rule>
     <!--
     INPUT:  ^чакыр<v><tv><ifi><p3><sg>/звать<vblex><impf><tv><ifi><p3><sg>/позвать<vblex><perf><tv><ifi><p3><sg>$
@@ -102,7 +120,12 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     -->
     <match tags="v.tv.ifi.*"><select lemma="позвать" tags="*.perf.*"/></match>
   </rule>
+
   <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><neg><ifi><p3><sg>/звать<vblex><impf><tv><neg><ifi><p3><sg>/позвать<vblex><perf><tv><neg><ifi><p3><sg>$
+    OUTPUT: ^чакыр<v><tv><neg><ifi><p3><sg>/позвать<vblex><perf><tv><neg><ifi><p3><sg>$
+    -->
     <match tags="v.tv.neg.ifi.*"><select lemma="позвать" tags="*.perf.*"/></match>
   </rule>
 
@@ -113,8 +136,45 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     -->
     <match tags="v.tv.past.*"><select lemma="позвать" tags="*.perf.*"/></match>
   </rule>
+
   <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><neg><past><p3><sg>/звать<vblex><impf><tv><neg><past><p3><sg>/позвать<vblex><perf><tv><neg><past><p3><sg>$
+    OUTPUT: ^чакыр<v><tv><neg><past><p3><sg>/позвать<vblex><perf><tv><neg><past><p3><sg>$
+    -->
     <match tags="v.tv.neg.past.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><fut><p1><sg>/звать<vblex><impf><tv><fut><p1><sg>/позвать<vblex><perf><tv><fut><p1><sg>$
+    OUTPUT: ^чакыр<v><tv><fut><p1><sg>/позвать<vblex><perf><tv><fut><p1><sg>$
+    -->
+    <match tags="v.tv.fut.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><neg><fut><p1><sg>/звать<vblex><impf><tv><neg><fut><p1><sg>/позвать<vblex><perf><tv><neg><fut><p1><sg>$
+    OUTPUT: ^чакыр<v><tv><neg><fut><p1><sg>/звать<vblex><impf><tv><neg><fut><p1><sg>/позвать<vblex><perf><tv><neg><fut><p1><sg>$
+    -->
+    <match tags="v.tv.neg.fut.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><fut2><p1><sg>/звать<vblex><impf><tv><fut2><p1><sg>/позвать<vblex><perf><tv><fut2><p1><sg>$
+    OUTPUT: ^чакыр<v><tv><fut2><p1><sg>/позвать<vblex><perf><tv><fut2><p1><sg>$
+    -->
+    <match tags="v.tv.fut2.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><neg><fut2><p1><sg>/звать<vblex><impf><tv><neg><fut2><p1><sg>/позвать<vblex><perf><tv><neg><fut2><p1><sg>$
+    OUTPUT: ^чакыр<v><tv><neg><fut2><p1><sg>/звать<vblex><impf><tv><neg><fut2><p1><sg>/позвать<vblex><perf><tv><neg><fut2><p1><sg>$
+    -->
+    <match tags="v.tv.neg.fut2.*"><select lemma="позвать" tags="*.perf.*"/></match>
   </rule>
 
 </rules>

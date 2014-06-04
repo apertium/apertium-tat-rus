@@ -114,21 +114,24 @@
     <def-cat n="verb-fin">
       <cat-item tags="v.*.pres.*"/>
       <cat-item tags="v.*.*.pres.*"/>
-      <cat-item tags="vaux.pres.*"/>
-      <cat-item tags="vaux.neg.pres.*"/>
       <cat-item tags="v.*.ifi.*"/>
       <cat-item tags="v.*.*.ifi.*"/>
-      <cat-item tags="vaux.ifi.*"/>
-      <cat-item tags="vaux.neg.ifi.*"/>
       <cat-item tags="v.*.past.*"/>
       <cat-item tags="v.*.*.past.*"/>
-      <cat-item tags="vaux.past.*"/>
-      <cat-item tags="vaux.neg.past.*"/>
       <cat-item tags="v.*.fut.*"/>
       <cat-item tags="v.*.*.fut.*"/>
+      <cat-item tags="v.*.fut2.*"/>
+      <cat-item tags="v.*.*.fut2.*"/>
+      <cat-item tags="vaux.pres.*"/>
+      <cat-item tags="vaux.neg.pres.*"/>
+      <cat-item tags="vaux.ifi.*"/>
+      <cat-item tags="vaux.neg.ifi.*"/>
+      <cat-item tags="vaux.past.*"/>
+      <cat-item tags="vaux.neg.past.*"/>
       <cat-item tags="v.*.imp.*"/>
       <cat-item tags="v.*.*.imp.*"/>
     </def-cat>
+
     <def-cat n="verb-nonfin">
       <cat-item tags="v.*.inf"/>
       <cat-item tags="v.*.*.inf.*"/>
@@ -321,6 +324,8 @@
   </section-def-lists>
 
   <section-def-macros>
+
+<!-- SECTION: Noun phrases -->
 
     <def-macro n="return-number-of-sl-word" npar="1">
       <!-- arg.1 any nominal -> v_number
@@ -600,6 +605,8 @@
       </choose>
     </def-macro>
 
+<!-- SECTION: Verbs -->
+
     <def-macro n="convert-neg-to-ne.adv" npar="1">
       <!-- arg.1 verb -> v_negation
            Sets the 'negation' variable to '^не<adv>$ ' if the verb contains <neg> tag. -->
@@ -630,6 +637,10 @@
         <when>
           <test><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="ifi"/></equal></test>
           <let><clip pos="1" side="tl" part="a_tense"/><lit-tag v="past"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_tense"/><lit-tag v="fut2"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_tense"/><lit-tag v="fut"/></let>
         </when>
       </choose>
       <choose>
