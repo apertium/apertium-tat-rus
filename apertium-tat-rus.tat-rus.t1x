@@ -165,6 +165,7 @@
       <cat-item tags="vaux.*.gna_after"/>
       <cat-item tags="v.*.gna_cond.*"/>
       <cat-item tags="v.*.*.gna_cond.*"/>
+      <cat-item tags="v.*.prc_vol.*"/>
     </def-cat>
 
     <def-cat n="post">
@@ -290,6 +291,7 @@
       <attr-item tags="ifi"/>
       <attr-item tags="past"/>
       <attr-item tags="fut"/>
+      <attr-item tags="fut2"/>
       <attr-item tags="imp"/>
     </def-attr>
     <def-attr n="a_neg">
@@ -1127,7 +1129,7 @@
       </action>
     </rule>
 
-<!-- SECTION: Verb phrases -->
+<!-- SECTION: Verbs -->
 
 <!--
 INPUT:  ^и<cop><p3><sg>/быть<vbser><p3><sg>$

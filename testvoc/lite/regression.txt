@@ -112,4 +112,3 @@ Verb
 чакырмаслар:^чакыр<v><tv><neg><fut><p3><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p3><pl>$:не позовут
 чакырмассыз:^чакыр<v><tv><neg><fut><p2><frm><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
 чакырмассыз:^чакыр<v><tv><neg><fut><p2><frm><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
-
