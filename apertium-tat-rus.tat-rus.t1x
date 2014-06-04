@@ -300,6 +300,10 @@
     <def-attr n="a_neg">
       <attr-item tags="neg"/>
     </def-attr>
+    <def-attr n="a_trans">
+      <attr-item tags="tv"/>
+      <attr-item tags="iv"/>
+    </def-attr>
     <def-attr n="a_formality">
       <attr-item tags="frm"/>
     </def-attr>
@@ -695,13 +699,13 @@
           INPUT:  ^мәктәп<n><attr>/школьный<adj><m><an><sg><nom>$
           OUTPUT: ^adj<AdjP>{^школьный<adj><m><an><sg><nom>$}$
           INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
-          OUTPUT: ^n<SN>{^школа<n><f><nn><sg><nom>$}$
+          OUTPUT: ^n<SN><nom>{^школа<n><f><nn><sg><2>$}$
           INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
-          OUTPUT: ^n<SN>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><dat>$}$
+          OUTPUT: ^n<SN><dat>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><2>$}$
           INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
           OUTPUT: ^pr_n<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
 	  INPUT:  ^яхшы<adj><subst><dat>/хороший<adj><m><an><dat>$
-          OUTPUT: ^n<SN>{^хороший<adj><m><an><sg><dat>$}$
+          OUTPUT: ^n<SN><dat>{^хороший<adj><m><an><sg><2>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
@@ -737,10 +741,17 @@
                   <chunk name="n" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
+                      <tag><clip pos="1" side="tl" part="a_case"/></tag>
                     </tags>
                     <var n="possessive"/>
                     <lu>
-                      <clip pos="1" side="tl" part="whole"/>
+		      <clip pos="1" side="tl" part="lem"/>
+		      <clip pos="1" side="tl" part="a_nom"/>
+		      <clip pos="1" side="tl" part="a_gender"/>
+		      <clip pos="1" side="tl" part="a_anim"/>
+		      <clip pos="1" side="tl" part="a_nbr"/>
+		      <clip pos="1" side="tl" part="a_case" link-to="2"/>
+		      <clip pos="1" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -754,7 +765,7 @@
                     <var n="preposition"/>
                     <var n="possessive"/>
                     <lu>
-                      <clip pos="1" side="tl" part="whole"/>
+		      <clip pos="1" side="tl" part="whole"/>
                     </lu>
                   </chunk>
                 </out>
@@ -1200,9 +1211,9 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
 
 <!--
 INPUT:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
-OUTPUT: ^verb<VBLEX>{^играть<vblex><impf><pres><p1><sg>$}$
+OUTPUT: ^v<SV><tv>{^играть<vblex><impf><pres><p1><sg>$}$
 INPUT:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
-OUTPUT: ^verb<VBLEX>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
+OUTPUT: ^v<SV><tv>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
 -->
     <rule comment="">
       <pattern>
@@ -1213,9 +1224,10 @@ OUTPUT: ^verb<VBLEX>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="verb">
+          <chunk name="v">
             <tags>
-              <tag><lit-tag v="VBLEX"/></tag>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="sl" part="a_trans"/></tag>
             </tags>
             <var n="negation"/>
             <lu>
@@ -1230,9 +1242,9 @@ OUTPUT: ^verb<VBLEX>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
 INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>$
 OUTPUT: ^n<SN>{^игра<n><f><nn><sg><acc>$}$
 INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
-OUTPUT: ^inf<VBLEX>{^быть<vbser><inf>$}$
+OUTPUT: ^v<SV>{^быть<vbser><inf>$}$
 INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
-OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
+OUTPUT: ^v<SV>{^найти<vblex><perf><inf>$}$
 -->
     <rule comment="To translate every non-finite form with infinitive is not good,
                    but this is a temporal solution until things get sorted out.">
@@ -1262,9 +1274,9 @@ OUTPUT: ^inf<VBLEX>{^найти<vblex><perf><inf>$}$
               <with-param pos="1"/>
             </call-macro>
             <out>
-              <chunk name="inf">
+              <chunk name="v">
                 <tags>
-                  <tag><lit-tag v="VBLEX"/></tag>
+                  <tag><lit-tag v="SV"/></tag>
                 </tags>
                 <var n="negation"/>
                 <lu>

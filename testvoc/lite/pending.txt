@@ -17,3 +17,19 @@ Animate noun (different case prep's in particular)
 абыйларымны:^абый<n><pl><px1sg><acc>$:^мой<det><pos><mfn><aa><pl><acc>$ ^брат<n><m><aa><pl><acc>$:моих братьев
 абыйларымнан:^абый<n><pl><px1sg><abl>$:^от<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:от моих братьев
 абыйларымда:^абый<n><pl><px1sg><loc>$:^у<pr>$ ^моих/мой<det><мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:у моих братьев
+
+Verb
+====
+
+Finite forms
+------------
+
+чакырмакчымын:^чакыр<v><tv><fut_plan><p1><sg>$:^собираться<vblex><impf><pres><p1><sg>$ ^позвать<vblex><perf><inf>$:собираюсь позвать
+чакырмакчысың:^чакыр<v><tv><fut_plan><p2><sg>$:^собираться<vblex><impf><pres><p2><sg>$ ^позвать<vblex><perf><inf>$:собираешься позвать
+чакырмакчы:^чакыр<v><tv><fut_plan><p3><sg>$:^собираться<vblex><impf><pres><p3><sg>$ ^позвать<vblex><perf><inf>$:собирается позвать
+чакырмакчыбыз:^чакыр<v><tv><fut_plan><p1><pl>$:^собираться<vblex><impf><pres><p1><pl>$ ^позвать<vblex><perf><inf>$:собираемся позвать
+чакырмакчысыз:^чакыр<v><tv><fut_plan><p2><pl>$:^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$:собираетесь позвать
+чакырмакчылар:^чакыр<v><tv><fut_plan><p3><pl>$:^собираться<vblex><impf><pres><p3><pl>$ ^позвать<vblex><perf><inf>$:собираются позвать
+чакырмакчысыз:^чакыр<v><tv><fut_plan><p2><frm><pl>$:^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$:собираетесь позвать
+чакырмакчысыз:^@чакыр<v><tv><fut_plan><p2><frm><sg>$:^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$:собираетесь позвать
+

@@ -11,8 +11,14 @@
 <interchunk>
 
   <section-def-cats>
+
     <def-cat n="SN">
       <cat-item tags="SN"/>
+      <cat-item tags="SN.*"/>
+    </def-cat>
+    <def-cat n="SV">
+      <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
     </def-cat>
     <def-cat n="VBSER">
       <cat-item lemma="cop-pres" tags="VBSER"/>
@@ -20,12 +26,29 @@
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
     </def-cat>
+
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="attrstub">
-      <attr-item tags="stub"/>
+
+    <def-attr n="a_case">
+      <attr-item tags="nom"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="abl"/>
+      <attr-item tags="loc"/>
+      <attr-item tags="sim"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="prp"/>
+      <attr-item tags="CD"/>
     </def-attr>
+
+    <def-attr n="a_trans">
+      <attr-item tags="tv"/>
+      <attr-item tags="iv"/>
+    </def-attr>
+
   </section-def-attrs>
 
   <section-def-vars>
@@ -33,7 +56,6 @@
   </section-def-vars>
 
   <section-rules>
-
 
     <rule comment="REGLA: SN VBSER SENT">
       <!--
@@ -56,7 +78,45 @@
         </out>
       </action>
     </rule>
-    
+
+    <rule>
+      <!--
+      INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^n<SN><nom>{^книга<n><f><nn><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$^dot<SENT>{^.<sent>$}$
+      OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><nom>$}$^dot<SENT>{^.<sent>$}$
+      -->
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+	<choose>
+	  <when>
+	    <test>
+	      <and>
+		<equal><clip pos="2" part="a_case"/><lit-tag v="nom"/></equal>
+		<equal><clip pos="3" part="a_trans"/><lit-tag v="tv"/></equal>
+	      </and>
+	    </test>
+	    <let><clip pos="2" part="a_case"/><lit-tag v="acc"/></let>
+	  </when>
+	</choose>
+        <out>
+          <chunk>
+	    <clip pos="1" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>      
+
   </section-rules>
   
 </interchunk>
