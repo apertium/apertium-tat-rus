@@ -93,3 +93,23 @@ Verb
 чакырмадылар:^чакыр<v><tv><neg><ifi><p3><pl>$:^не<adv>$ ^позвать<vblex><perf><past><mfn><pl>$:не позвали
 чакырмадыгыз:^чакыр<v><tv><neg><ifi><p2><frm><sg>$:^не<adv>$ ^позвать<vblex><perf><past><mfn><pl>$:не позвали
 чакырмадыгыз:^чакыр<v><tv><neg><ifi><p2><frm><pl>$:^не<adv>$ ^позвать<vblex><perf><past><mfn><pl>$:не позвали
+
+чакырырмын:^чакыр<v><tv><fut><p1><sg>$:^позвать<vblex><perf><fut><p1><sg>$:позову
+чакырырсың:^чакыр<v><tv><fut><p2><sg>$:^позвать<vblex><perf><fut><p2><sg>$:позовёшь
+чакырыр:^чакыр<v><tv><fut><p3><sg>$:^позвать<vblex><perf><fut><p3><sg>$:позовёт
+чакырырбыз:^чакыр<v><tv><fut><p1><pl>$:^позвать<vblex><perf><fut><p1><pl>$:позовём
+чакырырсыз:^чакыр<v><tv><fut><p2><pl>$:^позвать<vblex><perf><fut><p2><pl>$:позовёте
+чакырырлар:^чакыр<v><tv><fut><p3><pl>$:^позвать<vblex><perf><fut><p3><pl>$:позовут
+чакырырсыз:^чакыр<v><tv><fut><p2><frm><sg>$:^позвать<vblex><perf><fut><p2><pl>$:позовёте
+чакырырсыз:^чакыр<v><tv><fut><p2><frm><pl>$:^позвать<vblex><perf><fut><p2><pl>$:позовёте
+чакырмам:^чакыр<v><tv><neg><fut><p1><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p1><sg>$:не позову
+чакырмамын:^чакыр<v><tv><neg><fut><p1><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p1><sg>$:не позову
+чакырмасмын:^чакыр<v><tv><neg><fut><p1><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p1><sg>$:не позову
+чакырмассың:^чакыр<v><tv><neg><fut><p2><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><sg>$:не позовёшь
+чакырмас:^чакыр<v><tv><neg><fut><p3><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p3><sg>$:не позовёт
+чакырмабыз:^чакыр<v><tv><neg><fut><p1><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p1><pl>$:не позовём
+чакырмассыз:^чакыр<v><tv><neg><fut><p2><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
+чакырмаслар:^чакыр<v><tv><neg><fut><p3><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p3><pl>$:не позовут
+чакырмассыз:^чакыр<v><tv><neg><fut><p2><frm><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
+чакырмассыз:^чакыр<v><tv><neg><fut><p2><frm><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
+
