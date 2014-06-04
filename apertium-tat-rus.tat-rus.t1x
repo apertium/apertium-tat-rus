@@ -696,16 +696,16 @@
 
     <rule comment="REGLA: N">
       <!--
-          INPUT:  ^мәктәп<n><attr>/школьный<adj><m><an><sg><nom>$
-          OUTPUT: ^adj<AdjP>{^школьный<adj><m><an><sg><nom>$}$
-          INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
-          OUTPUT: ^n<SN><nom>{^школа<n><f><nn><sg><2>$}$
-          INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
-          OUTPUT: ^n<SN><dat>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><2>$}$
-          INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
-          OUTPUT: ^pr_n<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
-	  INPUT:  ^яхшы<adj><subst><dat>/хороший<adj><m><an><dat>$
-          OUTPUT: ^n<SN><dat>{^хороший<adj><m><an><sg><2>$}$
+      INPUT:  ^мәктәп<n><attr>/школьный<adj><m><an><sg><nom>$
+      OUTPUT: ^adj<AdjP>{^школьный<adj><m><an><sg><nom>$}$
+      INPUT:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
+      OUTPUT: ^n<SN><nom>{^школа<n><f><nn><sg><2>$}$
+      INPUT:  ^абый<n><px1sg><dat>/брат<n><m><aa><px1sg><dat>$
+      OUTPUT: ^n<SN><dat>{^мой<det><pos><m><an><sg><dat>$ ^брат<n><m><aa><sg><2>$}$
+      INPUT:  ^мәктәп<n><loc>/школа<n><f><nn><loc>$
+      OUTPUT: ^pr_n<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
+      INPUT:  ^яхшы<adj><subst><dat>/хороший<adj><m><an><dat>$
+      OUTPUT: ^n<SN><dat>{^хороший<adj><m><an><sg><2>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
@@ -778,14 +778,14 @@
 
     <rule comment="REGLA: N N">
       <!--
-        INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
-        OUTPUT: ^n_n<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><sg><gen>$}$
-        INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
-        OUTPUT: ^pr_n<PP>{^Перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
-        INPUT:  ^диңгез<n><attr>/морской<adj><m><an><sg><nom>$ ^флот<n><px3sp><acc>/флот<n><m><nn><px3sp><acc>$
-        OUTPUT: ^adj_n<SN>{^морской<adj><m><nn><sg><acc>$ ^флот<n><m><nn><sg><acc>$}$
-        INPUT:  ^Казан<np><top><attr>/Казань<np><top><f><attr>$ ^шәһәр<n><px3sp><acc>/город<n><m><nn><px3sp><acc>$
-        OUTPUT: ^n_n<SN>{^город<n><m><nn><sg><acc>$ ^Казань<np><top><f><sg><acc>$}$
+      INPUT:  ^урындык<n><attr>/стул<n><m><nn><attr>$ ^аст<n><pl><px3sp><acc>/низ<n><m><nn><pl><px3sp><acc>$
+      OUTPUT: ^n_n<SN>{^низ<n><m><nn><pl><acc>$ ^стул<n><m><nn><sg><gen>$}$
+      INPUT:  ^Өй<n><attr>/Дом<n><m><nn><attr>$ ^алд<n><px3sp><loc>/перед<pr><ins>$
+      OUTPUT: ^pr_n<PP>{^Перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+      INPUT:  ^диңгез<n><attr>/морской<adj><m><an><sg><nom>$ ^флот<n><px3sp><acc>/флот<n><m><nn><px3sp><acc>$
+      OUTPUT: ^adj_n<SN>{^морской<adj><m><nn><sg><acc>$ ^флот<n><m><nn><sg><acc>$}$
+      INPUT:  ^Казан<np><top><attr>/Казань<np><top><f><attr>$ ^шәһәр<n><px3sp><acc>/город<n><m><nn><px3sp><acc>$
+      OUTPUT: ^n_n<SN>{^город<n><m><nn><sg><acc>$ ^Казань<np><top><f><sg><acc>$}$
       -->
       <pattern>
         <pattern-item n="n-attr-or-gen"/>
@@ -923,10 +923,10 @@
 
     <rule comment="REGLA: N POST">
       <!--
-        INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
-        OUTPUT: ^pr_n<PP>{^без<pr>$ ^школа<n><f><nn><sg><gen>$}$
-        INPUT:  ^яхшы<adj><subst><pl>/хороший<adj><m><an><pl>$ ^сыз<post>/без<pr><gen>$
-        OUTPUT: ^pr_n<PP>{^без<pr>$ ^хороший<adj><mfn><an><pl><gen>$}$
+      INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
+      OUTPUT: ^pr_n<PP>{^без<pr>$ ^школа<n><f><nn><sg><gen>$}$
+      INPUT:  ^яхшы<adj><subst><pl>/хороший<adj><m><an><pl>$ ^сыз<post>/без<pr><gen>$
+      OUTPUT: ^pr_n<PP>{^без<pr>$ ^хороший<adj><mfn><an><pl><gen>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
@@ -972,8 +972,8 @@
 
     <rule comment="REGLA: N POST N">
       <!--
-        INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><ins><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
-        OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+      INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><ins><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
+      OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
         <pattern-item n="n-attr-or-gen"/>
@@ -1014,10 +1014,10 @@
 
     <rule comment="REGLA: NUM N">
       <!--
-          INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><nom>/год<n><m><nn><nom>$
-          OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
-          INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><dat>/год<n><m><nn><dat>$
-          OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><nom>/год<n><m><nn><nom>$
+      OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><dat>/год<n><m><nn><dat>$
+      OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
       -->
       <pattern>
         <pattern-item n="num"/>
@@ -1063,8 +1063,8 @@
 
     <rule comment="PRN N">
       <!--
-          INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-          OUTPUT: ^det_n<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+      INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
+      OUTPUT: ^det_n<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="prn-gen"/>
@@ -1209,13 +1209,13 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
-OUTPUT: ^v<SV><tv>{^играть<vblex><impf><pres><p1><sg>$}$
-INPUT:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
-OUTPUT: ^v<SV><tv>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
--->
-    <rule comment="">
+    <rule comment="REGLA: V">
+      <!--
+      INPUT:  ^уйна<v><tv><pres><p1><sg>/играть<vblex><impf><tv><pres><p1><sg>$
+      OUTPUT: ^v<SV><tv>{^играть<vblex><impf><pres><p1><sg>$}$
+      INPUT:  ^уйна<v><tv><neg><ifi><p3><pl>/играть<vblex><impf><tv><neg><ifi><p3><pl>$
+      OUTPUT: ^v<SV><tv>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
+      -->
       <pattern>
         <pattern-item n="verb-fin"/>
       </pattern>
@@ -1238,16 +1238,17 @@ OUTPUT: ^v<SV><tv>{^не<adv>$ ^играть<vblex><impf><past><mfn><pl>$}$
       </action>
     </rule>
 
-<!--
-INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>$
-OUTPUT: ^n<SN>{^игра<n><f><nn><sg><acc>$}$
-INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
-OUTPUT: ^v<SV>{^быть<vbser><inf>$}$
-INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
-OUTPUT: ^v<SV>{^найти<vblex><perf><inf>$}$
--->
-    <rule comment="To translate every non-finite form with infinitive is not good,
+    <rule comment="REGLA: V
+		   To translate every non-finite form with infinitive is not good,
                    but this is a temporal solution until things get sorted out.">
+      <!--
+      INPUT:  ^уйна<v><tv><ger_past><px3sp><acc>/игра<n><f><nn><px3sp><acc>$
+      OUTPUT: ^n<SN>{^игра<n><f><nn><sg><acc>$}$
+      INPUT:  ^и<cop><ger_past><px3sp><acc>/быть<vbser><ger_past><px3sp><acc>$
+      OUTPUT: ^v<SV>{^быть<vbser><inf>$}$
+      INPUT:  ^тап<v><tv><prc_impf>/найти<vblex><perf><tv><prc_impf>$
+      OUTPUT: ^v<SV>{^найти<vblex><perf><inf>$}$
+      -->
       <pattern>
         <pattern-item n="verb-nonfin"/>
       </pattern>
