@@ -58,6 +58,9 @@ Adjective
 Verb
 ====
 
+Finite forms
+------------
+
 чакырам:^чакыр<v><tv><pres><p1><sg>$:^звать<vblex><impf><pres><p1><sg>$:зову
 чакырамын:^чакыр<v><tv><pres><p1><sg>$:^звать<vblex><impf><pres><p1><sg>$:зову
 чакырасың:^чакыр<v><tv><pres><p2><sg>$:^звать<vblex><impf><pres><p2><sg>$:зовёшь
@@ -129,3 +132,12 @@ Verb
 чакырмаячаклар:^чакыр<v><tv><neg><fut2><p3><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p3><pl>$:не позовут
 чакырмаячаксыз:^чакыр<v><tv><neg><fut2><p2><frm><pl>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
 чакырмаячаксыз:^чакыр<v><tv><neg><fut2><p2><frm><sg>$:^не<adv>$ ^позвать<vblex><perf><fut><p2><pl>$:не позовёте
+
+чакырмакчымын:^чакыр<v><tv><fut_plan><p1><sg>$:^собираться<vblex><impf><pres><p1><sg>$ ^позвать<vblex><perf><inf>$:собираюсь позвать
+чакырмакчысың:^чакыр<v><tv><fut_plan><p2><sg>$:^собираться<vblex><impf><pres><p2><sg>$ ^позвать<vblex><perf><inf>$:собираешься позвать
+чакырмакчы:^чакыр<v><tv><fut_plan><p3><sg>$:^собираться<vblex><impf><pres><p3><sg>$ ^позвать<vblex><perf><inf>$:собирается позвать
+чакырмакчыбыз:^чакыр<v><tv><fut_plan><p1><pl>$:^собираться<vblex><impf><pres><p1><pl>$ ^позвать<vblex><perf><inf>$:собираемся позвать
+чакырмакчысыз:^чакыр<v><tv><fut_plan><p2><pl>$:^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$:собираетесь позвать
+чакырмакчылар:^чакыр<v><tv><fut_plan><p3><pl>$:^собираться<vblex><impf><pres><p3><pl>$ ^позвать<vblex><perf><inf>$:собираются позвать
+чакырмакчысыз:^чакыр<v><tv><fut_plan><p2><frm><pl>$:^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$:собираетесь позвать
+чакырмакчысыз:^чакыр<v><tv><fut_plan><p2><frm><sg>$:^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$:собираетесь позвать

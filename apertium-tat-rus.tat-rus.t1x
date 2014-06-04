@@ -132,6 +132,11 @@
       <cat-item tags="v.*.*.imp.*"/>
     </def-cat>
 
+    <def-cat n="verb-fin-fut-plan">
+      <cat-item tags="v.*.fut_plan.*"/>
+      <cat-item tags="v.*.neg.fut_plan.*"/>
+    </def-cat>
+
     <def-cat n="verb-nonfin">
       <cat-item tags="v.*.inf"/>
       <cat-item tags="v.*.*.inf.*"/>
@@ -303,6 +308,10 @@
     <def-attr n="a_trans">
       <attr-item tags="tv"/>
       <attr-item tags="iv"/>
+    </def-attr>
+    <def-attr n="a_aspec">
+      <attr-item tags="perf"/>
+      <attr-item tags="impf"/>
     </def-attr>
     <def-attr n="a_formality">
       <attr-item tags="frm"/>
@@ -1232,6 +1241,53 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
             <var n="negation"/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: V">
+      <!--
+      INPUT:  ^чакыр<v><tv><fut_plan><p1><sg>/позвать<vblex><perf><tv><fut_plan><p1><sg>$
+      OUTPUT: ^v<SV><tv>{^собираться<vblex><impf><pres><p1><sg>$ ^позвать<vblex><perf><inf>$}$
+      INPUT:  ^чакыр<v><tv><fut_plan><p2><frm><sg>/позвать<vblex><perf><tv><fut_plan><p2><frm><sg>$
+      OUTPUT: ^v<SV><tv>{^собираться<vblex><impf><pres><p2><pl>$ ^позвать<vblex><perf><inf>$}$
+      -->
+      <pattern>
+        <pattern-item n="verb-fin-fut-plan"/>
+      </pattern>
+      <action>
+	<choose>
+	  <when>
+	    <test>
+	      <not><equal><clip pos="1" side="sl" part="a_formality"/><lit v=""/></equal></not>
+	    </test>
+	    <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+	  </when>
+	</choose>
+        <out>
+          <chunk name="v">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="tl" part="a_trans"/></tag>
+            </tags>
+            <var n="negation"/>
+            <lu>
+	      <lit v="собираться"/>
+	      <lit-tag v="vblex"/>
+	      <lit-tag v="impf"/>
+	      <lit-tag v="pres"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+	    <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+	      <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_aspec"/>
+	      <lit-tag v="inf"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
