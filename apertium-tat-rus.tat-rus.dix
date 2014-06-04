@@ -240,6 +240,7 @@
 <e>       <p><l>уйна<s n="v"/><s n="tv"/></l>          <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/><s n="ger_past"/></l><r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>звать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
+<e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>позвать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 
     <!-- Adjectives -->
 

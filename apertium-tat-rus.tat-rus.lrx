@@ -95,4 +95,26 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ярминкә" tags="n.*"/>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><ifi><p3><sg>/звать<vblex><impf><tv><ifi><p3><sg>/позвать<vblex><perf><tv><ifi><p3><sg>$
+    OUTPUT: ^чакыр<v><tv><ifi><p3><sg>/позвать<vblex><perf><tv><ifi><p3><sg>$
+    -->
+    <match tags="v.tv.ifi.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+  <rule>
+    <match tags="v.tv.neg.ifi.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^чакыр<v><tv><past><p3><sg>/звать<vblex><impf><tv><past><p3><sg>/позвать<vblex><perf><tv><past><p3><sg>$
+    OUTPUT: ^чакыр<v><tv><past><p3><sg>/позвать<vblex><perf><tv><past><p3><sg>$
+    -->
+    <match tags="v.tv.past.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+  <rule>
+    <match tags="v.tv.neg.past.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
 </rules>
