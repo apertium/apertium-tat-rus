@@ -153,8 +153,6 @@
       <cat-item tags="v.*.prc_fut"/>
       <cat-item tags="v.*.*.prc_fut"/>
       <cat-item tags="v.*.prc_vol_"/>
-      <cat-item tags="v.*.ger_past.*"/>
-      <cat-item tags="v.*.*.ger_past.*"/>
       <cat-item tags="cop.ger_past.*"/>
       <cat-item tags="cop.*.ger_past.*"/>
       <cat-item tags="v.*.gpr_past"/>
@@ -174,6 +172,11 @@
       <cat-item tags="v.*.gna_cond.*"/>
       <cat-item tags="v.*.*.gna_cond.*"/>
       <cat-item tags="v.*.prc_vol.*"/>
+    </def-cat>
+
+    <def-cat n="verb-nonfin-ger_past">
+      <cat-item tags="v.*.ger_past.*"/>
+      <cat-item tags="v.*.*.ger_past.*"/>
     </def-cat>
 
     <def-cat n="post">
@@ -1346,6 +1349,59 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
             </out>
           </otherwise>
         </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: V">
+      <!--
+      INPUT:  ^кычкыр<v><iv><ger_past><acc>/кричать<vblex><impf><iv><ger_past><acc>$
+      OUTPUT: ^v<SV><ger_past><acc>{^кричать<vblex><impf><past><m><sg>$}$
+      -->
+      <pattern>
+        <pattern-item n="verb-nonfin-ger_past"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal></test>
+            <call-macro n="translate-noun">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk name="n">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+	  <otherwise>
+            <call-macro n="convert-neg-to-ne.adv">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk name="v">
+		<tags>
+		  <tag><lit-tag v="SV"/></tag>
+		  <tag><lit-tag v="ger_past"/></tag>
+		  <tag><clip pos="1" side="sl" part="a_case"/></tag>
+		</tags>
+		<var n="negation"/>
+		<lu>
+		  <clip pos="1" side="tl" part="lemh"/>
+		  <clip pos="1" side="tl" part="a_vblex"/>
+		  <lit-tag v="past"/>
+		  <lit-tag v="m"/>
+		  <lit-tag v="sg"/>
+		  <clip pos="1" side="tl" part="lemq"/>
+		</lu>
+              </chunk>
+            </out>
+	  </otherwise>
+	</choose>
       </action>
     </rule>
 

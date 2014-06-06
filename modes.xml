@@ -25,9 +25,13 @@
         <file name="apertium-tat-rus.tat-rus.t2x"/>
         <file name="tat-rus.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk">
+      <program name="apertium-interchunk">
         <file name="apertium-tat-rus.tat-rus.t3x"/>
         <file name="tat-rus.t3x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-tat-rus.tat-rus.t4x"/>
+        <file name="tat-rus.t4x.bin"/>
       </program>
       <program name="lt-proc $1">
         <file name="tat-rus.autogen.bin"/>
@@ -158,7 +162,7 @@
     </pipeline>
   </mode>
 
-  <mode name="tat-rus-interchunk" install="no">
+  <mode name="tat-rus-interchunk1" install="no">
     <pipeline>
       <program name="lt-proc -w">
         <file name="tat-rus.automorf.bin"/>
@@ -180,6 +184,36 @@
       <program name="apertium-interchunk">
         <file name="apertium-tat-rus.tat-rus.t2x"/>
         <file name="tat-rus.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="tat-rus-interchunk2" install="no">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="tat-rus.automorf.bin"/>
+      </program>
+      <program name="cg-proc -n -w -1">
+        <file name="tat-rus.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="tat-rus.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m"> 
+        <file name="tat-rus.lrx.bin"/> 
+      </program> 
+      <program name="apertium-transfer -b">
+        <file name="apertium-tat-rus.tat-rus.t1x"/>
+        <file name="tat-rus.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-tat-rus.tat-rus.t2x"/>
+        <file name="tat-rus.t2x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-tat-rus.tat-rus.t3x"/>
+        <file name="tat-rus.t3x.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -207,9 +241,13 @@
         <file name="apertium-tat-rus.tat-rus.t2x"/>
         <file name="tat-rus.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk">
+      <program name="apertium-interchunk">
         <file name="apertium-tat-rus.tat-rus.t3x"/>
         <file name="tat-rus.t3x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-tat-rus.tat-rus.t4x"/>
+        <file name="tat-rus.t4x.bin"/>
       </program>
     </pipeline>
   </mode>

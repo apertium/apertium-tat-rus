@@ -230,6 +230,8 @@
 
 <e>       <p><l>әйт<s n="v"/><s n="tv"/></l>           <r>говорить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>әйт<s n="v"/><s n="tv"/></l>           <r>сказать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
+<e>       <p><l>ишет<s n="v"/><s n="tv"/></l>          <r>слышать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
+<e>       <p><l>ишет<s n="v"/><s n="tv"/></l>          <r>услышать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>йөр<s n="v"/><s n="iv"/></l>           <r>ходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>йөгер<s n="v"/><s n="iv"/></l>         <r>бегать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кайт<s n="v"/><s n="iv"/><s n="ger"/></l><r>возвращение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
@@ -237,6 +239,7 @@
 <e>       <p><l>ки<s n="v"/><s n="tv"/></l>            <r>одеть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
 <e>       <p><l>кил<s n="v"/><s n="iv"/></l>           <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кит<s n="v"/><s n="iv"/></l>           <r>уходить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
+<e>       <p><l>кычкыр<s n="v"/><s n="iv"/></l>        <r>кричать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>тукта<s n="v"/><s n="iv"/></l>         <r>остановиться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p></e>
 <e>       <p><l>тукта<s n="v"/><s n="iv"/><s n="ger"/></l><r>остановка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/></l>          <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
@@ -2275,7 +2278,6 @@
 <e>       <p><l>җылы<s n="adj"/></l>                   <r>тёплый<s n="adj"/><s n="sint"/></r></p></e>
 <e>       <p><l>и<s n="cop"/></l>                      <r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>иске<s n="adj"/></l>                   <r>старый<s n="adj"/></r></p></e>
-<e>       <p><l>ишет<s n="v"/><s n="tv"/></l>          <r>слышать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>йокла<s n="v"/><s n="iv"/></l>         <r>спать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>
 <e>       <p><l>кайда<s n="prn"/><s n="itg"/></l>      <r>где<s n="prn"/><s n="itg"/></r></p></e>
 <e>       <p><l>кайт<s n="v"/><s n="iv"/></l>          <r>возвращаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p></e>

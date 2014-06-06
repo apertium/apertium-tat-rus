@@ -16,9 +16,16 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="SN-nom">
+      <cat-item tags="SN.nom"/>
+    </def-cat>
     <def-cat n="SV">
       <cat-item tags="SV"/>
-      <cat-item tags="SV.*"/>
+      <cat-item tags="SV.tv"/>
+      <cat-item tags="SV.iv"/>
+    </def-cat>
+    <def-cat n="SV-ger_past-acc">
+      <cat-item tags="SV.ger_past.acc"/>
     </def-cat>
     <def-cat n="VBSER">
       <cat-item lemma="cop-pres" tags="VBSER"/>
@@ -42,6 +49,7 @@
       <attr-item tags="ins"/>
       <attr-item tags="prp"/>
       <attr-item tags="CD"/>
+      <attr-item tags="2"/>
     </def-attr>
 
     <def-attr n="a_trans">
@@ -79,7 +87,33 @@
       </action>
     </rule>
 
-    <rule>
+    <rule comment="SN (SN SV) SV">
+      <!--
+      INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^n<SN><nom>{^ты<prn><pers><p2><mf><sg><2>$}$ ^v<SV><ger_past><acc>{^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
+      OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^sn_sv<SN><nom><C><OBJ>{^ты<prn><pers><p2><mf><sg><2>$ ^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
+      -->
+      <pattern>
+        <pattern-item n="SN-nom"/>
+        <pattern-item n="SV-ger_past-acc"/>
+      </pattern>
+      <action>
+	<out>
+          <chunk>
+            <lit v="sn_sv"/>
+	    <clip pos="1" part="tags"/>
+	    <lit-tag v="C"/>
+	    <lit-tag v="OBJ"/>
+            <lit v="{"/>
+            <clip pos="1" part="content"/>
+            <b/>
+            <clip pos="2" part="content"/>
+            <lit v="}"/>
+          </chunk>
+	</out>
+      </action>
+    </rule> 
+
+ <rule>
       <!--
       INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^n<SN><nom>{^книга<n><f><nn><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$^dot<SENT>{^.<sent>$}$
       OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><nom>$}$^dot<SENT>{^.<sent>$}$

@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 
-<postchunk>
+<!-- Tests are run by './qa.sh t3x' command.
+     INPUT is the output of t2x,
+     OUTPUT is the expected output of this transfer module.
+
+     Also make sure to run './qa.sh' (with no arguments)
+     before committing to svn. -->
+
+<interchunk>
 
   <section-def-cats>
-    <def-cat n="vbser-pres">
-      <cat-item name="cop-pres"/>
+
+    <def-cat n="SN">
+      <cat-item tags="SN"/>
+      <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="C-OBJ">
+      <cat-item tags="*.C.OBJ"/>
+    </def-cat>
+    <def-cat n="SV">
+      <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
+    </def-cat>
+
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="attrstub">
-      <attr-item tags="attrstub"/>
+
+    <def-attr n="a_stub">
+      <attr-item tags="stub"/>
     </def-attr>
+
   </section-def-attrs>
 
   <section-def-vars>
@@ -21,24 +40,45 @@
 
   <section-rules>
 
-<!--
-INPUT:  ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
-OUTPUT: ""
--->
-    <rule comment="Deletes copula in present tense which
-                   is normally ommitted in Russian.">
+    <rule comment="REGLA: SN C-OBJ SV">
+      <!--
+        INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^sn_sv<SN><nom><C><OBJ>{^ты<prn><pers><p2><mf><sg><2>$ ^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
+        OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$^cs{^,<cm>$ ^что<cnjsub>$}$ ^sn_sv<SN><nom><C><OBJ>{^ты<prn><pers><p2><mf><sg><2>$ ^кричать<vblex><impf><past><m><sg>$}$
+      -->
       <pattern>
-        <pattern-item n="vbser-pres"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="C-OBJ"/>
+        <pattern-item n="SV"/>
       </pattern>
       <action>
         <out>
-          <lu>
-            <lit v=""/>
-          </lu>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <chunk>
+            <lit v="cs"/>
+            <lit v="{"/>
+	    <lit v="^,"/>
+	    <lit-tag v="cm"/>
+	    <lit v="$"/>
+	    <b/>
+	    <lit v="^что"/>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$"/>
+            <lit v="}"/>
+          </chunk>	  
+	  <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
         </out>
       </action>
     </rule>
 
   </section-rules>
-
-</postchunk>
+  
+</interchunk>
