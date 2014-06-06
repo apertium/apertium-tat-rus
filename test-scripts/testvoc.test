@@ -87,3 +87,8 @@ do
 done < /tmp/testCases.txt
 
 echo "$CORRECT / $TOTAL"
+
+if [ "$CORRECT" = "$TOTAL" ] && [ ! "$TOTAL" = "0" ]
+then
+    exit 0
+fi

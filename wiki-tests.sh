@@ -98,5 +98,7 @@ if [ -n $CALC ]; then
 fi
 echo $CORRECT" / "$TOTAL$WORKING;
 
-#rm $SRCLIST $TRGLIST $TSTLIST;
-#echo $SRCLIST $TRGLIST $TSTLIST;
+if [ "$CORRECT" = "$TOTAL" ] && [ ! "$TOTAL" = "0" ]
+then
+    exit 0
+fi
