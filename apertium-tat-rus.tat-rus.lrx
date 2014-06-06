@@ -95,7 +95,15 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ярминкә" tags="n.*"/>
   </rule>
 
-<!-- TODO: the follwing rules should be lemma independent -->
+<!-- TODO: some of the following rules should be lemma independent.
+     The idea is to have two alternative (perfective and imperfective) translations for any Tatar verb.
+     In some cases, e.g. when verb is in present, we can select imperfective variant without referring
+     to any context. In other cases, when both imperfective and perfective verbs are generetable
+     in Russian, we could select one based on context (so that it sounds better and is less misleading).
+     Transfer rules should take into account that two translations are possible for any Tatar verb and work
+     no matter what verb gets selected:
+     e.g. tat. 'foo<v><tv><fut><p1><sg>' -> rus. 'буду bar<vblex><tv><impf><inf>' and
+          tat. 'foo<v><tv><fut><p1><sg>' -> rus. 'baz<vblex><tv><perf><fut><p1><sg>' -->
 
   <rule>
     <!--
