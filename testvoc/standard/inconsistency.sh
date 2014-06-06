@@ -25,13 +25,15 @@ if [[ $DIR = "tat-rus" ]]; then
     T1X=../../apertium-tat-rus.tat-rus.t1x; T1XBIN=../../tat-rus.t1x.bin
     T2X=../../apertium-tat-rus.tat-rus.t2x; T2XBIN=../../tat-rus.t2x.bin
     T3X=../../apertium-tat-rus.tat-rus.t3x; T3XBIN=../../tat-rus.t3x.bin
+    T4X=../../apertium-tat-rus.tat-rus.t4x; T4XBIN=../../tat-rus.t4x.bin
     GENERATORBIN=../../tat-rus.autogen.bin
 
     tee $INPUT |
     apertium-pretransfer |
     apertium-transfer $T1X $T1XBIN $BIDIXBIN |
     apertium-interchunk $T2X $T2XBIN |
-    apertium-postchunk $T3X $T3XBIN | tee $TRANSFOUT |
+    apertium-interchunk $T3X $T3XBIN |
+    apertium-postchunk $T4X $T4XBIN |tee $TRANSFOUT |
     lt-proc -d $GENERATORBIN > $GENOUT
     paste -d % $INPUT $TRANSFOUT $GENOUT |
     sed 's/\^.<sent>\$//g' | sed 's/%/   -->  /g'
