@@ -94,25 +94,43 @@
     <sdef n="cog" 	c=""/> 
     <sdef n="fut" 	c=""/> 
     <sdef n="fut2" 	c=""/>
+    <sdef n="coop" 	c=""/>
   </sdefs>
+
   <pardefs>
 
-<pardef n="__LR_gen">
-  <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
-<pardef n="__LR_dat">
-  <e r="LR"><p><l></l>          <r><s n="dat"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
-<pardef n="__LR_acc">
-  <e r="LR"><p><l></l>          <r><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
-<pardef n="__LR_ins">
-  <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
+    <pardef n="__LR_gen">
+      <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+    <pardef n="__LR_dat">
+      <e r="LR"><p><l></l>          <r><s n="dat"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+    <pardef n="__LR_acc">
+      <e r="LR"><p><l></l>          <r><s n="acc"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+    <pardef n="__LR_ins">
+      <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+
+    <pardef n="impf__verb">
+      <e r="LR"><p><l><s n="pers"/></l><r><s n="pers"/></r></p></e>
+      <e><p><l></l><r></r></p></e>
+    </pardef>
+
+    <pardef n="perf__verb">
+      <e r="LR"><p><l><s n="fut"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="coop"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="coop"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="pass"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="pass"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+      <e><p><l></l><r></r></p></e>
+    </pardef>
+
   </pardefs>
 
   <section id="main" type="standard">
@@ -245,8 +263,8 @@
 <e>       <p><l>уйна<s n="v"/><s n="tv"/></l>          <r>играть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
 <e>       <p><l>уйна<s n="v"/><s n="tv"/><s n="ger_past"/></l><r>игра<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>укы<s n="v"/><s n="tv"/></l>           <r>читать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>звать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p></e>
-<e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>позвать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p></e>
+<e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>звать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>позвать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 
     <!-- Adjectives -->
 
