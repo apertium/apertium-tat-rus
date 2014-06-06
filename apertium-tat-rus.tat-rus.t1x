@@ -186,6 +186,7 @@
       <cat-item tags="v.*.gpr_fut3.*"/>
       <cat-item tags="v.*.*.gpr_fut3.*"/>
       <cat-item tags="v.*.ger_perf.*"/>
+      <cat-item tags="v.*.neg.ger.*"/>
       <cat-item tags="v.*.*.ger_perf.*"/>
       <cat-item tags="v.*.ger_ppot.*"/>
       <cat-item tags="v.*.*.ger_ppot.*"/>
