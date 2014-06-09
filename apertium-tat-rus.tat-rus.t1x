@@ -231,10 +231,11 @@
 
   <section-def-attrs>
     <def-attr n="a_pos">
-      <attr-item tags="adj"/>
       <attr-item tags="n"/>
       <attr-item tags="np"/>
       <attr-item tags="np.cog"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="adv"/>
       <attr-item tags="pred"/>
       <attr-item tags="pr"/>
     </def-attr>
@@ -1452,7 +1453,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
       <action>
         <choose>
           <when>
-            <test><equal><clip pos="1" side="tl" part="a_adv"/><lit-tag v="adv"/></equal></test>
+            <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/></equal></test>
             <out>
               <chunk name="adv">
                 <tags>
