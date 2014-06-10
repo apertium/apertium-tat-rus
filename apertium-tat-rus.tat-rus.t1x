@@ -82,6 +82,8 @@
     <def-cat n="adj">
       <cat-item tags="adj"/>
       <cat-item tags="adj.comp"/>
+      <cat-item tags="adj.advl"/>
+      <cat-item tags="adj.comp.advl"/>
     </def-cat>
 
     <def-cat n="yuq-adj">
@@ -1443,10 +1445,10 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
 <!-- SECTION: Modifiers -->
 
 <!--
-INPUT:  ^яхшы<adj>/хороший<adj>$
+INPUT:  ^яхшы<adj>/хороший<adj><m><an><sg><nom>$
 OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
 -->
-    <rule comment="">
+    <rule comment="REGLA: ADJ">
       <pattern>
         <pattern-item n="adj"/>
       </pattern>
@@ -1487,9 +1489,9 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="lem"/>
-                  <lit-tag v="pred"/>
-                  <lit-tag v="m"/>
-                  <lit-tag v="sg"/>
+                  <clip pos="1" side="tl" part="a_pos"/>
+                  <clip pos="1" side="tl" part="a_gender"/>
+                  <clip pos="1" side="tl" part="a_nbr"/>
                 </lu>
               </chunk>
             </out>
@@ -1501,12 +1503,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
                   <tag><lit-tag v="AdjP"/></tag>
                 </tags>
                 <lu>
-                  <clip pos="1" side="tl" part="lem"/>
-                  <clip pos="1" side="tl" part="a_adj"/>
-                  <lit-tag v="m"/>
-                  <lit-tag v="an"/>
-                  <lit-tag v="sg"/>
-                  <lit-tag v="nom"/>
+                  <clip pos="1" side="tl" part="whole"/>
                 </lu>
               </chunk>
             </out>
