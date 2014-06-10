@@ -352,6 +352,7 @@
     <def-attr n="a_aspec">
       <attr-item tags="perf"/>
       <attr-item tags="impf"/>
+      <attr-item tags="dual"/>
     </def-attr>
     <def-attr n="a_formality">
       <attr-item tags="frm"/>
