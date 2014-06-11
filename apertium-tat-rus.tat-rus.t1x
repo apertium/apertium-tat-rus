@@ -1062,6 +1062,43 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: ADJ N">
+      <!--
+      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><nom>$
+      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><nom>$ ^дерево<n><nt><nn><sg><nom>$}$
+      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><dat>$
+      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><dat>$ ^дерево<n><nt><nn><sg><dat>$}$
+      -->
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="concord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="adj_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: NUM N">
       <!--
       INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><nom>/год<n><m><nn><nom>$
@@ -1611,6 +1648,8 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
         </choose>
       </action>
     </rule>
+
+<!-- SECTION: Punctuation -->
 
     <rule comment="REGLA: SENT">
       <!--
