@@ -630,7 +630,7 @@
       </let>
     </def-macro>
 
-    <def-macro n="concord2" npar="2">
+    <def-macro n="makeagree-det-noun" npar="2">
       <!-- arg.1 determiner arg.2 noun -> determiner noun
            Concords gender, animacy, number, case of the determiner with the head of the NP.
            Assumes that the head of the NP was already 'translated'. -->
@@ -898,7 +898,7 @@
             <call-macro n="translate-noun">
               <with-param pos="2"/>
             </call-macro>
-	    <call-macro n="concord2">
+	    <call-macro n="makeagree-det-noun">
 	      <with-param pos="1"/>
 	      <with-param pos="2"/>
 	    </call-macro>
@@ -1085,7 +1085,7 @@
         <call-macro n="translate-noun">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="concord2">
+        <call-macro n="makeagree-det-noun">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
@@ -1194,7 +1194,7 @@
             <call-macro n="translate-noun">
               <with-param pos="2"/>
             </call-macro>
-            <call-macro n="concord2">
+            <call-macro n="makeagree-det-noun">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -1265,11 +1265,11 @@
           <with-param pos="4"/>
           <with-param pos="3"/>
         </call-macro>
-        <call-macro n="concord2">
+        <call-macro n="makeagree-det-noun">
           <with-param pos="1"/>
           <with-param pos="3"/>
         </call-macro>
-        <call-macro n="concord2">
+        <call-macro n="makeagree-det-noun">
           <with-param pos="2"/>
           <with-param pos="3"/>
         </call-macro>
