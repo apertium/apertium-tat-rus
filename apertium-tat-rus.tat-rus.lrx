@@ -1,18 +1,9 @@
 <rules>
   <rule>
-    <match lemma="эт" tags="n.*"><select lemma="собака" tags="n.*"/></match>
-  </rule>
-  <rule>
-    <match lemma="ул" tags="prn.pers.*"><select lemma="он" tags="prn.pers.*"/></match>
-  </rule>
-
-<!--
-INPUT:  ^Тик<cnjcoo>/Но<cnjcoo>$ ^кичә<adv>/вчера<adv>$ ^бик<adv>/очень<adv>$
-        ^суык<adj>/холодно<adv>/холодный<adj>$ ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
-OUTPUT: ^Тик<cnjcoo>/Но<cnjcoo>$ ^кичә<adv>/вчера<adv>$ ^бик<adv>/очень<adv>$
-        [0]^суык<adj>/холодно<adv>$ ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
--->
-  <rule>
+    <!--
+    INPUT:  ^суык<adj>/холодно<adv>/холодный<adj>$ ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
+    OUTPUT: ^суык<adj>/холодно<adv>$ ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
+    -->
     <match tags="adj"><select tags="adv"/></match>
     <match tags="cop.*"/>
   </rule>
@@ -191,6 +182,16 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     OUTPUT: ^чакыр<v><tv><fut_plan><p1><sg>/позвать<vblex><perf><tv><fut_plan><p1><sg>$
     -->
     <match tags="v.tv.fut_plan.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+<!-- SECTION: default translations -->
+
+  <rule>
+    <!--
+    INPUT:  ^шуннан соң<adv>/потом<adv>/затем<adv>$
+    OUTPUT: ^шуннан соң<adv>/затем<adv>$
+    -->
+    <match lemma="шуннан соң" tags="adv"><select lemma="затем"/></match>
   </rule>
 
 </rules>
