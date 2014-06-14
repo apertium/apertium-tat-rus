@@ -194,4 +194,20 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="шуннан соң" tags="adv"><select lemma="затем"/></match>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^начарлык<n><nom>/плохое<n><nt><nn><nom>/лихое<n><nt><nn><nom>/плохое состояние<n><nt><nn><nom>$
+    OUTPUT: ^начарлык<n><nom>/плохое состояние<n><nt><nn><nom>$
+    -->
+    <match lemma="начарлык" tags="n.*"><select lemma="плохое состояние"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^эшчәнлек<n><nom>/трудолюбие<n><nt><nn><nom>/деятельность<n><f><nn><nom>$
+    OUTPUT: ^эшчәнлек<n><nom>/деятельность<n><f><nn><nom>$
+    -->
+    <match lemma="эшчәнлек" tags="n.*"><select lemma="деятельность"/></match>
+  </rule>
+
 </rules>
