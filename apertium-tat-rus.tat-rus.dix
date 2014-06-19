@@ -2,7 +2,7 @@
 <!--
 	Dictionary:
 	Sections: 1
-	Entries: 5271
+	Entries: 5304
 	Sdefs: 91
 	Paradigms: 8
 
@@ -202,11 +202,12 @@
 <e>       <p><l>бу<s n="det"/><s n="dem"/></l>         <r>этот<s n="det"/><s n="dem"/></r></p></e>
 <e>       <p><l>ул<s n="det"/><s n="dem"/></l>         <r>этот<s n="det"/><s n="dem"/></r></p></e>
 <e>       <p><l>берәр<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="itg"/></r></p></e> <!-- FIXME какой-то (add it first in rus.dix) -->
+<e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 
     <!-- Numerals -->
 
+<e>       <p><l>нуль<s n="num"/></l>                   <r>ноль<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>бер<s n="num"/></l>                    <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-<e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>ике<s n="num"/></l>                    <r>два<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>ике<s n="num"/><s n="subst"/></l>      <r>оба<s n="num"/><s n="m"/><s n="an"/><s n="pl"/></r></p></e>
 <e>       <p><l>өч<s n="num"/></l>                     <r>три<s n="num"/><s n="mfn"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -217,6 +218,38 @@
 <e>       <p><l>сигез<s n="num"/></l>                  <r>восемь<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>тугыз<s n="num"/></l>                  <r>девять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>ун<s n="num"/></l>                     <r>десять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унбер<s n="num"/></l>                  <r>одиннадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унике<s n="num"/></l>                  <r>двенадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унөч<s n="num"/></l>                   <r>тринадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>ундүрт<s n="num"/></l>                 <r>четырнадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унбиш<s n="num"/></l>                  <r>пятнадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>уналты<s n="num"/></l>                 <r>шестнадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унҗиде<s n="num"/></l>                 <r>семьнадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унсигез<s n="num"/></l>                <r>восемнадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>унтугыз<s n="num"/></l>                <r>девятнадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>егерме<s n="num"/></l>                 <r>двадцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>утыз<s n="num"/></l>                   <r>тридцать<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>кырык<s n="num"/></l>                  <r>сорок<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>илле<s n="num"/></l>                   <r>пятьдесять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>алтмыш<s n="num"/></l>                 <r>шестьдесять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>җитмеш<s n="num"/></l>                 <r>семьдесять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>сиксән<s n="num"/></l>                 <r>восемдесять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>туксан<s n="num"/></l>                 <r>девяносто<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>йөз<s n="num"/></l>                    <r>сто<s n="num"/><s n="mfn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ике<b/>йөз<s n="num"/></l>             <r>двести<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>өч<b/>йөз<s n="num"/></l>              <r>триста<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>дүрт<b/>йөз<s n="num"/></l>            <r>четыреста<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>биш<b/>йөз<s n="num"/></l>             <r>пятьсот<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>алты<b/>йөз<s n="num"/></l>            <r>шестьсот<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>җиде<b/>йөз<s n="num"/></l>            <r>семьсот<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>сигез<b/>йөз<s n="num"/></l>           <r>восемьсот<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>тугыз<b/>йөз<s n="num"/></l>           <r>девятьсот<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>мең<s n="num"/></l>                    <r>тысяча<s n="num"/><s n="f"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>төмән<s n="num"/></l>                  <r>десять<b/>тысяч<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>миллион<s n="num"/></l>                <r>миллион<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>миллиард<s n="num"/></l>               <r>миллиард<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>триллион<s n="num"/></l>               <r>триллион<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>триллиард<s n="num"/></l>              <r>триллиард<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 
     <!-- Adpositions -->
 
