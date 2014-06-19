@@ -21,20 +21,19 @@ DIR=$1
 
 if [[ $DIR = "tat-rus" ]]; then
 
-    BIDIXBIN=../../tat-rus.autobil.bin
-    T1X=../../apertium-tat-rus.tat-rus.t1x; T1XBIN=../../tat-rus.t1x.bin
-    T2X=../../apertium-tat-rus.tat-rus.t2x; T2XBIN=../../tat-rus.t2x.bin
-    T3X=../../apertium-tat-rus.tat-rus.t3x; T3XBIN=../../tat-rus.t3x.bin
-    T4X=../../apertium-tat-rus.tat-rus.t4x; T4XBIN=../../tat-rus.t4x.bin
-    GENERATORBIN=../../tat-rus.autogen.bin
+    PRETRANSFER="apertium-pretransfer"
+    LEXTRANSFER="lt-proc -b ../../tat-rus.autobil.bin"
+    LEXSELECTION="lrx-proc -m ../../tat-rus.lrx.bin"
+    TRANSFER_1="apertium-transfer -b ../../apertium-tat-rus.tat-rus.t1x ../../tat-rus.t1x.bin"
+    TRANSFER_2="apertium-interchunk ../../apertium-tat-rus.tat-rus.t2x ../../tat-rus.t2x.bin"
+    TRANSFER_3="apertium-interchunk ../../apertium-tat-rus.tat-rus.t3x ../../tat-rus.t3x.bin"
+    TRANSFER_4="apertium-postchunk ../../apertium-tat-rus.tat-rus.t4x ../../tat-rus.t4x.bin"
+    GENERATOR="lt-proc -d ../../tat-rus.autogen.bin"
 
     tee $INPUT |
-    apertium-pretransfer |
-    apertium-transfer $T1X $T1XBIN $BIDIXBIN |
-    apertium-interchunk $T2X $T2XBIN |
-    apertium-interchunk $T3X $T3XBIN |
-    apertium-postchunk $T4X $T4XBIN |tee $TRANSFOUT |
-    lt-proc -d $GENERATORBIN > $GENOUT
+    $PRETRANSFER | $LEXTRANSFER | $LEXSELECTION |
+    $TRANSFER_1 | $TRANSFER_2 | $TRANSFER_3 | $TRANSFER_4 | tee $TRANSFOUT |
+    $GENERATOR > $GENOUT
     paste -d % $INPUT $TRANSFOUT $GENOUT |
     sed 's/\^.<sent>\$//g' | sed 's/%/   -->  /g'
 
