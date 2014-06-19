@@ -102,56 +102,65 @@
     <sdef n="ord" 	c=""/> 
     <sdef n="dual" 	c=""/> 
   </sdefs>
+
   <pardefs>
 
-<!-- For prepostions -->
+    <!-- For prepostions -->
 
-<pardef n="__LR_gen">
-  <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
-<pardef n="__LR_dat">
-  <e r="LR"><p><l></l>          <r><s n="dat"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
-<pardef n="__LR_acc">
-  <e r="LR"><p><l></l>          <r><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
-<pardef n="__LR_ins">
-  <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
-  <e r="RL"><p><l></l>          <r></r></p></e>
-</pardef>
+    <pardef n="__LR_gen">
+      <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+    <pardef n="__LR_dat">
+      <e r="LR"><p><l></l>          <r><s n="dat"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+    <pardef n="__LR_acc">
+      <e r="LR"><p><l></l>          <r><s n="acc"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
+    <pardef n="__LR_ins">
+      <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
+      <e r="RL"><p><l></l>          <r></r></p></e>
+    </pardef>
 
-<!-- For adjectives -->
+    <!-- For adverbs -->
+    
+    <pardef n="__adv">
+      <e>       <p><l><s n="attr"/></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+      <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
+    </pardef>
+    
+    <!-- For verbs -->
+    
+    <pardef n="impf__verb">
+      <e r="LR"><p><l><s n="pres"/></l><r><s n="pres"/></r></p></e>
+      <e r="LR"><p><l><s n="neg"/><s n="pres"/></l><r><s n="pres"/></r></p></e>
+      <e>       <p><l></l>          <r></r></p></e>
+    </pardef>
+    
+    <pardef n="perf__verb">
+      <e r="LR"><p><l><s n="fut"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="coop"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="coop"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="pass"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
+      <e r="LR"><p><l><s n="pass"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+      <e>       <p><l></l>          <r></r></p></e>
+    </pardef>
+    
+    <!-- For adjectives -->
 
-<pardef n="__adj">
-  <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
-</pardef>
+    <pardef n="__adj">
+      <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+      <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
+    </pardef>
+    
+    <pardef n="__pred">
+      <e>       <p><l></l>          <r><s n="m"/><s n="sg"/></r></p></e>
+      <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="sg"/></r></p></e>
+    </pardef>
 
-<pardef n="__pred">
-  <e>       <p><l></l>          <r><s n="m"/><s n="sg"/></r></p></e>
-  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="sg"/></r></p></e>
-</pardef>
-
-<!-- For verbs -->
-
-<pardef n="impf__verb">
-  <e r="LR"><p><l><s n="pres"/></l><r><s n="pres"/></r></p></e>
-  <e r="LR"><p><l><s n="neg"/><s n="pres"/></l><r><s n="pres"/></r></p></e>
-  <e>       <p><l></l>          <r></r></p></e>
-</pardef>
-
-<pardef n="perf__verb">
-  <e r="LR"><p><l><s n="fut"/></l><r><s n="fut"/></r></p></e>
-  <e r="LR"><p><l><s n="fut2"/></l><r><s n="fut"/></r></p></e>
-  <e r="LR"><p><l><s n="coop"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
-  <e r="LR"><p><l><s n="coop"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
-  <e r="LR"><p><l><s n="pass"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
-  <e r="LR"><p><l><s n="pass"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
-  <e>       <p><l></l>          <r></r></p></e>
-</pardef>
   </pardefs>
 
   <section id="main" type="standard">
@@ -431,6 +440,10 @@
 <e>       <p><l>янәдән<s n="adv"/></l>                 <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>янә<s n="adv"/></l>                    <r>опять<s n="adv"/></r></p></e>
 <e>       <p><l>яртылаш<s n="adv"/></l>                <r>наполовину<s n="adv"/></r></p></e>
+
+        <!-- Adverbs which take KI-->
+
+<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодняшний<s n="adj"/></r></p><par n="__adv"/></e>
 
     <!-- Verbs -->
 
