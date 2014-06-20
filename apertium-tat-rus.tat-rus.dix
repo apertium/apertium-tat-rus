@@ -2,9 +2,9 @@
 <!--
 	Dictionary:
 	Sections: 1
-	Entries: 5304
+	Entries: 5331
 	Sdefs: 91
-	Paradigms: 8
+	Paradigms: 9
 
 -->
 <dictionary>
@@ -102,65 +102,63 @@
     <sdef n="ord" 	c=""/> 
     <sdef n="dual" 	c=""/> 
   </sdefs>
-
   <pardefs>
 
     <!-- For prepostions -->
 
-    <pardef n="__LR_gen">
-      <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
-      <e r="RL"><p><l></l>          <r></r></p></e>
-    </pardef>
-    <pardef n="__LR_dat">
-      <e r="LR"><p><l></l>          <r><s n="dat"/></r></p></e>
-      <e r="RL"><p><l></l>          <r></r></p></e>
-    </pardef>
-    <pardef n="__LR_acc">
-      <e r="LR"><p><l></l>          <r><s n="acc"/></r></p></e>
-      <e r="RL"><p><l></l>          <r></r></p></e>
-    </pardef>
-    <pardef n="__LR_ins">
-      <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
-      <e r="RL"><p><l></l>          <r></r></p></e>
-    </pardef>
+<pardef n="__LR_gen">
+  <e r="LR"><p><l></l>          <r><s n="gen"/></r></p></e>
+  <e r="RL"><p><l></l>          <r></r></p></e>
+</pardef>
+<pardef n="__LR_dat">
+  <e r="LR"><p><l></l>          <r><s n="dat"/></r></p></e>
+  <e r="RL"><p><l></l>          <r></r></p></e>
+</pardef>
+<pardef n="__LR_acc">
+  <e r="LR"><p><l></l>          <r><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r></r></p></e>
+</pardef>
+<pardef n="__LR_ins">
+  <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
+  <e r="RL"><p><l></l>          <r></r></p></e>
+</pardef>
 
     <!-- For adverbs -->
     
-    <pardef n="adv_attr/adj">
-      <e>       <p><l><s n="attr"/></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-      <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
-    </pardef>
+<pardef n="adv_attr/adj">
+  <e>       <p><l><s n="attr"/></l><r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
+</pardef>
     
     <!-- For verbs -->
     
-    <pardef n="impf__verb">
-      <e r="LR"><p><l><s n="pres"/></l><r><s n="pres"/></r></p></e>
-      <e r="LR"><p><l><s n="neg"/><s n="pres"/></l><r><s n="pres"/></r></p></e>
-      <e>       <p><l></l>          <r></r></p></e>
-    </pardef>
+<pardef n="impf__verb">
+  <e r="LR"><p><l><s n="pres"/></l><r><s n="pres"/></r></p></e>
+  <e r="LR"><p><l><s n="neg"/><s n="pres"/></l><r><s n="pres"/></r></p></e>
+  <e>       <p><l></l>          <r></r></p></e>
+</pardef>
     
-    <pardef n="perf__verb">
-      <e r="LR"><p><l><s n="fut"/></l><r><s n="fut"/></r></p></e>
-      <e r="LR"><p><l><s n="fut2"/></l><r><s n="fut"/></r></p></e>
-      <e r="LR"><p><l><s n="coop"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
-      <e r="LR"><p><l><s n="coop"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
-      <e r="LR"><p><l><s n="pass"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
-      <e r="LR"><p><l><s n="pass"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
-      <e>       <p><l></l>          <r></r></p></e>
-    </pardef>
+<pardef n="perf__verb">
+  <e r="LR"><p><l><s n="fut"/></l><r><s n="fut"/></r></p></e>
+  <e r="LR"><p><l><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+  <e r="LR"><p><l><s n="coop"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
+  <e r="LR"><p><l><s n="coop"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+  <e r="LR"><p><l><s n="pass"/><s n="fut"/></l><r><s n="fut"/></r></p></e>
+  <e r="LR"><p><l><s n="pass"/><s n="fut2"/></l><r><s n="fut"/></r></p></e>
+  <e>       <p><l></l>          <r></r></p></e>
+</pardef>
     
     <!-- For adjectives -->
 
-    <pardef n="__adj">
-      <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-      <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
-    </pardef>
+<pardef n="__adj">
+  <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
+</pardef>
     
-    <pardef n="__pred">
-      <e>       <p><l></l>          <r><s n="m"/><s n="sg"/></r></p></e>
-      <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="sg"/></r></p></e>
-    </pardef>
-
+<pardef n="__pred">
+  <e>       <p><l></l>          <r><s n="m"/><s n="sg"/></r></p></e>
+  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="sg"/></r></p></e>
+</pardef>
   </pardefs>
 
   <section id="main" type="standard">
@@ -285,6 +283,11 @@
 
     <!-- Modal particles -->
 
+<e>       <p><l>ла<s n="mod_ass"/></l>                 <r>бы<s n="part"/></r></p></e>
+<e>       <p><l>ла<s n="mod_ass"/></l>                 <r>же<s n="part"/></r></p></e>
+<e>       <p><l>ла<s n="mod_ass"/></l>                 <r>к<b/>сожалению<s n="ij"/></r></p></e>
+<e>       <p><l>ук<s n="postadv"/></l>                 <r>же<s n="part"/></r></p></e>
+<e>       <p><l>чы<s n="emph"/></l>                    <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>шул<s n="mod_ass"/></l>                <r>ведь<s n="part"/></r></p></e>
 
 <!-- SECTION: ~Open categories -->
@@ -456,8 +459,8 @@
 <e>       <p><l>иртән<s n="adv"/></l>                  <r>утром<s n="adv"/></r></p></e>
 <e>       <p><l>иртән<s n="adv"/></l>                  <r>утренний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>кичә<s n="adv"/></l>                   <r>вчера<s n="adv"/></r></p></e>
-<e>       <p><l>кич<s n="adv"/></l>                    <r>вечером<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
-<e>       <p><l>кич<s n="adv"/></l>                    <r>вечерний<s n="adv"/></r></p></e>
+<e>       <p><l>кич<s n="adv"/></l>                    <r>вечером<s n="adv"/></r></p></e>
+<e>       <p><l>кич<s n="adv"/></l>                    <r>вечерний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>кичә<s n="adv"/></l>                   <r>вчерашний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>көндез<s n="adv"/></l>                 <r>днём<s n="adv"/></r></p></e>
 <e>       <p><l>көндез<s n="adv"/></l>                 <r>дневной<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
@@ -5545,7 +5548,6 @@
 <e>       <p><l>үз<s n="det"/><s n="ref"/></l>         <r>свой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/>$</r></p></e>
 <e>       <p><l>үз<s n="prn"/><s n="ref"/><s n="p3"/><s n="sg"/></l><r>сам<s n="prn"/><s n="ref"/><s n="m"/><s n="nn"/><s n="sg"/></r></p></e>
 <e>       <p><l>һәм<s n="cnjcoo"/></l>                 <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>чы<s n="emph"/></l>                    <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>шул<b/>сәбәпле<s n="cnjadv"/></l>      <r>по<b/>этой<b/>причине<s n="cnjadv"/></r></p></e>
 <e>       <p><l>шул<s n="det"/><s n="dem"/></l>        <r>тот<s n="det"/><s n="dem"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>тот<s n="prn"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
