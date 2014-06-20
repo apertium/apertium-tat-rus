@@ -126,7 +126,7 @@
 
     <!-- For adverbs -->
     
-    <pardef n="__adv">
+    <pardef n="adv_attr/adj">
       <e>       <p><l><s n="attr"/></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
       <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
     </pardef>
@@ -291,13 +291,14 @@
 
     <!-- Adverbs -->
 
+        <!-- Interrogative -->
+
 <e>       <p><l>кайда<s n="adv"/><s n="itg"/></l>      <r>где<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>кая<s n="adv"/><s n="itg"/></l>        <r>куда<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>ни<b/>өчен<s n="adv"/><s n="itg"/></l> <r>почему<s n="adv"/><s n="itg"/></r></p></e>
 
 <e>       <p><l>бергә<s n="adv"/></l>                  <r>вместе<s n="adv"/></r></p></e>
 <e>       <p><l>бик<s n="adv"/></l>                    <r>очень<s n="adv"/></r></p></e>
-<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодня<s n="adv"/></r></p></e>
 <e>       <p><l>гына<s n="postadv"/></l>               <r>только<s n="adv"/></r></p></e>
 <e>       <p><l>да<s n="postadv"/></l>                 <r>тоже<s n="adv"/></r></p></e>
 <e>       <p><l>дыр<s n="mod_ind"/></l>                <r>наверное<s n="adv"/></r></p></e>
@@ -306,7 +307,6 @@
 <e>       <p><l>әлегә<s n="adv"/></l>                  <r>пока<s n="adv"/></r></p></e>
 <e>       <p><l>игътибар<b/>белән<s n="adv"/></l>      <r>внимательно<s n="adv"/></r></p></e>
 <e>       <p><l>кичә<s n="adv"/></l>                   <r>вчера<s n="adv"/></r></p></e>
-<e>       <p><l>суык<s n="adj"/></l>                   <r>холодно<s n="adv"/></r></p></e> <!--for 'салкын<adj>? иде' > 'холодно<adv> было'-->
 <e>       <p><l>тагын<s n="adv"/></l>                  <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>хәзер<s n="adv"/></l>                  <r>сейчас<s n="adv"/></r></p></e>
 <e>       <p><l>һаман<s n="adv"/></l>                  <r>всегда<s n="adv"/></r></p></e>
@@ -443,7 +443,8 @@
 
         <!-- Adverbs which take KI-->
 
-<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодняшний<s n="adj"/></r></p><par n="__adv"/></e>
+<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодня<s n="adv"/></r></p></e>
+<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодняшний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 
     <!-- Verbs -->
 
@@ -1509,6 +1510,7 @@
 <e>       <p><l>сулы<s n="adj"/></l>                   <r>водный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>суык<s n="adj"/></l>                   <r>холодный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>суык<s n="adj"/><s n="advl"/></l>      <r>холодно<s n="adv"/></r></p></e>
+<e>       <p><l>суык<s n="adj"/></l>                   <r>холодно<s n="adv"/></r></p></e> <!--for 'салкын<adj>? иде' > 'холодно<adv> было'-->
 <e>       <p><l>сыйфатлы<s n="adj"/></l>               <r>качественный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>табигый<s n="adj"/><s n="advl"/></l>   <r>естественно<s n="adv"/></r></p></e>
 <e>       <p><l>таза<s n="adj"/></l>                   <r>здоровый<s n="adj"/></r></p><par n="__adj"/></e>
