@@ -86,6 +86,7 @@
       <cat-item tags="adj.comp"/>
       <cat-item tags="adj.advl"/>
       <cat-item tags="adj.comp.advl"/>
+      <cat-item tags="adv.attr"/>
     </def-cat>
 
     <def-cat n="yuq-adj">
@@ -1136,6 +1137,8 @@
       OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><nom>$ ^дерево<n><nt><nn><sg><nom>$}$
       INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><dat>$
       OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><dat>$ ^дерево<n><nt><nn><sg><dat>$}$
+      INPUT:  ^соң<adv><attr>/последний<adj><m><an><sg><nom>$ ^хат<n><nom>/письмо<n><nt><nn><nom>$
+      OUTPUT: ^adj_n<SN>{^последний<adj><nt><an><sg><nom>$ ^письмо<n><nt><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="adj"/>
