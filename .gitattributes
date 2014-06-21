@@ -33,6 +33,7 @@ dev/shupashkar/apertium-tt-ru.tt.twol -text
 /pending-tests.sh -text
 /qa.sh -text
 /regression-tests.sh -text
+/tat-rus.t1x.bin -text svneol=unset#unset
 test-scripts/t1x.test -text
 test-scripts/t2x.test -text
 test-scripts/t3x.test -text

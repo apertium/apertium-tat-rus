@@ -653,60 +653,72 @@
 
     <def-macro n="makeagree-num-noun" npar="2">
       <!-- arg.1 numeral arg.2 noun -> numeral noun
-           Assumes that the noun was already 'translated'. -->
+           Assumes that the noun was already 'translated'.
+	   GIVEN:  ^бер<num>/один<num><m><an><sg><nom>$ ^йорт<n><nom>/дом<n><m><nn><sg><nom>$
+	   EXPECT: ^бер<num>/один<num><m><an><sg><nom>$ ^йорт<n><nom>/дом<n><m><nn><sg><nom>$
+           GIVEN:  ^бер<num>/один<num><m><an><sg><nom>$ ^мәктәп<n><nom>/школа<n><f><nn><sg><nom>$
+	   EXPECT: ^бер<num>/один<num><f><an><sg><nom>$ ^мәктәп<n><nom>/школа<n><f><nn><sg><nom>$
+	   GIVEN:  ^бер<num>/один<num><m><an><sg><nom>$ ^йорт<n><dat>/дом<n><m><nn><sg><dat>$
+	   EXPECT: ^бер<num>/один<num><m><an><sg><dat>$ ^йорт<n><dat>/дом<n><m><nn><sg><dat>$
+           GIVEN:  ^ике<num>/два<num><m><an><sg><nom>$ ^йорт<n><nom>/дом<n><m><nn><sg><nom>$
+           EXPECT: ^ике<num>/два<num><m><an><sg><nom>$ ^йорт<n><nom>/дом<n><m><nn><sg><gen>$
+           GIVEN:  ^ике<num>/два<num><m><an><sg><nom>$ ^мәктәп<n><nom>/школа<n><f><nn><sg><gen>$
+           EXPECT: ^ике<num>/два<num><f><an><sg><gen>$ ^мәктәп<n><nom>/школа<n><f><nn><pl><gen>$
+           GIVEN:  ^биш<num>/пять<num><mfn><pl><nom>$ ^йорт<n><nom>/дом<n><m><nn><sg><nom>$
+           EXPECT: ^биш<num>/пять<num><mfn><pl><nom>$ ^йорт<n><nom>/дом<n><m><nn><pl><gen>$
+           GIVEN:  ^биш<num>/пять<num><mfn><pl><nom>$ ^йорт<n><acc>/дом<n><m><nn><sg><acc>$
+           EXPECT: ^биш<num>/пять<num><mfn><pl><acc>$ ^йорт<n><nom>/дом<n><m><nn><pl><gen>$ -->
+      <choose>
+	<when>
+	  <test>
+	    <not><equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></equal></not>
+	  </test>
+	  <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
+	</when>
+      </choose>
+      <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>      
       <choose>
 	<when>
 	  <test>
 	    <not><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal></not>
 	  </test>
-	  <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
 	  <choose>
 	    <when>
 	      <test>
-		<not><equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></equal></not>
+		<or>
+		  <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
+		  <and>
+		    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+		    <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+		  </and>
+		</or>
 	      </test>
-	      <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+	      <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+	      <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
 	    </when>
+	    <otherwise>
+	      <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+	    </otherwise>
 	  </choose>
 	</when>
       </choose>
-      <!-- Adjust numeral's case to noun's case -->
-      <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>
       <choose>
-        <when c="If the noun's case is nominative or accusative when plural, change it to genitive
-                 (except when the numeral is 'один')">
+        <when c="If the number of the numeral is singular, and the gender either masculine or mfn,
+		 in accusative we want to take the animacy tag of the noun, otherwise it should remain 'an'.">
           <test>
             <and>
-              <not><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal></not>
+              <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
 	      <or>
-		<equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
-		<and>
-		  <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
-		  <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
-		</and>
+		<equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
+		<equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="mfn"/></equal>
 	      </or>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
-        </when>
-      </choose>
-      <choose>
-        <when>
-          <test>
-            <and>
-              <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
-              <or>
-                <equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>
-                <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
-              </or>
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
         </when>
-        <otherwise>
-          <let><clip pos="1" side="tl" part="a_anim"/><lit-tag v="an"/></let>
-        </otherwise>
       </choose>
+
     </def-macro>
 
 <!-- SECTION: Prepositional phrases -->
@@ -1157,9 +1169,9 @@
 
     <rule comment="REGLA: NUM N">
       <!--
-      INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><nom>/год<n><m><nn><nom>$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><nom>/год<n><m><nn><nom>$
       OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
-      INPUT:  ^биш<num>/пять<num><mfn><pl><CD>$ ^яшь<n><dat>/год<n><m><nn><dat>$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><dat>/год<n><m><nn><dat>$
       OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
       -->
       <pattern>
@@ -1648,7 +1660,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
 
     <rule comment="REGLA: DET">
       <!--
-        INPUT: ^бер<det><ind>/один<num><m><an><sg><nom>$
+        INPUT:  ^бер<det><ind>/один<num><m><an><sg><nom>$
         OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
       -->
       <pattern>
