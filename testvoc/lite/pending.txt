@@ -17,3 +17,16 @@ Animate noun (different case prep's in particular)
 абыйларымны:^абый<n><pl><px1sg><acc>$:^мой<det><pos><mfn><aa><pl><acc>$ ^брат<n><m><aa><pl><acc>$:моих братьев
 абыйларымнан:^абый<n><pl><px1sg><abl>$:^от<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:от моих братьев
 абыйларымда:^абый<n><pl><px1sg><loc>$:^у<pr>$ ^моих/мой<det><мой<det><pos><mfn><an><pl><gen>$ ^брат<n><m><aa><pl><gen>$:у моих братьев
+
+Verb
+====
+
+Finite forms
+------------
+
+уйный идем:^уйна<v><tv><prc_impf>$ ^и<cop><ifi><p1><sg>$:^играть<vblex><impf><past><m><sg>$:играл
+уйный идең:^уйна<v><tv><prc_impf>$ ^и<cop><ifi><p2><sg>$:^играть<vblex><impf><past><m><sg>$:играл
+уйный иде:^уйна<v><tv><prc_impf>$ ^и<cop><ifi><p3><sg>$:^играть<vblex><impf><past><m><sg>$:играл
+уйный идек:^уйна<v><tv><prc_impf>$ ^и<cop><ifi><p1><pl>$:^играть<vblex><impf><past><mfn><pl>$:играли
+уйный идегез:^уйна<v><tv><prc_impf>$ ^и<cop><ifi><p2><pl>$:^играть<vblex><impf><past><mfn><pl>$:играли
+уйный иделәр:^уйна<v><tv><prc_impf>$ ^и<cop><ifi><p3><pl>$:^играть<vblex><impf><past><mfn><pl>$:играли
