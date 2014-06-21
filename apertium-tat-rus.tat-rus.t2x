@@ -19,6 +19,11 @@
     <def-cat n="SN-nom">
       <cat-item tags="SN.nom"/>
     </def-cat>
+
+    <def-cat n="PP">
+      <cat-item tags="PP"/>
+    </def-cat>
+
     <def-cat n="SV">
       <cat-item tags="SV"/>
       <cat-item tags="SV.tv"/>
@@ -27,6 +32,7 @@
     <def-cat n="SV-ger_past-acc">
       <cat-item tags="SV.ger_past.acc"/>
     </def-cat>
+
     <def-cat n="VBSER">
       <cat-item lemma="cop-pres" tags="VBSER"/>
     </def-cat>
@@ -67,8 +73,8 @@
 
     <rule comment="REGLA: SN VBSER SENT">
       <!--
-        INPUT:  ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
-        OUTPUT: ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
+      INPUT:  ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
+      OUTPUT: ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
       -->
       <pattern>
         <pattern-item n="SN"/>
@@ -87,7 +93,7 @@
       </action>
     </rule>
 
-    <rule comment="SN (SN SV) SV">
+    <rule comment="REGLA: SN (SN SV) SV">
       <!--
       INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^n<SN><nom>{^ты<prn><pers><p2><mf><sg><2>$}$ ^v<SV><ger_past><acc>{^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
       OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^sn_sv<SN><nom><C><OBJ>{^ты<prn><pers><p2><mf><sg><2>$ ^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
@@ -113,10 +119,10 @@
       </action>
     </rule> 
 
- <rule>
+    <rule comment="REGLA: SN SN SV">
       <!--
-      INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^n<SN><nom>{^книга<n><f><nn><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$^dot<SENT>{^.<sent>$}$
-      OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><nom>$}$^dot<SENT>{^.<sent>$}$
+      INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^n<SN><nom>{^книга<n><f><nn><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$
+      OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="SN"/>
@@ -146,6 +152,38 @@
 	  <b/>
           <chunk>
             <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>      
+
+    <rule comment="REGLA: SN SN PP SV -> SN SN SV PP">
+      <!--
+      INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><2>$}$ ^pr_n<PP>{^в<pr>$ ^Казань<np><top><f><sg><prp>$}$ ^v<SV><tv>{^читать<vblex><impf><past><m><sg>$}$
+      OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><2>$}$ ^v<SV><tv>{^читать<vblex><impf><past><m><sg>$}$ ^pr_n<PP>{^в<pr>$ ^Казань<np><top><f><sg><prp>$}$
+      -->
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="PP"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+	    <clip pos="1" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="3" part="whole"/>
           </chunk>
         </out>
       </action>
