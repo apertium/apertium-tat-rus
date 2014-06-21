@@ -261,6 +261,46 @@
 <e>       <p><l>триллион<s n="num"/></l>               <r>триллион<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>триллиард<s n="num"/></l>              <r>триллиард<s n="num"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 
+<e>       <p><l>бер<s n="num"/><s n="ord"/></l>  <r>первый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ике<s n="num"/><s n="ord"/></l>  <r>второй<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>өч<s n="num"/><s n="ord"/></l>  <r>третий<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>дүрт<s n="num"/><s n="ord"/></l>  <r>четвёртый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>биш<s n="num"/><s n="ord"/></l>  <r>пятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>алты<s n="num"/><s n="ord"/></l>  <r>шестой<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>җиде<s n="num"/><s n="ord"/></l>  <r>седьмой<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>сигез<s n="num"/><s n="ord"/></l>  <r>восьмой<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>тугыз<s n="num"/><s n="ord"/></l>  <r>девятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ун<s n="num"/><s n="ord"/></l>  <r>десятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унбер<s n="num"/><s n="ord"/></l>  <r>одиннадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унике<s n="num"/><s n="ord"/></l>  <r>двенадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унөч<s n="num"/><s n="ord"/></l>  <r>тринадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ундүрт<s n="num"/><s n="ord"/></l>  <r>четырнадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унбиш<s n="num"/><s n="ord"/></l>  <r>пятнадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>уналты<s n="num"/><s n="ord"/></l>  <r>шестнадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унҗиде<s n="num"/><s n="ord"/></l>  <r>семьнадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унсигез<s n="num"/><s n="ord"/></l>  <r>восемьнадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>унтугыз<s n="num"/><s n="ord"/></l>  <r>девятнадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>егерме<s n="num"/><s n="ord"/></l>  <r>двадцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>утыз<s n="num"/><s n="ord"/></l>  <r>тридцатый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>кырык<s n="num"/><s n="ord"/></l>  <r>сороковой<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>илле<s n="num"/><s n="ord"/></l>  <r>пятидесятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>алтмыш<s n="num"/><s n="ord"/></l>  <r>шестидесятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>җитмеш<s n="num"/><s n="ord"/></l>  <r>семидесятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>сиксән<s n="num"/><s n="ord"/></l>  <r>восьмидесятый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>туксан<s n="num"/><s n="ord"/></l>  <r>девяностый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>йөз<s n="num"/><s n="ord"/></l>  <r>сотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ике<b/>йөз<s n="num"/><s n="ord"/></l>  <r>двухсотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>өч<b/>йөз<s n="num"/><s n="ord"/></l>  <r>трёхсотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>дүрт<b/>йөз<s n="num"/><s n="ord"/></l>  <r>четырёхсотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>биш<b/>йөз<s n="num"/><s n="ord"/></l>  <r>пятисотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>алты<b/>йөз<s n="num"/><s n="ord"/></l>  <r>шестисотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>җиде<b/>йөз<s n="num"/><s n="ord"/></l>  <r>семисотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>сигез<b/>йөз<s n="num"/><s n="ord"/></l>  <r>восьмисотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>тугыз<b/>йөз<s n="num"/><s n="ord"/></l>  <r>девятисотый<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>мең<s n="num"/><s n="ord"/></l>  <r>тысячный<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>миллион<s n="num"/><s n="ord"/></l>  <r>миллионный<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>миллиард<s n="num"/><s n="ord"/></l>  <r>миллиардный<s n="det"/><s n="ord"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+
     <!-- Adpositions -->
 
 <e c="алдында"><p><l>алд<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>перед<s n="pr"/></r></p><par n="__LR_ins"/></e>

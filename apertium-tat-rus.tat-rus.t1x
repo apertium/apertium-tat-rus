@@ -271,6 +271,7 @@
     </def-attr>
     <def-attr n="a_num">
       <attr-item tags="num"/>
+      <attr-item tags="det.ord"/>
     </def-attr>
 
     <def-attr n="a_adj">
