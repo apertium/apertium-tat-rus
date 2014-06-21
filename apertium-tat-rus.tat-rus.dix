@@ -217,8 +217,8 @@
 <e>       <p><l>бер<s n="num"/></l>                    <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>ике<s n="num"/></l>                    <r>два<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>ике<s n="num"/><s n="subst"/></l>      <r>оба<s n="num"/><s n="m"/><s n="an"/><s n="pl"/></r></p></e>
-<e>       <p><l>өч<s n="num"/></l>                     <r>три<s n="num"/><s n="mfn"/><s n="sg"/><s n="nom"/></r></p></e>
-<e>       <p><l>дүрт<s n="num"/></l>                   <r>четыре<s n="num"/><s n="mfn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>өч<s n="num"/></l>                     <r>три<s n="num"/><s n="mfn"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>дүрт<s n="num"/></l>                   <r>четыре<s n="num"/><s n="mfn"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>биш<s n="num"/></l>                    <r>пять<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>алты<s n="num"/></l>                   <r>шесть<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>җиде<s n="num"/></l>                   <r>семь<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
