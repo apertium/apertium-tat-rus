@@ -206,10 +206,13 @@
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>его<s n="det"/><s n="pos"/></r></p></e>
 <e c="аларның"><p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/><s n="gen"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
 
-<e>       <p><l>бу<s n="det"/><s n="dem"/></l>         <r>этот<s n="det"/><s n="dem"/></r></p></e>
-<e>       <p><l>ул<s n="det"/><s n="dem"/></l>         <r>этот<s n="det"/><s n="dem"/></r></p></e>
-<e>       <p><l>берәр<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="itg"/></r></p></e> <!-- FIXME какой-то (add it first in rus.dix) -->
+<e>       <p><l>бар<s n="det"/><s n="qnt"/></l>        <r>весь<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>берәр<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="itg"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>бу<s n="det"/><s n="dem"/></l>         <r>этот<s n="det"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>үз<s n="det"/><s n="ref"/></l>         <r>свой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>ул<s n="det"/><s n="dem"/></l>         <r>этот<s n="det"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>шул<s n="det"/><s n="dem"/></l>        <r>тот<s n="det"/><s n="dem"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 
     <!-- Numerals -->
 
@@ -5527,7 +5530,6 @@
 <e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/></r></p></e>
 <e>       <p><l>астында<s n="post"/></l>               <r>под<s n="pr"/><s n="ins"/></r></p></e>
 <e>       <p><l>аша<s n="post"/></l>                   <r>через<s n="pr"/><s n="gen"/></r></p></e>
-<e>       <p><l>бар<s n="det"/><s n="qnt"/></l>        <r>весь<s n="det"/><s n="ind"/></r></p></e>
 <e>       <p><l>бетер<s n="vaux"/></l>                 <r>заканчивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>бәлки<s n="cnjcoo"/></l>               <r>а<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>бул<s n="vaux"/><s n="imp"/><s n="p2"/><s n="sg"/></l><r>быть<s n="vbser"/></r></p></e>
@@ -5545,11 +5547,9 @@
 <e>       <p><l>ни өчен<s n="prn"/><s n="itg"/></l>    <r>почему<s n="prn"/><s n="itg"/></r></p></e>
 <e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/><s n="dat"/></r></p></e>
 <e>       <p><l>тик<s n="cnjcoo"/></l>                 <r>но<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>үз<s n="det"/><s n="ref"/></l>         <r>свой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/>$</r></p></e>
 <e>       <p><l>үз<s n="prn"/><s n="ref"/><s n="p3"/><s n="sg"/></l><r>сам<s n="prn"/><s n="ref"/><s n="m"/><s n="nn"/><s n="sg"/></r></p></e>
 <e>       <p><l>һәм<s n="cnjcoo"/></l>                 <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>шул<b/>сәбәпле<s n="cnjadv"/></l>      <r>по<b/>этой<b/>причине<s n="cnjadv"/></r></p></e>
-<e>       <p><l>шул<s n="det"/><s n="dem"/></l>        <r>тот<s n="det"/><s n="dem"/><s n="m"/><s n="nn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>тот<s n="prn"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>это<s n="prn"/><s n="dem"/></r></p></e>
 <e>       <p><l>юк<s n="ij"/></l>                      <r>нет<s n="ij"/></r></p></e>

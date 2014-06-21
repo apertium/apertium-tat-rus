@@ -388,7 +388,11 @@
       <!-- arg.1 any nominal -> v_number
            Sets the 'number' variable to '<pl>' if the word contains the '<pl>' tag,
            to '<sg>' otherwise (in context of Tatar, singular is the absence of the
-           plural affix). -->
+           plural affix).
+           GIVEN:  ^мәктәп<n><nom>/школа<n><f><nn><nom>$
+           EXPECT: number = "<sg>"
+           GIVEN:  ^мәктәп<n><pl><nom>/школа<n><f><nn><pl><nom>$
+           EXPECT: number = "<pl>" -->
       <choose>
         <when>
           <test>
@@ -442,12 +446,10 @@
       </call-macro>
       <choose>
         <when>
-          <test>
-	    <and>
-              <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
-            </and>
-	  </test>
+          <test><and>
+            <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+          </and></test>
           <let><var n="possessive"/>
           <concat>
             <lit v="^мой"/>
@@ -461,19 +463,19 @@
           </let>  
         </when>
         <when>
-          <test><and>
-            <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
-            <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+	  <test><and>
+	    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+	    <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
           </and></test>
           <let><var n="possessive"/>
           <concat>
-              <lit v="^мой"/>
-              <lit-tag v="det"/><lit-tag v="pos"/>
-              <lit-tag v="mfn"/>
-              <var n="animacy"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
-              <clip pos="1" side="tl" part="a_case"/>
-              <lit v="$ "/>
+            <lit v="^мой"/>
+            <lit-tag v="det"/><lit-tag v="pos"/>
+            <lit-tag v="mfn"/>
+            <var n="animacy"/>
+            <clip pos="1" side="tl" part="a_nbr"/>
+            <clip pos="1" side="tl" part="a_case"/>
+            <lit v="$ "/>
           </concat>
           </let>  
         </when>
@@ -614,23 +616,6 @@
       <call-macro n="convert-poss-affix-to-poss-determiner">
         <with-param pos="1"/>
       </call-macro>
-    </def-macro>
-    
-    <def-macro n="adapt-det" npar="1">
-      <!-- arg.1 determiner (det.pos, det.dem etc) -> determiner
-           Sets the determiner to the default <m.an.sg.nom> (to be agreed with the head of the NP in another macro).
-           GIVEN: ^бу<det><dem>/этот<det><dem>$ EXPECT: ^бу<det><dem>/^этот<det><dem><m><an><sg><nom>$ -->
-      <let>
-        <clip pos="1" side="tl" part="whole"/>
-        <concat>
-          <clip pos="1" side="tl" part="lem"/>
-          <clip pos="1" side="tl" part="a_det"/>
-          <lit-tag v="m"/>
-          <lit-tag v="an"/>
-          <lit-tag v="sg"/>
-          <lit-tag v="nom"/>
-        </concat>
-      </let>
     </def-macro>
 
     <def-macro n="makeagree-det-noun" npar="2">
@@ -852,7 +837,7 @@
 	      </and>
 	    </test>
             <out>
-              <chunk name="adj" case="caseFirstWord">
+              <chunk name="adj">
                 <tags>
                   <tag><lit-tag v="AdjP"/></tag>
                 </tags>
@@ -870,7 +855,7 @@
               <when>
                 <test><equal><var n="preposition"/><lit v=""/></equal></test>
                 <out>
-                  <chunk name="n" case="caseFirstWord">
+                  <chunk name="n">
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
                       <tag><clip pos="1" side="tl" part="a_case"/></tag>
@@ -890,7 +875,7 @@
               </when>
               <otherwise>
                 <out>
-                  <chunk name="pr_n" case="caseFirstWord">
+                  <chunk name="pr_n">
                     <tags>
                       <tag><lit-tag v="PP"/></tag>
                     </tags>
@@ -1663,18 +1648,13 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
 
     <rule comment="REGLA: DET">
       <!--
-        INPUT: ^бер<det><ind>/один<num><num><m><an><sg><CD>$
+        INPUT: ^бер<det><ind>/один<num><m><an><sg><nom>$
         OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
-        INPUT: ^бер<num>/один<num><m><an><sg><CD>$
-        OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="det"/>
       </pattern>
       <action>
-        <call-macro n="adapt-det">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="det">
             <tags>
@@ -1690,16 +1670,13 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
 
     <rule comment="REGLA: NUM">
       <!--
-        INPUT:  ^бер<num>/один<num><m><an><sg><CD>$
+        INPUT:  ^бер<num>/один<num><m><an><sg><nom>$
         OUTPUT: ^num<DET>{^один<num><m><an><sg><nom>$}$
-        INPUT:  ^бер<det><ind>/один<num><num><m><an><sg><CD>$
-        OUTPUT: ^det<DET>{^один<num><m><an><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="num"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         <out>
           <chunk name="num">
             <tags>
