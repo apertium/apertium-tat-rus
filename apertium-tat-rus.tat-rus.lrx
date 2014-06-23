@@ -86,6 +86,17 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ярминкә" tags="n.*"/>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^Россия<np><top><attr>/Россия<np><top><f>/российский<adj><m><an><sg><nom>$ ^Федерация<n><px3sp><nom>/Федерация<n><f><nn><px3sp><nom>$
+    OUTPUT: ^Россия<np><top><attr>/российский<adj><m><an><sg><nom>$ ^Федерация<n><px3sp><nom>/Федерация<n><f><nn><px3sp><nom>$
+    -->
+    <match tags="np.top.attr"><select lemma="российский"/></match>
+    <or>
+      <match lemma="федерация"/>
+      <match lemma="республика"/>
+    </or>
+  </rule>
 <!-- TODO: some of the following rules should be lemma independent.
      The idea is to have two alternative (perfective and imperfective) translations for any Tatar verb.
      In some cases, e.g. when verb is in present, we can select imperfective variant without referring
