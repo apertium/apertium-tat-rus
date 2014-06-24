@@ -1054,6 +1054,91 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: N N N">
+      <!--
+      INPUT:  ^Татарстан<np><top><attr>/Татарстан<np><top><m><attr>$ ^Республика<n><px3sp><nom>/Республика<n><f><nn><px3sp><nom>$ ^закон<n><pl><px3sp><nom>/закон<n><m><nn><pl><px3sp><nom>$
+      OUTPUT: ^n_n_n<SN>{^закон<n><m><nn><pl><nom>$ ^Республика<n><f><nn><sg><gen>$ ^Татарстан<np><top><m><sg><nom>$}$
+      INPUT:  ^дәүләт<n><attr>/государственный<adj><m><an><sg><nom>$ ^хакимият<n><px3sp><nom>/управление<n><nt><nn><px3sp><nom>$ ^орган<n><pl><px3sp><nom>/орган<n><m><nn><pl><px3sp><nom>$
+      OUTPUT: ^n_adj_n<SN>{^орган<n><m><nn><pl><nom>$ ^государственный<adj><nt><an><sg><gen>$ ^управление<n><nt><nn><sg><gen>$}$
+      -->
+      <pattern>
+        <pattern-item n="n-attr-or-gen"/>
+        <pattern-item n="n-px3sp"/>
+        <pattern-item n="n-px3sp"/>
+      </pattern>
+      <action>
+	<choose>
+	  <when c="n.attr is translated with an adjective">
+	    <test>
+	      <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+	    </test>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+            <call-macro n="translate-noun">
+              <with-param pos="3"/>
+            </call-macro>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+	    <call-macro n="makeagree-det-noun">
+	      <with-param pos="1"/>
+	      <with-param pos="2"/>
+	    </call-macro>
+	    <out>
+	      <chunk name="n_adj_n">
+		<tags>
+                  <tag><lit-tag v="SN"/></tag>
+		</tags>
+		<var n="preposition"/>
+		<lu>
+                  <clip pos="3" side="tl" part="whole"/>
+		</lu>
+		<b/>
+		<lu>
+                  <clip pos="1" side="tl" part="whole"/>
+		</lu>
+		<b/>
+		<lu>
+                  <clip pos="2" side="tl" part="whole"/>
+		</lu>
+	      </chunk>
+	    </out>
+          </when>
+	  <otherwise>
+            <call-macro n="translate-noun">
+              <with-param pos="1"/>
+            </call-macro>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+            <call-macro n="translate-noun">
+              <with-param pos="3"/>
+            </call-macro>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+            <out>
+              <chunk name="n_n_n">
+		<tags>
+		  <tag><lit-tag v="SN"/></tag>
+		</tags>
+		<var n="preposition"/>
+		<lu>
+		  <clip pos="3" side="tl" part="whole"/>
+		</lu>
+		<b/>
+		<lu>
+		  <clip pos="2" side="tl" part="whole"/>
+		</lu>
+		<b/>
+		<lu>
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
+              </chunk>
+            </out>
+	  </otherwise>
+	</choose>
+      </action>
+    </rule>
+
     <rule comment="REGLA: N POST">
       <!--
       INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
