@@ -5,7 +5,7 @@
 # 1) tat>rus regression tests (without fetching them from the wiki)
 # 2) similar to the regression tests on the wiki tests for single words
 # in testvoc/lite
-# 3) tat>rus corpus test (=tat-rus-corp.test), and,
+# 3) tat>rus corpus test (=corp.test), and,
 # if the 'origina' and 'nova' translations differ, outputs info
 # about the [*@#] errors and the WER of both, so that you can see whether they increased or
 # decreased after the changes you've made.
@@ -30,7 +30,7 @@ then
     echo ""
 fi
 
-./qa.sh tat-rus-corp
+./qa.sh corp
 
 if ! diff corpus/tat-rus-origina.txt corpus/tat-rus-nova.txt > /dev/null; then
 	echo '[*@#] errors tat-rus before:'
