@@ -50,4 +50,7 @@ testvoc/standard/inconsistency-summary.sh -text
 testvoc/standard/inconsistency.sh -text
 testvoc/standard/testvoc-summary.tat-rus.txt -text
 testvoc/standard/testvoc.sh -text
+texts/README -text
+texts/text1.rus.txt -text
+texts/text1.tat.txt -text
 /wiki-tests.sh -text
