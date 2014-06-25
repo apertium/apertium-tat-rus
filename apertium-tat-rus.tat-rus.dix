@@ -553,6 +553,10 @@
 <e>       <p><l>элек<s n="adv"/></l>                   <r>раньше<s n="adv"/></r></p></e>
 <e>       <p><l>элек<s n="adv"/></l>                   <r>бывший<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 
+        <!-- Languages -->
+
+<e>       <p><l>инглизчә<s n="adv"/></l>               <r>по-английски<s n="adv"/></r></p></e>
+
     <!-- Verbs -->
 
 <e>       <p><l>чакыр<s n="v"/><s n="tv"/></l>         <r>звать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -599,6 +603,7 @@
 <e>       <p><l>арттыр<s n="v"/><s n="tv"/></l>        <r>превышать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>арчы<s n="v"/><s n="tv"/></l>          <r>чистить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>арын<s n="v"/><s n="iv"/></l>          <r>избавиться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>ары<s n="v"/><s n="iv"/></l>           <r>устать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>асра<s n="v"/><s n="tv"/></l>          <r>содержать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ат<s n="v"/><s n="tv"/></l>            <r>стрелять<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ата<s n="v"/><s n="tv"/></l>           <r>назвать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
@@ -1274,6 +1279,7 @@
 <e>       <p><l>актив<s n="adj"/></l>                  <r>активный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>актив<s n="adj"/><s n="advl"/></l>     <r>активно<s n="adv"/></r></p></e>
 <e>       <p><l>акустик<s n="adj"/></l>                <r>акустический<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>акыллы<s n="adj"/></l>                 <r>умный<s n="adj"/></r></p><par n="__adj"/></e> <!---->
 <e>       <p><l>алты<b/>яшьлек<s n="adj"/></l>         <r>шестилетний<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>аман<s n="adj"/></l>                   <r>здоровый<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>аман<s n="adj"/><s n="advl"/></l>      <r>здорово<s n="adv"/></r></p></e>
