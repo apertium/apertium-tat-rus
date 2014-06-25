@@ -203,6 +203,8 @@
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/></r></p></e>
 <e>       <p><l>бернәрсә<s n="prn"/><s n="neg"/></l>   <r>ничто<s n="prn"/><s n="neg"/><s n="nt"/><s n="nn"/></r></p></e>
 
+<e>       <p><l>кем<s n="prn"/><s n="itg"/></l>    <r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/></r></p></e>
+
     <!-- Determiners -->
 
 <e c="минем"><p><l>мин<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/><s n="gen"/></l><r>мой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
