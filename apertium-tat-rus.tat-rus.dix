@@ -351,7 +351,10 @@
 
     <!-- Interjections -->
 
+<e>       <p><l>әйе<s n="ij"/></l>                     <r>да<s n="ij"/></r></p></e>
 <e>       <p><l>әлбәттә<s n="ij"/></l>                 <r>конечно<s n="adv"/></r></p></e>  <!-- FIXME CHECK pos russian -->
+<e>       <p><l>рәхмәт<s n="ij"/></l>                  <r>спасибо<s n="ij"/></r></p></e>
+<e>       <p><l>юк<s n="ij"/></l>                      <r>нет<s n="ij"/></r></p></e>
 
         <!-- Кереш сүзләр - Вводные слова -->
 
@@ -373,6 +376,7 @@
         <!-- Interrogative -->
 
 <e>       <p><l>кайда<s n="adv"/><s n="itg"/></l>      <r>где<s n="adv"/><s n="itg"/></r></p></e>
+<e>       <p><l>кайчан<s n="adv"/><s n="itg"/></l>     <r>когда<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>кая<s n="adv"/><s n="itg"/></l>        <r>куда<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>ни<b/>өчен<s n="adv"/><s n="itg"/></l> <r>почему<s n="adv"/><s n="itg"/></r></p></e>
 
@@ -5724,7 +5728,6 @@
 <e>       <p><l>шул<b/>сәбәпле<s n="cnjadv"/></l>      <r>по<b/>этой<b/>причине<s n="cnjadv"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>тот<s n="prn"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>это<s n="prn"/><s n="dem"/></r></p></e>
-<e>       <p><l>юк<s n="ij"/></l>                      <r>нет<s n="ij"/></r></p></e>
 
 <!-- SECTION: Punctuation-->
 
