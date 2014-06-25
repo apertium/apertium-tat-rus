@@ -102,6 +102,7 @@
     <sdef n="ord" 	c=""/> 
     <sdef n="dual" 	c=""/> 
     <sdef n="roman" 	c=""/> 
+    <sdef n="qst" 	c=""/> 
   </sdefs>
   <pardefs>
 
@@ -367,6 +368,7 @@
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>бы<s n="part"/></r></p></e>
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>же<s n="part"/></r></p></e>
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>к<b/>сожалению<s n="ij"/></r></p></e>
+<e>       <p><l>мы<s n="qst"/></l>                     <r/></p></e>
 <e>       <p><l>ук<s n="postadv"/></l>                 <r>же<s n="part"/></r></p></e>
 <e>       <p><l>чы<s n="emph"/></l>                    <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>шул<s n="mod_ass"/></l>                <r>ведь<s n="part"/></r></p></e>
