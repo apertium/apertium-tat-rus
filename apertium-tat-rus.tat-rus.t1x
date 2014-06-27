@@ -36,6 +36,9 @@
       <cat-item tags="np.*.*.gen"/>
       <cat-item tags="v.*.ger.nom"/>
     </def-cat>
+    <def-cat n="n-nom">
+      <cat-item tags="n.nom"/>
+    </def-cat>
     <def-cat n="n-gen">
       <cat-item tags="n.gen"/>
       <cat-item tags="np.*.*.gen"/>
@@ -1188,7 +1191,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: ADJ N">
+    <rule comment="REGLA: DET N">
       <!--
       INPUT:  ^һәр<det><qnt>/каждый<det><def><m><an><sg><nom>$ ^иртә<n><nom>/утро<n><nt><nn><nom>$
       OUTPUT: ^det_n<SN>{^каждый<det><def><nt><an><sg><nom>$ ^утро<n><nt><nn><sg><nom>$}$
@@ -1207,82 +1210,6 @@
         </call-macro>
         <out>
           <chunk name="det_n">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-            </tags>
-            <var n="preposition"/>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: ADJ N">
-      <!--
-      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><nom>$
-      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><nom>$ ^дерево<n><nt><nn><sg><nom>$}$
-      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><dat>$
-      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><dat>$ ^дерево<n><nt><nn><sg><dat>$}$
-      INPUT:  ^соң<adv><attr>/последний<adj><m><an><sg><nom>$ ^хат<n><nom>/письмо<n><nt><nn><nom>$
-      OUTPUT: ^adj_n<SN>{^последний<adj><nt><an><sg><nom>$ ^письмо<n><nt><nn><sg><nom>$}$
-      -->
-      <pattern>
-        <pattern-item n="adj"/>
-        <pattern-item n="n"/>
-      </pattern>
-      <action>
-        <call-macro n="translate-noun">
-          <with-param pos="2"/>
-        </call-macro>
-        <call-macro n="makeagree-det-noun">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="adj_n">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-            </tags>
-            <var n="preposition"/>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: NUM N">
-      <!--
-      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><nom>/год<n><m><nn><nom>$
-      OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
-      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><dat>/год<n><m><nn><dat>$
-      OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
-      -->
-      <pattern>
-        <pattern-item n="num"/>
-        <pattern-item n="n"/>
-      </pattern>
-      <action>
-        <call-macro n="translate-noun">
-          <with-param pos="2"/>
-        </call-macro>
-        <call-macro n="makeagree-num-noun">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="num_n">
             <tags>
               <tag><lit-tag v="SN"/></tag>
             </tags>
@@ -1386,6 +1313,131 @@
             </choose>
           </otherwise>
         </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ADJ N">
+      <!--
+      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><nom>$
+      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><nom>$ ^дерево<n><nt><nn><sg><nom>$}$
+      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><dat>$
+      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><dat>$ ^дерево<n><nt><nn><sg><dat>$}$
+      INPUT:  ^соң<adv><attr>/последний<adj><m><an><sg><nom>$ ^хат<n><nom>/письмо<n><nt><nn><nom>$
+      OUTPUT: ^adj_n<SN>{^последний<adj><nt><an><sg><nom>$ ^письмо<n><nt><nn><sg><nom>$}$
+      -->
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="adj_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NUM N">
+      <!--
+      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><nom>/год<n><m><nn><nom>$
+      OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><nom>$ ^год<n><m><nn><pl><gen>$}$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><dat>/год<n><m><nn><dat>$
+      OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
+      -->
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="makeagree-num-noun">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="num_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NUM N N">
+      <!--
+      INPUT:  ^бер<num>/один<num><m><an><sg><nom>$ ^чиләк<n><nom>/ведро<n><nt><nn><nom>$ ^су<n><nom>/вода<n><f><nn><nom>$
+      OUTPUT: ^num_n_n<SN>{^один<num><nt><an><sg><nom>$ ^ведро<n><nt><nn><sg><nom>$ ^вода<n><f><nn><sg><gen>$}$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^чиләк<n><nom>/ведро<n><nt><nn><nom>$ ^су<n><nom>/вода<n><f><nn><nom>$
+      OUTPUT: ^num_n_n<SN>{^пять<num><mfn><pl><nom>$ ^ведро<n><nt><nn><pl><gen>$ ^вода<n><f><nn><sg><gen>$}$
+      INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^чиләк<n><nom>/ведро<n><nt><nn><nom>$ ^су<n><loc>/вода<n><f><nn><loc>$
+      OUTPUT: ^num_n_n<SN>{^в<pr>$ ^пять<num><mfn><pl><prp>$ ^ведро<n><nt><nn><pl><prp>$ ^вода<n><f><nn><sg><gen>$}$
+      -->
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="n-nom"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="3"/>
+        </call-macro>
+        <let><clip pos="2" side="tl" part="a_case"/><clip pos="3" side="tl" part="a_case"/></let>
+        <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+        <call-macro n="makeagree-num-noun">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="num_n_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 
