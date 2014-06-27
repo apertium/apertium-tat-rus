@@ -227,9 +227,11 @@
       <attr-item tags="prn.pers.p2"/>
       <attr-item tags="prn.pers.p3"/>
       <attr-item tags="prn.dem"/>
+      <attr-item tags="prn.def"/>
       <attr-item tags="prn.itg"/>
       <attr-item tags="prn.neg"/>
       <attr-item tags="adj"/>
+      <attr-item tags="det.def"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.dem"/>

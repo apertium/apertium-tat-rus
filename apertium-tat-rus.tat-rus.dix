@@ -106,6 +106,8 @@
     <sdef n="px" 	c=""/>
     <sdef n="sp" 	c=""/>
     <sdef n="frm" 	c=""/>
+    <sdef n="def" 	c=""/>
+    <sdef n="px1pl" 	c=""/>
   </sdefs>
   <pardefs>
 
@@ -205,8 +207,11 @@
 <e>       <p><l>ул<s n="prn"/><s n="dem"/></l>         <r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
 <e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/></r></p></e>
-<e>       <p><l>бернәрсә<s n="prn"/><s n="neg"/></l>   <r>ничто<s n="prn"/><s n="neg"/><s n="nt"/><s n="nn"/></r></p></e>
 
+<e c="бөтенесе"><p><l>бөтенесе<s n="prn"/><s n="qnt"/><s n="px3sp"/></l><r>весь<s n="prn"/><s n="def"/><s n="nt"/><s n="an"/><s n="sg"/></r></p></e>
+<e c="бөтенебез"><p><l>бөтенесе<s n="prn"/><s n="qnt"/><s n="px1pl"/></l><r>весь<s n="prn"/><s n="def"/><s n="mfn"/><s n="an"/><s n="pl"/></r></p></e>
+<e>       <p><l>һәркем<s n="prn"/><s n="qnt"/></l>    <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/></r></p></e>
+<e>       <p><l>бернәрсә<s n="prn"/><s n="neg"/></l>   <r>ничто<s n="prn"/><s n="neg"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>кем<s n="prn"/><s n="itg"/></l>    <r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/></r></p></e>
 
     <!-- Determiners -->
@@ -405,6 +410,8 @@
 <e>       <p><l>кая<s n="adv"/><s n="itg"/></l>        <r>куда<s n="adv"/><s n="itg"/></r></p></e>
 <e>       <p><l>ни<b/>өчен<s n="adv"/><s n="itg"/></l> <r>почему<s n="adv"/><s n="itg"/></r></p></e>
 
+        <!-- More or less regular stuff -->
+
 <e c="шуннан"><p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>оттуда<s n="adv"/></r></p></e>
 <e c="шуннан"><p><l>шул<s n="prn"/><s n="dem"/><s n="abl"/></l><r>потом<s n="adv"/></r></p></e>
 <e>       <p><l>аеруча<s n="adv"/></l>                 <r>особенно<s n="adv"/></r></p></e>
@@ -503,6 +510,8 @@
 <e>       <p><l>тагын<s n="adv"/></l>                  <r>опять<s n="adv"/></r></p></e>
 <e>       <p><l>тагын<s n="adv"/></l>                  <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>теге<b/>юлы<s n="adv"/></l>            <r>в<b/>тот<b/>раз<s n="adv"/></r></p></e>
+<e>       <p><l>тиздән<s n="adv"/></l>                 <r>скоро<s n="adv"/></r></p></e>
+<e>       <p><l>тиздән<s n="adv"/></l>                 <r>вскоре<s n="adv"/></r></p></e>
 <e>       <p><l>тик<s n="adv"/></l>                    <r>только<s n="adv"/></r></p></e>
 <e>       <p><l>туктаусыз<s n="adv"/></l>              <r>безостановочно<s n="adv"/></r></p></e>
 <e>       <p><l>тулаем<s n="adv"/></l>                 <r>в<b/>целом<s n="adv"/></r></p></e>
@@ -1921,6 +1930,7 @@
 <e>       <p><l>Монтенегро<s n="np"/><s n="top"/></l>  <r>Черногория<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Чехия<s n="np"/><s n="top"/></l>       <r>Чехия<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Чехословакия<s n="np"/><s n="top"/></l><r>Чехословакия<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
+<e>       <p><l>Чистай<s n="np"/><s n="top"/></l><r>Чистополь<s n="np"/><s n="top"/><s n="m"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Чуашстан<s n="np"/><s n="top"/></l>    <r>Чувашия<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Швейцария<s n="np"/><s n="top"/></l>   <r>Швейцария<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Швеция<s n="np"/><s n="top"/></l>      <r>Швеция<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
