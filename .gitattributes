@@ -53,4 +53,7 @@ testvoc/standard/testvoc.sh -text
 texts/README -text
 texts/text1.rus.txt -text
 texts/text1.tat.txt -text
+texts/text2.posted.txt -text
+texts/text2.rus.txt -text
+texts/text2.tat.txt -text
 /wiki-tests.sh -text
