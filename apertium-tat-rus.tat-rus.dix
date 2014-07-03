@@ -189,6 +189,8 @@
     <!-- Conjunctions -->
 
 <e>       <p><l>белән<s n="cnjcoo"/></l>               <r>и<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>ә<s n="cnjcoo"/></l>                   <r>а<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>ә<s n="cnjcoo"/></l>                   <r>однако<s n="cnjcoo"/></r></p></e>
 
     <!-- Pronouns -->
 
@@ -714,6 +716,7 @@
 <e>       <p><l>буй җит<s n="v"/><s n="iv"/></l>       <r>вырасти<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>буйсын<s n="v"/><s n="iv"/></l>        <r>подчиняться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>бул<s n="v"/><s n="iv"/></l>           <r>быть<s n="vbser"/></r></p></e>
+<e>       <p><l>бул<s n="v"/><s n="iv"/></l>           <r>случиться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>бүл<s n="v"/><s n="tv"/></l>           <r>делить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>бүл<s n="v"/><s n="tv"/></l>           <r>поделить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>бүлдер<s n="v"/><s n="tv"/></l>        <r>делить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -5763,7 +5766,6 @@
 <e>       <p><l>бул<s n="vaux"/><s n="imp"/><s n="p2"/><s n="sg"/></l><r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>вә<s n="cnjcoo"/></l>                  <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>да<s n="cnjcoo"/></l>                  <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>ә<s n="cnjcoo"/></l>                   <r>однако<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>әле<s n="cnjcoo"/></l>                 <r>пока<s n="cnjadv"/></r></p></e>
 <e>       <p><l>әмма<s n="cnjcoo"/></l>                <r>но<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>и<s n="cop"/></l>                      <r>быть<s n="vbser"/></r></p></e>
