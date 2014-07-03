@@ -378,7 +378,9 @@
 <e>       <p><l>аша<s n="post"/></l>                   <r>через<s n="pr"/></r></p><par n="__LR_acc"/></e>
 <e>       <p><l>белән<s n="post"/></l>                 <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e>       <p><l>бергә<s n="post"/></l>                 <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
+
 <e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>лы<s n="post"/></l>                    <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/></r></p><par n="__LR_dat"/></e>
 <e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p><par n="__LR_gen"/></e>
@@ -1515,6 +1517,7 @@
 <e>       <p><l>күңелле<s n="adj"/><s n="advl"/></l>   <r>весело<s n="adv"/></r></p></e>
 <e>       <p><l>күп<s n="adj"/></l>                    <r>много<s n="det"/><s n="qnt"/><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>күп<s n="adj"/><s n="advl"/></l>       <r>много<s n="adv"/></r></p></e>
+<e>       <p><l>күп<b/>балалы<s n="adj"/></l>          <r>многодетный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>күренекле<s n="adj"/></l>              <r>видный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>күркәм<s n="adj"/></l>                 <r>красивый<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>күркәм<s n="adj"/><s n="advl"/></l>    <r>красиво<s n="adv"/></r></p></e>
@@ -1687,6 +1690,7 @@
 <e>       <p><l>термик<s n="adj"/></l>                 <r>термический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>территориаль<s n="adj"/></l>           <r>территориальный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>тетрәткеч<s n="adj"/></l>              <r>ужасный<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>тәмле<s n="adj"/></l>                  <r>вкусный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>тәүге<s n="adj"/></l>                  <r>первый<s n="det"/><s n="ord"/></r></p><par n="__adj"/></e>
 <e>       <p><l>техник<s n="adj"/></l>                 <r>технический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>технологик<s n="adj"/></l>             <r>технологический<s n="adj"/></r></p><par n="__adj"/></e>
@@ -1707,6 +1711,7 @@
 <e>       <p><l>төпле<s n="adj"/><s n="advl"/></l>     <r>основательно<s n="adv"/></r></p></e>
 <e>       <p><l>торак<s n="adj"/></l>                  <r>населённый<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>төрки<s n="adj"/></l>                  <r>тюркский<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>төрле<s n="adj"/></l>                  <r>разный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>төсле<s n="adj"/></l>                  <r>цветной<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>тоташ<s n="adj"/></l>                  <r>сплошной<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>тотрыклы<s n="adj"/></l>               <r>устойчивый<s n="adj"/></r></p><par n="__adj"/></e>
