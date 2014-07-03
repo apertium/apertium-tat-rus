@@ -836,6 +836,22 @@
                 </lu>
               </chunk>
             </out>
+	  </when>
+          <when c="similative is translated with an adverb (happens in case of pronouns
+		   шундый->так)">
+	    <test>
+	      <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/></equal>
+	    </test>
+	    <out>
+	      <chunk name="adv">
+                <tags>
+                  <tag><lit-tag v="AdvP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+	      </chunk>
+	    </out>
           </when>
           <otherwise>
             <call-macro n="translate-noun">
