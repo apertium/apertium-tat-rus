@@ -230,4 +230,12 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="эшчәнлек" tags="n.*"><select lemma="деятельность"/></match>
   </rule>
 
+  <rule>
+    <match lemma="сез" tags="prn.pers.p2.pl.gen.@ADVL→"><select lemma="вы" tags="prn.*"/></match>
+  </rule>
+
+  <rule>
+    <match lemma="сез" tags="prn.pers.p2.pl.gen"><select lemma="ваш" tags="det.pos.*"/></match>
+  </rule>
+
 </rules>
