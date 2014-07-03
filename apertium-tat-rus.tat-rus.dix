@@ -189,6 +189,7 @@
     <!-- Conjunctions -->
 
 <e>       <p><l>белән<s n="cnjcoo"/></l>               <r>и<s n="cnjcoo"/></r></p></e>
+<e>       <p><l>да<s n="cnjcoo"/></l>                  <r>тоже<s n="adv"/></r></p></e>
 <e>       <p><l>ә<s n="cnjcoo"/></l>                   <r>а<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>ә<s n="cnjcoo"/></l>                   <r>однако<s n="cnjcoo"/></r></p></e>
 
@@ -5766,7 +5767,6 @@
 <e>       <p><l>бәлки<s n="cnjcoo"/></l>               <r>а<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>бул<s n="vaux"/><s n="imp"/><s n="p2"/><s n="sg"/></l><r>быть<s n="vbser"/></r></p></e>
 <e>       <p><l>вә<s n="cnjcoo"/></l>                  <r>и<s n="cnjcoo"/></r></p></e>
-<e>       <p><l>да<s n="cnjcoo"/></l>                  <r>и<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>әле<s n="cnjcoo"/></l>                 <r>пока<s n="cnjadv"/></r></p></e>
 <e>       <p><l>әмма<s n="cnjcoo"/></l>                <r>но<s n="cnjcoo"/></r></p></e>
 <e>       <p><l>и<s n="cop"/></l>                      <r>быть<s n="vbser"/></r></p></e>
