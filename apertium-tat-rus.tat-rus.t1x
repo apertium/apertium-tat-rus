@@ -261,10 +261,8 @@
     <def-attr n="a_pr">
       <attr-item tags="pr"/>
     </def-attr>
-    <def-attr n="a_vbser">
+    <def-attr n="a_verb">
       <attr-item tags="vbser"/>
-    </def-attr>
-    <def-attr n="a_vblex">
       <attr-item tags="vblex.impf"/>
       <attr-item tags="vblex.perf"/>
       <attr-item tags="vbmod.impf.tv"/> <!-- Modal verbs already receive transitivity tags in rus.dix-->
@@ -785,7 +783,7 @@
         <clip pos="1" side="tl" part="whole"/>
         <concat>
             <clip pos="1" side="tl" part="lemh"/>
-            <clip pos="1" side="tl" part="a_vblex"/>
+            <clip pos="1" side="tl" part="a_verb"/>
             <clip pos="1" side="tl" part="a_tense"/>
             <var n="gender"/>
             <clip pos="1" side="tl" part="a_pers"/>
@@ -1531,7 +1529,7 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
             <var n="negation"/>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_vbser"/>
+              <clip pos="1" side="tl" part="a_verb"/>
               <lit-tag v="pres"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
@@ -1557,7 +1555,7 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_vbser"/>
+              <clip pos="1" side="tl" part="a_verb"/>
               <lit-tag v="past"/>
               <lit-tag v="nt"/>
               <clip pos="1" side="tl" part="a_nbr"/>
@@ -1687,7 +1685,7 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
                 <var n="negation"/>
                 <lu>
                   <clip pos="1" side="tl" part="lemh"/>
-                  <clip pos="1" side="tl" part="a_vblex"/><!-- OR --><clip pos="1" side="tl" part="a_vbser"/>
+                  <clip pos="1" side="tl" part="a_verb"/>
                   <lit-tag v="inf"/>
                   <clip pos="1" side="tl" part="lemq"/>
                 </lu>
@@ -1738,7 +1736,7 @@ OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
 		<var n="negation"/>
 		<lu>
 		  <clip pos="1" side="tl" part="lemh"/>
-		  <clip pos="1" side="tl" part="a_vblex"/>
+		  <clip pos="1" side="tl" part="a_verb"/>
 		  <lit-tag v="past"/>
 		  <lit-tag v="m"/>
 		  <lit-tag v="sg"/>

@@ -97,7 +97,8 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
       <match lemma="республика"/>
     </or>
   </rule>
-<!-- TODO: some of the following rules should be lemma independent.
+
+<!-- SECTION: TODO: some of the following rules should be lemma independent.
      The idea is to have two alternative (perfective and imperfective) translations for any Tatar verb.
      In some cases, e.g. when verb is in present, we can select imperfective variant without referring
      to any context. In other cases, when both imperfective and perfective verbs are generetable
@@ -129,6 +130,14 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     OUTPUT: ^чакыр<v><tv><ifi><p3><sg>/позвать<vblex><perf><tv><ifi><p3><sg>$
     -->
     <match tags="v.tv.ifi.*"><select lemma="позвать" tags="*.perf.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^бул<v><iv><ifi><p3><sg>/быть<vbser><ifi><p3><sg>/случиться<vblex><perf><iv><ifi><p3><sg>$
+    OUTPUT: ^бул<v><iv><ifi><p3><sg>/случиться<vblex><perf><iv><ifi><p3><sg>$
+    -->
+    <match lemma="бул" tags="v.iv.ifi.p3.sg"><select lemma="случиться"/></match>
   </rule>
 
   <rule>
