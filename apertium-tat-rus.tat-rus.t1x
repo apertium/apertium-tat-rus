@@ -98,6 +98,7 @@
 
     <def-cat n="det">
       <cat-item tags="det.*"/>
+      <cat-item lemma="иң" tags="adv"/>
     </def-cat>
 
     <def-cat n="num">
@@ -1234,6 +1235,50 @@
             <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: DET ADJ N">
+      <!--
+      INPUT:  ^иң<adv>/самый<det><def><m><an><sg><nom>$ ^тәмле<adj>/вкусный<adj><m><an><sg><nom>$ ^аш<n><nom>/еда<n><f><nn><nom>$
+      OUTPUT: ^det_adj_n<SN>{^самый<det><def><f><an><sg><nom>$ ^вкусный<adj><f><an><sg><nom>$ ^еда<n><f><nn><sg><nom>$}$
+      -->
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="det_adj_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
