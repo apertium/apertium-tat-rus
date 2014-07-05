@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- nxml -*- -->
+
 <rules>
   <rule>
     <!--
@@ -96,6 +99,14 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
       <match lemma="федерация"/>
       <match lemma="республика"/>
     </or>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^ул<prn><dem><gen><@ADVL→>/его<det><pos><@ADVL→>/он<prn><pers><p3><m><sg><gen><@ADVL→>$
+    OUTPUT: ^ул<prn><dem><gen><@ADVL→>/он<prn><pers><p3><m><sg><gen><@ADVL→>$
+    -->
+    <match lemma="ул" tags="prn.dem.gen.@ADVL→"><select lemma="он"/></match>
   </rule>
 
 <!-- SECTION: TODO: some of the following rules should be lemma independent.

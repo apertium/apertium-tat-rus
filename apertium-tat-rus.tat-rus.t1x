@@ -217,10 +217,13 @@
       <attr-item tags="pred"/>
       <attr-item tags="pr"/>
     </def-attr>
-    <def-attr n="a_syn">
+    <def-attr n="a_syntag">
       <attr-item tags="advl"/>
       <attr-item tags="attr"/>
       <attr-item tags="subst"/>
+    </def-attr>
+    <def-attr n="a_SYNLABEL">
+      <attr-item tags="@ADVL→"/>
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
@@ -695,7 +698,6 @@
           <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
         </when>
       </choose>
-
     </def-macro>
 
 <!-- SECTION: Prepositional phrases -->
@@ -812,6 +814,8 @@
       OUTPUT: ^pr_n<PP>{^в<pr>$ ^школа<n><f><nn><sg><prp>$}$
       INPUT:  ^яхшы<adj><subst><dat>/хороший<adj><m><an><dat>$
       OUTPUT: ^n<SN><dat>{^хороший<adj><m><an><sg><2>$}$
+      INPUT:  ^ул<prn><dem><gen><@ADVL→>/он<prn><pers><p3><m><sg><gen><@ADVL→>$
+      OUTPUT: ^n<SN><gen><@ADVL→>{^он<prn><pers><p3><m><sg><2>$}$
       -->
       <pattern>
         <pattern-item n="n"/>
@@ -821,7 +825,7 @@
           <when>
             <test>
 	      <and>
-	        <equal><clip pos="1" side="sl" part="a_syn"/><lit-tag v="attr"/></equal>
+	        <equal><clip pos="1" side="sl" part="a_syntag"/><lit-tag v="attr"/></equal>
 	        <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
 	      </and>
 	    </test>
@@ -864,6 +868,7 @@
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
                       <tag><clip pos="1" side="tl" part="a_case"/></tag>
+                      <tag><clip pos="1" side="tl" part="a_SYNLABEL"/></tag>
                     </tags>
                     <var n="possessive"/>
                     <lu>
