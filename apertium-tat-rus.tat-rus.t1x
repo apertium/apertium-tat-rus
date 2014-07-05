@@ -868,7 +868,7 @@
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
                       <tag><clip pos="1" side="tl" part="a_case"/></tag>
-                      <tag><clip pos="1" side="tl" part="a_SYNLABEL"/></tag>
+                      <tag><clip pos="1" side="sl" part="a_SYNLABEL"/></tag>
                     </tags>
                     <var n="possessive"/>
                     <lu>
