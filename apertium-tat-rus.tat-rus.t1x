@@ -216,6 +216,7 @@
       <attr-item tags="adv"/>
       <attr-item tags="pred"/>
       <attr-item tags="pr"/>
+      <attr-item tags="det"/>
     </def-attr>
     <def-attr n="a_syntag">
       <attr-item tags="advl"/>
@@ -239,6 +240,7 @@
       <attr-item tags="prn.neg"/>
       <attr-item tags="adj"/>
       <attr-item tags="det.def"/>
+      <attr-item tags="det.ref"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.dem"/>
@@ -559,7 +561,10 @@
         <when>
           <test>
 	    <and>
-              <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+	      <or>
+		<equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>
+		<equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="det"/></equal>
+	      </or>
               <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
 	      <or>
 		<equal><clip pos="1" side="tl" part="a_gender"/><lit-tag v="m"/></equal>

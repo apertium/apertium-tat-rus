@@ -230,7 +230,11 @@
 <e>       <p><l>һәркем<s n="prn"/><s n="qnt"/></l>    <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/></r></p></e>
 
 <e>       <p><l>бернәрсә<s n="prn"/><s n="neg"/></l>   <r>ничто<s n="prn"/><s n="neg"/><s n="nt"/><s n="nn"/></r></p></e>
+
 <e>       <p><l>кем<s n="prn"/><s n="itg"/></l>    <r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/></r></p></e>
+<e>       <p><l>нинди<s n="prn"/><s n="itg"/><s n="sim"/></l><r>какой<s n="prn"/><s n="itg"/><s n="m"/><s n="an"/></r></p></e>
+
+<e>       <p><l>үз<s n="prn"/><s n="ref"/></l><r>сам<s n="det"/><s n="ref"/><s n="m"/><s n="an"/></r></p></e>
 
     <!-- Determiners -->
 
@@ -403,6 +407,7 @@
 <e>       <p><l>әйе<s n="ij"/></l>                     <r>да<s n="ij"/></r></p></e>
 <e>       <p><l>әлбәттә<s n="ij"/></l>                 <r>конечно<s n="adv"/></r></p></e>  <!-- FIXME CHECK pos russian -->
 <e>       <p><l>менә<s n="ij"/></l>                    <r>вот<s n="part"/></r></p></e>
+<e>       <p><l>рәхим<b/>итегез<s n="ij"/></l>         <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>рәхмәт<s n="ij"/></l>                  <r>спасибо<s n="ij"/></r></p></e>
 <e>       <p><l>юк<s n="ij"/></l>                      <r>нет<s n="ij"/></r></p></e>
 <e>       <p><l>яме<s n="ij"/></l>                     <r>ладно<s n="adv"/></r></p></e>
