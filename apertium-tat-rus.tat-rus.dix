@@ -2,9 +2,9 @@
 <!--
 	Dictionary:
 	Sections: 1
-	Entries: 5488
-	Sdefs: 92
-	Paradigms: 9
+	Entries: 5573
+	Sdefs: 100
+	Paradigms: 11
 
 -->
 <dictionary>
@@ -101,15 +101,15 @@
     <sdef n="pprs" 	c=""/> 
     <sdef n="ord" 	c=""/> 
     <sdef n="dual" 	c=""/> 
-    <sdef n="roman" 	c=""/>
-    <sdef n="qst" 	c=""/>
-    <sdef n="px" 	c=""/>
-    <sdef n="sp" 	c=""/>
-    <sdef n="frm" 	c=""/>
-    <sdef n="def" 	c=""/>
-    <sdef n="px1pl" 	c=""/>
-    <sdef n="px2pl" 	c=""/>
-    <sdef n="sim" 	c=""/>
+    <sdef n="roman" 	c=""/> 
+    <sdef n="qst" 	c=""/> 
+    <sdef n="px" 	c=""/> 
+    <sdef n="sp" 	c=""/> 
+    <sdef n="frm" 	c=""/> 
+    <sdef n="def" 	c=""/> 
+    <sdef n="px1pl" 	c=""/> 
+    <sdef n="px2pl" 	c=""/> 
+    <sdef n="sim" 	c=""/> 
   </sdefs>
   <pardefs>
 
@@ -179,7 +179,6 @@
   <e>       <p><l></l>          <r></r></p></e>
   <e>       <p><l><s n="attr"/></l><r></r></p></e>
 </pardef>
-
   </pardefs>
 
   <section id="main" type="standard">
@@ -219,8 +218,8 @@
 <e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>это<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></r></p></e>
-<e c="шундый">       <p><l>шул<s n="prn"/><s n="dem"/><s n="sim"/><s n="nom"/></l><r>так<s n="adv"/></r></p></e>
-<e c="шундый">       <p><l>шул<s n="prn"/><s n="dem"/><s n="qnt"/></l><r>так<s n="adv"/></r></p></e>
+<e c="шундый"><p><l>шул<s n="prn"/><s n="dem"/><s n="sim"/><s n="nom"/></l><r>так<s n="adv"/></r></p></e>
+<e c="шундый"><p><l>шул<s n="prn"/><s n="dem"/><s n="qnt"/></l><r>так<s n="adv"/></r></p></e>
 
 <e c="барысы"><p><l>бары<s n="prn"/><s n="qnt"/><s n="px3sp"/></l><r>весь<s n="prn"/><s n="def"/><s n="nt"/><s n="an"/><s n="sg"/></r></p></e>
 <e c="барыбыз"><p><l>бары<s n="prn"/><s n="qnt"/><s n="px1pl"/></l><r>весь<s n="prn"/><s n="def"/><s n="mfn"/><s n="an"/><s n="pl"/></r></p></e>
@@ -234,14 +233,14 @@
 <e c="бөтенесе"><p><l>бөтенесе<s n="prn"/><s n="qnt"/><s n="px3sp"/></l><r>весь<s n="prn"/><s n="def"/><s n="mfn"/><s n="an"/><s n="pl"/></r></p></e>
 <e c="бөтенесен"><p><l>бөтенесе<s n="prn"/><s n="qnt"/><s n="px3sp"/><s n="acc"/></l><r>весь<s n="prn"/><s n="def"/><s n="mfn"/><s n="aa"/><s n="pl"/><s n="acc"/></r></p></e>
 <e c="бөтенесен"><p><l>бөтенесе<s n="prn"/><s n="qnt"/><s n="px3sp"/><s n="acc"/></l><r>весь<s n="prn"/><s n="def"/><s n="mfn"/><s n="nn"/><s n="pl"/><s n="acc"/></r></p></e>
-<e>       <p><l>һәркем<s n="prn"/><s n="qnt"/></l>    <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/></r></p></e>
+<e>       <p><l>һәркем<s n="prn"/><s n="qnt"/></l>     <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/></r></p></e>
 
 <e>       <p><l>бернәрсә<s n="prn"/><s n="neg"/></l>   <r>ничто<s n="prn"/><s n="neg"/><s n="nt"/><s n="nn"/></r></p></e>
 
-<e>       <p><l>кем<s n="prn"/><s n="itg"/></l>    <r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/></r></p></e>
+<e>       <p><l>кем<s n="prn"/><s n="itg"/></l>        <r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>нинди<s n="prn"/><s n="itg"/><s n="sim"/></l><r>какой<s n="prn"/><s n="itg"/><s n="m"/><s n="an"/></r></p></e>
 
-<e>       <p><l>үз<s n="prn"/><s n="ref"/></l><r>сам<s n="det"/><s n="ref"/><s n="m"/><s n="an"/></r></p></e>
+<e>       <p><l>үз<s n="prn"/><s n="ref"/></l>         <r>сам<s n="det"/><s n="ref"/><s n="m"/><s n="an"/></r></p></e>
 
     <!-- Determiners -->
 
@@ -435,7 +434,7 @@
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>бы<s n="part"/></r></p></e>
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>же<s n="part"/></r></p></e>
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>к<b/>сожалению<s n="ij"/></r></p></e>
-<e>       <p><l>мы<s n="qst"/></l>                     <r/></p></e>
+<e>       <p><l>мы<s n="qst"/></l>                     <r></r></p></e>
 <e>       <p><l>ук<s n="postadv"/></l>                 <r>же<s n="part"/></r></p></e>
 <e>       <p><l>чы<s n="emph"/></l>                    <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>шул<s n="mod_ass"/></l>                <r>ведь<s n="part"/></r></p></e>
@@ -1480,7 +1479,7 @@
 <e>       <p><l>изге<s n="adj"/></l>                   <r>святой<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>икътисади<s n="adj"/></l>              <r>экономический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>инсафлы<s n="adj"/></l>                <r>воспитать<s n="vblex"/><s n="perf"/><s n="pp"/><s n="pasv"/></r></p><par n="__adj"/></e>
-<e>       <p><l>иртә<s n="adj"/><s n="comp"/></l>       <r>рано<s n="adv"/></r></p></e>
+<e>       <p><l>иртә<s n="adj"/><s n="comp"/></l>      <r>рано<s n="adv"/></r></p></e>
 <e>       <p><l>иртә<s n="adj"/><s n="comp"/><s n="advl"/></l><r>раньше<s n="adv"/></r></p></e>
 <e>       <p><l>исән<s n="adj"/></l>                   <r>живой<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>исән<s n="adj"/><s n="advl"/></l>      <r>живо<s n="adv"/></r></p></e>
@@ -1988,7 +1987,7 @@
 <e>       <p><l>Монтенегро<s n="np"/><s n="top"/></l>  <r>Черногория<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Чехия<s n="np"/><s n="top"/></l>       <r>Чехия<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Чехословакия<s n="np"/><s n="top"/></l><r>Чехословакия<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
-<e>       <p><l>Чистай<s n="np"/><s n="top"/></l><r>Чистополь<s n="np"/><s n="top"/><s n="m"/></r></p><par n="np_top"/></e>
+<e>       <p><l>Чистай<s n="np"/><s n="top"/></l>      <r>Чистополь<s n="np"/><s n="top"/><s n="m"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Чуашстан<s n="np"/><s n="top"/></l>    <r>Чувашия<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Швейцария<s n="np"/><s n="top"/></l>   <r>Швейцария<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
 <e>       <p><l>Швеция<s n="np"/><s n="top"/></l>      <r>Швеция<s n="np"/><s n="top"/><s n="f"/></r></p><par n="np_top"/></e>
