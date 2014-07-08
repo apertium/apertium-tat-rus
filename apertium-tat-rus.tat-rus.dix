@@ -413,7 +413,9 @@
 
 <e>       <p><l>әйе<s n="ij"/></l>                     <r>да<s n="ij"/></r></p></e>
 <e>       <p><l>әлбәттә<s n="ij"/></l>                 <r>конечно<s n="adv"/></r></p></e>  <!-- FIXME CHECK pos russian -->
+<e>       <p><l>кит<b/>аннан<s n="ij"/></l>            <r>неужели<s n="part"/></r></p></e>
 <e>       <p><l>менә<s n="ij"/></l>                    <r>вот<s n="part"/></r></p></e>
+<e>       <p><l>рәхим<b/>ит<s n="ij"/></l>             <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>рәхим<b/>итегез<s n="ij"/></l>         <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>рәхмәт<s n="ij"/></l>                  <r>спасибо<s n="ij"/></r></p></e>
 <e>       <p><l>юк<s n="ij"/></l>                      <r>нет<s n="ij"/></r></p></e>
@@ -1478,6 +1480,8 @@
 <e>       <p><l>изге<s n="adj"/></l>                   <r>святой<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>икътисади<s n="adj"/></l>              <r>экономический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>инсафлы<s n="adj"/></l>                <r>воспитать<s n="vblex"/><s n="perf"/><s n="pp"/><s n="pasv"/></r></p><par n="__adj"/></e>
+<e>       <p><l>иртә<s n="adj"/><s n="comp"/></l>       <r>рано<s n="adv"/></r></p></e>
+<e>       <p><l>иртә<s n="adj"/><s n="comp"/><s n="advl"/></l><r>раньше<s n="adv"/></r></p></e>
 <e>       <p><l>исән<s n="adj"/></l>                   <r>живой<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>исән<s n="adj"/><s n="advl"/></l>      <r>живо<s n="adv"/></r></p></e>
 <e>       <p><l>иске<s n="adj"/></l>                   <r>старый<s n="adj"/></r></p><par n="__adj"/></e>
@@ -1845,6 +1849,7 @@
 <e>       <p><l>этник<s n="adj"/></l>                  <r>этнический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>этнографик<s n="adj"/></l>             <r>этнографический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>эчке<s n="adj"/></l>                   <r>внутренний<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>юан<s n="adj"/></l>                    <r>тучный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>югары<s n="adj"/></l>                  <r>высокий<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>югары<s n="adj"/><s n="advl"/></l>     <r>высоко<s n="adv"/></r></p></e>
 <e>       <p><l>юеш<s n="adj"/></l>                    <r>мокрый<s n="adj"/></r></p><par n="__adj"/></e>
@@ -1854,6 +1859,7 @@
 <e>       <p><l>юләр<s n="adj"/><s n="advl"/></l>      <r>глупо<s n="adv"/></r></p></e>
 <e>       <p><l>юридик<s n="adj"/></l>                 <r>юридический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>ябык<s n="adj"/></l>                   <r>закрыть<s n="vblex"/><s n="perf"/><s n="pp"/><s n="pasv"/></r></p><par n="__adj"/></e>
+<e>       <p><l>ябык<s n="adj"/></l>                   <r>худой<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>ягымлы<s n="adj"/></l>                 <r>ласковый<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>ягымлы<s n="adj"/><s n="advl"/></l>    <r>ласково<s n="adv"/></r></p></e>
 <e>       <p><l>якты<s n="adj"/></l>                   <r>светлый<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
