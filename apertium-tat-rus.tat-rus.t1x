@@ -1835,6 +1835,7 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
               <chunk name="bar">
                 <tags>
                   <tag><lit-tag v="VBSER"/></tag>
+                  <tag><clip pos="1" side="tl" part="a_neg"/></tag>
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>

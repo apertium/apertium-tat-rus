@@ -161,8 +161,13 @@
 <pardef n="__adj">
   <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
+</pardef>
+<pardef n="__adj_sint">
+  <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
   <e>       <p><l><s n="comp"/></l><r><s n="comp"/></r></p></e>
 </pardef>
+
 <pardef n="__pred">
   <e>       <p><l></l>          <r><s n="m"/><s n="sg"/></r></p></e>
   <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="sg"/></r></p></e>
@@ -1628,7 +1633,7 @@
 <e>       <p><l>ныклы<s n="adj"/><s n="advl"/></l>     <r>крепко<s n="adv"/></r></p></e>
 <e>       <p><l>озак<s n="adj"/><s n="advl"/></l>      <r>долго<s n="adv"/></r></p></e>
 <e>       <p><l>өзлексез<s n="adj"/><s n="advl"/></l>  <r>непрерывно<s n="adv"/></r></p></e>
-<e>       <p><l>озын<s n="adj"/></l>                   <r>длинный<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>озын<s n="adj"/></l>                   <r>длинный<s n="adj"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>өлкән<s n="adj"/></l>                  <r>старший<s n="adj"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>олы<s n="adj"/></l>                    <r>большой<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>өметле<s n="adj"/></l>                 <r>перспективный<s n="adj"/></r></p><par n="__adj"/></e>
@@ -3884,6 +3889,7 @@
 <e>       <p><l>әсәр<s n="n"/></l>                     <r>произведение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>әти<s n="n"/></l>                      <r>отец<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>әти<s n="n"/></l>                      <r>папа<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+<e>       <p><l>әти-әни<s n="n"/></l>                  <r>родитель<s n="n"/><s n="m"/><s n="aa"/><s n="pl"/></r></p></e>
 <e>       <p><l>әткә<s n="n"/></l>                     <r>папа<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>ефәк<s n="n"/></l>                     <r>шёлк<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>әфәнде<s n="n"/></l>                   <r>господин<s n="n"/><s n="m"/><s n="aa"/></r></p></e>

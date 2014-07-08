@@ -19,6 +19,9 @@
     <def-cat n="SN-nom">
       <cat-item tags="SN.nom"/>
     </def-cat>
+    <def-cat n="SN-gen-ADVL">
+      <cat-item tags="SN.gen.@ADVL→"/>
+    </def-cat>
 
     <def-cat n="PP">
       <cat-item tags="PP"/>
@@ -33,9 +36,14 @@
       <cat-item tags="SV.ger_past.acc"/>
     </def-cat>
 
-    <def-cat n="VBSER">
+    <def-cat n="VBSER-pres">
       <cat-item lemma="cop-pres" tags="VBSER"/>
     </def-cat>
+    <def-cat n="VBSER-bar">
+      <cat-item lemma="bar" tags="VBSER"/>
+      <cat-item lemma="bar" tags="VBSER.neg"/>
+    </def-cat>
+
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
     </def-cat>
@@ -63,6 +71,10 @@
       <attr-item tags="iv"/>
     </def-attr>
 
+    <def-attr n="a_neg">
+      <attr-item tags="neg"/>
+    </def-attr>
+
   </section-def-attrs>
 
   <section-def-vars>
@@ -71,14 +83,14 @@
 
   <section-rules>
 
-    <rule comment="REGLA: SN VBSER SENT">
+    <rule comment="REGLA: SN VBSER SENT -> SN SENT">
       <!--
       INPUT:  ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
       OUTPUT: ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
       -->
       <pattern>
         <pattern-item n="SN"/>
-        <pattern-item n="VBSER"/>
+        <pattern-item n="VBSER-pres"/>
         <pattern-item n="SENT"/>
       </pattern>
       <action>
@@ -119,7 +131,7 @@
       </action>
     </rule> 
 
-    <rule comment="REGLA: SN SN SV">
+    <rule comment="REGLA: SN SN SV -> SN SV SN">
       <!--
       INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^n<SN><nom>{^книга<n><f><nn><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$
       OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><nom>$}$ ^v<SV><tv>{^читать<vblex><impf><pres><p1><sg>$}$ ^n<SN><acc>{^книга<n><f><nn><sg><nom>$}$
@@ -186,6 +198,50 @@
             <clip pos="3" part="whole"/>
           </chunk>
         </out>
+      </action>
+    </rule>      
+
+    <rule>
+      <!--
+      INPUT:  ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^n<SN><nom>{^собака<n><f><aa><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$
+      OUTPUT: ^pr<PREP>{^у<pr>$}$ ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$ ^n<SN><gen>{^собака<n><f><aa><sg><2>$}$
+      -->
+      <pattern>
+        <pattern-item n="SN-gen-ADVL"/>
+        <pattern-item n="SN-nom"/>
+        <pattern-item n="VBSER-bar"/>
+      </pattern>
+      <action>
+	<choose>
+	  <when>
+	    <test><equal><clip pos="3" part="a_neg"/><lit-tag v="neg"/></equal></test>
+	    <let><clip pos="2" part="a_case"/><lit-tag v="gen"/></let>
+	  </when>
+	</choose>
+        <out>
+          <chunk>
+            <lit v="pr"/>
+	    <lit-tag v="PREP"/>
+            <lit v="{"/>
+	    <lit v="^"/>
+            <lit v="у"/>
+	    <lit-tag v="pr"/>
+	    <lit v="$"/>
+            <lit v="}"/>
+          </chunk>
+	  <b/>
+          <chunk>
+	    <clip pos="1" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+	</out>
       </action>
     </rule>      
 
