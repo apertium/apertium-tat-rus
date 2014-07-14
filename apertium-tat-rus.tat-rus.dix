@@ -1047,6 +1047,8 @@
 <e>       <p><l>сөйлә<s n="v"/><s n="tv"/></l>         <r>рассказывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>сөйләш<s n="v"/><s n="tv"/></l>        <r>говорить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>сөйләш<s n="v"/><s n="tv"/></l>        <r>поговорить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>соңга<b/>кал<s n="v"/><s n="iv"/></l>  <r>опаздывать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>соңга<b/>кал<s n="v"/><s n="iv"/></l>  <r>опоздать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>сора<s n="v"/><s n="tv"/></l>          <r>спрашивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>сора<s n="v"/><s n="tv"/></l>          <r>спросить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>сораш<s n="v"/><s n="tv"/></l>         <r>расспрашивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
