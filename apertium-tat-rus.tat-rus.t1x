@@ -363,6 +363,7 @@
     <def-list n="nouns-with-loc-case">
       <list-item v="год"/>
       <list-item v="сад"/>
+      <list-item v="угол"/>
     </def-list>
 
   </section-def-lists>
