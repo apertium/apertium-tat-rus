@@ -110,6 +110,7 @@
     <sdef n="px1pl" 	c=""/> 
     <sdef n="px2pl" 	c=""/> 
     <sdef n="sim" 	c=""/> 
+    <sdef n="prp" 	c=""/> 
   </sdefs>
   <pardefs>
 
@@ -129,6 +130,10 @@
 </pardef>
 <pardef n="__LR_ins">
   <e r="LR"><p><l></l>          <r><s n="ins"/></r></p></e>
+  <e r="RL"><p><l></l>          <r></r></p></e>
+</pardef>
+<pardef n="__LR_prp">
+  <e r="LR"><p><l></l>          <r><s n="prp"/></r></p></e>
   <e r="RL"><p><l></l>          <r></r></p></e>
 </pardef>
 
@@ -405,6 +410,7 @@
 <e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>лы<s n="post"/></l>                    <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/></r></p><par n="__LR_dat"/></e>
+<e>       <p><l>турында<s n="post"/></l>               <r>о<s n="pr"/></r></p><par n="__LR_prp"/></e>
 <e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p><par n="__LR_gen"/></e>
 
