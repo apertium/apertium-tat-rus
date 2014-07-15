@@ -360,6 +360,11 @@
       <list-item v="шәһәр"/>
     </def-list>
 
+    <def-list n="nouns-with-loc-case">
+      <list-item v="год"/>
+      <list-item v="сад"/>
+    </def-list>
+
   </section-def-lists>
 
   <section-def-macros>
@@ -529,9 +534,17 @@
         </when>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></equal></test>
-          <let><var n="preposition"/><concat><lit v="^в"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
-          <let><var n="case"/><lit-tag v="prp"/></let>
-        </when>
+	  <let><var n="preposition"/><concat><lit v="^в"/><lit-tag v="pr"/><lit v="$ "/></concat></let>
+	  <choose>
+	    <when>
+	      <test><in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="nouns-with-loc-case"/></in></test>
+              <let><var n="case"/><lit-tag v="loc"/></let>
+            </when>
+	    <otherwise>
+              <let><var n="case"/><lit-tag v="prp"/></let>
+	    </otherwise>
+	  </choose>
+	</when>
         <when>
           <test><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="sim"/></equal></test>
           <let><var n="preposition"/><concat><lit v="^как"/><lit-tag v="adv"/><lit-tag v="rel"/><lit v="$ "/></concat></let>
