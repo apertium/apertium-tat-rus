@@ -627,7 +627,7 @@
 <e>       <p><l>көндез<s n="adv"/></l>                 <r>днём<s n="adv"/></r></p></e>
 <e>       <p><l>көндез<s n="adv"/></l>                 <r>дневной<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>соң<s n="adv"/></l>                    <r>поздно<s n="adv"/></r></p></e>
-<e>       <p><l>соң<s n="adv"/></l>                    <r>последний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>соң<s n="adv"/></l>                    <r>последний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>хәзер<s n="adv"/></l>                  <r>сейчас<s n="adv"/></r></p></e>
 <e>       <p><l>хәзер<s n="adv"/></l>                  <r>нынешний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>элек<s n="adv"/></l>                   <r>раньше<s n="adv"/></r></p></e>
@@ -1454,7 +1454,8 @@
 <e>       <p><l>әдәби<s n="adj"/></l>                  <r>литературный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>әдәпсез<s n="adj"/></l>                <r>невежливый<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>әзер<s n="adj"/></l>                   <r>готовый<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
-<e>       <p><l>әйбәт<s n="adj"/></l>                  <r>хороший<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
+<e>       <p><l>әйбәт<s n="adj"/></l>                  <r>хороший<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
+<e>       <p><l>әйбәт<s n="adj"/><s n="comp"/></l>     <r>лучше<s n="adj"/><s n="sint"/><s n="comp"/></r></p></e>
 <e>       <p><l>әйбәт<s n="adj"/><s n="advl"/></l>     <r>хорошо<s n="adv"/></r></p></e>
 <e>       <p><l>әкрен<s n="adj"/></l>                  <r>медленный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>әкрен<s n="adj"/><s n="advl"/></l>     <r>медленно<s n="adv"/></r></p></e>
