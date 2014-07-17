@@ -45,15 +45,15 @@ Noun
 Adjective
 =========
 
-яхшы:^яхшы<adj>$:^хороший<adj><m><an><sg><nom>$:хороший
-яхшырак:^яхшы<adj><comp>$:^лучший<adj><m><an><sg><nom>$:лучший
+яхшы:^яхшы<adj>$:^хороший<adj><sint><m><an><sg><nom>$:хороший
+яхшырак:^яхшы<adj><comp>$:^лучший<adj><sint><m><an><sg><nom>$:лучший
 яхшы:^яхшы<adj><advl>$:^хорошо<adv>$:хорошо
 яхшырак:^яхшы<adj><comp><advl>$:^лучше<adv>$:лучше
 
-яхшы:^яхшы<adj><subst><nom>$:^хороший<adj><m><an><sg><nom>$:хороший
-яхшыга:^яхшы<adj><subst><dat>$:^хороший<adj><m><an><sg><dat>$:хорошему
-яхшыдан:^яхшы<adj><subst><abl>$:^из<pr>$ ^хороший<adj><m><an><sg><gen>$:из хорошего
-яхшыларсыз:^яхшы<adj><subst><pl>$ ^сыз<post>$:^без<pr>$ ^хороший<adj><mfn><an><pl><gen>$:без хороших
+яхшы:^яхшы<adj><subst><nom>$:^хороший<adj><sint><m><an><sg><nom>$:хороший
+яхшыга:^яхшы<adj><subst><dat>$:^хороший<adj><sint><m><an><sg><dat>$:хорошему
+яхшыдан:^яхшы<adj><subst><abl>$:^из<pr>$ ^хороший<adj><sint><m><an><sg><gen>$:из хорошего
+яхшыларсыз:^яхшы<adj><subst><pl>$ ^сыз<post>$:^без<pr>$ ^хороший<adj><sint><mfn><an><pl><gen>$:без хороших
 
 Verb
 ====

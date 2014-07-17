@@ -1333,8 +1333,8 @@
 
     <!-- Adjectives -->
 
-<e>       <p><l>яхшы<s n="adj"/></l>                   <r>хороший<s n="adj"/></r></p><par n="__adj"/></e>
-<e>       <p><l>яхшы<s n="adj"/><s n="comp"/></l>      <r>лучший<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>яхшы<s n="adj"/></l>                   <r>хороший<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
+<e>       <p><l>яхшы<s n="adj"/><s n="comp"/></l>      <r>лучший<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>яхшы<s n="adj"/><s n="advl"/></l>      <r>хорошо<s n="adv"/></r></p></e>
 <e>       <p><l>яхшы<s n="adj"/><s n="comp"/><s n="advl"/></l><r>лучше<s n="adv"/></r></p></e>
 
