@@ -109,6 +109,15 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ул" tags="prn.dem.gen.@ADVL→"><select lemma="он"/></match>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^Бер<num>/Один<num><m><an><sg><nom>$ ^ай<n><abl>/луна<n><f><nn><abl>/месяц<n><m><nn><abl>$
+    OUTPUT: ^Бер<num>/Один<num><m><an><sg><nom>$ ^ай<n><abl>/месяц<n><m><nn><abl>$
+    -->
+    <match tags="num"/>
+    <match lemma="ай" tags="n.*"><select lemma="месяц"/></match>
+  </rule>
+
 <!-- SECTION: TODO: some of the following rules should be lemma independent.
      The idea is to have two alternative (perfective and imperfective) translations for any Tatar verb.
      In some cases, e.g. when verb is in present, we can select imperfective variant without referring
