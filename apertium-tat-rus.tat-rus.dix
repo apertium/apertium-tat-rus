@@ -167,12 +167,6 @@
   <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
 </pardef>
-<pardef n="__adj_sint">
-  <e>       <p><l></l>          <r><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="an"/></r></p></e>
-  <e>       <p><l><s n="comp"/></l><r><s n="comp"/></r></p></e>
-</pardef>
-
 <pardef n="__pred">
   <e>       <p><l></l>          <r><s n="m"/><s n="sg"/></r></p></e>
   <e>       <p><l><s n="subst"/></l><r><s n="m"/><s n="sg"/></r></p></e>
@@ -1565,7 +1559,7 @@
 <e>       <p><l>күп<s n="adj"/><s n="advl"/></l>       <r>много<s n="adv"/></r></p></e>
 <e>       <p><l>күп<b/>балалы<s n="adj"/></l>          <r>многодетный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>күренекле<s n="adj"/></l>              <r>видный<s n="adj"/></r></p><par n="__adj"/></e>
-<e>       <p><l>күркәм<s n="adj"/></l>                 <r>красивый<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>күркәм<s n="adj"/></l>                 <r>красивый<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>күркәм<s n="adj"/><s n="advl"/></l>    <r>красиво<s n="adv"/></r></p></e>
 <e>       <p><l>куркыныч<s n="adj"/></l>               <r>опасный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>куркыныч<s n="adj"/><s n="advl"/></l>  <r>опасно<s n="adv"/></r></p></e>
@@ -1574,9 +1568,9 @@
 <e>       <p><l>кыен<s n="adj"/><s n="advl"/></l>      <r>трудно<s n="adv"/></r></p></e>
 <e>       <p><l>кызганыч<s n="adj"/><s n="advl"/></l>  <r>жалко<s n="adv"/></r></p></e>
 <e>       <p><l>кызу<s n="adj"/><s n="advl"/></l>      <r>жарко<s n="adv"/></r></p></e>
-<e>       <p><l>кызык<s n="adj"/></l>                  <r>интересный<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>кызык<s n="adj"/></l>                  <r>интересный<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>кызык<s n="adj"/><s n="advl"/></l>     <r>интересно<s n="adv"/></r></p></e>
-<e>       <p><l>кызыклы<s n="adj"/></l>                <r>интересный<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>кызыклы<s n="adj"/></l>                <r>интересный<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>кызыклы<s n="adj"/><s n="advl"/></l>   <r>интересно<s n="adv"/></r></p></e>
 <e>       <p><l>кызыл<s n="adj"/></l>                  <r>красный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>кызыл<s n="adj"/><s n="advl"/></l>     <r>красно<s n="adv"/></r></p></e>
@@ -1602,7 +1596,7 @@
 <e>       <p><l>математик<s n="adj"/></l>              <r>математический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>материалистик<s n="adj"/></l>          <r>материалистический<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>материаль<s n="adj"/></l>              <r>материальный<s n="adj"/></r></p><par n="__adj"/></e>
-<e>       <p><l>матур<s n="adj"/></l>                  <r>красивый<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>матур<s n="adj"/></l>                  <r>красивый<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>матур<s n="adj"/><s n="advl"/></l>     <r>красиво<s n="adv"/></r></p></e>
 <e>       <p><l>махсус<s n="adj"/><s n="advl"/></l>    <r>специально<s n="adv"/></r></p></e>
 <e>       <p><l>мәгълүм<s n="adj"/></l>                <r>известный<s n="adj"/></r></p><par n="__adj"/></e>
@@ -1645,7 +1639,7 @@
 <e>       <p><l>ныклы<s n="adj"/><s n="advl"/></l>     <r>крепко<s n="adv"/></r></p></e>
 <e>       <p><l>озак<s n="adj"/><s n="advl"/></l>      <r>долго<s n="adv"/></r></p></e>
 <e>       <p><l>өзлексез<s n="adj"/><s n="advl"/></l>  <r>непрерывно<s n="adv"/></r></p></e>
-<e>       <p><l>озын<s n="adj"/></l>                   <r>длинный<s n="adj"/></r></p><par n="__adj_sint"/></e>
+<e>       <p><l>озын<s n="adj"/></l>                   <r>длинный<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>өлкән<s n="adj"/></l>                  <r>старший<s n="adj"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>олы<s n="adj"/></l>                    <r>большой<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>өметле<s n="adj"/></l>                 <r>перспективный<s n="adj"/></r></p><par n="__adj"/></e>
@@ -1830,7 +1824,7 @@
 <e>       <p><l>чагыштырмалы<s n="adj"/></l>           <r>сравнительный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>чамалы<s n="adj"/></l>                 <r>ограниченный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>чамалы<s n="adj"/></l>                 <r>умеренный<s n="adj"/></r></p><par n="__adj"/></e>
-<e>       <p><l>чибәр<s n="adj"/></l>                  <r>красивый<s n="adj"/></r></p><par n="__adj"/></e>
+<e>       <p><l>чибәр<s n="adj"/></l>                  <r>красивый<s n="adj"/><s n="sint"/></r></p><par n="__adj"/></e>
 <e>       <p><l>чибәр<s n="adj"/><s n="advl"/></l>     <r>красиво<s n="adv"/></r></p></e>
 <e>       <p><l>чикле<s n="adj"/></l>                  <r>ограниченный<s n="adj"/></r></p><par n="__adj"/></e>
 <e>       <p><l>чирле<s n="adj"/><s n="advl"/></l>     <r>больно<s n="adv"/></r></p></e>
