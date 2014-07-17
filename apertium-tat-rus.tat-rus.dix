@@ -596,42 +596,42 @@
         <!-- Adverbs which take KI-->
 
 <e>       <p><l>башта<s n="adv"/></l>                  <r>вначале<s n="adv"/></r></p></e>
-<e>       <p><l>башта<s n="adv"/></l>                  <r>начальный<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
-<e>       <p><l>башта<s n="adv"/></l>                  <r>исходный<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>башта<s n="adv"/></l>                  <r>начальный<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>башта<s n="adv"/></l>                  <r>исходный<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>бая<s n="adv"/></l>                    <r>недавно<s n="adv"/></r></p></e>
-<e>       <p><l>бая<s n="adv"/></l>                    <r>недавний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>бая<s n="adv"/></l>                    <r>недавний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>бире<s n="adv"/></l>                   <r>сюда<s n="adv"/></r></p></e>
-<e>       <p><l>бире<s n="adv"/></l>                   <r>ближний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>бире<s n="adv"/></l>                   <r>ближний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>борын<s n="adv"/></l>                  <r>прежде<s n="adv"/></r></p></e>
-<e>       <p><l>борын<s n="adv"/></l>                  <r>древний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
-<e>       <p><l>борын<s n="adv"/></l>                  <r>прежний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>борын<s n="adv"/></l>                  <r>древний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>борын<s n="adv"/></l>                  <r>прежний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодня<s n="adv"/></r></p></e>
-<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодняшний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>бүген<s n="adv"/></l>                  <r>сегодняшний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>быел<s n="adv"/></l>                   <r>в<b/>этом<b/>году<s n="adv"/></r></p></e>
 <e>       <p><l>быел<s n="adv"/></l>                   <r>ныне<s n="adv"/></r></p></e>
-<e>       <p><l>быел<s n="adv"/></l>                   <r>нынешний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>быел<s n="adv"/></l>                   <r>нынешний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>былтыр<s n="adv"/></l>                 <r>в<b/>прошлом<b/>году<s n="adv"/></r></p></e>
-<e>       <p><l>былтыр<s n="adv"/></l>                 <r>прошлогодний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>былтыр<s n="adv"/></l>                 <r>прошлогодний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>әле<s n="adv"/></l>                    <r>ещё<s n="adv"/></r></p></e>
 <e>       <p><l>әле<s n="adv"/></l>                    <r>пока<s n="adv"/></r></p></e>
-<e>       <p><l>әле<s n="adv"/></l>                    <r>настоящий<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>әле<s n="adv"/></l>                    <r>настоящий<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>әле<s n="adv"/></l>                    <r>сегодняшний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>әүвәл<s n="adv"/></l>                  <r>раньше<s n="adv"/></r></p></e>
-<e>       <p><l>әүвәл<s n="adv"/></l>                  <r>прежний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>әүвәл<s n="adv"/></l>                  <r>прежний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>иртән<s n="adv"/></l>                  <r>утром<s n="adv"/></r></p></e>
-<e>       <p><l>иртән<s n="adv"/></l>                  <r>утренний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>иртән<s n="adv"/></l>                  <r>утренний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>кичә<s n="adv"/></l>                   <r>вчера<s n="adv"/></r></p></e>
 <e>       <p><l>кич<s n="adv"/></l>                    <r>вечером<s n="adv"/></r></p></e>
-<e>       <p><l>кич<s n="adv"/></l>                    <r>вечерний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
-<e>       <p><l>кичә<s n="adv"/></l>                   <r>вчерашний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>кич<s n="adv"/></l>                    <r>вечерний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>кичә<s n="adv"/></l>                   <r>вчерашний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>көндез<s n="adv"/></l>                 <r>днём<s n="adv"/></r></p></e>
-<e>       <p><l>көндез<s n="adv"/></l>                 <r>дневной<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>көндез<s n="adv"/></l>                 <r>дневной<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>соң<s n="adv"/></l>                    <r>поздно<s n="adv"/></r></p></e>
 <e>       <p><l>соң<s n="adv"/></l>                    <r>последний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>хәзер<s n="adv"/></l>                  <r>сейчас<s n="adv"/></r></p></e>
-<e>       <p><l>хәзер<s n="adv"/></l>                  <r>нынешний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>хәзер<s n="adv"/></l>                  <r>нынешний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>элек<s n="adv"/></l>                   <r>раньше<s n="adv"/></r></p></e>
-<e>       <p><l>элек<s n="adv"/></l>                   <r>бывший<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
+<e>       <p><l>элек<s n="adv"/></l>                   <r>бывший<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 
         <!-- Languages -->
 
@@ -1409,7 +1409,7 @@
 <e>       <p><l>бозык<s n="adj"/></l>                  <r>испортить<s n="vblex"/><s n="perf"/><s n="pp"/><s n="pasv"/></r></p><par n="__adj"/></e>
 <e>       <p><l>борчулы<s n="adj"/></l>                <r>обеспокоить<s n="vblex"/><s n="perf"/><s n="pp"/><s n="pasv"/></r></p><par n="__adj"/></e>
 <e>       <p><l>бөтенроссия<s n="adj"/></l>            <r>всероссийский<s n="adj"/></r></p><par n="__adj"/></e>
-<e>       <p><l>бүтән<s n="adj"/></l>                  <r>другой<s n="det"/><s n="ind"/><s n="m"/></r></p></e>
+<e>       <p><l>бүтән<s n="adj"/></l>                  <r>другой<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>буш<s n="adj"/><s n="advl"/></l>       <r>пусто<s n="adv"/></r></p></e>
 <e>       <p><l>бушлай<s n="adj"/></l>                 <r>бесплатный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>бушлай<s n="adj"/><s n="advl"/></l>    <r>бесплатно<s n="adv"/></r></p></e>
@@ -3820,7 +3820,7 @@
 <e>       <p><l>дәү әни<s n="n"/></l>                  <r>бабушка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 <e>       <p><l>дәү әти<s n="n"/></l>                  <r>дедушка<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>дәүләт<s n="n"/></l>                   <r>государство<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
-<e>       <p><l>дәүләт<s n="n"/><s n="attr"/></l>      <r>государственный<s n="adj"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>дәүләт<s n="n"/><s n="attr"/></l>      <r>государственный<s n="adj"/><s n="sint"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>дәфтәр<s n="n"/></l>                   <r>тетрадка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>дәфтәр<s n="n"/></l>                   <r>тетрадь<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>джаз<s n="n"/></l>                     <r>джаз<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
