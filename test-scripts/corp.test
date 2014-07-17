@@ -5,6 +5,6 @@
 
 # See http://wiki.apertium.org/wiki/Corpus_test
 
-cat corpus/corpus.tat.txt | apertium -d . tat-rus > corpus/tat-rus-nova.txt &&
+cat corpus/corpus.tat.txt | apertium -f html -d . tat-rus > corpus/tat-rus-nova.txt &&
 
 diff -U0 corpus/tat-rus-origina.txt corpus/tat-rus-nova.txt | dwdiff -c --diff-input | more
