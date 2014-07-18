@@ -118,6 +118,16 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ай" tags="n.*"><select lemma="месяц"/></match>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^уйна<v><tv><pres><p1><pl>/играть<vblex><impf><tv><pres><p1><pl>$ ^да<cnjcoo>/и<cnjcoo>/тоже<adv>$ ^бетер<v><tv><pres><p1><pl>/кончать<vblex><impf><tv><pres><p1><pl>/заканчивать<vblex><impf><tv><pres><p1><pl>$
+    OUTPUT: ^уйна<v><tv><pres><p1><pl>/играть<vblex><impf><tv><pres><p1><pl>$ ^да<cnjcoo>/и<cnjcoo>$ ^бетер<v><tv><pres><p1><pl>/кончать<vblex><impf><tv><pres><p1><pl>/заканчивать<vblex><impf><tv><pres><p1><pl>$
+    -->
+    <match tags="v.*"/>
+    <match lemma="да" tags="cnjcoo"><select lemma="и"/></match>
+    <match tags="v.*"/>
+  </rule>
+    
 <!-- SECTION: TODO: some of the following rules should be lemma independent.
      The idea is to have two alternative (perfective and imperfective) translations for any Tatar verb.
      In some cases, e.g. when verb is in present, we can select imperfective variant without referring
@@ -264,6 +274,14 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     OUTPUT: ^гафу ит<v><tv><imp><p2><sg>/простить<vblex><perf><tv><imp><p2><sg>$
     -->
     <match lemma="гафу ит" tags="v.tv.imp.*"><select lemma="простить"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^да<cnjcoo>/и<cnjcoo>/тоже<adv>$
+    OUTPUT: ^да<cnjcoo>/тоже<adv>$
+    -->
+    <match lemma="да" tags="cnjcoo"><select lemma="тоже"/></match>
   </rule>
 
 </rules>
