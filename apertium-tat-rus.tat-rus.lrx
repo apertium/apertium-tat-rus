@@ -141,7 +141,7 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="белән" tags="post"><select lemma="на"/></match>
   </rule>
 
-  <rule>
+  <rule weight="2.0">
     <!--
     INPUT:  ^сәгать<n><attr>/час<n><m><nn><attr>/часы<n><mfn><nn><pl><attr>$ ^эч<n><px3sp><loc>/в<pr><prp>/внутри<pr><gen>/в течение<pr><gen>$
     OUTPUT: ^сәгать<n><attr>/час<n><m><nn><attr>/часы<n><mfn><nn><pl><attr>$ ^эч<n><px3sp><loc>/в течение<pr><gen>$
