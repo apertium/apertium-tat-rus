@@ -398,21 +398,56 @@
 
     <!-- Adpositions -->
 
+<e c="алдына"><p><l>алд<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>перед<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e c="алдыннан"><p><l>алд<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>перед<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e c="алдында"><p><l>алд<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>перед<s n="pr"/></r></p><par n="__LR_ins"/></e>
-<e c="артыннан"><p><l>арт<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-за<s n="pr"/></r></p><par n="__LR_gen"/></e>
+
+<e c="арасына"><p><l>ара<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>между<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e c="арасында"><p><l>ара<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>среди<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="арасыннан"><p><l>арас<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из<s n="pr"/></r></p><par n="__LR_gen"/></e>
+
+<e c="аркада"><p><l>арка<s n="n"/><s n="loc"/></l><r>из-за<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="аркасында"><p><l>арка<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>из-за<s n="pr"/></r></p><par n="__LR_gen"/></e>
+
 <e c="артына"><p><l>арт<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>за<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e c="артыннан"><p><l>арт<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-за<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e c="артында"><p><l>арт<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>за<s n="pr"/></r></p><par n="__LR_ins"/></e>
-<e>       <p><l>астында<s n="post"/></l>               <r>под<s n="pr"/></r></p><par n="__LR_ins"/></e>
+
+<e c="астына"><p><l>аст<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>под<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e c="астыннан"><p><l>аст<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из-под<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="астында"><p><l>аст<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>под<s n="pr"/></r></p><par n="__LR_ins"/></e>
+
+<e c="өстенә"><p><l>өст<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>на<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e c="өстеннән"><p><l>өст<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>над<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e c="өстеннән"><p><l>өст<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>с<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="өстендә"><p><l>өст<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>на<s n="pr"/></r></p><par n="__LR_prp"/></e>
+<e c="өстендә"><p><l>өст<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>над<s n="pr"/></r></p><par n="__LR_ins"/></e>
+
+<e c="эченә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>в<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e c="эченнән"><p><l>эч<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>из<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>в<s n="pr"/></r></p><par n="__LR_prp"/></e>
+<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>в<b/>течение<s n="pr"/></r></p><par n="__LR_gen"/></e>
+
+<e c="янына"><p><l>ян<s n="n"/><s n="px3sp"/><s n="dat"/></l><r>к<s n="pr"/></r></p><par n="__LR_dat"/></e>
+<e c="яныннан"><p><l>ян<s n="n"/><s n="px3sp"/><s n="abl"/></l><r>мимо<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>у<s n="pr"/></r></p><par n="__LR_gen"/></e>
+
+<e>       <p><l>аркылы<s n="post"/></l>                <r>через<s n="pr"/></r></p><par n="__LR_acc"/></e>
 <e>       <p><l>аша<s n="post"/></l>                   <r>через<s n="pr"/></r></p><par n="__LR_acc"/></e>
 <e>       <p><l>белән<s n="post"/></l>                 <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e>       <p><l>белән<s n="post"/></l>                 <r>на<s n="pr"/></r></p><par n="__LR_prp"/></e>
 <e>       <p><l>бергә<s n="post"/></l>                 <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
+<e>       <p><l>буе<s n="post"/></l>                   <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
+<e>       <p><l>буе<s n="post"/></l>                   <r>в<b/>течение<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>буена<s n="post"/></l>                 <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
+<e>       <p><l>буена<s n="post"/></l>                 <r>в<b/>течение<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>буенча<s n="post"/></l>                <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
 
 <e>       <p><l>сыз<s n="post"/></l>                   <r>без<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>лы<s n="post"/></l>                    <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e>       <p><l>таба<s n="post"/></l>                  <r>к<s n="pr"/></r></p><par n="__LR_dat"/></e>
 <e>       <p><l>турында<s n="post"/></l>               <r>о<s n="pr"/></r></p><par n="__LR_prp"/></e>
-<e c="эчендә"><p><l>эч<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>внутри<s n="pr"/></r></p><par n="__LR_gen"/></e>
-<e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>возле<s n="pr"/></r></p><par n="__LR_gen"/></e>
 
     <!-- Interjections -->
 

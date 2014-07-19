@@ -876,6 +876,20 @@
 	      </chunk>
 	    </out>
           </when>
+          <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
+            <test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
+            <out>
+              <chunk name="pr">
+                <tags>
+                  <tag><lit-tag v="PREP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_pr"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
           <otherwise>
             <call-macro n="translate-noun">
               <with-param pos="1"/>
@@ -1192,7 +1206,7 @@
     <rule comment="REGLA: N POST N">
       <!--
       INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><ins><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
-      OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^сад<n><m><nn><sg><prp>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+      OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^сад<n><m><nn><sg><loc>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
       -->
       <pattern>
         <pattern-item n="n-attr-or-gen"/>
