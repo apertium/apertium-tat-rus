@@ -146,7 +146,16 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     INPUT:  ^сәгать<n><attr>/час<n><m><nn><attr>/часы<n><mfn><nn><pl><attr>$ ^эч<n><px3sp><loc>/в<pr><prp>/внутри<pr><gen>/в течение<pr><gen>$
     OUTPUT: ^сәгать<n><attr>/час<n><m><nn><attr>/часы<n><mfn><nn><pl><attr>$ ^эч<n><px3sp><loc>/в течение<pr><gen>$
     -->
-    <match lemma="сәгать" tags="n.attr"/>
+    <or>
+      <match lemma="секунд" tags="n.attr"/>
+      <match lemma="минут" tags="n.attr"/>
+      <match lemma="сәгать" tags="n.attr"/>
+      <match lemma="көн" tags="n.attr"/>
+      <match lemma="тәүлек" tags="n.attr"/>
+      <match lemma="атна" tags="n.attr"/>
+      <match lemma="ай" tags="n.attr"/>
+      <match lemma="ел" tags="n.attr"/>
+    </or>
     <match lemma="эч" tags="n.px3sp.loc"><select lemma="в течение"/></match>
   </rule>
 
