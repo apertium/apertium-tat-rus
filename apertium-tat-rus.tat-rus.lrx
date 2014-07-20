@@ -339,4 +339,12 @@ SECTION: default translations
     <match lemma="эч" tags="n.px3sp.loc"><select lemma="внутри"/></match>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^һөнәри<adj>/ремесленный<adj><sint><m><an><sg><nom>/профессиональный<adj><sint><m><an><sg><nom>$
+    OUTPUT: ^һөнәри<adj>/профессиональный<adj><sint><m><an><sg><nom>$
+    -->
+    <match lemma="һөнәри" tags="adj"><select lemma="профессиональный"/></match>
+  </rule>
+    
 </rules>
