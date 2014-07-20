@@ -278,9 +278,21 @@
 <e>       <p><l>ошбу<s n="det"/><s n="dem"/></l>       <r>этот<s n="det"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 
 <e>       <p><l>бар<s n="det"/><s n="qnt"/></l>        <r>весь<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>барлык<s n="det"/><s n="qnt"/></l>     <r>весь<s n="det"/><s n="ind"/><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>берничә<s n="det"/><s n="qnt"/></l>     <r>несколько<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>һәр<s n="det"/><s n="qnt"/></l>        <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>һәрбер<s n="det"/><s n="qnt"/></l>     <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+
 <e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>берәр<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="itg"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+
+<e>       <p><l>кай<s n="det"/><s n="ind"/></l>        <r>какой<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>кайсы<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+
+<e>       <p><l>бернинди<s n="det"/><s n="ind"/></l>   <r>никакой<s n="det"/><s n="ind"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e> <!-- FIXME -->
+<e>       <p><l>һичбер<s n="det"/><s n="ind"/></l>     <r>никакой<s n="det"/><s n="ind"/><s n="m"/>><s n="sg"/><s n="nom"/></r></p></e> <!-- FIXME -->
+<e>       <p><l>һичнинди<s n="det"/><s n="ind"/></l>   <r>никакой<s n="det"/><s n="ind"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e> <!-- FIXME -->
+
 <e>       <p><l>үз<s n="det"/><s n="ref"/></l>         <r>свой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 
 <e>       <p><l>иң<s n="adv"/></l>                     <r>самый<s n="det"/><s n="def"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
