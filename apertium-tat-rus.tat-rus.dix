@@ -427,20 +427,34 @@
 <e c="янында"><p><l>ян<s n="n"/><s n="px3sp"/><s n="loc"/></l><r>у<s n="pr"/></r></p><par n="__LR_gen"/></e>
 
 <e>       <p><l>аркылы<s n="post"/></l>           <r>через<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e>       <p><l>ары<s n="post"/></l>              <r>после<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>аша<s n="post"/></l>              <r>через<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e>       <p><l>башка<s n="post"/></l>            <r>кроме<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>белән<s n="post"/></l>            <r>на<s n="pr"/></r></p><par n="__LR_prp"/></e>
 <e>       <p><l>белән<s n="post"/></l>            <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
 <e>       <p><l>бергә<s n="post"/></l>            <r>вместе<s n="adv"/></r></p></e> <!-- FIXME CHECK -->
+<e>       <p><l>беррәттән<s n="post"/></l>        <r>наряду<b/>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e>       <p><l>бирле<s n="post"/></l>            <r>с<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>буе<s n="post"/></l>              <r>в<b/>течение<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>буе<s n="post"/></l>              <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
 <e>       <p><l>буена<s n="post"/></l>            <r>в<b/>течение<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>буена<s n="post"/></l>            <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
 <e>       <p><l>буенча<s n="post"/></l>           <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
 <e>       <p><l>буйлап<s n="post"/></l>           <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
+<e>       <p><l>буларак<s n="post"/></l>          <r>в<b/>качестве<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>буларак<s n="post"/></l>          <r>как<s n="adv"/><s n="itg"/></r></p></e> <!-- FIXME CHECK -->
+<e>       <p><l>бүтән<s n="post"/></l>            <r>кроме<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>кадәр<s n="post"/></l>            <r>до<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>караганда<s n="post"/></l>        <r>по<b/>сравнению<b/>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e>       <p><l>карамастан<s n="post"/></l>       <r>несмотря<b/>на<s n="pr"/></r></p><par n="__LR_acc"/></e>
+<e>       <p><l>карата<s n="post"/></l>           <r>в<b/>отношении<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>каршы<s n="post"/></l>            <r>против<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>кебек<s n="post"/></l>            <r>как<s n="adv"/><s n="itg"/></r></p></e> <!-- FIXME CHECK -->
 <e>       <p><l>күк<s n="post"/></l>              <r>как<s n="adv"/><s n="itg"/></r></p></e> <!-- FIXME CHECK -->
+<e>       <p><l>күрә<s n="post"/></l>             <r>ввиду<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>күрә<s n="post"/></l>             <r>по<s n="pr"/></r></p><par n="__LR_dat"/></e>
 <e>       <p><l>лы<s n="post"/></l>               <r>с<s n="pr"/></r></p><par n="__LR_ins"/></e>
+<e>       <p><l>максатында<s n="post"/></l>       <r>в<b/>целях<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>өчен<s n="post"/></l>             <r>для<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>соң<s n="post"/></l>              <r>после<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>сыз<s n="post"/></l>              <r>без<s n="pr"/></r></p><par n="__LR_gen"/></e>
@@ -453,6 +467,9 @@
 <e>       <p><l>хәтле<s n="post"/></l>            <r>до<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>чаклы<s n="post"/></l>            <r>до<s n="pr"/></r></p><par n="__LR_gen"/></e>
 <e>       <p><l>шикелле<s n="post"/></l>          <r>будто<s n="cnjsub"/></r></p></e> <!-- FIXME CHECK -->
+<e>       <p><l>элек<s n="post"/></l>             <r>раньше<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>якын<s n="post"/></l>             <r>около<s n="pr"/></r></p><par n="__LR_gen"/></e>
+<e>       <p><l>ярашлы<b/>рәвештә<s n="post"/></l><r>согласно<s n="pr"/></r></p><par n="__LR_dat"/></e>
 
     <!-- Interjections -->
 
@@ -4212,6 +4229,7 @@
 <e>       <p><l>каравыл<s n="n"/></l>             <r>караул<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 <e>       <p><l>карак<s n="n"/></l>               <r>вор<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 <e>       <p><l>кара карга<s n="n"/></l>          <r>грач<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+<e>       <p><l>карамак<s n="n"/></l>             <r>распоряжение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>караңгылык<s n="n"/></l>          <r>темнота<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 <e>       <p><l>карар<s n="n"/></l>               <r>постановление<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>карачкы<s n="n"/></l>             <r>чучело<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
