@@ -9,7 +9,7 @@ fi
 # This file is kept even after the script is ended:
 needed=/tmp/corpus-stat-all-needed.txt
 
-covgoal="10.0" # percent goal we aim for this week, according to http://wiki.apertium.org/wiki/Kazakh_and_Tatar/Work_plan
+covgoal="95.0" # percent goal we aim for this week, according to http://wiki.apertium.org/wiki/Kazakh_and_Tatar/Work_plan
 
 
 cd "$(dirname $0)"
@@ -68,8 +68,8 @@ fi
 
 
 # Try uncommenting this to see words that didn't pass through transfer alright:
-#paste "$transfout" "$genout"
+paste "$transfout" "$genout"
 # This is the full list of unknown words:
 #cat "$sorted"
 
-rm -f "$transfout" "$genout" "$sorted" 
+rm -f "$transfout" "$genout" "$sorted"
