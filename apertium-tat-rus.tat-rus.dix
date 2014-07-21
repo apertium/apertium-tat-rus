@@ -231,8 +231,9 @@
 <e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>это<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></r></p></e>
+<e c="шулай"><p><l>шул<s n="prn"/><s n="dem"/><s n="adv"/></l><r>так<s n="adv"/></r></p></e>
 <e c="шундый"><p><l>шул<s n="prn"/><s n="dem"/><s n="sim"/><s n="nom"/></l><r>так<s n="adv"/></r></p></e>
-<e c="шундый"><p><l>шул<s n="prn"/><s n="dem"/><s n="qnt"/></l><r>так<s n="adv"/></r></p></e>
+<e c="шулкадәр"><p><l>шул<s n="prn"/><s n="dem"/><s n="qnt"/></l><r>так<s n="adv"/></r></p></e>
 
 <e>       <p><l>берәр<b/>нәрсә<s n="prn"/><s n="ind"/></l><r>что-то<s n="prn"/><s n="ind"/><s n="nt"/></r></p></e>
 

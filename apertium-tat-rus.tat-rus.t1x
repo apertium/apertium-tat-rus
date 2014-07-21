@@ -241,6 +241,7 @@
       <attr-item tags="prn.ind"/>
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
+      <attr-item tags="det.pos"/>
       <attr-item tags="det.def"/>
       <attr-item tags="det.ref"/>
     </def-attr>
