@@ -184,6 +184,8 @@
       <cat-item tags="vaux.*.gna_after"/>
       <cat-item tags="cop.ger_past.*"/>
       <cat-item tags="cop.*.ger_past.*"/>
+      <cat-item tags="cop.ger_perf.*"/>
+      <cat-item tags="cop.*.ger_perf.*"/>
     </def-cat>
 
     <def-cat n="verb-nonfin-ger_past">
