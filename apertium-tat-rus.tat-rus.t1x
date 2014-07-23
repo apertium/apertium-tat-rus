@@ -122,15 +122,10 @@
 
     <def-cat n="verb-fin">
       <cat-item tags="v.*.pres.*"/>
-      <cat-item tags="v.*.*.pres.*"/>
       <cat-item tags="v.*.ifi.*"/>
-      <cat-item tags="v.*.*.ifi.*"/>
       <cat-item tags="v.*.past.*"/>
-      <cat-item tags="v.*.*.past.*"/>
       <cat-item tags="v.*.fut.*"/>
-      <cat-item tags="v.*.*.fut.*"/>
       <cat-item tags="v.*.fut2.*"/>
-      <cat-item tags="v.*.*.fut2.*"/>
       <cat-item tags="vaux.pres.*"/>
       <cat-item tags="vaux.neg.pres.*"/>
       <cat-item tags="vaux.ifi.*"/>
@@ -138,7 +133,10 @@
       <cat-item tags="vaux.past.*"/>
       <cat-item tags="vaux.neg.past.*"/>
       <cat-item tags="v.*.imp.*"/>
-      <cat-item tags="v.*.*.imp.*"/>
+      <cat-item tags="cop.ifi.*"/>
+      <cat-item tags="cop.past.*"/>
+      <cat-item tags="cop.*.ifi.*"/>
+      <cat-item tags="cop.*.past.*"/>
     </def-cat>
 
     <def-cat n="verb-fin-fut-plan">
@@ -1684,32 +1682,6 @@ OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
               <clip pos="1" side="tl" part="a_verb"/>
               <lit-tag v="pres"/>
               <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-<!--
-INPUT:  ^и<cop><ifi><p3><sg>/быть<vbser><ifi><p3><sg>$
-OUTPUT: ^cop<VBSER>{^быть<vbser><past><nt><sg>$}$
--->
-    <rule comment="">
-      <pattern>
-        <pattern-item n="cop-ifi"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="cop">
-            <tags>
-              <tag><lit-tag v="VBSER"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
-              <lit-tag v="past"/>
-              <lit-tag v="nt"/>
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>

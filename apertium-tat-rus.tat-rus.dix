@@ -1277,6 +1277,8 @@
 <e>       <p><l>укы<s n="v"/><s n="tv"/></l>           <r>прочитать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>укы<s n="v"/><s n="tv"/></l>           <r>читать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>укыт<s n="v"/><s n="tv"/></l>          <r>учить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>укыт<s n="v"/><s n="tv"/><s n="ger"/></l><r>обучение<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
+<e>       <p><l>укыт<s n="v"/><s n="tv"/><s n="ger"/></l><r>преподавание<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
 <e>       <p><l>үл<s n="v"/><s n="iv"/></l>            <r>умереть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>үл<s n="v"/><s n="iv"/></l>            <r>умирать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>үпкәлә<s n="v"/><s n="iv"/></l>        <r>обидеться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
@@ -1703,6 +1705,7 @@
 <e>       <p><l>карт<s n="adj"/></l>                   <r>старый<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>каршы<s n="adj"/></l>                  <r>противный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>каршы<s n="adj"/></l>                  <r>противоположный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
+<e>       <p><l>каршы<s n="adj"/><s n="advl"/></l>     <r>наперекор<s n="adv"/></r></p></e>
 <e>       <p><l>катгый<s n="adj"/></l>                 <r>строгий<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>катлаулы<s n="adj"/></l>               <r>сложный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>каты<s n="adj"/></l>                   <r>жёсткий<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
@@ -3933,7 +3936,7 @@
 <e>       <p><l>башкорт<s n="n"/></l>                  <r>башкир<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>башкорт<s n="n"/></l>                  <r>башкирин<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>башкорт<s n="n"/><s n="attr"/></l>     <r>башкирский<s n="adj"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-<e>       <p><l>башлык<s n="n"/></l>                   <r>глава<s n="n"/><s n="f"/><s n="aa"/></r></p><par n="__n"/></e>
+<e>       <p><l>башлык<s n="n"/></l>                   <r>глава¹<s n="n"/><s n="f"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>башлык<s n="n"/></l>                   <r>шапка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>баян<s n="n"/></l>                     <r>баян<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>бәбкә<s n="n"/></l>                    <r>детёныш<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
@@ -5002,7 +5005,7 @@
 <e>       <p><l>миф<s n="n"/></l>                      <r>миф<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>мич<s n="n"/></l>                      <r>печка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>мич<s n="n"/></l>                      <r>печь<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
-<e>       <p><l>мөгаллим<s n="n"/></l>                 <r>учитель<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
+<e>       <p><l>мөгаллим<s n="n"/></l>                 <r>учитель¹<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>мөгез<s n="n"/></l>                    <r>рог<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>модель<s n="n"/></l>                   <r>модель<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>мөдәррис<s n="n"/></l>                 <r>преподаватель<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
@@ -5721,6 +5724,7 @@
 <e>       <p><l>уй<s n="n"/></l>                       <r>мысль<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>уйгыр<s n="n"/></l>                    <r>уйгур<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>ук<s n="n"/></l>                       <r>стрела<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
+<e>       <p><l>уку-укыту<s n="n"/></l>                 <r>обучение<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>указ<s n="n"/></l>                     <r>указ<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>үкенеч<s n="n"/></l>                   <r>сожаление<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>украин<s n="n"/></l>                   <r>украинец<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
