@@ -15,8 +15,8 @@
     <def-cat n="n">
       <cat-item tags="n"/>
       <cat-item tags="n.*"/>
-      <cat-item tags="prn.*"/>
       <cat-item tags="np.*"/>
+      <cat-item tags="prn.*"/>
       <cat-item tags="adj.subst"/>
       <cat-item tags="adj.subst.*"/>
       <cat-item tags="adj.comp.subst"/>
@@ -71,12 +71,11 @@
     </def-cat>
 
     <def-cat n="npost">
-      <cat-item lemma="алд" tags="n.px3sp.*"/>
-      <cat-item lemma="арт" tags="n.px3sp.*"/>
-      <cat-item lemma="ян" tags="n.px3sp.*"/>
+      <cat-item tags="n.px3sp.*"/>
     </def-cat>
-    <def-cat n="npost-attr">
-      <cat-item lemma="алд" tags="n.px3sp.loc.attr"/>
+
+    <def-cat n="npost-loc-attr">
+      <cat-item tags="n.px3sp.loc.attr"/>
     </def-cat>
 
     <def-cat n="prn-gen">
@@ -196,6 +195,11 @@
 
     <def-cat n="post">
       <cat-item tags="post"/>
+    </def-cat>
+
+    <def-cat n="post-or-npost">
+      <cat-item tags="post"/>
+      <cat-item tags="n.px3sp.*"/>
     </def-cat>
 
     <def-cat n="qst">
@@ -1104,7 +1108,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: N N N">
+    <rule comment="REGLA: N N N (1)">
       <!--
       INPUT:  ^Татарстан<np><top><attr>/Татарстан<np><top><m><attr>$ ^Республика<n><px3sp><nom>/Республика<n><f><nn><px3sp><nom>$ ^закон<n><pl><px3sp><nom>/закон<n><m><nn><pl><px3sp><nom>$
       OUTPUT: ^n_n_n<SN>{^закон<n><m><nn><pl><nom>$ ^Республика<n><f><nn><sg><gen>$ ^Татарстан<np><top><m><sg><nom>$}$
@@ -1189,6 +1193,48 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: N N N (2)">
+      <!--
+      INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><ins><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
+      OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^сад<n><m><nn><sg><loc>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+      -->
+      <pattern>
+        <pattern-item n="n-attr-or-gen"/>
+        <pattern-item n="npost-loc-attr"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="n_pr_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_gender"/>
+              <clip pos="1" side="tl" part="a_anim"/>
+              <lit-tag v="sg"/>
+              <clip pos="2" side="tl" part="a_case"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: N POST">
       <!--
       INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
@@ -1227,12 +1273,12 @@
 
     <rule comment="REGLA: N POST N">
       <!--
-      INPUT:  ^өй<n><attr>/дом<n><m><nn><attr>$ ^алд<n><px3sp><loc><attr>/перед<pr><ins><attr>$ ^бакча<n><loc>/сад<n><m><nn><loc>$
-      OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^сад<n><m><nn><sg><loc>$ ^перед<pr>$ ^дом<n><m><nn><sg><ins>$}$
+      INPUT:  ^азатлык<n><nom>/свобода<n><f><nn><sg><nom>$ ^өчен<post>/за<pr><acc>$ ^көрәш<n><loc>/борьба<n><f><nn><sg><loc>$
+      OUTPUT: ^n_pr_n<SN>{^в<pr>$ ^борьба<n><f><nn><sg><prp>$ ^за<pr>$ ^свобода<n><f><nn><sg><acc>$}$
       -->
       <pattern>
-        <pattern-item n="n-attr-or-gen"/>
-        <pattern-item n="npost-attr"/>
+        <pattern-item n="n-nom"/>
+        <pattern-item n="post"/>
         <pattern-item n="n"/>
       </pattern>
       <action>
@@ -1240,7 +1286,7 @@
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="n_pr_n" case="caseFirstWord">
+          <chunk name="n_pr_n">
             <tags>
               <tag><lit-tag v="SN"/></tag>
             </tags>
@@ -1561,7 +1607,7 @@
       </action>
     </rule>
 
-    <rule comment="ADJ ADJ N POST">
+    <rule comment="ADJ ADJ N POST/NPOST">
       <!--
       INPUT:  ^зур<adj>/большой<adj><sint><m><an><sg><nom>$ ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><gen>/дерево<n><nt><nn><gen>$ ^арт<n><px3sp><abl>/из-за<pr><gen>$
       OUTPUT: ^pr_adj_adj_n<PP>{^из-за<pr>$ ^большой<adj><sint><nt><an><sg><gen>$ ^старый<adj><sint><nt><an><sg><gen>$ ^дерево<n><nt><nn><sg><gen>$}$
@@ -1570,7 +1616,7 @@
         <pattern-item n="adj"/>
         <pattern-item n="adj"/>
         <pattern-item n="n"/>
-        <pattern-item n="npost"/>
+        <pattern-item n="post-or-npost"/>
       </pattern>
       <action>
         <call-macro n="translate-noun">

@@ -159,6 +159,15 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="эч" tags="n.px3sp.loc"><select lemma="в течение"/></match>
   </rule>
 
+  <rule weight="2.0">
+    <!--
+    INPUT:  ^азатлык<n><nom>/свобода<n><f><nn><sg><nom>$ ^өчен<post>/для<pr><gen>/за<pr><acc>$ ^көрәш<v><iv><imp><p2><sg>/бороться<vblex><impf><iv><imp><p2><sg>$
+    OUTPUT: ^азатлык<n><nom>/свобода<n><f><nn><sg><nom>$ ^өчен<post>/за<pr><acc>$ ^көрәш<v><iv><imp><p2><sg>/бороться<vblex><impf><iv><imp><p2><sg>$
+    -->
+    <match lemma="өчен" tags="post"><select lemma="за"/></match>
+    <match lemma="көрәш"/>
+  </rule>
+
 <!-- 
 SECTION:
 ========
@@ -346,5 +355,13 @@ SECTION: default translations
     -->
     <match lemma="һөнәри" tags="adj"><select lemma="профессиональный"/></match>
   </rule>
-    
+
+  <rule>
+    <!--
+    INPUT:  ^өчен<post>/для<pr><gen>/за<pr><acc>$
+    OUTPUT: ^өчен<post>/для<pr><gen>$
+    -->
+    <match lemma="өчен" tags="post"><select lemma="для"/></match>
+  </rule>
+
 </rules>
