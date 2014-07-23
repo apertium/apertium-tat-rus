@@ -28,6 +28,7 @@
     <def-cat n="n-attr-or-gen">
       <cat-item tags="n.attr"/>
       <cat-item tags="n.gen"/>
+      <cat-item tags="n.pl.nom"/>
       <cat-item tags="n.pl.gen"/>
       <cat-item tags="np.*.attr"/>
       <cat-item tags="np.*.nom"/>
@@ -219,6 +220,7 @@
       <attr-item tags="pred"/>
       <attr-item tags="pr"/>
       <attr-item tags="det"/>
+      <attr-item tags="det.pos"/>
     </def-attr>
     <def-attr n="a_syntag">
       <attr-item tags="advl"/>
@@ -241,6 +243,7 @@
       <attr-item tags="prn.itg"/>
       <attr-item tags="prn.neg"/>
       <attr-item tags="prn.ind"/>
+      <attr-item tags="prn.ref"/>
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
       <attr-item tags="det.pos"/>
@@ -873,6 +876,21 @@
 	      <chunk name="adv">
                 <tags>
                   <tag><lit-tag v="AdvP"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+	      </chunk>
+	    </out>
+          </when>
+          <when>
+	    <test>
+	      <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="det.pos"/></equal>
+	    </test>
+	    <out>
+	      <chunk name="det">
+                <tags>
+                  <tag><lit-tag v="DET"/></tag>
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
