@@ -105,7 +105,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: SN (SN SV) SV">
+    <rule comment="REGLA: SN (SN SV) SV -> SN C SV">
       <!--
       INPUT:  ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^n<SN><nom>{^ты<prn><pers><p2><mf><sg><2>$}$ ^v<SV><ger_past><acc>{^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
       OUTPUT: ^n<SN><nom>{^Я<prn><pers><p1><mf><sg><2>$}$ ^sn_sv<SN><nom><C><OBJ>{^ты<prn><pers><p2><mf><sg><2>$ ^кричать<vblex><impf><past><m><sg>$}$ ^v<SV><tv>{^слышать<vblex><impf><past><m><sg>$}$
@@ -201,14 +201,14 @@
       </action>
     </rule>      
 
-    <rule>
+    <rule comment="REGLA: SN SN VBSER -> PREP SN VBSER SN">
       <!--
       INPUT:  ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^n<SN><nom>{^собака<n><f><aa><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$
       OUTPUT: ^pr<PREP>{^у<pr>$}$ ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$ ^n<SN><gen>{^собака<n><f><aa><sg><2>$}$
       -->
       <pattern>
         <pattern-item n="SN-gen-ADVL"/>
-        <pattern-item n="SN-nom"/>
+        <pattern-item n="SN"/>
         <pattern-item n="VBSER-bar"/>
       </pattern>
       <action>
@@ -220,11 +220,13 @@
 	</choose>
         <out>
           <chunk>
-            <lit v="pr"/>
+	    <get-case-from pos="1">
+              <lit v="pr"/>
+	    </get-case-from>
 	    <lit-tag v="PREP"/>
             <lit v="{"/>
 	    <lit v="^"/>
-            <lit v="у"/>
+            <lit v="У"/>
 	    <lit-tag v="pr"/>
 	    <lit v="$"/>
             <lit v="}"/>

@@ -1438,9 +1438,9 @@
     <rule comment="PRN N">
       <!--
       INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-      OUTPUT: ^det_n<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+      OUTPUT: ^det_n<SN><nom>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
       INPUT:  ^ул<prn><dem><gen><@ADVL→>/он<prn><pers><p3><m><sg><gen><@ADVL→>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-      OUTPUT: ^n<SN><@ADVL→>{^он<prn><pers><p3><m><sg><gen>$}$ ^n<SN>{^сад<n><m><nn><sg><nom>$}$
+      OUTPUT: ^n<SN><gen><@ADVL→>{^он<prn><pers><p3><m><sg><gen>$}$ ^n<SN><nom>{^сад<n><m><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="prn-gen"/>
@@ -1451,20 +1451,15 @@
           <when c="n.px3sp.{dat/abl/loc} is translated with a preposition">
             <test><equal><clip pos="2" side="tl" part="a_pos"/><lit-tag v="pr"/></equal></test>
             <out>
-              <chunk name="pr">
+              <chunk name="pr_n">
                 <tags>
-                  <tag><lit-tag v="PREP"/></tag>
+                  <tag><lit-tag v="PP"/></tag>
                 </tags>
                 <lu>
                   <clip pos="2" side="tl" part="lem"/>
                   <clip pos="2" side="tl" part="a_pr"/>
                 </lu>
-              </chunk>
-              <b/>
-              <chunk name="n">
-                <tags>
-                  <tag><lit-tag v="SN"/></tag>
-                </tags>
+		<b/>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
                 </lu>
@@ -1474,13 +1469,15 @@
 	  <when>
             <test><equal><clip pos="1" side="sl" part="a_SYNLABEL"/><lit-tag v="@ADVL→"/></equal></test>
 	    <let><clip pos="1" side="tl" part="a_SYNLABEL"/><lit v=""/></let>
+            <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
             <call-macro n="translate-noun">
               <with-param pos="2"/>
             </call-macro>
 	    <out>
-              <chunk name="n">
+	      <chunk name="n">
                 <tags>
                   <tag><lit-tag v="SN"/></tag>
+                  <tag><clip pos="1" side="tl" part="a_case"/></tag>
 		  <tag><lit-tag v="@ADVL→"/></tag>
                 </tags>
                 <lu>
@@ -1491,6 +1488,7 @@
               <chunk name="n">
                 <tags>
                   <tag><lit-tag v="SN"/></tag>
+                  <tag><clip pos="2" side="tl" part="a_case"/></tag>
                 </tags>
                 <lu>
                   <clip pos="2" side="tl" part="whole"/>
@@ -1518,6 +1516,7 @@
                   <chunk name="det_n">
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
+                      <tag><clip pos="2" side="tl" part="a_case"/></tag>
                     </tags>
                     <var n="preposition"/>
                     <lu>
@@ -1536,6 +1535,7 @@
                   <chunk name="det_n">
                     <tags>
                       <tag><lit-tag v="SN"/></tag>
+		      <tag><clip pos="1" side="tl" part="a_case"/></tag>
                     </tags>
                     <var n="preposition"/>
                     <lu>
