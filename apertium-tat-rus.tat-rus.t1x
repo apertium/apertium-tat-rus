@@ -1354,12 +1354,12 @@
 
     <rule comment="REGLA: ADJ N">
       <!--
-      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><
-      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><nom>$ ^дерево
-      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><
-      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><dat>$ ^дерево
-      INPUT:  ^соң<adv><attr>/последний<adj><m><an><sg><nom>$ ^хат<n>
-      OUTPUT: ^adj_n<SN>{^последний<adj><nt><an><sg><nom>$ ^письмо<n>
+      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><nom>$
+      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><nom>$ ^дерево<n><nt><nn><sg><nom>$}$
+      INPUT:  ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><nom>/дерево<n><nt><nn><dat>$
+      OUTPUT: ^adj_n<SN>{^старый<adj><sint><nt><an><sg><dat>$ ^дерево<n><nt><nn><sg><dat>$}$
+      INPUT:  ^соң<adv><attr>/последний<adj><m><an><sg><nom>$ ^хат<n><nom>/письмо<n><nt><nn><nom>$
+      OUTPUT: ^adj_n<SN>{^последний<adj><nt><an><sg><nom>$ ^письмо<n><nt><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="adj"/>
@@ -1440,7 +1440,7 @@
       INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
       OUTPUT: ^det_n<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
       INPUT:  ^ул<prn><dem><gen><@ADVL→>/он<prn><pers><p3><m><sg><gen><@ADVL→>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
-      OUTPUT: ^n<SN><@ADVL→>{^он<prn><pers><p3><m><sg><gen>$}$ ^n<SN>{^сад<n><m><nn><px1sg><nom>$}$
+      OUTPUT: ^n<SN><@ADVL→>{^он<prn><pers><p3><m><sg><gen>$}$ ^n<SN>{^сад<n><m><nn><sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="prn-gen"/>
@@ -1481,7 +1481,7 @@
               <chunk name="n">
                 <tags>
                   <tag><lit-tag v="SN"/></tag>
-		  <tag><lit v="@ADVL→"/></tag>
+		  <tag><lit-tag v="@ADVL→"/></tag>
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
