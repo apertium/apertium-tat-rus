@@ -364,4 +364,68 @@ SECTION: default translations
     <match lemma="өчен" tags="post"><select lemma="для"/></match>
   </rule>
 
+  <!-- TODO WHISHLIST: allow having only tags in select as well
+  INPUT:  ^мин<prn><pers><p1><sg><gen>/я<prn><pers><p1><mf><sg><gen>/мой<det><pos><m><an><sg><nom>$
+  OUTPUT: ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$
+  -->
+  <rule>
+    <match lemma="мин" tags="prn.pers.p1.sg.gen"><select lemma="мой"/></match>
+  </rule>
+  <rule>
+    <match lemma="син" tags="prn.pers.p2.sg.gen"><select lemma="твой"/></match>
+  </rule>
+  <rule>
+    <match lemma="ул" tags="prn.pers.p3.sg.gen"><select lemma="его"/></match>
+  </rule>
+  <rule>
+    <match lemma="без" tags="prn.pers.p1.pl.gen"><select lemma="наш"/></match>
+  </rule>
+  <rule>
+    <match lemma="сез" tags="prn.pers.p2.pl.gen"><select lemma="ваш"/></match>
+  </rule>
+  <rule>
+    <match lemma="алар" tags="prn.pers.p3.pl.gen"><select lemma="их"/></match>
+  </rule>
+  <rule>
+    <match lemma="Сез" tags="prn.pers.p2.sp.frm.gen"><select lemma="ваш"/></match>
+  </rule>
+  <rule>
+    <match lemma="ул" tags="prn.dem.gen"><select lemma="его"/></match>
+  </rule>
+  <rule>
+    <match lemma="ул" tags="prn.dem.pl.gen"><select lemma="их"/></match>
+  </rule>
+
+  <!--
+  INPUT:  ^мин<prn><pers><p1><sg><gen><@ADVL→>/я<prn><pers><p1><mf><sg><gen><@ADVL→>/мой<det><pos><m><an><sg><nom><@ADVL→>$
+  INPUT:  ^мин<prn><pers><p1><sg><gen><@ADVL→>/я<prn><pers><p1><mf><sg><gen><@ADVL→>$
+  -->
+  <rule>
+      <match lemma="мин" tags="prn.pers.p1.sg.gen.@ADVL→"><select lemma="я"/></match>
+  </rule>
+  <rule>
+    <match lemma="син" tags="prn.pers.p2.sg.gen.@ADVL→"><select lemma="ты"/></match>
+  </rule>
+  <rule>
+    <match lemma="ул" tags="prn.pers.p3.sg.gen.@ADVL→"><select lemma="он"/></match>
+  </rule>
+  <rule>
+    <match lemma="без" tags="prn.pers.p1.pl.gen.@ADVL→"><select lemma="мы"/></match>
+  </rule>
+  <rule>
+    <match lemma="сез" tags="prn.pers.p2.pl.gen.@ADVL→"><select lemma="вы"/></match>
+  </rule>
+  <rule>
+    <match lemma="алар" tags="prn.pers.p3.pl.gen.@ADVL→"><select lemma="они"/></match>
+  </rule>
+  <rule>
+    <match lemma="Сез" tags="prn.pers.p2.sp.frm.gen.@ADVL→"><select lemma="вы"/></match>
+  </rule>
+  <rule>
+    <match lemma="ул" tags="prn.dem.gen.@ADVL→"><select lemma="он"/></match>
+  </rule>
+  <rule>
+    <match lemma="ул" tags="prn.dem.pl.gen.@ADVL→"><select lemma="они"/></match>
+  </rule>
+
 </rules>
