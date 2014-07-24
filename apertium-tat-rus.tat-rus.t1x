@@ -82,8 +82,9 @@
       <cat-item tags="prn.pers.*.*.gen"/>
       <cat-item lemma="ул" tags="prn.dem.gen"/>
       <cat-item lemma="ул" tags="prn.dem.pl.gen"/> 
-   </def-cat>
-    <def-cat n="prn-gen_ADVLr">
+      <cat-item tags="prn.pers.*.*.gen"/>
+      <cat-item lemma="ул" tags="prn.dem.gen"/>
+      <cat-item lemma="ул" tags="prn.dem.pl.gen"/> 
       <cat-item tags="prn.pers.*.*.gen.@ADVL→"/>
       <cat-item lemma="ул" tags="prn.dem.gen.@ADVL→"/>
       <cat-item lemma="ул" tags="prn.dem.pl.gen.@ADVL→"/> 
@@ -1438,6 +1439,8 @@
       <!--
       INPUT:  ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
       OUTPUT: ^det_n<SN>{^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$}$
+      INPUT:  ^ул<prn><dem><gen><@ADVL→>/он<prn><pers><p3><m><sg><gen><@ADVL→>$ ^бакча<n><px1sg><nom>/сад<n><m><nn><px1sg><nom>$
+      OUTPUT: ^n<SN><@ADVL→>{^он<prn><pers><p3><m><sg><gen>$}$ ^n<SN>{^сад<n><m><nn><px1sg><nom>$}$
       -->
       <pattern>
         <pattern-item n="prn-gen"/>
@@ -1464,6 +1467,33 @@
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+	  <when>
+            <test><equal><clip pos="1" side="sl" part="a_SYNLABEL"/><lit-tag v="@ADVL→"/></equal></test>
+	    <let><clip pos="1" side="tl" part="a_SYNLABEL"/><lit v=""/></let>
+            <call-macro n="translate-noun">
+              <with-param pos="2"/>
+            </call-macro>
+	    <out>
+              <chunk name="n">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+		  <tag><lit v="@ADVL→"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="n">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
                 </lu>
               </chunk>
             </out>
