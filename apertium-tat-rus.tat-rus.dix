@@ -4391,6 +4391,7 @@
 <e>       <p><l>золым<s n="n"/></l>                    <r>насилие<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>зона<s n="n"/></l>                     <r>зона<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>зоотехник<s n="n"/></l>                <r>зоотехник<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
+<e>       <p><l>зөбәрҗәт<s n="n"/></l>                 <r>изумруд<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>зурлык<s n="n"/></l>                   <r>величина<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>зыян<s n="n"/></l>                     <r>вред<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>игелек<s n="n"/></l>                   <r>добро<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>
@@ -5274,6 +5275,7 @@
 <e>       <p><l>рак<s n="n"/></l>                      <r>рак<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>ракета<s n="n"/></l>                   <r>ракета<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>рапс<s n="n"/></l>                     <r>рапс<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
+<e>       <p><l>раунд<s n="n"/></l>                    <r>раунд<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>реакция<s n="n"/></l>                  <r>реакция<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>реализм<s n="n"/></l>                  <r>реализм<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>рәвеш<s n="n"/></l>                    <r>образ¹<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
@@ -6247,7 +6249,18 @@
 <e>       <p><l>—<s n="guio"/></l>                     <r>—<s n="guio"/></r></p></e>
 <e>       <p><l>'<s n="apos"/></l>                     <r>'<s n="apos"/></r></p></e>
 <e>       <re>[.\?;:!"]+</re><p><l><s n="sent"/></l>   <r><s n="sent"/></r></p></e>
-<e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
+<!-- SECTION: Digits-->
+
+<e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+
+<e>       <re>[0-9]*0</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*[023456789]1</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*[023456789]2</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*[023456789]3</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*[023456789]4</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*[5-9]</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*1[1-4]</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
   
   </section>
 </dictionary>

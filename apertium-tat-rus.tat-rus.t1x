@@ -271,6 +271,7 @@
       <attr-item tags="det.ord"/>
       <attr-item tags="det.qnt"/>
       <attr-item tags="num.roman"/>
+      <attr-item tags="num.digit"/>
     </def-attr>
 
     <def-attr n="a_adj">
@@ -381,6 +382,12 @@
       <list-item v="год"/>
       <list-item v="сад"/>
       <list-item v="угол"/>
+    </def-list>
+
+    <def-list n="nouns-most-likely-used-with-ordinal-num">
+      <list-item v="статья"/>
+      <list-item v="глава"/>
+      <list-item v="параграф"/>
     </def-list>
 
   </section-def-lists>
@@ -683,7 +690,10 @@
            GIVEN:  ^биш<num>/пять<num><mfn><pl><nom>$ ^йорт<n><nom>/дом<n><m><nn><sg><nom>$
            EXPECT: ^биш<num>/пять<num><mfn><pl><nom>$ ^йорт<n><nom>/дом<n><m><nn><pl><gen>$
            GIVEN:  ^биш<num>/пять<num><mfn><pl><nom>$ ^йорт<n><acc>/дом<n><m><nn><sg><acc>$
-           EXPECT: ^биш<num>/пять<num><mfn><pl><acc>$ ^йорт<n><nom>/дом<n><m><nn><pl><gen>$ -->
+           EXPECT: ^биш<num>/пять<num><mfn><pl><acc>$ ^йорт<n><nom>/дом<n><m><nn><pl><gen>$
+                                  but 
+           GIVEN:  ^2<num>/2<num><digit><m><an><sg><nom>$ ^статья<n><nom>/статья<n><f><nn><sg><nom>$
+           EXPECT: ^2<num>/2<num><digit><m><an><sg><nom>$ ^статья<n><nom>/статья<n><f><nn><sg><nom>$ -->
       <choose>
 	<when>
 	  <test>
@@ -692,12 +702,26 @@
 	  <let><clip pos="1" side="tl" part="a_gender"/><clip pos="2" side="tl" part="a_gender"/></let>
 	</when>
       </choose>
-      <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>      
+      <let><clip pos="1" side="tl" part="a_case"/><clip pos="2" side="tl" part="a_case"/></let>
       <choose>
 	<when>
-	  <test>
-	    <not><equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal></not>
-	  </test>
+	  <test><not>
+	    <or>
+	      <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="один"/></equal>
+	      <!-- Anything ending in 1 except 11, because 11 require genitive plural as well -->
+	      <equal caseless="yes"><clip pos="1" side="tl" part="lem"/><lit v="1"/></equal>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="01"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="21"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="31"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="41"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="51"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="61"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="71"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="81"/></ends-with>
+	      <ends-with><clip pos="1" side="tl" part="lem"/><lit v="91"/></ends-with>
+	      <in caseless="yes"><clip pos="2" side="tl" part="lem"/><list n="nouns-most-likely-used-with-ordinal-num"/></in>
+	    </or>
+	  </not></test>
 	  <choose>
 	    <when>
 	      <test>
@@ -734,6 +758,20 @@
           <let><clip pos="1" side="tl" part="a_anim"/><clip pos="2" side="tl" part="a_anim"/></let>
         </when>
       </choose>
+    </def-macro>
+
+    <def-macro n="leave-only-lemma-and-num-tag" npar="1">
+      <!-- arg.1 numeral -> numeral
+           Strips all "informative" tags from a digit which were added in bidix.
+	   GIVEN:  ^1<num>/1<num><digit><m><an><sg><nom>$
+	   EXPECT: ^1<num>/1<num>$ -->
+      <let>
+        <clip pos="1" side="tl" part="whole"/>
+        <concat>
+          <clip pos="1" side="tl" part="lem"/>
+          <lit-tag v="num"/>
+        </concat>
+      </let>
     </def-macro>
 
 <!-- SECTION: Prepositional phrases -->
@@ -1575,20 +1613,28 @@
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_num"/><lit-tag v="num.digit"/></equal></test>
+	    <call-macro n="leave-only-lemma-and-num-tag">
+              <with-param pos="1"/>
+            </call-macro>
+	  </when>
+	</choose>
         <out>
-          <chunk name="num_n">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-            </tags>
-            <var n="preposition"/>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
+	  <chunk name="num_n">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	    </tags>
+	    <var n="preposition"/>
+	    <lu>
+	      <clip pos="1" side="tl" part="whole"/>
+	    </lu>
+	    <b/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
+	    </lu>
+	  </chunk>
         </out>
       </action>
     </rule>
@@ -1620,6 +1666,14 @@
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_num"/><lit-tag v="num.digit"/></equal></test>
+	    <call-macro n="leave-only-lemma-and-num-tag">
+              <with-param pos="1"/>
+            </call-macro>
+	  </when>
+	</choose>
         <out>
           <chunk name="num_n_n">
             <tags>
@@ -2012,6 +2066,14 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
         <pattern-item n="num"/>
       </pattern>
       <action>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_num"/><lit-tag v="num.digit"/></equal></test>
+	    <call-macro n="leave-only-lemma-and-num-tag">
+              <with-param pos="1"/>
+            </call-macro>
+	  </when>
+	</choose>
         <out>
           <chunk name="num">
             <tags>

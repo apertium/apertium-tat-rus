@@ -168,7 +168,16 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="көрәш"/>
   </rule>
 
-<!-- 
+  <rule>
+    <!--
+    INPUT:  ^1<num>/1<num>$ ^сәгать<n><nom>/часы<n><m><nn><pl><nom>/час<n><m><nn><sg><nom>$
+    OUTPUT: ^1<num>/1<num>$ ^сәгать<n><nom>/час<n><m><nn><sg><nom>$
+    -->
+    <match tags="num"/>
+    <match lemma="сәгать" tags="n.*"><select lemma="час"/></match>
+  </rule>
+ 
+<!--
 SECTION:
 ========
 
@@ -364,6 +373,14 @@ SECTION: default translations
     <match lemma="өчен" tags="post"><select lemma="для"/></match>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^1<num>/1<num>/1<num><digit><m><an><sg><nom>$
+    OUTPUT: ^1<num>/1<num><digit><m><an><sg><nom>$
+    -->
+    <match tags="num"><select lemma="1" tags="num.digit.*"/></match>
+  </rule>
+    
   <!-- TODO WHISHLIST: allow having only tags in select as well
   INPUT:  ^мин<prn><pers><p1><sg><gen>/я<prn><pers><p1><mf><sg><gen>/мой<det><pos><m><an><sg><nom>$
   OUTPUT: ^мин<prn><pers><p1><sg><gen>/мой<det><pos><m><an><sg><nom>$
