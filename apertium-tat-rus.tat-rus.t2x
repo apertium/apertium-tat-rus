@@ -204,7 +204,7 @@
     <rule comment="REGLA: SN SN VBSER -> PREP SN VBSER SN">
       <!--
       INPUT:  ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^n<SN><nom>{^собака<n><f><aa><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$
-      OUTPUT: ^pr<PREP>{^у<pr>$}$ ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$ ^n<SN><gen>{^собака<n><f><aa><sg><2>$}$
+      OUTPUT: ^pr<PREP>{^У<pr>$}$ ^n<SN><gen><@ADVL→>{^Гульнара<np><ant><f><sg><2>$}$ ^bar<VBSER><neg>{^быть<vbser><neg><pres><p3><sg>$}$ ^n<SN><gen>{^собака<n><f><aa><sg><2>$}$
       -->
       <pattern>
         <pattern-item n="SN-gen-ADVL"/>
