@@ -287,6 +287,7 @@
       <attr-item tags="vbser"/>
       <attr-item tags="vblex.impf"/>
       <attr-item tags="vblex.perf"/>
+      <attr-item tags="vblex.dual"/>
       <attr-item tags="vbmod.impf.tv"/> <!-- Modal verbs already receive transitivity tags in rus.dix-->
       <attr-item tags="vbmod.impf.iv"/>
       <attr-item tags="vbmod.perf.tv"/>
