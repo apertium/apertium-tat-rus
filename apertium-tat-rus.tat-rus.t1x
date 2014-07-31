@@ -283,6 +283,7 @@
     </def-attr>
     <def-attr n="a_pr">
       <attr-item tags="pr"/>
+      <attr-item tags="adv.itg"/> <!-- for как -->
     </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vbser"/>

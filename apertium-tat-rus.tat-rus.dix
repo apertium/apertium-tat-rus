@@ -111,6 +111,7 @@
     <sdef n="px2pl" 	c=""/> 
     <sdef n="sim" 	c=""/> 
     <sdef n="prp" 	c=""/> 
+    <sdef n="inf" 	c=""/> 
   </sdefs>
   <pardefs>
 
@@ -1243,7 +1244,7 @@
 <e>       <p><l>төшер<s n="v"/><s n="tv"/></l>         <r>опускать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>төшер<s n="v"/><s n="tv"/></l>         <r>опустить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>төя<s n="v"/><s n="tv"/></l>           <r>погрузить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
-<e>       <p><l>ту<s n="v"/><s n="iv"/></l>            <r>родиться<s n="vblex"/><s n="dual"/><s n="iv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>ту<s n="v"/><s n="iv"/></l>            <r>родиться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ту<s n="v"/><s n="iv"/></l>            <r>рождаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>тудыр<s n="v"/><s n="tv"/></l>         <r>родить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>тудыр<s n="v"/><s n="tv"/></l>         <r>рожать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
