@@ -811,6 +811,8 @@
 <e>       <p><l>башкар<s n="v"/><s n="tv"/></l>        <r>исполнять<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>башла<s n="v"/><s n="tv"/></l>         <r>начать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>башла<s n="v"/><s n="tv"/></l>         <r>начинать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>башла<s n="v"/><s n="tv"/><s n="pass"/></l><r>начаться<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>башла<s n="v"/><s n="tv"/><s n="pass"/></l><r>начинаться<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>бәйлә<s n="v"/><s n="tv"/></l>         <r>связать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>бәйлә<s n="v"/><s n="tv"/></l>         <r>связывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>бел<s n="v"/><s n="tv"/></l>           <r>знать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -5449,7 +5451,7 @@
 <e>       <p><l>субъект<s n="n"/></l>                  <r>субъект<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>суган<s n="n"/></l>                    <r>лук<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>сугым<s n="n"/></l>                    <r>забой<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
-<e>       <p><l>сугыш<s n="n"/></l>                    <r>бой<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
+<e>       <p><l>сугыш<s n="n"/></l>                    <r>бой¹<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>сугыш<s n="n"/></l>                    <r>война<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>сугышчы<s n="n"/></l>                  <r>боец<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>сугышчы<s n="n"/></l>                  <r>воин<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
