@@ -111,6 +111,11 @@
       <cat-item tags="num"/>
       <cat-item tags="num.*"/>
     </def-cat>
+    <def-cat n="num-det">
+      <cat-item tags="num"/>
+      <cat-item tags="num.ord"/>
+      <cat-item tags="num.itg"/>
+    </def-cat>
 
     <def-cat n="cop-p3">
       <cat-item tags="cop.p3.sg"/>
@@ -1603,7 +1608,7 @@
       OUTPUT: ^num_n<SN>{^пять<num><mfn><pl><dat>$ ^год<n><m><nn><pl><dat>$}$
       -->
       <pattern>
-        <pattern-item n="num"/>
+        <pattern-item n="num-det"/>
         <pattern-item n="n"/>
       </pattern>
       <action>
@@ -1650,7 +1655,7 @@
       OUTPUT: ^num_n_n<SN>{^в<pr>$ ^пять<num><mfn><pl><prp>$ ^ведро<n><nt><nn><pl><prp>$ ^вода<n><f><nn><sg><gen>$}$
       -->
       <pattern>
-        <pattern-item n="num"/>
+        <pattern-item n="num-det"/>
         <pattern-item n="n-nom"/>
         <pattern-item n="n"/>
       </pattern>
