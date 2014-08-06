@@ -176,7 +176,19 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match tags="num"/>
     <match lemma="сәгать" tags="n.*"><select lemma="час"/></match>
   </rule>
- 
+
+  <rule>
+    <!--
+    INPUT:  ^28<num>/28<num><digit><mfn><pl><nom>/28<num><digit><m><an><sg><nom>$ ^май<n><px3sp><loc>/май<n><m><nn><sg><px3sp><loc>/масло<n><nt><nn><sg><px3sp><loc>$
+    OUTPUT: ^28<num>/28<num><digit><mfn><pl><nom>/28<num><digit><m><an><sg><nom>$ ^май<n><px3sp><loc>/май<n><m><nn><sg><px3sp><loc>$
+    -->
+    <or>
+      <match tags="num"/>
+      <match tags="num.ord"/>
+    </or>
+    <match lemma="май" tags="n.*"><select lemma="май"/></match>
+  </rule>
+
 <!--
 SECTION:
 ========

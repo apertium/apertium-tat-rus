@@ -1761,6 +1761,66 @@
       </action>
     </rule>
 
+    <rule comment="NUM N NUM N">
+      <!--
+      INPUT:  ^1918<num>/1918<num><digit><mfn><pl><nom>$ ^ел<n><gen>/год²<n><m><nn><sg><gen>$ ^28<num>/28<num><digit><mfn><pl><nom>$ ^май<n><px3sp><loc>/май<n><m><nn><sg><px3sp><loc>$
+      OUTPUT: ^num_n_num_n<SN>{^в<pr>$ ^28<num>$ ^май<n><m><nn><sg><prp>$ ^1918<num>$ ^год²<n><m><nn><sg><gen>$}$
+      -->
+      <pattern>
+        <pattern-item n="num-det"/>
+        <pattern-item n="n-gen"/>
+        <pattern-item n="num-det"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="4"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_num"/><lit-tag v="num.digit"/></equal></test>
+	    <call-macro n="leave-only-lemma-and-num-tag">
+              <with-param pos="1"/>
+            </call-macro>
+	  </when>
+	</choose>
+        <choose>
+          <when>
+            <test><equal><clip pos="3" side="tl" part="a_num"/><lit-tag v="num.digit"/></equal></test>
+	    <call-macro n="leave-only-lemma-and-num-tag">
+              <with-param pos="3"/>
+            </call-macro>
+	  </when>
+	</choose>
+        <out>
+          <chunk name="num_n_num_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+	    <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="ADJ ADJ N POST/NPOST">
       <!--
       INPUT:  ^зур<adj>/большой<adj><sint><m><an><sg><nom>$ ^карт<adj>/старый<adj><sint><m><an><sg><nom>$ ^агач<n><gen>/дерево<n><nt><nn><gen>$ ^арт<n><px3sp><abl>/из-за<pr><gen>$
