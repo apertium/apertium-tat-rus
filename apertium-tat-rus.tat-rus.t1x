@@ -116,6 +116,11 @@
       <cat-item tags="num.ord"/>
       <cat-item tags="num.itg"/>
     </def-cat>
+    <def-cat n="thousand-etc">
+      <cat-item lemma="мең" tags="num"/>
+      <cat-item lemma="миллион" tags="num"/>
+      <cat-item lemma="миллиард" tags="num"/>
+    </def-cat>
 
     <def-cat n="cop-p3">
       <cat-item tags="cop.p3.sg"/>
@@ -262,6 +267,7 @@
       <attr-item tags="det.pos"/>
       <attr-item tags="det.def"/>
       <attr-item tags="det.ref"/>
+      <attr-item tags="num"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det.dem"/>
@@ -1599,7 +1605,6 @@
       </action>
     </rule>
 
-
     <rule comment="REGLA: NUM N">
       <!--
       INPUT:  ^биш<num>/пять<num><mfn><pl><nom>$ ^яшь<n><nom>/год<n><m><nn><nom>$
@@ -1682,6 +1687,60 @@
 	</choose>
         <out>
           <chunk name="num_n_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NUM NUM N">
+      <!--
+      INPUT:  ^100<num>/100<num><digit><mfn><pl><nom>/100<num><digit><m><an><sg><nom>$ ^мең<num>/тысяча<num><f><nn><sg><nom>$ ^сум<n><nom>/рубль<n><m><nn><sg><nom>$
+      OUTPUT: ^num_num_n<SN>{^100<num>$ ^тысяча<num><f><nn><pl><gen>$ ^рубль<n><m><nn><pl><gen>$}$
+      -->
+      <pattern>
+        <pattern-item n="num-det"/>
+        <pattern-item n="thousand-etc"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="3"/>
+        </call-macro>
+        <let><clip pos="2" side="tl" part="a_case"/><clip pos="3" side="tl" part="a_case"/></let>
+        <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+        <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+        <call-macro n="makeagree-num-noun">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_num"/><lit-tag v="num.digit"/></equal></test>
+	    <call-macro n="leave-only-lemma-and-num-tag">
+              <with-param pos="1"/>
+            </call-macro>
+	  </when>
+	</choose>
+        <out>
+          <chunk name="num_num_n">
             <tags>
               <tag><lit-tag v="SN"/></tag>
             </tags>
