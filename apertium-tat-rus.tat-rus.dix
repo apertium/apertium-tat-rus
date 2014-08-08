@@ -747,6 +747,7 @@
 <e>       <p><l>акла<s n="v"/><s n="tv"/></l>          <r>оправдать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>акыр<s n="v"/><s n="iv"/></l>          <r>орать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ал<s n="v"/><s n="tv"/></l>            <r>брать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>ал<s n="v"/><s n="tv"/><s n="pass"/></l><r>браться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ал<s n="v"/><s n="tv"/></l>            <r>взять<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>алда<s n="v"/><s n="tv"/></l>          <r>обмануть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>алда<s n="v"/><s n="tv"/></l>          <r>обманывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -779,6 +780,7 @@
 <e>       <p><l>ат<s n="v"/><s n="tv"/></l>            <r>стрелять<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ата<s n="v"/><s n="tv"/></l>           <r>назвать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ата<s n="v"/><s n="tv"/></l>           <r>называть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>ата<s n="v"/><s n="tv"/><s n="pass"/></l><r>называться<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>атла<s n="v"/><s n="iv"/></l>          <r>шагать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>атла<s n="v"/><s n="iv"/></l>          <r>шагнуть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ау<s n="v"/><s n="iv"/></l>            <r>падать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
@@ -839,6 +841,7 @@
 <e>       <p><l>билә<s n="v"/><s n="tv"/></l>          <r>занять<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>бир<s n="v"/><s n="tv"/></l>           <r>давать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>бир<s n="v"/><s n="tv"/></l>           <r>дать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>бир<s n="v"/><s n="tv"/><s n="pass"/></l><r>даваться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>боз<s n="v"/><s n="tv"/></l>           <r>испортить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>бор<s n="v"/><s n="tv"/></l>           <r>повернуть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>бор<s n="v"/><s n="tv"/></l>           <r>поворачивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -4166,7 +4169,7 @@
 <e>       <p><l>грузин<s n="n"/></l>                   <r>грузин<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>группа<s n="n"/></l>                   <r>группа<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>груша<s n="n"/></l>                    <r>груша<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
-<e>       <p><l>губерна<s n="n"/></l>                  <r>губерна<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
+<e>       <p><l>губерна<s n="n"/></l>                  <r>губерния<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>губернатор<s n="n"/></l>               <r>губернатор<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>гүзәллек<s n="n"/></l>                 <r>красота<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>гуманист<s n="n"/></l>                 <r>гуманист<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
@@ -5687,7 +5690,7 @@
 <e>       <p><l>түбә<s n="n"/></l>                     <r>крыша<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>туберкулез<s n="n"/></l>               <r>туберкулёз<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>тубык<s n="n"/></l>                    <r>щиколотка<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
-<e>       <p><l>туган<s n="n"/><s n="attr"/></l>       <r>родной<s n="adj"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>туган<s n="n"/><s n="attr"/></l>       <r>родной<s n="adj"/><s n="sint"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>түгәрәк<s n="n"/></l>                  <r>круг<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>тузан<s n="n"/></l>                    <r>пыль<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>туй<s n="n"/></l>                      <r>свадьба<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
@@ -5881,7 +5884,7 @@
 <e>       <p><l>халәт<s n="n"/></l>                    <r>состояние<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>халык<s n="n"/></l>                    <r>народ<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>халык<s n="n"/></l>                    <r>толпа<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
-<e>       <p><l>халык<s n="n"/><s n="attr"/></l>       <r>народный<s n="adj"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>халык<s n="n"/><s n="attr"/></l>       <r>народный<s n="adj"/><s n="sint"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>халыкчанлык<s n="n"/></l>              <r>народность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>хан<s n="n"/></l>                      <r>хан<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>ханлык<s n="n"/></l>                   <r>ханство<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>

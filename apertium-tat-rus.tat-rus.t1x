@@ -1289,6 +1289,59 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: N N N N">
+      <!--
+      INPUT:  ^Тукай<np><ant><m><nom>/Тукай<np><ant><m><nom>$ ^исем<n><px3sp><loc><attr>/имя<n><nt><nn><sg><px3sp><loc><attr>$ ^Дәүләт<n><attr>/Государственный<adj><sint><m><an><sg><nom>$ ^бүләк<n><px3sp><acc>/премия<n><f><nn><sg><px3sp><acc>$
+      OUTPUT: ^adj_n_n_n<SN>{^Государственный<adj><sint><f><an><sg><acc>$ ^премия<n><f><nn><sg><acc>$ ^имя<n><nt><nn><sg><gen>$ ^Тукай<np><ant><m><sg><gen>$}$
+      -->
+      <pattern>
+        <pattern-item n="n-attr-or-gen"/>
+        <pattern-item n="npost-loc-attr"/>
+        <pattern-item n="n-attr-or-gen"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="translate-noun">
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="3"/>
+          <with-param pos="4"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+        <out>
+          <chunk name="adj_n_n_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: N POST">
       <!--
       INPUT:  ^мәктәп<n>/школа<n><f><nn>$ ^сыз<post>/без<pr><gen>$
