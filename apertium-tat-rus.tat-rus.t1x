@@ -23,7 +23,6 @@
       <cat-item tags="adj.comp.subst.*"/>
       <cat-item tags="adv.subst"/>
       <cat-item tags="adv.subst.*"/>
-      <cat-item tags="v.*.ger.*"/>
     </def-cat>
     <def-cat n="n-attr-or-gen">
       <cat-item tags="n.attr"/>
@@ -186,7 +185,7 @@
       <cat-item tags="v.*.gpr_fut3"/>
       <cat-item tags="v.*.gpr_fut3.*"/>
       <cat-item tags="v.*.ger_perf.*"/>
-      <cat-item tags="v.*.neg.ger.*"/>
+      <cat-item tags="v.*.ger.*"/>
       <cat-item tags="v.*.ger_ppot.*"/>
       <cat-item tags="v.*.ger_abs.*"/>
       <cat-item tags="v.*.ger_fut.*"/>
