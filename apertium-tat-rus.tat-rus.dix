@@ -2,9 +2,9 @@
 <!--
 	Dictionary:
 	Sections: 1
-	Entries: 5934
-	Sdefs: 101
-	Paradigms: 12
+	Entries: 5973
+	Sdefs: 102
+	Paradigms: 13
 
 -->
 <dictionary>
@@ -191,7 +191,6 @@
   <e>       <p><l></l>          <r><s n="sg"/></r></p></e>
   <e>       <p><l><s n="pl"/></l><r><s n="pl"/></r></p></e>
 </pardef>
-
   </pardefs>
 
   <section id="main" type="standard">
@@ -299,7 +298,7 @@
 
 <e>       <p><l>бар<s n="det"/><s n="qnt"/></l>        <r>весь<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>барлык<s n="det"/><s n="qnt"/></l>     <r>весь<s n="det"/><s n="ind"/><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
-<e>       <p><l>берничә<s n="det"/><s n="qnt"/></l>     <r>несколько<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <p><l>берничә<s n="det"/><s n="qnt"/></l>    <r>несколько<s n="num"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <p><l>һәр<s n="det"/><s n="qnt"/></l>        <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>һәрбер<s n="det"/><s n="qnt"/></l>     <r>каждый<s n="det"/><s n="def"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 
@@ -6263,13 +6262,13 @@
 
 <e>       <re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 
-<e>       <re>[0-9]*0</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*0</re><p><l><s n="num"/></l>       <r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e>       <re>[0-9]*[023456789]1</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <re>[0-9]*[023456789]2</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <re>[0-9]*[023456789]3</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <re>[0-9]*[023456789]4</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-<e>       <re>[0-9]*[5-9]</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
-<e>       <re>[0-9]*1[1-4]</re><p><l><s n="num"/></l><r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*[5-9]</re><p><l><s n="num"/></l>   <r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e>       <re>[0-9]*1[1-4]</re><p><l><s n="num"/></l>  <r><s n="num"/><s n="digit"/><s n="mfn"/><s n="pl"/><s n="nom"/></r></p></e>
   
   </section>
 </dictionary>
