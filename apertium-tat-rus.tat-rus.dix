@@ -252,6 +252,7 @@
 <e>       <p><l>бернәрсә<s n="prn"/><s n="neg"/></l>   <r>ничто<s n="prn"/><s n="neg"/><s n="nt"/><s n="nn"/></r></p></e>
 
 <e>       <p><l>кем<s n="prn"/><s n="itg"/></l>        <r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/></r></p></e>
+<e>       <p><l>күпме<s n="prn"/><s n="itg"/></l>      <r>сколько<s n="prn"/><s n="itg"/><s n="mfn"/><s n="sg"/></r></p></e>
 <e>       <p><l>нинди<s n="prn"/><s n="itg"/><s n="sim"/></l><r>какой<s n="prn"/><s n="itg"/><s n="m"/><s n="an"/></r></p></e>
 <e>       <p><l>нәрсә<s n="prn"/><s n="itg"/></l>      <r>что<s n="prn"/><s n="itg"/><s n="nt"/><s n="sg"/></r></p></e>
 
@@ -304,13 +305,13 @@
 
 <e>       <p><l>бер<s n="det"/><s n="ind"/></l>        <r>один<s n="num"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>берәр<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="itg"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-
 <e>       <p><l>кай<s n="det"/><s n="ind"/></l>        <r>какой<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>кайсы<s n="det"/><s n="ind"/></l>      <r>какой<s n="det"/><s n="ind"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
-
 <e>       <p><l>бернинди<s n="det"/><s n="ind"/></l>   <r>никакой<s n="det"/><s n="ind"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e> <!-- FIXME -->
 <e>       <p><l>һичбер<s n="det"/><s n="ind"/></l>     <r>никакой<s n="det"/><s n="ind"/><s n="m"/>><s n="sg"/><s n="nom"/></r></p></e> <!-- FIXME -->
 <e>       <p><l>һичнинди<s n="det"/><s n="ind"/></l>   <r>никакой<s n="det"/><s n="ind"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e> <!-- FIXME -->
+
+<e>       <p><l>күпме<s n="det"/><s n="itg"/></l>        <r>какой<s n="det"/><s n="qnt"/><s n="mfn"/><s n="an"/><s n="pl"/><s n="nom"/></r></p></e>
 
 <e>       <p><l>үз<s n="det"/><s n="ref"/></l>         <r>свой<s n="det"/><s n="pos"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 
