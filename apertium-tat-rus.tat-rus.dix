@@ -531,6 +531,7 @@
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>же<s n="part"/></r></p></e>
 <e>       <p><l>ла<s n="mod_ass"/></l>                 <r>к<b/>сожалению<s n="ij"/></r></p></e>
 <e>       <p><l>мы<s n="qst"/></l>                     <r></r></p></e>
+<e>       <p><l>соң<s n="adv"/></l>                    <r>же<s n="part"/></r></p></e>
 <e>       <p><l>ук<s n="postadv"/></l>                 <r>же<s n="part"/></r></p></e>
 <e>       <p><l>чы<s n="emph"/></l>                    <r>пожалуйста<s n="ij"/></r></p></e>
 <e>       <p><l>шул<s n="mod_ass"/></l>                <r>ведь<s n="part"/></r></p></e>
@@ -1218,6 +1219,8 @@
 <e>       <p><l>тәмамлан<s n="v"/><s n="iv"/></l>      <r>закончиться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>тәрбиялә<s n="v"/><s n="tv"/></l>      <r>воспитать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>тәрбиялә<s n="v"/><s n="tv"/></l>      <r>воспитывать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>тәрҗемә<b/>ит<s n="v"/><s n="tv"/></l> <r>перевести<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>тәрҗемә<b/>ит<s n="v"/><s n="tv"/></l> <r>переводить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>тидер<s n="v"/><s n="tv"/></l>         <r>касаться<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>тидер<s n="v"/><s n="tv"/></l>         <r>коснуться<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>тикшер<s n="v"/><s n="tv"/></l>        <r>проверить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
