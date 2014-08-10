@@ -189,6 +189,15 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="май" tags="n.*"><select lemma="май"/></match>
   </rule>
 
+  <rule weight="2.0">
+    <!--
+    INPUT:  ^юл<n><nom>/путь<n><m><nn><sg><nom>/дорога<n><f><nn><sg><nom>/строка<n><f><nn><sg><nom>/строчка<n><f><nn><sg><nom>$ ^ятла<v><tv><ifi><p2><sg>/учить<vblex><impf><tv><ifi><p2><sg>/выучить<vblex><perf><tv><ifi><p2><sg>$
+    OUTPUT: ^юл<n><nom>/строка<n><f><nn><sg><nom>$ ^ятла<v><tv><ifi><p2><sg>/учить<vblex><impf><tv><ifi><p2><sg>/выучить<vblex><perf><tv><ifi><p2><sg>$
+    -->
+    <match lemma="юл" tags="n.*"><select lemma="строка"/></match>
+    <match lemma="ятла"/>
+  </rule>
+
 <!--
 SECTION:
 ========

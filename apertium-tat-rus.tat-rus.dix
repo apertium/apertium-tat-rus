@@ -1322,6 +1322,8 @@
 <e>       <p><l>утыр<s n="v"/><s n="iv"/></l>          <r>сидеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>утырт<s n="v"/><s n="tv"/></l>         <r>посадить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>утырт<s n="v"/><s n="tv"/></l>         <r>сажать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>утырып<b/>тор<s n="v"/><s n="iv"/></l> <r>сидеть<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>утырып<b/>тор<s n="v"/><s n="iv"/></l> <r>посидеть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>уян<s n="v"/><s n="iv"/></l>           <r>проснуться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>уят<s n="v"/><s n="tv"/></l>           <r>будить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>файдалан<s n="v"/><s n="tv"/></l>      <r>пользоваться<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -1429,6 +1431,8 @@
 <e>       <p><l>яса<s n="v"/><s n="tv"/></l>           <r>сделать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ят<s n="v"/><s n="iv"/></l>            <r>лечь<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ят<s n="v"/><s n="iv"/></l>            <r>ложиться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>ятла<s n="v"/><s n="tv"/></l>          <r>учить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>ятла<s n="v"/><s n="tv"/></l>          <r>выучить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>яу<s n="v"/><s n="iv"/></l>            <r>идти<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>яу<s n="v"/><s n="iv"/></l>            <r>падать<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>яу<s n="v"/><s n="iv"/></l>            <r>упасть<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
