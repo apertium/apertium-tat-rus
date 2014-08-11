@@ -225,7 +225,9 @@
 <e>       <p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
 
 <e>       <p><l>бу<s n="prn"/><s n="dem"/></l>         <r>это<s n="prn"/><s n="dem"/><s n="nt"/></r></p></e>
-<e>       <p><l>теге<s n="prn"/><s n="dem"/></l>       <r>тот<s n="prn"/><s n="dem"/><s n="m"/>><s n="an"/></r></p></e>
+<e c="монда"><p><l>бу<s n="prn"/><s n="dem"/><s n="loc"/></l><r>здесь<s n="adv"/></r></p></e>
+<e>       <p><l>теге<s n="prn"/><s n="dem"/></l><r>тот<s n="prn"/><s n="dem"/><s n="m"/><s n="an"/><s n="sg"/></r></p></e>
+<e c="тегендә"><p><l>теге<s n="prn"/><s n="dem"/><s n="loc"/></l><r>там<s n="adv"/></r></p></e>
 <e>       <p><l>ул<s n="prn"/><s n="dem"/></l>         <r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
 <e>       <p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
 <e>       <p><l>шул<s n="prn"/><s n="dem"/></l>        <r>это<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></r></p></e>
@@ -507,6 +509,8 @@
 
     <!-- Interjections -->
 
+<e>       <p><l>әйдә<s n="ij"/></l>                    <r>давай<s n="ij"/></r></p></e>
+<e>       <p><l>әйдәгез<s n="ij"/></l>                    <r>давайте<s n="ij"/></r></p></e>
 <e>       <p><l>әйе<s n="ij"/></l>                     <r>да<s n="ij"/></r></p></e>
 <e>       <p><l>әлбәттә<s n="ij"/></l>                 <r>конечно<s n="adv"/></r></p></e>  <!-- FIXME CHECK pos russian -->
 <e>       <p><l>кит<b/>аннан<s n="ij"/></l>            <r>неужели<s n="part"/></r></p></e>
@@ -625,6 +629,7 @@
 <e>       <p><l>кабат<s n="adv"/></l>                  <r>снова<s n="adv"/></r></p></e>
 <e>       <p><l>кайвакыт<s n="adv"/></l>               <r>иногда<s n="adv"/></r></p></e>
 <e>       <p><l>кайчак<s n="adv"/></l>                 <r>иногда<s n="adv"/></r></p></e>
+<e>       <p><l>кайчакта<s n="adv"/></l>               <r>иногда<s n="adv"/></r></p></e>
 <e>       <p><l>киресенчә<s n="adv"/></l>              <r>наоборот<s n="adv"/></r></p></e>
 <e>       <p><l>кичен<s n="adv"/></l>                  <r>вечером<s n="adv"/></r></p></e>
 <e>       <p><l>күбесенчә<s n="adv"/></l>              <r>в<b/>основном<s n="adv"/></r></p></e>
@@ -797,6 +802,7 @@
 <e>       <p><l>ачыл<s n="v"/><s n="iv"/></l>          <r>открыться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>аша<s n="v"/><s n="tv"/></l>           <r>есть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>аша<s n="v"/><s n="tv"/></l>           <r>кушать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>ашап<b/>ал<s n="v"/><s n="tv"/></l>    <r>поесть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ашат<s n="v"/><s n="tv"/></l>          <r>кормить<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ашык<s n="v"/><s n="iv"/></l>          <r>спешить<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>ашыр<s n="v"/><s n="tv"/></l>          <r>претворить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
@@ -1158,6 +1164,8 @@
 <e>       <p><l>сора<s n="v"/><s n="tv"/></l>          <r>спросить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>сораш<s n="v"/><s n="tv"/></l>         <r>расспрашивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>сораштыр<s n="v"/><s n="tv"/></l>      <r>расспрашивать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>сөрт<s n="v"/><s n="tv"/></l>          <r>вытирать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
+<e>       <p><l>сөрт<s n="v"/><s n="tv"/></l>          <r>вытереть<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>сүген<s n="v"/><s n="iv"/></l>         <r>ругаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>сугыш<s n="v"/><s n="iv"/></l>         <r>биться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>сугыш<s n="v"/><s n="iv"/></l>         <r>драться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
