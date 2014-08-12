@@ -310,7 +310,7 @@ tat. 'foo<v><tv><fut><p1><sg>' -> rus. 'baz<vblex><tv><perf><fut><p1><sg>'
   </rule>
 
 <!--
-SECTION: default translations
+SECTION: DEFAULT TRANSLATIONS
 =============================
 -->
 
