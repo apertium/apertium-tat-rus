@@ -209,10 +209,14 @@
     <def-cat n="post">
       <cat-item tags="post"/>
     </def-cat>
-
     <def-cat n="post-or-npost">
       <cat-item tags="post"/>
       <cat-item tags="n.px3sp.*"/>
+    </def-cat>
+
+    <def-cat n="adv">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.itg"/>
     </def-cat>
 
     <def-cat n="qst">
@@ -2308,6 +2312,28 @@ OUTPUT: ^adj<AdjP>{^хороший<adj><m><an><sg><nom>$}$
             </out>
           </otherwise>
         </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ADV">
+      <!--
+        INPUT:  ^кайда<adv><itg>/где<adv><itg>$
+        OUTPUT: ^adv<AdvP>{^где<adv><itg>$}$
+      -->
+      <pattern>
+        <pattern-item n="adv"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="adv">
+            <tags>
+              <tag><lit-tag v="AdvP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 

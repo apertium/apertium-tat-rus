@@ -12,6 +12,10 @@
 
   <section-def-cats>
 
+    <def-cat n="anything">
+      <cat-item tags="*"/>
+    </def-cat>
+
     <def-cat n="SN">
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
@@ -83,23 +87,19 @@
 
   <section-rules>
 
-    <rule comment="REGLA: SN VBSER SENT -> SN SENT">
+    <rule comment="REGLA: * VBSER -> *">
       <!--
-      INPUT:  ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$^dot<SENT>{^.<sent>$}$
-      OUTPUT: ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$^dot<SENT>{^.<sent>$}$
+      INPUT:  ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$ ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
+      OUTPUT: ^n_n<SN>{^книга<n><f><nn><sg><nom>$ ^ученик<n><m><aa><sg><gen>$}$
       -->
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="anything"/>
         <pattern-item n="VBSER-pres"/>
-        <pattern-item n="SENT"/>
       </pattern>
       <action>
         <out>
           <chunk>
             <clip pos="1" part="whole"/>
-          </chunk>
-          <chunk>
-            <clip pos="3" part="whole"/>
           </chunk>
         </out>
       </action>
