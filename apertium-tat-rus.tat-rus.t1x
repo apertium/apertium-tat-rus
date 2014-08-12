@@ -2387,59 +2387,6 @@ OUTPUT: ^qst<SENT>{^?<sent>$}$
       </action>
     </rule>
 
-    <rule comment="">
-      <!--
-        INPUT:  ^Гөлнара<np><ant><f><gen>/Гульнара<np><ant><f><sg><gen>$ ^эт<n><px3sp><nom>/собака<n><f><aa><px3sp><nom>$ ^юк<adj>/быть<vbser><neg><pres><p3><sg>$ ^и<cop><p3><sg>/быть<vbser><p3><sg>$
-        Гөлнараның эте юк
-        OUTPUT: ^bar-yuq<S>{^у<pr>$ ^Гульнара<np><ant><f><sg><gen>$ ^быть<vbser><neg><pres><p3><sg>$ ^собака<n><f><aa><sg><gen>$}$
-        У Гульнары нет собаки
-      -->
-      <pattern>
-        <pattern-item n="n-gen"/>
-        <pattern-item n="n-px3sp-nom"/>
-        <pattern-item n="yuq-adj"/>
-        <pattern-item n="cop-p3"/>
-      </pattern>
-      <action>
-        <call-macro n="return-number-of-sl-word">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="bar-yuq">
-            <tags>
-              <tag><lit-tag v="S"/></tag>
-            </tags>
-            <lu>
-              <lit v="у"/>
-              <lit-tag v="pr"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_nom"/>
-              <clip pos="1" side="tl" part="a_gender"/>
-              <clip pos="1" side="tl" part="a_anim"/>
-              <var n="number"/>
-              <lit-tag v="gen"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="3" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_nom"/>
-              <clip pos="2" side="tl" part="a_gender"/>
-              <clip pos="2" side="tl" part="a_anim"/>
-              <lit-tag v="sg"/>
-              <lit-tag v="gen"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
   </section-rules>
 
 </transfer>
