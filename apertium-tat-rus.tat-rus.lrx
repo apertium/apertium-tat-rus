@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 
+<!--
+SECTION: MAIN
+=============
+-->
+
 <rules>
   <rule>
     <!--
@@ -198,9 +203,103 @@ OUTPUT: ^биш<num>/пять<num><mfn><pl>$ ^яшь<n><nom>/год<n><m><nn><no
     <match lemma="ятла"/>
   </rule>
 
+  <rule>
+    <!--
+    INPUT:  ^бир<v><tv><imp><p2><frm><pl>/дать<vblex><perf><tv><imp><p2><frm><pl>$ ^әле<adv>/ещё<adv>/пока<adv>/пожалуйста<ij>$
+    OUTPUT: ^бир<v><tv><imp><p2><frm><pl>/дать<vblex><perf><tv><imp><p2><frm><pl>$ ^әле<adv>/пожалуйста<ij>$
+    -->
+    <match tags="v.*.imp.*"/>
+    <match lemma="әле" tags="adv"><select lemma="пожалуйста"/></match>
+  </rule>
+
 <!--
-SECTION:
-========
+SECTION: DEFAULT TRANSLATIONS
+=============================
+-->
+
+  <rule>
+    <!--
+    INPUT:  ^шуннан соң<adv>/потом<adv>/затем<adv>$
+    OUTPUT: ^шуннан соң<adv>/затем<adv>$
+    -->
+    <match lemma="шуннан соң" tags="adv"><select lemma="затем"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^начарлык<n><nom>/плохое<n><nt><nn><nom>/лихое<n><nt><nn><nom>/плохое состояние<n><nt><nn><nom>$
+    OUTPUT: ^начарлык<n><nom>/плохое состояние<n><nt><nn><nom>$
+    -->
+    <match lemma="начарлык" tags="n.*"><select lemma="плохое состояние"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^эшчәнлек<n><nom>/трудолюбие<n><nt><nn><nom>/деятельность<n><f><nn><nom>$
+    OUTPUT: ^эшчәнлек<n><nom>/деятельность<n><f><nn><nom>$
+    -->
+    <match lemma="эшчәнлек" tags="n.*"><select lemma="деятельность"/></match>
+  </rule>
+
+  <rule>
+    <match lemma="сез" tags="prn.pers.p2.pl.gen.@ADVL→"><select lemma="вы" tags="prn.*"/></match>
+  </rule>
+
+  <rule>
+    <match lemma="сез" tags="prn.pers.p2.pl.gen"><select lemma="ваш" tags="det.pos.*"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^гафу ит<v><tv><imp><p2><sg>/прощать<vblex><impf><tv><imp><p2><sg>/простить<vblex><perf><tv><imp><p2><sg>$
+    OUTPUT: ^гафу ит<v><tv><imp><p2><sg>/простить<vblex><perf><tv><imp><p2><sg>$
+    -->
+    <match lemma="гафу ит" tags="v.tv.imp.*"><select lemma="простить"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^да<cnjcoo>/и<cnjcoo>/тоже<adv>$
+    OUTPUT: ^да<cnjcoo>/тоже<adv>$
+    -->
+    <match lemma="да" tags="cnjcoo"><select lemma="тоже"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^белән<post>/на<pr><prp>/с<pr><ins>$
+    OUTPUT: ^белән<post>/с<pr><ins>$
+    -->
+    <match lemma="белән" tags="post"><select lemma="с"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^эч<n><px3sp><loc>/в<pr><prp>/внутри<pr><gen>/в течение<pr><gen>$
+    OUTPUT: ^эч<n><px3sp><loc>/внутри<pr><gen>$
+    -->
+    <match lemma="эч" tags="n.px3sp.loc"><select lemma="внутри"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^һөнәри<adj>/ремесленный<adj><sint><m><an><sg><nom>/профессиональный<adj><sint><m><an><sg><nom>$
+    OUTPUT: ^һөнәри<adj>/профессиональный<adj><sint><m><an><sg><nom>$
+    -->
+    <match lemma="һөнәри" tags="adj"><select lemma="профессиональный"/></match>
+  </rule>
+
+  <rule>
+    <!--
+    INPUT:  ^өчен<post>/для<pr><gen>/за<pr><acc>$
+    OUTPUT: ^өчен<post>/для<pr><gen>$
+    -->
+    <match lemma="өчен" tags="post"><select lemma="для"/></match>
+  </rule>
+
+<!--
+SECTION: CANDIDATES FOR LEMMA-INDEPENDENT RULES
+===============================================
 
 TODO: some of the following rules should be lemma independent.
 The idea is to have two alternative (perfective and imperfective) translations for any Tatar verb.
@@ -307,91 +406,6 @@ tat. 'foo<v><tv><fut><p1><sg>' -> rus. 'baz<vblex><tv><perf><fut><p1><sg>'
     OUTPUT: ^чакыр<v><tv><fut_plan><p1><sg>/позвать<vblex><perf><tv><fut_plan><p1><sg>$
     -->
     <match tags="v.tv.fut_plan.*"><select lemma="позвать" tags="*.perf.*"/></match>
-  </rule>
-
-<!--
-SECTION: DEFAULT TRANSLATIONS
-=============================
--->
-
-  <rule>
-    <!--
-    INPUT:  ^шуннан соң<adv>/потом<adv>/затем<adv>$
-    OUTPUT: ^шуннан соң<adv>/затем<adv>$
-    -->
-    <match lemma="шуннан соң" tags="adv"><select lemma="затем"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^начарлык<n><nom>/плохое<n><nt><nn><nom>/лихое<n><nt><nn><nom>/плохое состояние<n><nt><nn><nom>$
-    OUTPUT: ^начарлык<n><nom>/плохое состояние<n><nt><nn><nom>$
-    -->
-    <match lemma="начарлык" tags="n.*"><select lemma="плохое состояние"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^эшчәнлек<n><nom>/трудолюбие<n><nt><nn><nom>/деятельность<n><f><nn><nom>$
-    OUTPUT: ^эшчәнлек<n><nom>/деятельность<n><f><nn><nom>$
-    -->
-    <match lemma="эшчәнлек" tags="n.*"><select lemma="деятельность"/></match>
-  </rule>
-
-  <rule>
-    <match lemma="сез" tags="prn.pers.p2.pl.gen.@ADVL→"><select lemma="вы" tags="prn.*"/></match>
-  </rule>
-
-  <rule>
-    <match lemma="сез" tags="prn.pers.p2.pl.gen"><select lemma="ваш" tags="det.pos.*"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^гафу ит<v><tv><imp><p2><sg>/прощать<vblex><impf><tv><imp><p2><sg>/простить<vblex><perf><tv><imp><p2><sg>$
-    OUTPUT: ^гафу ит<v><tv><imp><p2><sg>/простить<vblex><perf><tv><imp><p2><sg>$
-    -->
-    <match lemma="гафу ит" tags="v.tv.imp.*"><select lemma="простить"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^да<cnjcoo>/и<cnjcoo>/тоже<adv>$
-    OUTPUT: ^да<cnjcoo>/тоже<adv>$
-    -->
-    <match lemma="да" tags="cnjcoo"><select lemma="тоже"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^белән<post>/на<pr><prp>/с<pr><ins>$
-    OUTPUT: ^белән<post>/с<pr><ins>$
-    -->
-    <match lemma="белән" tags="post"><select lemma="с"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^эч<n><px3sp><loc>/в<pr><prp>/внутри<pr><gen>/в течение<pr><gen>$
-    OUTPUT: ^эч<n><px3sp><loc>/внутри<pr><gen>$
-    -->
-    <match lemma="эч" tags="n.px3sp.loc"><select lemma="внутри"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^һөнәри<adj>/ремесленный<adj><sint><m><an><sg><nom>/профессиональный<adj><sint><m><an><sg><nom>$
-    OUTPUT: ^һөнәри<adj>/профессиональный<adj><sint><m><an><sg><nom>$
-    -->
-    <match lemma="һөнәри" tags="adj"><select lemma="профессиональный"/></match>
-  </rule>
-
-  <rule>
-    <!--
-    INPUT:  ^өчен<post>/для<pr><gen>/за<pr><acc>$
-    OUTPUT: ^өчен<post>/для<pr><gen>$
-    -->
-    <match lemma="өчен" tags="post"><select lemma="для"/></match>
   </rule>
 
   <rule>

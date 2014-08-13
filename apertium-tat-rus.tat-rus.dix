@@ -621,6 +621,7 @@
 <e>       <p><l>әлбәттә<s n="adv"/></l>                <r>конечно<s n="adv"/></r></p></e>
 <e>       <p><l>әлбәттә<s n="adv"/></l>                <r>непременно<s n="adv"/></r></p></e>
 <e>       <p><l>әлегә<s n="adv"/></l>                  <r>пока<s n="adv"/></r></p></e>
+<e>       <p><l>әле<b/>һаман<b/>да<s n="adv"/></l>     <r>всё<b/>ещё<s n="adv"/></r></p></e>
 <e>       <p><l>әрле-бирле<s n="adv"/></l>             <r>туда-сюда<s n="adv"/></r></p></e>
 <e>       <p><l>җәяү<s n="adv"/></l>                   <r>пешком<s n="adv"/></r></p></e>
 <e>       <p><l>җитди<b/>рәвештә<s n="adv"/></l>       <r>серьёзно<s n="adv"/></r></p></e>
@@ -713,6 +714,7 @@
 <e>       <p><l>былтыр<s n="adv"/></l>                 <r>прошлогодний<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>әле<s n="adv"/></l>                    <r>ещё<s n="adv"/></r></p></e>
 <e>       <p><l>әле<s n="adv"/></l>                    <r>пока<s n="adv"/></r></p></e>
+<e>       <p><l>әле<s n="adv"/></l>                    <r>пожалуйста<s n="ij"/></r></p></e> <!-- FIXME should probably be an <emph> in tat.lexc -->
 <e>       <p><l>әле<s n="adv"/></l>                    <r>настоящий<s n="adj"/><s n="sint"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>әле<s n="adv"/></l>                    <r>сегодняшний<s n="adj"/></r></p><par n="adv_attr/adj"/></e>
 <e>       <p><l>әүвәл<s n="adv"/></l>                  <r>раньше<s n="adv"/></r></p></e>
