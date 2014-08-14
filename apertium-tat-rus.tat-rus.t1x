@@ -1929,6 +1929,58 @@
       </action>
     </rule>
 
+    <rule comment="DET ADJ N POST/NPOST">
+      <!--
+      INPUT:  ^бер<det><ind>/один<num><m><an><sg><nom>$ ^зур<adj>/большой<adj><sint><m><an><sg><nom>$ ^агач<n><dat>/дерево<n><nt><nn><sg><dat>$ ^таба<post>/к<pr><dat>$
+      OUTPUT: ^pr_det_adj_n<PP>{^к<pr>$ ^один<num><nt><an><sg><dat>$ ^большой<adj><sint><nt><an><sg><dat>$ ^дерево<n><nt><nn><sg><dat>$}$
+      -->
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="n"/>
+        <pattern-item n="post-or-npost"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-pr-noun">
+          <with-param pos="4"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="pr_det_adj_n">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 <!-- SECTION: Verbs -->
 
 <!--
