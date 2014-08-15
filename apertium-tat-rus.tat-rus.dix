@@ -222,7 +222,8 @@
 <e>       <p><l>без<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e>
 <e>       <p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></l><r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e>
 <e>       <p><l>алар<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
-<e>       <p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
+<e>       <p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/></l><r>Вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>Ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
 
 <e>       <p><l>бу<s n="prn"/><s n="dem"/></l>         <r>это<s n="prn"/><s n="dem"/><s n="nt"/></r></p></e>
 <e c="монда"><p><l>бу<s n="prn"/><s n="dem"/><s n="loc"/></l><r>здесь<s n="adv"/></r></p></e>
@@ -268,7 +269,7 @@
 <e c="безнең"><p><l>без<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="gen"/></l><r>наш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
 <e c="сезнең"><p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/><s n="gen"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
 <e c="аларның"><p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/><s n="gen"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
-<e c="Сезнең"><p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
+<e c="Сезнең"><p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>Ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>его<s n="det"/><s n="pos"/></r></p></e>
 <e c="аларның"><p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/><s n="gen"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
 
@@ -278,7 +279,7 @@
 <e c="безнең"><p><l>без<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="gen"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="pl"/><s n="gen"/></r></p></e>
 <e c="сезнең"><p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/><s n="gen"/></l><r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/><s n="gen"/></r></p></e>
 <e c="аларның"><p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/><s n="gen"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/><s n="gen"/></r></p></e>
-<e c="Сезнең"><p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/><s n="gen"/></r></p></e>
+<e c="Сезнең"><p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="gen"/></l><r>Вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/><s n="gen"/></r></p></e>
 <e c="аның"><p><l>ул<s n="prn"/><s n="dem"/><s n="gen"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/><s n="gen"/></r></p></e>
 <e c="аларның"><p><l>ул<s n="prn"/><s n="dem"/><s n="pl"/><s n="gen"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/><s n="gen"/></r></p></e>
 
@@ -288,7 +289,7 @@
 <e c="безнеке"><p><l>без<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="px"/></l><r>наш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/></r></p></e>
 <e c="сезнеке"><p><l>сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/><s n="px"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/></r></p></e>
 <e c="аларныкы"><p><l>ул<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/><s n="px"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
-<e c="Сезнеке"><p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="px"/></l><r>ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/></r></p></e>
+<e c="Сезнеке"><p><l>Сез<s n="prn"/><s n="pers"/><s n="p2"/><s n="sp"/><s n="frm"/><s n="px"/></l><r>Ваш<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/></r></p></e>
 <e c="аныкы"><p><l>ул<s n="prn"/><s n="dem"/><s n="px"/></l><r>его<s n="det"/><s n="pos"/></r></p></e>
 <e c="аларныкы"><p><l>ул<s n="prn"/><s n="dem"/><s n="px"/><s n="gen"/></l><r>их<s n="det"/><s n="pos"/></r></p></e>
 
