@@ -1397,6 +1397,8 @@
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>          <r>поступить<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>          <r>работать<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>эшлә<s n="v"/><s n="tv"/></l>          <r>сделать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>эшләп<b/>ал<s n="v"/><s n="tv"/></l>   <r>поработать<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
+<e>       <p><l>эшләп<b/>бетер<s n="v"/><s n="tv"/></l><r>сделать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>ю<s n="v"/><s n="tv"/></l>             <r>мыть<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>югалт<s n="v"/><s n="tv"/></l>         <r>потерять<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>югалт<s n="v"/><s n="tv"/></l>         <r>терять<s n="vblex"/><s n="impf"/><s n="tv"/></r></p><par n="impf__verb"/></e>
@@ -1454,6 +1456,10 @@
 <e>       <p><l>яшер<s n="v"/><s n="tv"/></l>          <r>спрятать<s n="vblex"/><s n="perf"/><s n="tv"/></r></p><par n="perf__verb"/></e>
 <e>       <p><l>яшерен<s n="v"/><s n="iv"/></l>        <r>прятаться<s n="vblex"/><s n="impf"/><s n="iv"/></r></p><par n="impf__verb"/></e>
 <e>       <p><l>яшерен<s n="v"/><s n="iv"/></l>        <r>спрятаться<s n="vblex"/><s n="perf"/><s n="iv"/></r></p><par n="perf__verb"/></e>
+
+    <!-- Auxiliary verbs -->
+
+<e>       <p><l>бел<s n="vaux"/></l>                   <r>уметь<s n="vblex"/><s n="impf"/></r></p><par n="impf__verb"/></e>
 
     <!-- Adjectives -->
 
