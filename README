@@ -1,0 +1,95 @@
+Tatar and Russian
+
+                            apertium-tat-rus
+===============================================================================
+
+This is an Apertium language pair for translating from Tatar to Russian. 
+
+What you can use this language package for:
+
+* Translating from Tatar to Russian
+* Morphological analysis of Tatar
+* Part-of-speech tagging of Tatar
+
+For information on the latter two points, see subheading "For more 
+information" below.
+
+Requirements
+===============================================================================
+
+You will need the following software installed:
+
+* lttoolbox (>= 3.1.2)
+* apertium (>= 3.2.0)
+* vislcg3 (>= 0.9.7.5129)
+* apertium-tat
+* apertium-rus
+
+If this does not make any sense, we recommend you look at: www.apertium.org
+
+Compiling
+===============================================================================
+
+Given the requirements being installed, you should be able to just run:
+
+$ ./configure
+$ make
+# make install
+
+You can use ./autogen.sh instead of ./configure if you're compiling from
+SVN. If you're using a --prefix to ./configure, make sure it's the
+same one you used to install apertium itself.
+
+Testing
+===============================================================================
+
+If you are in the source directory after running make, the following
+commands should work:
+
+$ echo "Тиз коңгырт төлке ялкау эт аркылы сикерә." | apertium -d . tat-rus
+Быстрая коричневая лиса через ленивую собаку прыгает.
+
+After installing somewhere in $PATH, you should be able to do eg.
+
+$ echo "Тиз коңгырт төлке ялкау эт аркылы сикерә." | apertium tat-rus
+Быстрая коричневая лиса через ленивую собаку прыгает.
+
+The following command runs all regression tests:
+
+$ ./qa.sh
+
+The following command runs only tests which are on the Apertium wiki page:
+
+$ ./regression-tests.sh
+
+Files and data
+===============================================================================
+
+For monolingual data, see the modules apertium-tat and apertium-rus.
+
+* apertium-tat-rus.tat-rus.dix         - Bilingual dictionary
+* apertium-tat-rus.tat-rus.lrx         - Lexical selection rules for translating into Russian
+* apertium-tat-rus.tat-rus.t1x         - Transfer rules for translating into Russian (first pass)
+* apertium-tat-rus.tat-rus.t2x         - Transfer rules for translating into Russian (second pass)
+* apertium-tat-rus.tat-rus.t3x         - Transfer rules for translating into Russian (third pass)
+* apertium-tat-rus.tat-rus.t4x         - Transfer rules for translating into Russian (fourth pass)
+
+* modes.xml                            - Translation modes
+
+For more information
+===============================================================================
+
+* http://wiki.apertium.org/wiki/Installation
+* http://wiki.apertium.org/wiki/Tatar_and_Russian
+* http://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
+* http://wiki.apertium.org/wiki/Constraint_Grammar
+
+Help and support
+===============================================================================
+
+If you need help using this language pair or data, you can contact:
+
+* Mailing list: apertium-turkic@lists.sourceforge.net
+* IRC: #apertium on irc.freenode.net
+
+See also the file AUTHORS included in this distribution.
