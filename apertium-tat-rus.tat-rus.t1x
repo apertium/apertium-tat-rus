@@ -1498,6 +1498,52 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: ADJ ADJ N">
+      <!--
+      INPUT:  ^тиз<adj>/быстрый<adj><sint><m><an><sg><nom>$ ^коңгырт<adj>/коричневый<adj><sint><m><an><sg><nom>$ ^төлке<n><nom>/лиса<n><f><aa><sg><nom>$
+      OUTPUT: ^adj_adj_n<SN><nom>{^быстрый<adj><sint><f><an><sg><nom>$ ^коричневый<adj><sint><f><an><sg><nom>$ ^лиса<n><f><aa><sg><nom>$}$
+      -->
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="adj_adj_n">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="3" side="tl" part="a_case"/></tag>
+              <tag><clip pos="3" side="sl" part="a_SYNLABEL"/></tag>
+            </tags>
+            <var n="preposition"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: DET ADJ N">
       <!--
       INPUT:  ^иң<adv>/самый<det><def><m><an><sg><nom>$ ^тәмле<adj>/вкусный<adj><m><an><sg><nom>$ ^аш<n><nom>/еда<n><f><nn><nom>$
@@ -1869,6 +1915,49 @@
               <clip pos="1" side="tl" part="whole"/>
             </lu>
 	    <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="ADJ N POST">
+      <!--
+      INPUT:  ^ялкау<adj>/ленивый<adj><sint><m><an><sg><nom>$ ^эт<n><attr>/собака<n><f><aa><sg><attr>$ ^аркылы<post>/через<pr><acc>$
+      OUTPUT: ^pr_adj_n<PP>{^через<pr>$ ^ленивый<adj><sint><f><an><sg><acc>$ ^собака<n><f><aa><sg><acc>$}$
+      -->
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="n"/>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+        <call-macro n="translate-noun">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="makeagree-pr-noun">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="makeagree-det-noun">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="pr_adj_n">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
