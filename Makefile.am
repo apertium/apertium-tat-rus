@@ -126,7 +126,6 @@ $(PREFIX1).autopgen.bin: $(AP_SRC2)/apertium-$(LANG2).post-$(LANG2).dix
 
 EXTRA_DIST= \
            $(BASENAME).$(PREFIX1).dix \
-           $(BASENAME).post-$(LANG2).dix \
            $(BASENAME).$(PREFIX1).lrx \
            $(BASENAME).$(PREFIX1).t1x \
            $(BASENAME).$(PREFIX1).t2x \
