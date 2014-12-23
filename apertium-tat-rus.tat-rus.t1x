@@ -129,7 +129,7 @@
       <cat-item tags="cop.aor.p1.*"/>
       <cat-item tags="cop.aor.p2.*"/>
       <cat-item tags="cop.aor.p3.*"/>
-      <cat-item tags="cop.aor.neg.p3.*"/>
+      <cat-item tags="cop.neg.aor.p3.*"/>
     </def-cat>
     <def-cat n="cop-ifi">
       <cat-item tags="cop.ifi.*.*"/>
