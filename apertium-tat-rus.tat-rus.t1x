@@ -126,10 +126,10 @@
       <cat-item tags="cop.p3.pl"/>
     </def-cat>
     <def-cat n="cop-pres">
-      <cat-item tags="cop.p1.*"/>
-      <cat-item tags="cop.p2.*"/>
-      <cat-item tags="cop.p3.*"/>
-      <cat-item tags="cop.neg.p3.*"/>
+      <cat-item tags="cop.aor.p1.*"/>
+      <cat-item tags="cop.aor.p2.*"/>
+      <cat-item tags="cop.aor.p3.*"/>
+      <cat-item tags="cop.aor.neg.p3.*"/>
     </def-cat>
     <def-cat n="cop-ifi">
       <cat-item tags="cop.ifi.*.*"/>
@@ -2073,7 +2073,7 @@
 <!-- SECTION: Verbs -->
 
 <!--
-INPUT:  ^и<cop><p3><sg>/быть<vbser><p3><sg>$
+INPUT:  ^и<cop><aor><p3><sg>/быть<vbser><p3><sg>$
 OUTPUT: ^cop-pres<VBSER>{^быть<vbser><pres><p3><sg>$}$
 -->
     <rule comment="">
