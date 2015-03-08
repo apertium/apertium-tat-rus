@@ -144,6 +144,7 @@ apertium_tat_rus_DATA=$(TARGETS_COMMON) \
 	$(BASENAME).$(PREFIX1).t1x \
 	$(BASENAME).$(PREFIX1).t2x \
 	$(BASENAME).$(PREFIX1).t3x \
+	$(BASENAME).$(PREFIX1).t4x \
                     $(PREFIX1).prob
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
