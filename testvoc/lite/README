@@ -33,5 +33,5 @@ In this folder, there are also regression.txt and pending.txt files, which are l
 regression and pending tests on the wiki, but are intended to be used for single
 words, whereas the latter are reserved for phrases and clauses (which can be
 disambiguated). Test cases in regression.txt are run by the 'apertium-tat-rus/
-tests/testvoc.test' script (which is executed with './qa.sh testvoc reg' or simply with
-'./qa.sh' command.
+tests/testvoc.test' script (which is executed with './qa testvoc reg' or simply with
+'./qa' command.

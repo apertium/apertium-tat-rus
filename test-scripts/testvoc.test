@@ -12,7 +12,7 @@
 # GENERATOR and POSTGENERATOR, the latter two will yield an output which is
 # equal to field 4 (i.e. Russian surface forms).
 
-# Supposed to be invoked by "./qa.sh testvoc reg" or "./qa.sh testvoc pen"
+# Supposed to be invoked by "./qa testvoc reg" or "./qa testvoc pen"
 
 if [ "$1" = "reg" ]; then
     TESTS="testvoc/lite/regression.txt"

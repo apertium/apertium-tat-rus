@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 
-<!-- Tests are run by './qa.sh t3x' command.
+<!-- Tests are run by './qa t3x' command.
      INPUT is the output of t2x,
      OUTPUT is the expected output of this transfer module.
 
-     Also make sure to run './qa.sh' (with no arguments)
+     Also make sure to run './qa' (with no arguments)
      before committing to svn. -->
 
 <interchunk>

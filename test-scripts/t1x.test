@@ -3,7 +3,7 @@
 # The purpose of this script is to make sure that transfer rules
 # do the job they advertise in their headers with INPUT/OUTPUT comments.
 
-# Supposed to be invoked by "./qa.sh t1x"
+# Supposed to be invoked by "./qa t1x"
 
 # In particular, the program does the following:
 #   * extracts all INPUT-OUTPUT statements from the TRANSFER_FILE,

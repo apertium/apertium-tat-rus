@@ -23,14 +23,14 @@ make &&
 cd ../../nursery/apertium-tat-rus
 make &&
 
-if ./wiki-tests.sh Regression tat rus && ./qa.sh testvoc reg
+if ./wiki-tests.sh Regression tat rus && ./qa testvoc reg
 then
     echo ""
     echo "ALL TESTS PASS."
     echo ""
 fi
 
-./qa.sh corp
+./qa corp
 
 if ! diff corpus/tat-rus-origina.txt corpus/tat-rus-nova.txt > /dev/null; then
 	echo '[*@#] errors tat-rus before:'

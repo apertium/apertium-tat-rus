@@ -31,7 +31,7 @@ dev/shupashkar/apertium-tt-ru.tt.lexc -text
 dev/shupashkar/apertium-tt-ru.tt.twol -text
 /modes.xml -text
 /pending-tests.sh -text
-/qa.sh -text
+/qa -text
 /regression-tests.sh -text
 test-scripts/corp.test -text
 test-scripts/t1x.test -text

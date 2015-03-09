@@ -3,8 +3,8 @@
 # Takes the basename of the test scrpt in /test-scripts as an argument,
 # an additional argument if the test script requires it, and runs the test.
 #
-# Usage: ./qa.sh t1x
-#        ./qa.sh testvoc reg
+# Usage: ./qa t1x
+#        ./qa testvoc reg
 
 if [ $# -eq 0 ]
 then

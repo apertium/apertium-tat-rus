@@ -20,9 +20,9 @@ Basic workflow is like the following (IS talking to himself):
 	2) run diff on tat-rus-origina.txt and tat-rus-posted.txt,
 	3) see what is to fix/to improve,
 	4) fix them and compile,
-	5) run ./qa.sh tat-rus-corp to see whether you really fixed them, if so
+	5) run ./qa tat-rus-corp to see whether you really fixed them, if so
 	6) commit,
 	
 	repeat the cycle
 
-'qa.sh tat-rus-corp' in apertium-tat-rus/ gives a coloured diff of "origina" and "nova" translations.
+'qa tat-rus-corp' in apertium-tat-rus/ gives a coloured diff of "origina" and "nova" translations.

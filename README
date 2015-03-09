@@ -56,7 +56,7 @@ $ echo "Тиз коңгырт төлке ялкау эт аркылы сикер
 
 The following command runs all regression tests:
 
-$ ./qa.sh
+$ ./qa
 
 The following command runs only tests which are on the Apertium wiki page:
 
