@@ -58,3 +58,8 @@ texts/text2.ref.txt -text
 texts/text2.rus.txt -text
 texts/text2.tat.txt -text
 /wiki-tests.sh -text
+*.dix linguist-language=XML linguist-detectable=true
+*.lrx linguist-language=XML linguist-detectable=true
+*.lsx linguist-language=XML linguist-detectable=true
+*.tsx linguist-language=XML linguist-detectable=true
+*.t[[:digit:]]x linguist-language=XML linguist-detectable=true
