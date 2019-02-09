@@ -1921,6 +1921,7 @@
 <e>       <p><l>начар<s n="adj"/></l>                  <r>плохой<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>начар<s n="adj"/><s n="advl"/></l>     <r>плохо<s n="adv"/></r></p></e>
 <e>       <p><l>нәзек<s n="adj"/></l>                  <r>тонкий<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
+<e>       <p><l>нәни<s n="adj"/></l>                   <r>маленький<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>нәтиҗәле<s n="adj"/></l>               <r>результативный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>нәтиҗәле<s n="adj"/></l>               <r>эффективный<s n="adj"/><s n="sint"/></r></p><par n="__adj_sint"/></e>
 <e>       <p><l>нәтиҗәле<s n="adj"/><s n="advl"/></l>  <r>результативно<s n="adv"/></r></p></e>
@@ -5270,6 +5271,7 @@
 <e>       <p><l>приз<s n="n"/></l>                     <r>приз<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>призма<s n="n"/></l>                   <r>призма<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>приказ<s n="n"/></l>                   <r>приказ<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
+<e>       <p><l>принц<s n="n"/></l>                    <r>принц<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>принцип<s n="n"/></l>                  <r>принцип<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>проблема<s n="n"/></l>                 <r>проблема<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>провинция<s n="n"/></l>                <r>провинция<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
@@ -5917,6 +5919,7 @@
 <e>       <p><l>халык<s n="n"/><s n="attr"/></l>       <r>народный<s n="adj"/><s n="sint"/><s n="m"/><s n="an"/><s n="sg"/><s n="nom"/></r></p></e>
 <e>       <p><l>халыкчанлык<s n="n"/></l>              <r>народность<s n="n"/><s n="f"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>хан<s n="n"/></l>                      <r>хан<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
+<e>       <p><l>ханзадә<s n="n"/></l>                  <r>принц<s n="n"/><s n="m"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>ханлык<s n="n"/></l>                   <r>ханство<s n="n"/><s n="nt"/><s n="nn"/></r></p><par n="__n"/></e>
 <e>       <p><l>ханым<s n="n"/></l>                    <r>госпожа<s n="n"/><s n="f"/><s n="aa"/></r></p><par n="__n"/></e>
 <e>       <p><l>хаос<s n="n"/></l>                     <r>хаос<s n="n"/><s n="m"/><s n="nn"/></r></p><par n="__n"/></e>
