@@ -25,7 +25,7 @@ You will need the following software installed:
 * apertium-tat
 * apertium-rus
 
-If this does not make any sense, we recommend you look at: www.apertium.org
+If this does not make any sense, we recommend you look at: apertium.org
 
 Compiling
 ===============================================================================
@@ -79,10 +79,10 @@ For monolingual data, see the modules apertium-tat and apertium-rus.
 For more information
 ===============================================================================
 
-* http://wiki.apertium.org/wiki/Installation
-* http://wiki.apertium.org/wiki/Tatar_and_Russian
-* http://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
-* http://wiki.apertium.org/wiki/Constraint_Grammar
+* https://wiki.apertium.org/wiki/Installation
+* https://wiki.apertium.org/wiki/Tatar_and_Russian
+* https://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
+* https://wiki.apertium.org/wiki/Constraint_Grammar
 
 Help and support
 ===============================================================================
@@ -90,6 +90,6 @@ Help and support
 If you need help using this language pair or data, you can contact:
 
 * Mailing list: apertium-turkic@lists.sourceforge.net
-* IRC: #apertium on irc.freenode.net
+* IRC: #apertium on irc.oftc.net
 
 See also the file AUTHORS included in this distribution.

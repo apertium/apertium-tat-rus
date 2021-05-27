@@ -9,7 +9,7 @@ fi
 # This file is kept even after the script is ended:
 needed=/tmp/corpus-stat-all-needed.txt
 
-covgoal="95.0" # percent goal we aim for this week, according to http://wiki.apertium.org/wiki/Kazakh_and_Tatar/Work_plan
+covgoal="95.0" # percent goal we aim for this week, according to https://wiki.apertium.org/wiki/Kazakh_and_Tatar/Work_plan
 
 
 cd "$(dirname $0)"
