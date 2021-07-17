@@ -1,0 +1,200 @@
+[-kkvY-Bnpcb3#0] ^в<pr>$ ^твой<det><pos><m><an><sg><loc>$ ^сад<n><m><nn><sg><loc>$
+[/-kkvY-Bnpcb3]
+[12epD9ToZOJg#0] ^мой<det><pos><f><an><sg><dat>$ ^книга<n><f><nn><sg><dat>$
+[/12epD9ToZOJg]
+[1I7YRvcDJzSQ#0] ^мой<det><pos><nt><an><sg><acc>$ ^желание<n><nt><nn><sg><acc>$
+[/1I7YRvcDJzSQ]
+[1_l-_8FbGEXT#0] ^сад<n><m><nn><pl><dat>$
+[/1_l-_8FbGEXT]
+[4ifa9TN4P-k0#0] ^Вы<prn><pers><p2><mf><sg><nom>$ ^не<adv>$ ^играть<vblex><impf><inf>$ ^быть<vbser><past><mfn><pl>$^.<sent>$
+[/4ifa9TN4P-k0]
+[68L0IcNwGieG#0] ^твой<det><pos><m><nn><sg><acc>$ ^сад<n><m><nn><sg><acc>$
+[/68L0IcNwGieG]
+[6Ea65PeL7E0I#0] ^сам<det><ref><m><an><sg><nom>$
+[/6Ea65PeL7E0I]
+[9GDfiV6902cn#0] ^Он<prn><pers><p3><m><sg><nom>$ ^играть<vblex><impf><pres><p3><sg>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/9GDfiV6902cn]
+[9P2QcX2gQ1vT#0] ^твой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$
+[/9P2QcX2gQ1vT]
+[AZOLlwG-zwrT#0] ^ты<prn><pers><p2><mf><sg><nom>$ ^твой<det><pos><m><an><sg><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/AZOLlwG-zwrT]
+[Abpxk-IMIoXJ#0] ^из<pr>$ ^мой<det><pos><m><an><sg><gen>$ ^дом<n><m><nn><sg><gen>$
+[/Abpxk-IMIoXJ]
+[AzY6wkyzsRNF#0] ^они<prn><pers><p3><mfn><pl><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/AzY6wkyzsRNF]
+[B4Xn79SHpcti#0] ^@Без<n><sg><nom>$ ^играть<vblex><impf><pres><p3><sg>$ ^быть<vbser><past><mfn><pl>$^.<sent>$
+[/B4Xn79SHpcti]
+[B96KHddfEvn4#0] ^сад<n><m><nn><sg><nom>$
+[/B96KHddfEvn4]
+[BXRFRiQsiBQX#0] ^Они<prn><pers><p3><mfn><pl><nom>$ ^не<adv>$ ^играть<vblex><impf><inf>$ ^быть<vbser><past><mfn><pl>$^.<sent>$
+[/BXRFRiQsiBQX]
+[BfwC-nVMtx7u#0] ^мой<det><pos><m><nn><sg><acc>$ ^сад<n><m><nn><sg><acc>$
+[/BfwC-nVMtx7u]
+[Bwig-tBESFVu#0] ^сад<n><m><nn><sg><nom>$
+[/Bwig-tBESFVu]
+[CB6CWP4Mr0IT#0] ^@без<n><sg><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/CB6CWP4Mr0IT]
+[CEYCK7ICgLwV#0] ^из<pr>$ ^сад<n><m><nn><sg><gen>$
+[/CEYCK7ICgLwV]
+[CQ_WNc2eJgvE#0] ^твой<det><pos><m><an><sg><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/CQ_WNc2eJgvE]
+[Cos4VBzOjeyC#0] ^в<pr>$ ^сад<n><m><nn><sg><loc>$
+[/Cos4VBzOjeyC]
+[F4F8A-MvScMy#0] ^из<pr>$ ^сад<n><m><nn><sg><gen>$
+[/F4F8A-MvScMy]
+[G_oC1f5MMxHP#0] ^из<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^книга<n><f><nn><pl><gen>$
+[/G_oC1f5MMxHP]
+[GmIk2XtM6rMJ#0] ^мой<det><pos><mfn><an><pl><dat>$ ^книга<n><f><nn><pl><dat>$
+[/GmIk2XtM6rMJ]
+[GsaXS0oe9Z0Y#0] ^мой<det><pos><m><an><sg><nom>$ ^сад<n><m><nn><sg><nom>$
+[/GsaXS0oe9Z0Y]
+[HKDO4f-mjlEl#0] ^мой<det><pos><mfn><an><pl><nom>$ ^книга<n><f><nn><pl><nom>$
+[/HKDO4f-mjlEl]
+[I1Qokz_6LERx#0] ^в<pr>$ ^мой<det><pos><mfn><an><pl><prp>$ ^желание<n><nt><nn><pl><prp>$
+[/I1Qokz_6LERx]
+[I7-rjStAJTHU#0] ^мой<det><pos><mfn><an><pl><gen>$ ^желание<n><nt><nn><pl><gen>$
+[/I7-rjStAJTHU]
+[ILeAgWweqgSw#0] ^мой<det><pos><mfn><an><pl><gen>$ ^книга<n><f><nn><pl><gen>$
+[/ILeAgWweqgSw]
+[IQ3Z8KQIrqBw#0] ^сад<n><m><nn><pl><nom>$
+[/IQ3Z8KQIrqBw]
+[JQ4KwnDcUTN9#0] ^Они<prn><pers><p3><mfn><pl><nom>$ ^не<adv>$ ^играть<vblex><impf><pres><p3><pl>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/JQ4KwnDcUTN9]
+[KUx_Yb1UOqlT#0] ^в<pr>$ ^Школа<n><f><nn><sg><prp>$^.<sent>$
+[/KUx_Yb1UOqlT]
+[LOPbb0HDruXS#0] ^сам<det><ref><m><an><sg><nom>$
+[/LOPbb0HDruXS]
+[LPeqLyStmuBW#0] ^из<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^дом<n><m><nn><pl><gen>$
+[/LPeqLyStmuBW]
+[Lw802mvGjtAV#0] ^железо<n><nt><nn><sg><nom>$ ^@көрәк<n><sg><nom>$^.<sent>$
+[/Lw802mvGjtAV]
+[N79PU64JkAmZ#0] ^в<pr>$ ^сад<n><m><nn><sg><loc>$ ^@ал$ ^дом<n><m><nn><sg><loc>$^.<sent>$
+[/N79PU64JkAmZ]
+[P-R3rOZWAzfk#0] ^Ты<prn><pers><p2><mf><sg><nom>$ ^играть<vblex><impf><pres><p3><sg>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/P-R3rOZWAzfk]
+[P0u0wgfyWSyB#0] ^Мустафа<np><ant><m><sg><nom>$ ^господин<n><m><aa><sg><nom>$^.<sent>$
+[/P0u0wgfyWSyB]
+[P1DtPa5VaJex#0] ^из<pr>$ ^мой<det><pos><m><an><sg><gen>$ ^сад<n><m><nn><sg><gen>$
+[/P1DtPa5VaJex]
+[PAqZtIjD83Ja#0] ^мой<det><pos><mfn><nn><pl><acc>$ ^желание<n><nt><nn><pl><acc>$
+[/PAqZtIjD83Ja]
+[QBuuUkH-dWC9#0] ^сад<n><m><nn><sg><acc>$
+[/QBuuUkH-dWC9]
+[SHY4TQubGNYG#0] ^Ты<prn><pers><p2><mf><sg><nom>$ ^не<adv>$ ^играть<vblex><impf><inf>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/SHY4TQubGNYG]
+[SSUDxpyf82By#0] ^в<pr>$ ^мой<det><pos><m><an><sg><prp>$ ^дом<n><m><nn><sg><prp>$
+[/SSUDxpyf82By]
+[S_mRY1zHGJmn#0] ^в<pr>$ ^мой<det><pos><nt><an><sg><prp>$ ^желание<n><nt><nn><sg><prp>$
+[/S_mRY1zHGJmn]
+[T-J5sUrvabCU#0] ^мой<det><pos><nt><an><sg><nom>$ ^желание<n><nt><nn><sg><nom>$
+[/T-J5sUrvabCU]
+[T0fIee-6UDpP#0] ^@мин<n><sg><nom>$ ^мой<det><pos><m><an><sg><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/T0fIee-6UDpP]
+[TEJi1LcO8UVC#0] ^мой<det><pos><nt><an><sg><dat>$ ^желание<n><nt><nn><sg><dat>$
+[/TEJi1LcO8UVC]
+[UK8SOHi_Eito#0] ^в<pr>$ ^мой<det><pos><m><an><sg><loc>$ ^сад<n><m><nn><sg><loc>$
+[/UK8SOHi_Eito]
+[ULjiOPaElvSF#0] ^в<pr>$ ^@ал<n><sg><prp>$ ^дом<n><m><nn><sg><gen>$^.<sent>$
+[/ULjiOPaElvSF]
+[V-96DhskG4Gx#0] ^сам<det><ref><m><an><sg><nom>$
+[/V-96DhskG4Gx]
+[V0_sg3AkCArT#0] ^мой<det><pos><f><an><sg><gen>$ ^книга<n><f><nn><sg><gen>$
+[/V0_sg3AkCArT]
+[WRYJ7FFy4Xw-#0] ^@Мин<n><sg><nom>$ ^не<adv>$ ^играть<vblex><impf><inf>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/WRYJ7FFy4Xw-]
+[XCNPWQkVGL9l#0] ^мой<det><pos><mfn><an><pl><dat>$ ^желание<n><nt><nn><pl><dat>$
+[/XCNPWQkVGL9l]
+[XMeAEWEkV2WW#0] ^мой<det><pos><mfn><an><pl><dat>$ ^дом<n><m><nn><pl><dat>$
+[/XMeAEWEkV2WW]
+[Y50694uDS6v8#0] ^из<pr>$ ^мой<det><pos><f><an><sg><gen>$ ^книга<n><f><nn><sg><gen>$
+[/Y50694uDS6v8]
+[YVtb-ybMP3By#0] ^из<pr>$ ^мой<det><pos><mfn><an><pl><gen>$ ^желание<n><nt><nn><pl><gen>$
+[/YVtb-ybMP3By]
+[Z-no1gKdw43b#0] ^мой<det><pos><m><an><sg><nom>$ ^дом<n><m><nn><sg><nom>$
+[/Z-no1gKdw43b]
+[ZXda4ugiCaBC#0] ^мой<det><pos><m><an><sg><dat>$ ^дом<n><m><nn><sg><dat>$
+[/ZXda4ugiCaBC]
+[_4hgwrEkyosW#0] ^Они<prn><pers><p3><mfn><pl><nom>$ ^играть<vblex><impf><pres><p3><pl>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/_4hgwrEkyosW]
+[_KxrEq_F1hBz#0] ^мой<det><pos><mfn><nn><pl><acc>$ ^книга<n><f><nn><pl><acc>$
+[/_KxrEq_F1hBz]
+[_TJHHcn1nzQI#0] ^в<pr>$ ^мой<det><pos><f><an><sg><prp>$ ^книга<n><f><nn><sg><prp>$
+[/_TJHHcn1nzQI]
+[aOfmJhGNSZPE#0] ^Вы<prn><pers><p2><mf><sg><nom>$ ^играть<vblex><impf><pres><p3><sg>$ ^быть<vbser><past><mfn><pl>$^.<sent>$
+[/aOfmJhGNSZPE]
+[bFsEnanVsQrL#0] ^мой<det><pos><m><an><sg><dat>$ ^сад<n><m><nn><sg><dat>$
+[/bFsEnanVsQrL]
+[bidgjQlNCxOA#0] ^из<pr>$ ^сад<n><m><nn><pl><gen>$
+[/bidgjQlNCxOA]
+[brQlpQwXu83x#0] ^сад<n><m><nn><sg><dat>$
+[/brQlpQwXu83x]
+[c6KkgRipkCat#0] ^в<pr>$ ^мой<det><pos><mfn><an><pl><prp>$ ^книга<n><f><nn><pl><prp>$
+[/c6KkgRipkCat]
+[c6XkvBsYDOMi#0] ^мой<det><pos><mfn><an><pl><nom>$ ^желание<n><nt><nn><pl><nom>$
+[/c6XkvBsYDOMi]
+[cQRu7oOYXcCb#0] ^в<pr>$ ^мой<det><pos><mfn><an><pl><prp>$ ^дом<n><m><nn><pl><prp>$
+[/cQRu7oOYXcCb]
+[e0MYeh9Q3oPj#0] ^@Мин<n><sg><nom>$ ^играть<vblex><impf><pres><p3><sg>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/e0MYeh9Q3oPj]
+[feTxvbyv6gCN#0] ^из<pr>$ ^твой<det><pos><m><an><sg><gen>$ ^сад<n><m><nn><sg><gen>$
+[/feTxvbyv6gCN]
+[gTd-YIjpXK09#0] ^мой<det><pos><f><an><sg><nom>$ ^книга<n><f><nn><sg><nom>$
+[/gTd-YIjpXK09]
+[hlIVawoC-A6A#0] ^сад<n><m><nn><pl><acc>$
+[/hlIVawoC-A6A]
+[iMgGojw-tORv#0] ^сад<n><m><nn><sg><dat>$
+[/iMgGojw-tORv]
+[iyIpQdnkva6O#0] ^@бул<imp><p2><sg>$ ^сам<det><ref><m><an><sg><nom>$
+[/iyIpQdnkva6O]
+[jiBRlZ6wI1lY#0] ^мой<det><pos><m><nn><sg><acc>$ ^дом<n><m><nn><sg><acc>$
+[/jiBRlZ6wI1lY]
+[kFL2rOvQziLj#0] ^в<pr>$ ^сад<n><m><nn><sg><loc>$
+[/kFL2rOvQziLj]
+[kaihrjnBzVoJ#0] ^сад<n><m><nn><sg><acc>$
+[/kaihrjnBzVoJ]
+[kbysWjmgFTQ1#0] ^@тимерче<n><sg><nom>$ ^Мустафа<np><ant><m><sg><nom>$^.<sent>$
+[/kbysWjmgFTQ1]
+[l7ZTGXawKB2P#0] ^Он<prn><pers><p3><m><sg><nom>$ ^не<adv>$ ^играть<vblex><impf><inf>$ ^быть<vbser><past><m><sg>$^.<sent>$
+[/l7ZTGXawKB2P]
+[lYmkj_abhkjD#0] ^Гульнара<np><ant><f><sg><nom>$ ^в<pr>$ ^сад<n><m><nn><sg><loc>$^.<sent>$
+[/lYmkj_abhkjD]
+[muMcLg_wobcW#0] ^сам<det><ref><m><an><sg><nom>$
+[/muMcLg_wobcW]
+[nWx6S7tFrN1J#0] ^сад<n><m><nn><sg><dat>$
+[/nWx6S7tFrN1J]
+[npA97E_nfclC#0] ^вы<prn><pers><p2><mf><pl><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/npA97E_nfclC]
+[pjGdf3MxlKyR#0] ^мой<det><pos><m><an><sg><nom>$ ^сам<det><ref><m><an><sg><nom>$
+[/pjGdf3MxlKyR]
+[ptunFuKdlIYb#0] ^@бак<n><sg><nom>$ ^@ал$ ^дом<n><m><nn><sg><loc>$^.<sent>$
+[/ptunFuKdlIYb]
+[qFQ8EwbZGwaX#0] ^в<pr>$ ^сад<n><m><nn><pl><loc>$
+[/qFQ8EwbZGwaX]
+[qihtBa3VQYiI#0] ^из<pr>$ ^сад<n><m><nn><sg><gen>$
+[/qihtBa3VQYiI]
+[r-RSBGI9bSXU#0] ^сад<n><m><nn><sg><nom>$
+[/r-RSBGI9bSXU]
+[u9L7Yi2jIwWF#0] ^мой<det><pos><f><an><sg><acc>$ ^книга<n><f><nn><sg><acc>$
+[/u9L7Yi2jIwWF]
+[uBpxyhqELzSM#0] ^в<pr>$ ^сад<n><m><nn><sg><loc>$
+[/uBpxyhqELzSM]
+[uEdo3NTl1sGp#0] ^@Без<n><sg><nom>$ ^не<adv>$ ^играть<vblex><impf><inf>$ ^быть<vbser><past><mfn><pl>$^.<sent>$
+[/uEdo3NTl1sGp]
+[uvJdZXHnJAmQ#0] ^Они<prn><pers><p3><mfn><pl><nom>$ ^играть<vblex><impf><pres><p3><sg>$ ^быть<vbser><past><mfn><pl>$^.<sent>$
+[/uvJdZXHnJAmQ]
+[v8d-r-rhxuGb#0] ^мой<det><pos><mfn><an><pl><nom>$ ^дом<n><m><nn><pl><nom>$
+[/v8d-r-rhxuGb]
+[v9Pi177Kvj3s#0] ^твой<det><pos><m><an><sg><dat>$ ^сад<n><m><nn><sg><dat>$
+[/v9Pi177Kvj3s]
+[vUynNS4yUIa8#0] ^мой<det><pos><nt><an><sg><gen>$ ^желание<n><nt><nn><sg><gen>$
+[/vUynNS4yUIa8]
+[vlIZkOFrcsC6#0] ^мой<det><pos><mfn><nn><pl><acc>$ ^дом<n><m><nn><pl><acc>$
+[/vlIZkOFrcsC6]
+[wTz7yKqQyaDR#0] ^мой<det><pos><m><an><sg><gen>$ ^дом<n><m><nn><sg><gen>$
+[/wTz7yKqQyaDR]
+[wXY2_B8rRLet#0] ^мой<det><pos><mfn><an><pl><gen>$ ^дом<n><m><nn><pl><gen>$
+[/wXY2_B8rRLet]
+[xyh4nDfGf4_G#0] ^из<pr>$ ^мой<det><pos><nt><an><sg><gen>$ ^желание<n><nt><nn><sg><gen>$
+[/xyh4nDfGf4_G]
+[zizbCv6we_5k#0] ^сад<n><m><nn><sg><acc>$
+[/zizbCv6we_5k]

@@ -1,0 +1,10 @@
+{
+    "tat-rus-pending": {
+        "input": "tat-rus-pending-input.txt",
+        "mode": "tat-rus"
+    },
+    "tat-rus-regression": {
+        "input": "tat-rus-regression-input.txt",
+        "mode": "tat-rus"
+    }
+}

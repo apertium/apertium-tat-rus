@@ -16,3 +16,9 @@
 /missing
 /modes
 /tat-rus.prob
+/*.hfst
+/*.gz
+/*.pc
+/*.zhfst
+/.DS_Store
+/test/*-output.txt

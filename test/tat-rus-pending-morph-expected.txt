@@ -1,0 +1,200 @@
+[-kkvY-Bnpcb3#0] ^бакчаңда/бакча<n><px2sg><loc>/бакча<n><px2sg><loc>+и<cop><aor><p3><pl>/бакча<n><px2sg><loc>+и<cop><aor><p3><sg>$
+[/-kkvY-Bnpcb3]
+[12epD9ToZOJg#0] ^китабыма/китап<n><px1sg><dat>$
+[/12epD9ToZOJg]
+[1I7YRvcDJzSQ#0] ^теләгемне/теләк<n><px1sg><acc>$
+[/1I7YRvcDJzSQ]
+[1_l-_8FbGEXT#0] ^бакчаларына/бакча<n><pl><px3sp><dat>$
+[/1_l-_8FbGEXT]
+[4ifa9TN4P-k0#0] ^Сез/сез<prn><pers><p2><pl><nom>/Сез<prn><pers><p2><sp><frm><nom>/сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><pl>/сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><sg>/Сез<prn><pers><p2><sp><frm><nom>+и<cop><aor><p3><pl>/Сез<prn><pers><p2><sp><frm><nom>+и<cop><aor><p3><sg>$ ^уйнамый/уйна<v><tv><neg><gna_perf>/уйна<v><tv><neg><prc_impf>/уйна<v><tv><neg><prc_perf>/уйна<v><tv><neg><pres><p3><sg>$ ^идегез/и<cop><ifi><p2><pl>/и<cop><ifi><p2><frm><pl>/и<cop><ifi><p2><frm><sg>$^./.<sent>$
+[/4ifa9TN4P-k0]
+[68L0IcNwGieG#0] ^бакчаңны/бакча<n><px2sg><acc>$
+[/68L0IcNwGieG]
+[6Ea65PeL7E0I#0] ^үзебез/үз<prn><ref><px3sp><nom>+и<cop><aor><p1><pl>/үз<prn><ref><px1pl><nom>/үз<prn><ref><px1pl><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px1pl><nom>+и<cop><aor><p3><sg>$
+[/6Ea65PeL7E0I]
+[9GDfiV6902cn#0] ^Ул/ул<n><attr>/ул<n><nom>/ул<det><dem>/ул<prn><dem><nom>/ул<prn><pers><p3><sg><nom>/бул<v><tv><imp><p2><sg>/бул<v><iv><imp><p2><sg>/ул<n><nom>+и<cop><aor><p3><pl>/ул<n><nom>+и<cop><aor><p3><sg>/ул<prn><dem><nom>+и<cop><aor><p3><pl>/ул<prn><dem><nom>+и<cop><aor><p3><sg>$ ^уйный/уйна<v><tv><prc_impf>/уйна<v><tv><pres><p3><sg>$ ^иде/и<cop><ifi><p3><sg>$^./.<sent>$
+[/9GDfiV6902cn]
+[9P2QcX2gQ1vT#0] ^бакчаң/бакча<n><px2sg><nom>/бакча<n><px2sg><nom>+и<cop><aor><p3><pl>/бакча<n><px2sg><nom>+и<cop><aor><p3><sg>$
+[/9P2QcX2gQ1vT]
+[AZOLlwG-zwrT#0] ^син/син<prn><pers><p2><sg><nom>$ ^үзең/үз<prn><ref><px2sg><nom>/үз<prn><ref><px2sg><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2sg><nom>+и<cop><aor><p3><sg>$
+[/AZOLlwG-zwrT]
+[Abpxk-IMIoXJ#0] ^йортымнан/йорт<n><px1sg><abl>/йорт<n><px1sg><abl>+и<cop><aor><p3><pl>/йорт<n><px1sg><abl>+и<cop><aor><p3><sg>$
+[/Abpxk-IMIoXJ]
+[AzY6wkyzsRNF#0] ^алар/ул<prn><dem><pl><nom>/алар<prn><pers><p3><pl><nom>/ул<prn><dem><pl><nom>+и<cop><aor><p3><pl>/ул<prn><dem><pl><nom>+и<cop><aor><p3><sg>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><pl>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><sg>$ ^үзләре/үз<prn><ref><px3pl><nom>/үз<prn><ref><px3pl><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px3pl><nom>+и<cop><aor><p3><sg>$
+[/AzY6wkyzsRNF]
+[B4Xn79SHpcti#0] ^Без/без<ideo>/без<n><attr>/без<n><nom>/без<prn><pers><p1><pl><nom>/без<n><nom>+и<cop><aor><p3><pl>/без<n><nom>+и<cop><aor><p3><sg>/без<prn><pers><p1><pl><nom>+и<cop><aor><p3><pl>/без<prn><pers><p1><pl><nom>+и<cop><aor><p3><sg>$ ^уйный/уйна<v><tv><prc_impf>/уйна<v><tv><pres><p3><sg>$ ^идек/и<cop><ifi><p1><pl>$^./.<sent>$
+[/B4Xn79SHpcti]
+[B96KHddfEvn4#0] ^бакчасы/бакча<n><px3sp><nom>/бакча<n><px3sp><nom>+и<cop><aor><p3><pl>/бакча<n><px3sp><nom>+и<cop><aor><p3><sg>$
+[/B96KHddfEvn4]
+[BXRFRiQsiBQX#0] ^Алар/ул<prn><dem><pl><nom>/алар<prn><pers><p3><pl><nom>/ул<prn><dem><pl><nom>+и<cop><aor><p3><pl>/ул<prn><dem><pl><nom>+и<cop><aor><p3><sg>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><pl>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><sg>$ ^уйнамый/уйна<v><tv><neg><gna_perf>/уйна<v><tv><neg><prc_impf>/уйна<v><tv><neg><prc_perf>/уйна<v><tv><neg><pres><p3><sg>$ ^иделәр/и<cop><ifi><p3><pl>$^./.<sent>$
+[/BXRFRiQsiBQX]
+[BfwC-nVMtx7u#0] ^бакчамны/бакча<n><px1sg><acc>$
+[/BfwC-nVMtx7u]
+[Bwig-tBESFVu#0] ^бакчагыз/бакча<n><px2pl><nom>/бакча<n><px2pl><frm><nom>/бакча<n><px2sg><frm><nom>/бакча<n><px2pl><nom>+и<cop><aor><p3><pl>/бакча<n><px2pl><nom>+и<cop><aor><p3><sg>/бакча<n><px2pl><frm><nom>+и<cop><aor><p3><pl>/бакча<n><px2pl><frm><nom>+и<cop><aor><p3><sg>/бакча<n><px2sg><frm><nom>+и<cop><aor><p3><pl>/бакча<n><px2sg><frm><nom>+и<cop><aor><p3><sg>$
+[/Bwig-tBESFVu]
+[CB6CWP4Mr0IT#0] ^без/без<ideo>/без<n><attr>/без<n><nom>/без<prn><pers><p1><pl><nom>/без<n><nom>+и<cop><aor><p3><pl>/без<n><nom>+и<cop><aor><p3><sg>/без<prn><pers><p1><pl><nom>+и<cop><aor><p3><pl>/без<prn><pers><p1><pl><nom>+и<cop><aor><p3><sg>$ ^үзебез/үз<prn><ref><px3sp><nom>+и<cop><aor><p1><pl>/үз<prn><ref><px1pl><nom>/үз<prn><ref><px1pl><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px1pl><nom>+и<cop><aor><p3><sg>$
+[/CB6CWP4Mr0IT]
+[CEYCK7ICgLwV#0] ^бакчабыздан/бакча<n><px1pl><abl>/бакча<n><px1pl><abl>+и<cop><aor><p3><pl>/бакча<n><px1pl><abl>+и<cop><aor><p3><sg>$
+[/CEYCK7ICgLwV]
+[CQ_WNc2eJgvE#0] ^үзең/үз<prn><ref><px2sg><nom>/үз<prn><ref><px2sg><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2sg><nom>+и<cop><aor><p3><sg>$
+[/CQ_WNc2eJgvE]
+[Cos4VBzOjeyC#0] ^бакчагызда/бакча<n><px2pl><loc>/бакча<n><px2pl><frm><loc>/бакча<n><px2sg><frm><loc>/бакча<n><px2pl><loc>+и<cop><aor><p3><pl>/бакча<n><px2pl><loc>+и<cop><aor><p3><sg>/бакча<n><px2pl><frm><loc>+и<cop><aor><p3><pl>/бакча<n><px2pl><frm><loc>+и<cop><aor><p3><sg>/бакча<n><px2sg><frm><loc>+и<cop><aor><p3><pl>/бакча<n><px2sg><frm><loc>+и<cop><aor><p3><sg>$
+[/Cos4VBzOjeyC]
+[F4F8A-MvScMy#0] ^бакчагыздан/бакча<n><px2pl><abl>/бакча<n><px2pl><frm><abl>/бакча<n><px2sg><frm><abl>/бакча<n><px2pl><abl>+и<cop><aor><p3><pl>/бакча<n><px2pl><abl>+и<cop><aor><p3><sg>/бакча<n><px2pl><frm><abl>+и<cop><aor><p3><pl>/бакча<n><px2pl><frm><abl>+и<cop><aor><p3><sg>/бакча<n><px2sg><frm><abl>+и<cop><aor><p3><pl>/бакча<n><px2sg><frm><abl>+и<cop><aor><p3><sg>$
+[/F4F8A-MvScMy]
+[G_oC1f5MMxHP#0] ^китапларымнан/китап<n><pl><px1sg><abl>/китап<n><pl><px1sg><abl>+и<cop><aor><p3><pl>/китап<n><pl><px1sg><abl>+и<cop><aor><p3><sg>$
+[/G_oC1f5MMxHP]
+[GmIk2XtM6rMJ#0] ^китапларыма/китап<n><pl><px1sg><dat>$
+[/GmIk2XtM6rMJ]
+[GsaXS0oe9Z0Y#0] ^бакчам/бакча<n><px1sg><nom>/бакча<n><px1sg><nom>+и<cop><aor><p3><pl>/бакча<n><px1sg><nom>+и<cop><aor><p3><sg>$
+[/GsaXS0oe9Z0Y]
+[HKDO4f-mjlEl#0] ^китапларым/китап<n><pl><px1sg><nom>/китап<n><pl><px1sg><nom>+и<cop><aor><p3><pl>/китап<n><pl><px1sg><nom>+и<cop><aor><p3><sg>$
+[/HKDO4f-mjlEl]
+[I1Qokz_6LERx#0] ^теләкләремдә/теләк<n><pl><px1sg><loc>/теләк<n><pl><px1sg><loc>+и<cop><aor><p3><pl>/теләк<n><pl><px1sg><loc>+и<cop><aor><p3><sg>$
+[/I1Qokz_6LERx]
+[I7-rjStAJTHU#0] ^теләкләремнең/теләк<n><pl><px1sg><gen>$
+[/I7-rjStAJTHU]
+[ILeAgWweqgSw#0] ^китапларымның/китап<n><pl><px1sg><gen>$
+[/ILeAgWweqgSw]
+[IQ3Z8KQIrqBw#0] ^бакчалары/бакча<n><pl><px3sp><nom>/бакча<n><pl><px3sp><nom>+и<cop><aor><p3><pl>/бакча<n><pl><px3sp><nom>+и<cop><aor><p3><sg>$
+[/IQ3Z8KQIrqBw]
+[JQ4KwnDcUTN9#0] ^Алар/ул<prn><dem><pl><nom>/алар<prn><pers><p3><pl><nom>/ул<prn><dem><pl><nom>+и<cop><aor><p3><pl>/ул<prn><dem><pl><nom>+и<cop><aor><p3><sg>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><pl>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><sg>$ ^уйнамыйлар/уйна<v><tv><neg><pres><p3><pl>$ ^иде/и<cop><ifi><p3><sg>$^./.<sent>$
+[/JQ4KwnDcUTN9]
+[KUx_Yb1UOqlT#0] ^Мәктәптә/мәктәп<n><loc>/мәктәп<n><loc>+и<cop><aor><p3><pl>/мәктәп<n><loc>+и<cop><aor><p3><sg>$^./.<sent>$
+[/KUx_Yb1UOqlT]
+[LOPbb0HDruXS#0] ^үзегез/үз<prn><ref><px2pl><nom>/үз<prn><ref><px2pl><frm><nom>/үз<prn><ref><px2sg><frm><nom>/үз<prn><ref><px2pl><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2pl><nom>+и<cop><aor><p3><sg>/үз<prn><ref><px2pl><frm><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2pl><frm><nom>+и<cop><aor><p3><sg>/үз<prn><ref><px2sg><frm><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2sg><frm><nom>+и<cop><aor><p3><sg>$
+[/LOPbb0HDruXS]
+[LPeqLyStmuBW#0] ^йортларымнан/йорт<n><pl><px1sg><abl>/йорт<n><pl><px1sg><abl>+и<cop><aor><p3><pl>/йорт<n><pl><px1sg><abl>+и<cop><aor><p3><sg>$
+[/LPeqLyStmuBW]
+[Lw802mvGjtAV#0] ^тимер/тимер<n><attr>/тимер<n><nom>/тимер<n><nom>+и<cop><aor><p3><pl>/тимер<n><nom>+и<cop><aor><p3><sg>$ ^көрәк/көрәк<n><attr>/көрәк<n><nom>/көрәк<n><nom>+и<cop><aor><p3><pl>/көрәк<n><nom>+и<cop><aor><p3><sg>$^./.<sent>$
+[/Lw802mvGjtAV]
+[N79PU64JkAmZ#0] ^өй/өй<n><attr>/өй<n><nom>/өй<v><tv><imp><p2><sg>/өй<n><nom>+и<cop><aor><p3><pl>/өй<n><nom>+и<cop><aor><p3><sg>$ ^алдындагы/ал<n><px3sp><loc><attr>/алдын<adj><subst><loc><attr>/ал<n><px3sp><loc><subst><nom>/алдын<adj><subst><loc><subst><nom>/ал<n><px3sp><loc><subst><nom>+и<cop><aor><p3><pl>/ал<n><px3sp><loc><subst><nom>+и<cop><aor><p3><sg>/алдын<adj><subst><loc><subst><nom>+и<cop><aor><p3><pl>/алдын<adj><subst><loc><subst><nom>+и<cop><aor><p3><sg>$ ^бакчада/бакча<n><loc>/бакча<n><loc>+и<cop><aor><p3><pl>/бакча<n><loc>+и<cop><aor><p3><sg>$^./.<sent>$
+[/N79PU64JkAmZ]
+[P-R3rOZWAzfk#0] ^Син/син<prn><pers><p2><sg><nom>$ ^уйный/уйна<v><tv><prc_impf>/уйна<v><tv><pres><p3><sg>$ ^идең/и<cop><ifi><p2><sg>$^./.<sent>$
+[/P-R3rOZWAzfk]
+[P0u0wgfyWSyB#0] ^Мостафа/Мостафа<np><ant><m><nom>/Мостафа<np><ant><m><nom><err_orth>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><pl>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><sg>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><pl><err_orth>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><sg><err_orth>$ ^әфәнде/әфәнде<n><attr>/әфәнде<n><nom>/әфәнде<n><nom>+и<cop><aor><p3><pl>/әфәнде<n><nom>+и<cop><aor><p3><sg>$^./.<sent>$
+[/P0u0wgfyWSyB]
+[P1DtPa5VaJex#0] ^бакчамнан/бакча<n><px1sg><abl>/бакча<n><px1sg><abl>+и<cop><aor><p3><pl>/бакча<n><px1sg><abl>+и<cop><aor><p3><sg>$
+[/P1DtPa5VaJex]
+[PAqZtIjD83Ja#0] ^теләкләремне/теләк<n><pl><px1sg><acc>$
+[/PAqZtIjD83Ja]
+[QBuuUkH-dWC9#0] ^бакчагызны/бакча<n><px2pl><acc>/бакча<n><px2pl><frm><acc>/бакча<n><px2sg><frm><acc>$
+[/QBuuUkH-dWC9]
+[SHY4TQubGNYG#0] ^Син/син<prn><pers><p2><sg><nom>$ ^уйнамый/уйна<v><tv><neg><gna_perf>/уйна<v><tv><neg><prc_impf>/уйна<v><tv><neg><prc_perf>/уйна<v><tv><neg><pres><p3><sg>$ ^идең/и<cop><ifi><p2><sg>$^./.<sent>$
+[/SHY4TQubGNYG]
+[SSUDxpyf82By#0] ^йортымда/йорт<n><px1sg><loc>/йорт<n><px1sg><loc>+и<cop><aor><p3><pl>/йорт<n><px1sg><loc>+и<cop><aor><p3><sg>$
+[/SSUDxpyf82By]
+[S_mRY1zHGJmn#0] ^теләгемдә/теләк<n><px1sg><loc>/теләк<n><px1sg><loc>+и<cop><aor><p3><pl>/теләк<n><px1sg><loc>+и<cop><aor><p3><sg>$
+[/S_mRY1zHGJmn]
+[T-J5sUrvabCU#0] ^теләгем/теләк<n><px1sg><nom>/теләк<n><px1sg><nom>+и<cop><aor><p3><pl>/теләк<n><px1sg><nom>+и<cop><aor><p3><sg>$
+[/T-J5sUrvabCU]
+[T0fIee-6UDpP#0] ^мин/мин<n><attr>/мин<n><nom>/мин<prn><pers><p1><sg><nom>/мин<n><nom>+и<cop><aor><p3><pl>/мин<n><nom>+и<cop><aor><p3><sg>$ ^үзем/үз<prn><ref><px1sg><nom>/үз<prn><ref><px1sg><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px1sg><nom>+и<cop><aor><p3><sg>$
+[/T0fIee-6UDpP]
+[TEJi1LcO8UVC#0] ^теләгемә/теләк<n><px1sg><dat>$
+[/TEJi1LcO8UVC]
+[UK8SOHi_Eito#0] ^бакчамда/бакча<n><px1sg><loc>/бакча<n><px1sg><loc>+и<cop><aor><p3><pl>/бакча<n><px1sg><loc>+и<cop><aor><p3><sg>$
+[/UK8SOHi_Eito]
+[ULjiOPaElvSF#0] ^өй/өй<n><attr>/өй<n><nom>/өй<v><tv><imp><p2><sg>/өй<n><nom>+и<cop><aor><p3><pl>/өй<n><nom>+и<cop><aor><p3><sg>$ ^алдында/ал<n><px3sp><loc>/алдын<adj><subst><loc>/ал<n><px3sp><loc>+и<cop><aor><p3><pl>/ал<n><px3sp><loc>+и<cop><aor><p3><sg>/алдын<adj><subst><loc>+и<cop><aor><p3><pl>/алдын<adj><subst><loc>+и<cop><aor><p3><sg>$^./.<sent>$
+[/ULjiOPaElvSF]
+[V-96DhskG4Gx#0] ^үзләре/үз<prn><ref><px3pl><nom>/үз<prn><ref><px3pl><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px3pl><nom>+и<cop><aor><p3><sg>$
+[/V-96DhskG4Gx]
+[V0_sg3AkCArT#0] ^китабымның/китап<n><px1sg><gen>$
+[/V0_sg3AkCArT]
+[WRYJ7FFy4Xw-#0] ^Мин/мин<n><attr>/мин<n><nom>/мин<prn><pers><p1><sg><nom>/мин<n><nom>+и<cop><aor><p3><pl>/мин<n><nom>+и<cop><aor><p3><sg>$ ^уйнамый/уйна<v><tv><neg><gna_perf>/уйна<v><tv><neg><prc_impf>/уйна<v><tv><neg><prc_perf>/уйна<v><tv><neg><pres><p3><sg>$ ^идем/и<cop><ifi><p1><sg>$^./.<sent>$
+[/WRYJ7FFy4Xw-]
+[XCNPWQkVGL9l#0] ^теләкләремә/теләк<n><pl><px1sg><dat>$
+[/XCNPWQkVGL9l]
+[XMeAEWEkV2WW#0] ^йортларыма/йорт<n><pl><px1sg><dat>$
+[/XMeAEWEkV2WW]
+[Y50694uDS6v8#0] ^китабымнан/китап<n><px1sg><abl>/китап<n><px1sg><abl>+и<cop><aor><p3><pl>/китап<n><px1sg><abl>+и<cop><aor><p3><sg>$
+[/Y50694uDS6v8]
+[YVtb-ybMP3By#0] ^теләкләремнән/теләк<n><pl><px1sg><abl>/теләк<n><pl><px1sg><abl>+и<cop><aor><p3><pl>/теләк<n><pl><px1sg><abl>+и<cop><aor><p3><sg>$
+[/YVtb-ybMP3By]
+[Z-no1gKdw43b#0] ^йортым/йорт<n><px1sg><nom>/йорт<n><px1sg><nom>+и<cop><aor><p3><pl>/йорт<n><px1sg><nom>+и<cop><aor><p3><sg>$
+[/Z-no1gKdw43b]
+[ZXda4ugiCaBC#0] ^йортыма/йорт<n><px1sg><dat>$
+[/ZXda4ugiCaBC]
+[_4hgwrEkyosW#0] ^Алар/ул<prn><dem><pl><nom>/алар<prn><pers><p3><pl><nom>/ул<prn><dem><pl><nom>+и<cop><aor><p3><pl>/ул<prn><dem><pl><nom>+и<cop><aor><p3><sg>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><pl>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><sg>$ ^уйныйлар/уйна<v><tv><pres><p3><pl>$ ^иде/и<cop><ifi><p3><sg>$^./.<sent>$
+[/_4hgwrEkyosW]
+[_KxrEq_F1hBz#0] ^китапларымны/китап<n><pl><px1sg><acc>$
+[/_KxrEq_F1hBz]
+[_TJHHcn1nzQI#0] ^китабымда/китап<n><px1sg><loc>/китап<n><px1sg><loc>+и<cop><aor><p3><pl>/китап<n><px1sg><loc>+и<cop><aor><p3><sg>$
+[/_TJHHcn1nzQI]
+[aOfmJhGNSZPE#0] ^Сез/сез<prn><pers><p2><pl><nom>/Сез<prn><pers><p2><sp><frm><nom>/сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><pl>/сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><sg>/Сез<prn><pers><p2><sp><frm><nom>+и<cop><aor><p3><pl>/Сез<prn><pers><p2><sp><frm><nom>+и<cop><aor><p3><sg>$ ^уйный/уйна<v><tv><prc_impf>/уйна<v><tv><pres><p3><sg>$ ^идегез/и<cop><ifi><p2><pl>/и<cop><ifi><p2><frm><pl>/и<cop><ifi><p2><frm><sg>$^./.<sent>$
+[/aOfmJhGNSZPE]
+[bFsEnanVsQrL#0] ^бакчама/бакча<n><px1sg><dat>$
+[/bFsEnanVsQrL]
+[bidgjQlNCxOA#0] ^бакчаларыннан/бакча<n><pl><px3sp><abl>/бакча<n><pl><px3sp><abl>+и<cop><aor><p3><pl>/бакча<n><pl><px3sp><abl>+и<cop><aor><p3><sg>$
+[/bidgjQlNCxOA]
+[brQlpQwXu83x#0] ^бакчабызга/бакча<n><px1pl><dat>$
+[/brQlpQwXu83x]
+[c6KkgRipkCat#0] ^китапларымда/китап<n><pl><px1sg><loc>/китап<n><pl><px1sg><loc>+и<cop><aor><p3><pl>/китап<n><pl><px1sg><loc>+и<cop><aor><p3><sg>$
+[/c6KkgRipkCat]
+[c6XkvBsYDOMi#0] ^теләкләрем/теләк<n><pl><px1sg><nom>/теләк<n><pl><px1sg><nom>+и<cop><aor><p3><pl>/теләк<n><pl><px1sg><nom>+и<cop><aor><p3><sg>$
+[/c6XkvBsYDOMi]
+[cQRu7oOYXcCb#0] ^йортларымда/йорт<n><pl><px1sg><loc>/йорт<n><pl><px1sg><loc>+и<cop><aor><p3><pl>/йорт<n><pl><px1sg><loc>+и<cop><aor><p3><sg>$
+[/cQRu7oOYXcCb]
+[e0MYeh9Q3oPj#0] ^Мин/мин<n><attr>/мин<n><nom>/мин<prn><pers><p1><sg><nom>/мин<n><nom>+и<cop><aor><p3><pl>/мин<n><nom>+и<cop><aor><p3><sg>$ ^уйный/уйна<v><tv><prc_impf>/уйна<v><tv><pres><p3><sg>$ ^идем/и<cop><ifi><p1><sg>$^./.<sent>$
+[/e0MYeh9Q3oPj]
+[feTxvbyv6gCN#0] ^бакчаңнан/бакча<n><px2sg><abl>/бакча<n><px2sg><abl>+и<cop><aor><p3><pl>/бакча<n><px2sg><abl>+и<cop><aor><p3><sg>$
+[/feTxvbyv6gCN]
+[gTd-YIjpXK09#0] ^китабым/китап<n><px1sg><nom>/китап<n><px1sg><nom>+и<cop><aor><p3><pl>/китап<n><px1sg><nom>+и<cop><aor><p3><sg>$
+[/gTd-YIjpXK09]
+[hlIVawoC-A6A#0] ^бакчаларын/бакча<n><pl><px3sp><acc>$
+[/hlIVawoC-A6A]
+[iMgGojw-tORv#0] ^бакчасына/бакча<n><px3sp><dat>$
+[/iMgGojw-tORv]
+[iyIpQdnkva6O#0] ^ул/ул<n><attr>/ул<n><nom>/ул<det><dem>/ул<prn><dem><nom>/ул<prn><pers><p3><sg><nom>/бул<v><tv><imp><p2><sg>/бул<v><iv><imp><p2><sg>/ул<n><nom>+и<cop><aor><p3><pl>/ул<n><nom>+и<cop><aor><p3><sg>/ул<prn><dem><nom>+и<cop><aor><p3><pl>/ул<prn><dem><nom>+и<cop><aor><p3><sg>$ ^үзе/үз<prn><ref><px3sp><nom>/үз<prn><ref><px3sp><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px3sp><nom>+и<cop><aor><p3><sg>$
+[/iyIpQdnkva6O]
+[jiBRlZ6wI1lY#0] ^йортымны/йорт<n><px1sg><acc>$
+[/jiBRlZ6wI1lY]
+[kFL2rOvQziLj#0] ^бакчасында/бакча<n><px3sp><loc>/бакча<n><px3sp><loc>+и<cop><aor><p3><pl>/бакча<n><px3sp><loc>+и<cop><aor><p3><sg>$
+[/kFL2rOvQziLj]
+[kaihrjnBzVoJ#0] ^бакчасын/бакча<n><px3sp><acc>$
+[/kaihrjnBzVoJ]
+[kbysWjmgFTQ1#0] ^тимерче/тимерче<n><attr>/тимерче<n><nom>/тимерче<n><nom>+и<cop><aor><p3><pl>/тимерче<n><nom>+и<cop><aor><p3><sg>$ ^Мостафа/Мостафа<np><ant><m><nom>/Мостафа<np><ant><m><nom><err_orth>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><pl>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><sg>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><pl><err_orth>/Мостафа<np><ant><m><nom>+и<cop><aor><p3><sg><err_orth>$^./.<sent>$
+[/kbysWjmgFTQ1]
+[l7ZTGXawKB2P#0] ^Ул/ул<n><attr>/ул<n><nom>/ул<det><dem>/ул<prn><dem><nom>/ул<prn><pers><p3><sg><nom>/бул<v><tv><imp><p2><sg>/бул<v><iv><imp><p2><sg>/ул<n><nom>+и<cop><aor><p3><pl>/ул<n><nom>+и<cop><aor><p3><sg>/ул<prn><dem><nom>+и<cop><aor><p3><pl>/ул<prn><dem><nom>+и<cop><aor><p3><sg>$ ^уйнамый/уйна<v><tv><neg><gna_perf>/уйна<v><tv><neg><prc_impf>/уйна<v><tv><neg><prc_perf>/уйна<v><tv><neg><pres><p3><sg>$ ^иде/и<cop><ifi><p3><sg>$^./.<sent>$
+[/l7ZTGXawKB2P]
+[lYmkj_abhkjD#0] ^Гөлнара/Гөлнара<np><ant><f><nom>/Гөлнара<np><ant><f><nom><err_orth>/Гөлнара<np><ant><f><nom>+и<cop><aor><p3><pl>/Гөлнара<np><ant><f><nom>+и<cop><aor><p3><sg>/Гөлнара<np><ant><f><nom>+и<cop><aor><p3><pl><err_orth>/Гөлнара<np><ant><f><nom>+и<cop><aor><p3><sg><err_orth>$ ^бакчада/бакча<n><loc>/бакча<n><loc>+и<cop><aor><p3><pl>/бакча<n><loc>+и<cop><aor><p3><sg>$^./.<sent>$
+[/lYmkj_abhkjD]
+[muMcLg_wobcW#0] ^үзе/үз<prn><ref><px3sp><nom>/үз<prn><ref><px3sp><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px3sp><nom>+и<cop><aor><p3><sg>$
+[/muMcLg_wobcW]
+[nWx6S7tFrN1J#0] ^бакчагызга/бакча<n><px2pl><dat>/бакча<n><px2pl><frm><dat>/бакча<n><px2sg><frm><dat>$
+[/nWx6S7tFrN1J]
+[npA97E_nfclC#0] ^сез/сез<prn><pers><p2><pl><nom>/сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><pl>/сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><sg>$ ^үзегез/үз<prn><ref><px2pl><nom>/үз<prn><ref><px2pl><frm><nom>/үз<prn><ref><px2sg><frm><nom>/үз<prn><ref><px2pl><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2pl><nom>+и<cop><aor><p3><sg>/үз<prn><ref><px2pl><frm><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2pl><frm><nom>+и<cop><aor><p3><sg>/үз<prn><ref><px2sg><frm><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px2sg><frm><nom>+и<cop><aor><p3><sg>$
+[/npA97E_nfclC]
+[pjGdf3MxlKyR#0] ^үзем/үз<prn><ref><px1sg><nom>/үз<prn><ref><px1sg><nom>+и<cop><aor><p3><pl>/үз<prn><ref><px1sg><nom>+и<cop><aor><p3><sg>$
+[/pjGdf3MxlKyR]
+[ptunFuKdlIYb#0] ^өй/өй<n><attr>/өй<n><nom>/өй<v><tv><imp><p2><sg>/өй<n><nom>+и<cop><aor><p3><pl>/өй<n><nom>+и<cop><aor><p3><sg>$ ^алдындагы/ал<n><px3sp><loc><attr>/алдын<adj><subst><loc><attr>/ал<n><px3sp><loc><subst><nom>/алдын<adj><subst><loc><subst><nom>/ал<n><px3sp><loc><subst><nom>+и<cop><aor><p3><pl>/ал<n><px3sp><loc><subst><nom>+и<cop><aor><p3><sg>/алдын<adj><subst><loc><subst><nom>+и<cop><aor><p3><pl>/алдын<adj><subst><loc><subst><nom>+и<cop><aor><p3><sg>$ ^бакча/бак<n><equ>/бакча<n><attr>/бакча<n><nom>/бак<n><equ>+и<cop><aor><p3><pl>/бак<n><equ>+и<cop><aor><p3><sg>/бакча<n><nom>+и<cop><aor><p3><pl>/бакча<n><nom>+и<cop><aor><p3><sg>$^./.<sent>$
+[/ptunFuKdlIYb]
+[qFQ8EwbZGwaX#0] ^бакчаларында/бакча<n><pl><px3sp><loc>/бакча<n><pl><px3sp><loc>+и<cop><aor><p3><pl>/бакча<n><pl><px3sp><loc>+и<cop><aor><p3><sg>$
+[/qFQ8EwbZGwaX]
+[qihtBa3VQYiI#0] ^бакчасыннан/бакча<n><px3sp><abl>/бакча<n><px3sp><abl>+и<cop><aor><p3><pl>/бакча<n><px3sp><abl>+и<cop><aor><p3><sg>$
+[/qihtBa3VQYiI]
+[r-RSBGI9bSXU#0] ^бакчабыз/бак<n><equ>+и<cop><aor><p1><pl>/бакча<n><nom>+и<cop><aor><p1><pl>/бакча<n><px1pl><nom>/бакча<n><px1pl><nom>+и<cop><aor><p3><pl>/бакча<n><px1pl><nom>+и<cop><aor><p3><sg>$
+[/r-RSBGI9bSXU]
+[u9L7Yi2jIwWF#0] ^китабымны/китап<n><px1sg><acc>$
+[/u9L7Yi2jIwWF]
+[uBpxyhqELzSM#0] ^бакчабызда/бакча<n><px1pl><loc>/бакча<n><px1pl><loc>+и<cop><aor><p3><pl>/бакча<n><px1pl><loc>+и<cop><aor><p3><sg>$
+[/uBpxyhqELzSM]
+[uEdo3NTl1sGp#0] ^Без/без<ideo>/без<n><attr>/без<n><nom>/без<prn><pers><p1><pl><nom>/без<n><nom>+и<cop><aor><p3><pl>/без<n><nom>+и<cop><aor><p3><sg>/без<prn><pers><p1><pl><nom>+и<cop><aor><p3><pl>/без<prn><pers><p1><pl><nom>+и<cop><aor><p3><sg>$ ^уйнамый/уйна<v><tv><neg><gna_perf>/уйна<v><tv><neg><prc_impf>/уйна<v><tv><neg><prc_perf>/уйна<v><tv><neg><pres><p3><sg>$ ^идек/и<cop><ifi><p1><pl>$^./.<sent>$
+[/uEdo3NTl1sGp]
+[uvJdZXHnJAmQ#0] ^Алар/ул<prn><dem><pl><nom>/алар<prn><pers><p3><pl><nom>/ул<prn><dem><pl><nom>+и<cop><aor><p3><pl>/ул<prn><dem><pl><nom>+и<cop><aor><p3><sg>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><pl>/алар<prn><pers><p3><pl><nom>+и<cop><aor><p3><sg>$ ^уйный/уйна<v><tv><prc_impf>/уйна<v><tv><pres><p3><sg>$ ^иделәр/и<cop><ifi><p3><pl>$^./.<sent>$
+[/uvJdZXHnJAmQ]
+[v8d-r-rhxuGb#0] ^йортларым/йорт<n><pl><px1sg><nom>/йорт<n><pl><px1sg><nom>+и<cop><aor><p3><pl>/йорт<n><pl><px1sg><nom>+и<cop><aor><p3><sg>$
+[/v8d-r-rhxuGb]
+[v9Pi177Kvj3s#0] ^бакчаңа/бакча<n><px2sg><dat>$
+[/v9Pi177Kvj3s]
+[vUynNS4yUIa8#0] ^теләгемнең/теләк<n><px1sg><gen>$
+[/vUynNS4yUIa8]
+[vlIZkOFrcsC6#0] ^йортларымны/йорт<n><pl><px1sg><acc>$
+[/vlIZkOFrcsC6]
+[wTz7yKqQyaDR#0] ^йортымның/йорт<n><px1sg><gen>$
+[/wTz7yKqQyaDR]
+[wXY2_B8rRLet#0] ^йортларымның/йорт<n><pl><px1sg><gen>$
+[/wXY2_B8rRLet]
+[xyh4nDfGf4_G#0] ^теләгемнән/теләк<n><px1sg><abl>/теләк<n><px1sg><abl>+и<cop><aor><p3><pl>/теләк<n><px1sg><abl>+и<cop><aor><p3><sg>$
+[/xyh4nDfGf4_G]
+[zizbCv6we_5k#0] ^бакчабызны/бакча<n><px1pl><acc>$
+[/zizbCv6we_5k]

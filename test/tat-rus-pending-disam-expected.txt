@@ -1,0 +1,200 @@
+[-kkvY-Bnpcb3#0] ^бакча<n><px2sg><loc>$
+[/-kkvY-Bnpcb3]
+[12epD9ToZOJg#0] ^китап<n><px1sg><dat>$
+[/12epD9ToZOJg]
+[1I7YRvcDJzSQ#0] ^теләк<n><px1sg><acc>$
+[/1I7YRvcDJzSQ]
+[1_l-_8FbGEXT#0] ^бакча<n><pl><px3sp><dat>$
+[/1_l-_8FbGEXT]
+[4ifa9TN4P-k0#0] ^Сез<prn><pers><p2><sp><frm><nom>$ ^уйна<v><tv><neg><gna_perf>$ ^и<cop><ifi><p2><frm><sg>$^.<sent>$
+[/4ifa9TN4P-k0]
+[68L0IcNwGieG#0] ^бакча<n><px2sg><acc>$
+[/68L0IcNwGieG]
+[6Ea65PeL7E0I#0] ^үз<prn><ref><px1pl><nom>$
+[/6Ea65PeL7E0I]
+[9GDfiV6902cn#0] ^Ул<prn><dem><nom>$ ^уйна<v><tv><pres><p3><sg>$ ^и<cop><ifi><p3><sg>$^.<sent>$
+[/9GDfiV6902cn]
+[9P2QcX2gQ1vT#0] ^бакча<n><px2sg><nom>$
+[/9P2QcX2gQ1vT]
+[AZOLlwG-zwrT#0] ^син<prn><pers><p2><sg><nom>$ ^үз<prn><ref><px2sg><nom>$
+[/AZOLlwG-zwrT]
+[Abpxk-IMIoXJ#0] ^йорт<n><px1sg><abl>$
+[/Abpxk-IMIoXJ]
+[AzY6wkyzsRNF#0] ^ул<prn><dem><pl><nom>+и<cop><aor><p3><pl>$ ^үз<prn><ref><px3pl><nom>$
+[/AzY6wkyzsRNF]
+[B4Xn79SHpcti#0] ^Без<n><nom>$ ^уйна<v><tv><pres><p3><sg>$ ^и<cop><ifi><p1><pl>$^.<sent>$
+[/B4Xn79SHpcti]
+[B96KHddfEvn4#0] ^бакча<n><px3sp><nom>$
+[/B96KHddfEvn4]
+[BXRFRiQsiBQX#0] ^Ул<prn><dem><pl><nom>$ ^уйна<v><tv><neg><gna_perf>$ ^и<cop><ifi><p3><pl>$^.<sent>$
+[/BXRFRiQsiBQX]
+[BfwC-nVMtx7u#0] ^бакча<n><px1sg><acc>$
+[/BfwC-nVMtx7u]
+[Bwig-tBESFVu#0] ^бакча<n><px2pl><nom>$
+[/Bwig-tBESFVu]
+[CB6CWP4Mr0IT#0] ^без<n><nom>+и<cop><aor><p1><pl>$ ^үз<prn><ref><px1pl><nom>$
+[/CB6CWP4Mr0IT]
+[CEYCK7ICgLwV#0] ^бакча<n><px1pl><abl>$
+[/CEYCK7ICgLwV]
+[CQ_WNc2eJgvE#0] ^үз<prn><ref><px2sg><nom>$
+[/CQ_WNc2eJgvE]
+[Cos4VBzOjeyC#0] ^бакча<n><px2pl><loc>$
+[/Cos4VBzOjeyC]
+[F4F8A-MvScMy#0] ^бакча<n><px2pl><abl>$
+[/F4F8A-MvScMy]
+[G_oC1f5MMxHP#0] ^китап<n><pl><px1sg><abl>$
+[/G_oC1f5MMxHP]
+[GmIk2XtM6rMJ#0] ^китап<n><pl><px1sg><dat>$
+[/GmIk2XtM6rMJ]
+[GsaXS0oe9Z0Y#0] ^бакча<n><px1sg><nom>$
+[/GsaXS0oe9Z0Y]
+[HKDO4f-mjlEl#0] ^китап<n><pl><px1sg><nom>$
+[/HKDO4f-mjlEl]
+[I1Qokz_6LERx#0] ^теләк<n><pl><px1sg><loc>$
+[/I1Qokz_6LERx]
+[I7-rjStAJTHU#0] ^теләк<n><pl><px1sg><gen>$
+[/I7-rjStAJTHU]
+[ILeAgWweqgSw#0] ^китап<n><pl><px1sg><gen>$
+[/ILeAgWweqgSw]
+[IQ3Z8KQIrqBw#0] ^бакча<n><pl><px3sp><nom>$
+[/IQ3Z8KQIrqBw]
+[JQ4KwnDcUTN9#0] ^Ул<prn><dem><pl><nom>$ ^уйна<v><tv><neg><pres><p3><pl>$ ^и<cop><ifi><p3><sg>$^.<sent>$
+[/JQ4KwnDcUTN9]
+[KUx_Yb1UOqlT#0] ^Мәктәп<n><loc>$^.<sent>$
+[/KUx_Yb1UOqlT]
+[LOPbb0HDruXS#0] ^үз<prn><ref><px2pl><nom>$
+[/LOPbb0HDruXS]
+[LPeqLyStmuBW#0] ^йорт<n><pl><px1sg><abl>$
+[/LPeqLyStmuBW]
+[Lw802mvGjtAV#0] ^тимер<n><nom>$ ^көрәк<n><nom>+и<cop><aor><p3><sg>$^.<sent>$
+[/Lw802mvGjtAV]
+[N79PU64JkAmZ#0] ^өй<n><attr>$ ^ал<n><px3sp><loc><attr>$ ^бакча<n><loc>+и<cop><aor><p3><sg>$^.<sent>$
+[/N79PU64JkAmZ]
+[P-R3rOZWAzfk#0] ^Син<prn><pers><p2><sg><nom>$ ^уйна<v><tv><pres><p3><sg>$ ^и<cop><ifi><p2><sg>$^.<sent>$
+[/P-R3rOZWAzfk]
+[P0u0wgfyWSyB#0] ^Мостафа<np><ant><m><nom>$ ^әфәнде<n><nom>+и<cop><aor><p3><sg>$^.<sent>$
+[/P0u0wgfyWSyB]
+[P1DtPa5VaJex#0] ^бакча<n><px1sg><abl>$
+[/P1DtPa5VaJex]
+[PAqZtIjD83Ja#0] ^теләк<n><pl><px1sg><acc>$
+[/PAqZtIjD83Ja]
+[QBuuUkH-dWC9#0] ^бакча<n><px2pl><acc>$
+[/QBuuUkH-dWC9]
+[SHY4TQubGNYG#0] ^Син<prn><pers><p2><sg><nom>$ ^уйна<v><tv><neg><gna_perf>$ ^и<cop><ifi><p2><sg>$^.<sent>$
+[/SHY4TQubGNYG]
+[SSUDxpyf82By#0] ^йорт<n><px1sg><loc>$
+[/SSUDxpyf82By]
+[S_mRY1zHGJmn#0] ^теләк<n><px1sg><loc>$
+[/S_mRY1zHGJmn]
+[T-J5sUrvabCU#0] ^теләк<n><px1sg><nom>$
+[/T-J5sUrvabCU]
+[T0fIee-6UDpP#0] ^мин<n><nom>$ ^үз<prn><ref><px1sg><nom>$
+[/T0fIee-6UDpP]
+[TEJi1LcO8UVC#0] ^теләк<n><px1sg><dat>$
+[/TEJi1LcO8UVC]
+[UK8SOHi_Eito#0] ^бакча<n><px1sg><loc>$
+[/UK8SOHi_Eito]
+[ULjiOPaElvSF#0] ^өй<n><attr>$ ^ал<n><px3sp><loc>+и<cop><aor><p3><sg>$^.<sent>$
+[/ULjiOPaElvSF]
+[V-96DhskG4Gx#0] ^үз<prn><ref><px3pl><nom>$
+[/V-96DhskG4Gx]
+[V0_sg3AkCArT#0] ^китап<n><px1sg><gen>$
+[/V0_sg3AkCArT]
+[WRYJ7FFy4Xw-#0] ^Мин<n><nom>$ ^уйна<v><tv><neg><gna_perf>$ ^и<cop><ifi><p1><sg>$^.<sent>$
+[/WRYJ7FFy4Xw-]
+[XCNPWQkVGL9l#0] ^теләк<n><pl><px1sg><dat>$
+[/XCNPWQkVGL9l]
+[XMeAEWEkV2WW#0] ^йорт<n><pl><px1sg><dat>$
+[/XMeAEWEkV2WW]
+[Y50694uDS6v8#0] ^китап<n><px1sg><abl>$
+[/Y50694uDS6v8]
+[YVtb-ybMP3By#0] ^теләк<n><pl><px1sg><abl>$
+[/YVtb-ybMP3By]
+[Z-no1gKdw43b#0] ^йорт<n><px1sg><nom>$
+[/Z-no1gKdw43b]
+[ZXda4ugiCaBC#0] ^йорт<n><px1sg><dat>$
+[/ZXda4ugiCaBC]
+[_4hgwrEkyosW#0] ^Ул<prn><dem><pl><nom>$ ^уйна<v><tv><pres><p3><pl>$ ^и<cop><ifi><p3><sg>$^.<sent>$
+[/_4hgwrEkyosW]
+[_KxrEq_F1hBz#0] ^китап<n><pl><px1sg><acc>$
+[/_KxrEq_F1hBz]
+[_TJHHcn1nzQI#0] ^китап<n><px1sg><loc>$
+[/_TJHHcn1nzQI]
+[aOfmJhGNSZPE#0] ^Сез<prn><pers><p2><sp><frm><nom>$ ^уйна<v><tv><pres><p3><sg>$ ^и<cop><ifi><p2><frm><sg>$^.<sent>$
+[/aOfmJhGNSZPE]
+[bFsEnanVsQrL#0] ^бакча<n><px1sg><dat>$
+[/bFsEnanVsQrL]
+[bidgjQlNCxOA#0] ^бакча<n><pl><px3sp><abl>$
+[/bidgjQlNCxOA]
+[brQlpQwXu83x#0] ^бакча<n><px1pl><dat>$
+[/brQlpQwXu83x]
+[c6KkgRipkCat#0] ^китап<n><pl><px1sg><loc>$
+[/c6KkgRipkCat]
+[c6XkvBsYDOMi#0] ^теләк<n><pl><px1sg><nom>$
+[/c6XkvBsYDOMi]
+[cQRu7oOYXcCb#0] ^йорт<n><pl><px1sg><loc>$
+[/cQRu7oOYXcCb]
+[e0MYeh9Q3oPj#0] ^Мин<n><nom>$ ^уйна<v><tv><pres><p3><sg>$ ^и<cop><ifi><p1><sg>$^.<sent>$
+[/e0MYeh9Q3oPj]
+[feTxvbyv6gCN#0] ^бакча<n><px2sg><abl>$
+[/feTxvbyv6gCN]
+[gTd-YIjpXK09#0] ^китап<n><px1sg><nom>$
+[/gTd-YIjpXK09]
+[hlIVawoC-A6A#0] ^бакча<n><pl><px3sp><acc>$
+[/hlIVawoC-A6A]
+[iMgGojw-tORv#0] ^бакча<n><px3sp><dat>$
+[/iMgGojw-tORv]
+[iyIpQdnkva6O#0] ^бул<v><tv><imp><p2><sg>$ ^үз<prn><ref><px3sp><nom>$
+[/iyIpQdnkva6O]
+[jiBRlZ6wI1lY#0] ^йорт<n><px1sg><acc>$
+[/jiBRlZ6wI1lY]
+[kFL2rOvQziLj#0] ^бакча<n><px3sp><loc>$
+[/kFL2rOvQziLj]
+[kaihrjnBzVoJ#0] ^бакча<n><px3sp><acc>$
+[/kaihrjnBzVoJ]
+[kbysWjmgFTQ1#0] ^тимерче<n><nom>$ ^Мостафа<np><ant><m><nom>+и<cop><aor><p3><sg>$^.<sent>$
+[/kbysWjmgFTQ1]
+[l7ZTGXawKB2P#0] ^Ул<prn><dem><nom>$ ^уйна<v><tv><neg><gna_perf>$ ^и<cop><ifi><p3><sg>$^.<sent>$
+[/l7ZTGXawKB2P]
+[lYmkj_abhkjD#0] ^Гөлнара<np><ant><f><nom>$ ^бакча<n><loc>+и<cop><aor><p3><sg>$^.<sent>$
+[/lYmkj_abhkjD]
+[muMcLg_wobcW#0] ^үз<prn><ref><px3sp><nom>$
+[/muMcLg_wobcW]
+[nWx6S7tFrN1J#0] ^бакча<n><px2pl><dat>$
+[/nWx6S7tFrN1J]
+[npA97E_nfclC#0] ^сез<prn><pers><p2><pl><nom>+и<cop><aor><p3><pl>$ ^үз<prn><ref><px2pl><nom>$
+[/npA97E_nfclC]
+[pjGdf3MxlKyR#0] ^үз<prn><ref><px1sg><nom>$
+[/pjGdf3MxlKyR]
+[ptunFuKdlIYb#0] ^өй<n><attr>$ ^ал<n><px3sp><loc><attr>$ ^бак<n><equ>+и<cop><aor><p3><sg>$^.<sent>$
+[/ptunFuKdlIYb]
+[qFQ8EwbZGwaX#0] ^бакча<n><pl><px3sp><loc>$
+[/qFQ8EwbZGwaX]
+[qihtBa3VQYiI#0] ^бакча<n><px3sp><abl>$
+[/qihtBa3VQYiI]
+[r-RSBGI9bSXU#0] ^бакча<n><px1pl><nom>$
+[/r-RSBGI9bSXU]
+[u9L7Yi2jIwWF#0] ^китап<n><px1sg><acc>$
+[/u9L7Yi2jIwWF]
+[uBpxyhqELzSM#0] ^бакча<n><px1pl><loc>$
+[/uBpxyhqELzSM]
+[uEdo3NTl1sGp#0] ^Без<n><nom>$ ^уйна<v><tv><neg><gna_perf>$ ^и<cop><ifi><p1><pl>$^.<sent>$
+[/uEdo3NTl1sGp]
+[uvJdZXHnJAmQ#0] ^Ул<prn><dem><pl><nom>$ ^уйна<v><tv><pres><p3><sg>$ ^и<cop><ifi><p3><pl>$^.<sent>$
+[/uvJdZXHnJAmQ]
+[v8d-r-rhxuGb#0] ^йорт<n><pl><px1sg><nom>$
+[/v8d-r-rhxuGb]
+[v9Pi177Kvj3s#0] ^бакча<n><px2sg><dat>$
+[/v9Pi177Kvj3s]
+[vUynNS4yUIa8#0] ^теләк<n><px1sg><gen>$
+[/vUynNS4yUIa8]
+[vlIZkOFrcsC6#0] ^йорт<n><pl><px1sg><acc>$
+[/vlIZkOFrcsC6]
+[wTz7yKqQyaDR#0] ^йорт<n><px1sg><gen>$
+[/wTz7yKqQyaDR]
+[wXY2_B8rRLet#0] ^йорт<n><pl><px1sg><gen>$
+[/wXY2_B8rRLet]
+[xyh4nDfGf4_G#0] ^теләк<n><px1sg><abl>$
+[/xyh4nDfGf4_G]
+[zizbCv6we_5k#0] ^бакча<n><px1pl><acc>$
+[/zizbCv6we_5k]
